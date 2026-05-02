@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO primário -->
+  <title>CVAT Brasil — Diagnóstico de Clima e Saúde Mental nas Empresas</title>
+  <meta name="description" content="Plataforma de diagnóstico organizacional, saúde mental e conformidade NR-01. Ferramentas CVAT, COPSOQ III e Gestor NR-01 para empresas brasileiras." />
+  <link rel="canonical" href="https://cvatbrasil.com.br/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://cvatbrasil.com.br/" />
+  <meta property="og:title"       content="CVAT Brasil — Diagnóstico de Clima e Saúde Mental" />
+  <meta property="og:description" content="Ferramentas científicas para diagnóstico organizacional, riscos psicossociais e conformidade com a NR-01." />
+  <meta property="og:image"       content="https://cvatbrasil.com.br/assets/img/og-home.webp" />
+  <meta property="og:locale"      content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="CVAT Brasil — Clima e Saúde Mental" />
+  <meta name="twitter:description" content="Diagnóstico organizacional, COPSOQ III e conformidade NR-01 para empresas." />
+  <meta name="twitter:image"       content="https://cvatbrasil.com.br/assets/img/og-home.webp" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/components.css" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
+</head>
+<body>
+
+  <!-- Skip navigation -->
+  <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+
+  <!-- Page loader -->
+  <div class="page-loader" id="page-loader" aria-hidden="true">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Header (injetado via fetch) -->
+  <div id="header-placeholder"></div>
+
+  <!-- ════════════════════════════════════════════════════════
+       CONTEÚDO PRINCIPAL
+  ════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="hero-label">Plataforma #1 em diagnóstico organizacional no Brasil</span>
+          <h1 id="hero-heading">
+            Saúde mental e clima<br />
+            organizacional que<br />
+            <em class="hero-highlight">geram resultados reais</em>
+          </h1>
+          <p class="hero-desc">
+            Diagnósticos científicos de clima, riscos psicossociais e conformidade NR-01
+            — com dados que sua liderança entende e consegue agir.
+          </p>
+          <div class="hero-actions">
+            <a href="./pages/diagnostico.html" class="btn btn-coral btn-lg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 4v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Fazer diagnóstico grátis
+            </a>
+            <a href="./pages/contato.html" class="btn btn-ghost btn-lg">
+              Falar com especialista
+            </a>
+          </div>
+          <div class="hero-trust">
+            <span class="hero-trust-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Sem cartão de crédito
+            </span>
+            <span class="hero-trust-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Resultado em 48h
+            </span>
+            <span class="hero-trust-item">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Conformidade NR-01
+            </span>
+          </div>
+        </div>
+
+        <!-- Painel visual do hero -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card hero-card--main">
+            <div class="hero-card-header">
+              <span class="hero-card-dot hero-card-dot--green"></span>
+              <span class="hero-card-dot hero-card-dot--yellow"></span>
+              <span class="hero-card-dot hero-card-dot--red"></span>
+              <span class="hero-card-title-bar">Relatório — Clima Organizacional</span>
+            </div>
+            <div class="hero-card-body">
+              <div class="hero-metric">
+                <span class="hero-metric-label">Índice de Engajamento</span>
+                <div class="hero-metric-bar-wrap">
+                  <div class="hero-metric-bar" style="--w:78%"></div>
+                  <span class="hero-metric-value">78%</span>
+                </div>
+              </div>
+              <div class="hero-metric">
+                <span class="hero-metric-label">Saúde Psicossocial</span>
+                <div class="hero-metric-bar-wrap">
+                  <div class="hero-metric-bar hero-metric-bar--green" style="--w:84%"></div>
+                  <span class="hero-metric-value">84%</span>
+                </div>
+              </div>
+              <div class="hero-metric">
+                <span class="hero-metric-label">Risco NR-01</span>
+                <div class="hero-metric-bar-wrap">
+                  <div class="hero-metric-bar hero-metric-bar--coral" style="--w:22%"></div>
+                  <span class="hero-metric-value hero-metric-value--coral">22%</span>
+                </div>
+              </div>
+              <div class="hero-card-chips">
+                <span class="badge badge-green">Conformidade ✓</span>
+                <span class="badge badge-blue">+12% vs. último ciclo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cards flutuantes -->
+          <div class="hero-float hero-float--top">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3l2 4 4.5.7-3.25 3.17.77 4.5L10 13.25l-4.02 2.12.77-4.5L3.5 7.7 8 7z" fill="var(--color-blue)" stroke="var(--color-blue)" stroke-width=".5"/></svg>
+            <span>+340 empresas atendidas</span>
+          </div>
+          <div class="hero-float hero-float--bottom">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 4v4l3 3" stroke="var(--color-green)" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>Resultado em 48h</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── LOGOS / PROVA SOCIAL ──────────────────────────────── -->
+    <section class="social-proof section" aria-labelledby="social-proof-heading">
+      <div class="container">
+        <p id="social-proof-heading" class="social-proof-label">
+          Confiado por empresas que colocam pessoas no centro
+        </p>
+        <div class="logo-strip" role="list" aria-label="Empresas clientes">
+          <!-- Logos como texto estilizado (substituir por SVG/WebP reais) -->
+          <span class="logo-item" role="listitem">Empresa A</span>
+          <span class="logo-item" role="listitem">Empresa B</span>
+          <span class="logo-item" role="listitem">Empresa C</span>
+          <span class="logo-item" role="listitem">Empresa D</span>
+          <span class="logo-item" role="listitem">Empresa E</span>
+          <span class="logo-item" role="listitem">Empresa F</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MÉTRICAS ──────────────────────────────────────────── -->
+    <section class="metrics-section section bg-blue-light" aria-label="Números da CVAT Brasil">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item" data-reveal data-reveal-delay="1">
+            <span class="metric-number">+340</span>
+            <span class="metric-label">empresas atendidas</span>
+          </div>
+          <div class="metric-item" data-reveal data-reveal-delay="2">
+            <span class="metric-number">+80 mil</span>
+            <span class="metric-label">colaboradores avaliados</span>
+          </div>
+          <div class="metric-item" data-reveal data-reveal-delay="3">
+            <span class="metric-number">98%</span>
+            <span class="metric-label">de satisfação dos clientes</span>
+          </div>
+          <div class="metric-item" data-reveal data-reveal-delay="4">
+            <span class="metric-number">48h</span>
+            <span class="metric-label">para receber o relatório</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 4 PERSONAS ────────────────────────────────────────── -->
+    <section class="personas-section section" id="para-voce" aria-labelledby="personas-heading">
+      <div class="container">
+        <header class="section-header centered" data-reveal>
+          <span class="section-label">Para quem é a CVAT Brasil</span>
+          <h2 id="personas-heading" class="section-title">
+            Uma solução para cada papel<br />dentro da sua organização
+          </h2>
+          <p class="section-desc">
+            Do C-level ao consultor externo — cada persona tem um caminho claro.
+          </p>
+        </header>
+
+        <div class="personas-grid">
+
+          <!-- Persona 1: Empresas -->
+          <article class="persona-card" data-reveal data-reveal-delay="1" aria-labelledby="persona-empresas">
+            <div class="persona-icon persona-icon--blue">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="3" y="10" width="22" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M9 10V7a5 5 0 0110 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 id="persona-empresas" class="persona-title">Para Empresas</h3>
+            <p class="persona-desc">
+              Lideranças que precisam de dados confiáveis sobre clima, engajamento e riscos antes de tomar decisões estratégicas de gente.
+            </p>
+            <ul class="persona-benefits" role="list">
+              <li>Diagnóstico completo em até 48h</li>
+              <li>Dashboard executivo com plano de ação</li>
+              <li>Conformidade NR-01 documentada</li>
+            </ul>
+            <a href="./pages/para-empresas.html" class="btn btn-primary persona-cta">
+              Ver solução para empresas
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <!-- Persona 2: RH -->
+          <article class="persona-card persona-card--featured" data-reveal data-reveal-delay="2" aria-labelledby="persona-rh">
+            <div class="persona-featured-badge">Mais popular</div>
+            <div class="persona-icon persona-icon--white">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><circle cx="14" cy="10" r="4" stroke="currentColor" stroke-width="2"/><path d="M6 24c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 id="persona-rh" class="persona-title">Para RH</h3>
+            <p class="persona-desc">
+              Profissionais de RH que querem relatórios acionáveis, linguagem de negócios e ferramentas para apresentar resultados à diretoria.
+            </p>
+            <ul class="persona-benefits" role="list">
+              <li>Questionários validados cientificamente</li>
+              <li>Relatórios prontos para apresentar</li>
+              <li>Histórico de ciclos comparativos</li>
+            </ul>
+            <a href="./pages/para-rh.html" class="btn btn-ghost persona-cta">
+              Ver solução para RH
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <!-- Persona 3: Consultores -->
+          <article class="persona-card" data-reveal data-reveal-delay="3" aria-labelledby="persona-consultores">
+            <div class="persona-icon persona-icon--green">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M5 23l5-5m0 0l3-9 9-5-5 9-9 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 id="persona-consultores" class="persona-title">Para Consultores</h3>
+            <p class="persona-desc">
+              Psicólogos e consultores de SST que aplicam diagnósticos em múltiplos clientes e precisam de eficiência, escala e credibilidade.
+            </p>
+            <ul class="persona-benefits" role="list">
+              <li>Gestão de múltiplos clientes</li>
+              <li>White-label disponível</li>
+              <li>Suporte técnico especializado</li>
+            </ul>
+            <a href="./pages/para-consultores.html" class="btn btn-primary persona-cta">
+              Ver solução para consultores
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <!-- Persona 4: NR-01 -->
+          <article class="persona-card persona-card--coral" data-reveal data-reveal-delay="4" aria-labelledby="persona-nr01">
+            <div class="persona-icon persona-icon--coral">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="5" y="4" width="18" height="20" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M10 10h8M10 14h8M10 18h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <span class="badge badge-coral" style="margin-bottom: var(--space-3);">Obrigatório desde 2025</span>
+            <h3 id="persona-nr01" class="persona-title">Conformidade NR-01</h3>
+            <p class="persona-desc">
+              A NR-01 exige identificação e gestão de riscos psicossociais. Evite autuações e demonstre conformidade com documentação completa.
+            </p>
+            <ul class="persona-benefits" role="list">
+              <li>Identificação de riscos psicossociais</li>
+              <li>Plano de Ação documentado</li>
+              <li>Evidências para fiscalização</li>
+            </ul>
+            <a href="./pages/nr01.html" class="btn btn-coral persona-cta">
+              Garantir conformidade agora
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SOLUÇÕES ──────────────────────────────────────────── -->
+    <section class="solutions-section section bg-gray-100" id="solucoes" aria-labelledby="solutions-heading">
+      <div class="container">
+        <header class="section-header centered" data-reveal>
+          <span class="section-label">Nossas ferramentas</span>
+          <h2 id="solutions-heading" class="section-title">
+            Soluções que combinam<br />ciência e praticidade
+          </h2>
+          <p class="section-desc">
+            Cada ferramenta é validada cientificamente e adaptada à realidade das empresas brasileiras.
+          </p>
+        </header>
+
+        <div class="solutions-list">
+
+          <article class="solution-item" data-reveal data-reveal-delay="1">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="var(--color-blue)" stroke-width="2"/><path d="M11 16l3 3 7-7" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="solution-content">
+              <h3 class="solution-title">CVAT — Clima Organizacional</h3>
+              <p class="solution-desc">Avalie engajamento, cultura e satisfação com metodologia própria e benchmarks setoriais. Resultados em dashboard interativo.</p>
+              <a href="./pages/solucoes/cvat.html" class="solution-link">
+                Conhecer o CVAT
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="solution-item" data-reveal data-reveal-delay="2">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4a12 12 0 100 24A12 12 0 0016 4z" stroke="var(--color-blue)" stroke-width="2"/><path d="M16 10v6l4 4" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <div class="solution-content">
+              <h3 class="solution-title">COPSOQ III — Riscos Psicossociais</h3>
+              <p class="solution-desc">Instrumento internacionalmente validado para identificar fatores de risco e proteção à saúde mental. Base para o PGR da NR-01.</p>
+              <a href="./pages/solucoes/copsoq.html" class="solution-link">
+                Conhecer o COPSOQ III
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="solution-item" data-reveal data-reveal-delay="3">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="5" width="20" height="22" rx="3" stroke="var(--color-blue)" stroke-width="2"/><path d="M11 12h10M11 17h10M11 22h6" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <div class="solution-content">
+              <h3 class="solution-title">Gestor NR-01</h3>
+              <p class="solution-desc">Plataforma completa para gestão do PGR com foco em riscos psicossociais: identificação, avaliação, plano de ação e evidências.</p>
+              <a href="./pages/solucoes/gestor-nr01.html" class="solution-link">
+                Conhecer o Gestor NR-01
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="solution-item" data-reveal data-reveal-delay="4">
+            <div class="solution-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="16" rx="3" stroke="var(--color-blue)" stroke-width="2"/><path d="M10 14h4m-4 4h8" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/><path d="M22 14l-3 4" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <div class="solution-content">
+              <h3 class="solution-title">HSE-IT — Saúde e Segurança</h3>
+              <p class="solution-desc">Integre saúde, segurança e meio ambiente em uma plataforma unificada com indicadores em tempo real e gestão de conformidade.</p>
+              <a href="./pages/solucoes/hse-it.html" class="solution-link">
+                Conhecer o HSE-IT
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COMO FUNCIONA ─────────────────────────────────────── -->
+    <section class="how-section section" id="como-funciona" aria-labelledby="how-heading">
+      <div class="container">
+        <header class="section-header centered" data-reveal>
+          <span class="section-label">Processo</span>
+          <h2 id="how-heading" class="section-title">Do diagnóstico ao plano de ação<br />em 4 etapas simples</h2>
+        </header>
+
+        <ol class="steps-list" role="list">
+          <li class="step-item" data-reveal data-reveal-delay="1">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-content">
+              <h3 class="step-title">Escolha o diagnóstico</h3>
+              <p class="step-desc">Selecione entre clima organizacional, riscos psicossociais (COPSOQ III) ou conformidade NR-01 conforme sua necessidade.</p>
+            </div>
+          </li>
+          <li class="step-item" data-reveal data-reveal-delay="2">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-content">
+              <h3 class="step-title">Convide os colaboradores</h3>
+              <p class="step-desc">Envio automático por e-mail ou link. Questionários anônimos, mobile-friendly, disponíveis 24h. Taxa média de resposta: 72%.</p>
+            </div>
+          </li>
+          <li class="step-item" data-reveal data-reveal-delay="3">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-content">
+              <h3 class="step-title">Receba o relatório em 48h</h3>
+              <p class="step-desc">Dashboard interativo com índices, gráficos, cruzamentos demográficos e benchmarks do seu setor. Exportação em PDF e Excel.</p>
+            </div>
+          </li>
+          <li class="step-item" data-reveal data-reveal-delay="4">
+            <div class="step-number" aria-hidden="true">04</div>
+            <div class="step-content">
+              <h3 class="step-title">Implante o plano de ação</h3>
+              <p class="step-desc">Recomendações priorizadas por impacto, atribuição de responsáveis, prazos e acompanhamento de indicadores ao longo do tempo.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── DEPOIMENTOS ───────────────────────────────────────── -->
+    <section class="testimonials-section section bg-blue-light" id="depoimentos" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <header class="section-header centered" data-reveal>
+          <span class="section-label">Depoimentos</span>
+          <h2 id="testimonials-heading" class="section-title">O que nossos clientes dizem</h2>
+        </header>
+
+        <div class="testimonials-grid">
+
+          <blockquote class="testimonial-card" data-reveal data-reveal-delay="1">
+            <div class="testimonial-stars" aria-label="5 estrelas">★★★★★</div>
+            <p class="testimonial-text">
+              "A CVAT Brasil nos ajudou a entender o que realmente estava acontecendo com o clima. Em 3 meses, o turnover caiu 18% após implementarmos as recomendações do relatório."
+            </p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">MR</div>
+              <div>
+                <cite class="testimonial-name">Mariana Rocha</cite>
+                <span class="testimonial-role">Diretora de RH — Indústria têxtil, 800 colaboradores</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card" data-reveal data-reveal-delay="2">
+            <div class="testimonial-stars" aria-label="5 estrelas">★★★★★</div>
+            <p class="testimonial-text">
+              "O Gestor NR-01 simplificou completamente o nosso processo de conformidade. Hoje temos todas as evidências organizadas e prontas para qualquer fiscalização."
+            </p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar testimonial-avatar--green" aria-hidden="true">CS</div>
+              <div>
+                <cite class="testimonial-name">Carlos Souza</cite>
+                <span class="testimonial-role">SESMT — Construção civil, 1.200 colaboradores</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card" data-reveal data-reveal-delay="3">
+            <div class="testimonial-stars" aria-label="5 estrelas">★★★★★</div>
+            <p class="testimonial-text">
+              "Como consultora, uso o COPSOQ III para todos os meus clientes. A plataforma me economiza horas de tabulação e os relatórios são suficientemente técnicos para apresentar ao MTE."
+            </p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar testimonial-avatar--coral" aria-hidden="true">AP</div>
+              <div>
+                <cite class="testimonial-name">Ana Paula Ferreira</cite>
+                <span class="testimonial-role">Psicóloga organizacional — Consultora independente</span>
+              </div>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ RÁPIDO ────────────────────────────────────────── -->
+    <section class="faq-section section" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <header class="section-header centered" data-reveal>
+          <span class="section-label">Dúvidas frequentes</span>
+          <h2 id="faq-heading" class="section-title">Perguntas que todo cliente faz</h2>
+        </header>
+
+        <div class="faq-list" data-reveal>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              O diagnóstico gratuito é realmente sem custo?
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="faq-answer">Sim. O diagnóstico inicial é 100% gratuito, sem cartão de crédito e sem compromisso. Você recebe um relatório executivo com os principais indicadores da sua empresa.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              Como funciona a anonimidade das respostas?
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="faq-answer">As respostas são completamente anônimas. Nenhum resultado individual é exibido — apenas agregados por área ou cargo, e somente quando há mínimo de 5 respostas no grupo.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              A CVAT Brasil atende à NR-01 atualizada em 2025?
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="faq-answer">Sim. O Gestor NR-01 e o COPSOQ III foram desenvolvidos especificamente para atender aos requisitos da NR-01 atualizada, incluindo a identificação e gestão de riscos psicossociais.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              Quanto tempo leva para ter os resultados?
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="faq-answer">O relatório executivo fica disponível em até 48 horas após o encerramento da coleta de dados. Diagnósticos completos com análise aprofundada podem levar até 5 dias úteis.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              É possível integrar com o HRIS da empresa?
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="faq-answer">Sim, temos APIs disponíveis para integração com os principais sistemas de RH (SAP, Totvs, Senior, ADP). Entre em contato para avaliar a integração com seu sistema atual.</p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA FINAL ─────────────────────────────────────────── -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-inner" data-reveal>
+          <div class="cta-text">
+            <span class="section-label" style="color: rgba(255,255,255,.7)">Comece hoje</span>
+            <h2 id="cta-heading" class="cta-title">
+              Sua empresa merece dados reais<br />sobre o bem-estar das pessoas
+            </h2>
+            <p class="cta-desc">
+              Faça o diagnóstico gratuito e descubra os pontos de atenção antes que se tornem problemas — ou autuações.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="./pages/diagnostico.html" class="btn btn-coral btn-lg">
+              Fazer diagnóstico grátis
+            </a>
+            <a href="./pages/contato.html" class="btn btn-ghost btn-lg">
+              Agendar demonstração
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (injetado via fetch) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS -->
+  <script src="./assets/js/main.js" defer></script>
+  <script src="./assets/js/forms.js" defer></script>
+
+</body>
+</html>
