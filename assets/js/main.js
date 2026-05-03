@@ -11,6 +11,11 @@
  * independente da profundidade da página atual.
  */
 function resolveComponentPath(component) {
+  /* Em produção (Vercel/Netlify) usa caminho absoluto a partir da raiz */
+  if (window.location.hostname !== 'localhost' && !window.location.hostname.includes('127.0.0.1')) {
+    return `/components/${component}`;
+  }
+  /* Em dev local resolve relativo à profundidade da página */
   const depth = (window.location.pathname.match(/\//g) || []).length - 1;
   const prefix = depth > 0 ? '../'.repeat(depth) : './';
   return `${prefix}components/${component}`;
@@ -159,10 +164,14 @@ function initPageLoader() {
   const loader = document.getElementById('page-loader');
   if (!loader) return;
 
-  window.addEventListener('load', () => {
+  function dismissLoader() {
     loader.classList.add('fade-out');
     setTimeout(() => loader.remove(), 350);
-  });
+  }
+
+  /* Dispara no load ou em até 1.5s — o que vier primeiro */
+  window.addEventListener('load', dismissLoader);
+  setTimeout(dismissLoader, 1500);
 }
 
 /* ── 4. ANIMAÇÕES DE ENTRADA (Intersection Observer) ────────── */
