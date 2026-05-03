@@ -1,0 +1,348 @@
+/* ============================================================
+   CVAT Brasil — sobre.css
+   Estilos específicos da página Sobre
+   ============================================================ */
+
+/* ── HERO ────────────────────────────────────────────────────── */
+.sobre-hero {
+  background: linear-gradient(135deg, var(--color-gray-900) 0%, #1e293b 100%);
+  color: var(--color-white);
+  padding-block: var(--space-16) var(--space-12);
+}
+
+.sobre-hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+@media (min-width: 1024px) {
+  .sobre-hero-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-16);
+  }
+  .sobre-hero-content { flex: 1; }
+}
+
+.sobre-hero-content .section-label { color: rgba(255,255,255,.6); }
+
+.sobre-hero h1 {
+  color: var(--color-white);
+  margin-block: var(--space-4) var(--space-5);
+}
+
+.sobre-hero-accent { color: #93c5fd; }
+
+.sobre-hero-desc {
+  font-size: var(--text-lg);
+  color: rgba(255,255,255,.8);
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+/* Stats no hero */
+.sobre-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .sobre-hero-stats {
+    width: 320px;
+  }
+}
+
+.sobre-stat {
+  background-color: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-align: center;
+}
+
+.sobre-stat-num {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.sobre-stat-label {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,.6);
+  line-height: 1.4;
+}
+
+/* ── MISSÃO / VISÃO / VALORES ────────────────────────────────── */
+.mvv-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) { .mvv-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.mvv-card {
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+  border-top: 4px solid;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.mvv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.mvv-card--blue  { border-color: var(--color-blue); }
+.mvv-card--green { border-color: var(--color-green); }
+.mvv-card--coral { border-color: var(--color-coral); }
+
+.mvv-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
+.mvv-card--blue  .mvv-icon { background-color: var(--color-blue-light); color: var(--color-blue); }
+.mvv-card--green .mvv-icon { background-color: #d1fae5; color: var(--color-green); }
+.mvv-card--coral .mvv-icon { background-color: #fde8de; color: var(--color-coral); }
+
+.mvv-card h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-3);
+}
+
+.mvv-card p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  line-height: 1.8;
+}
+
+/* ── TIMELINE ────────────────────────────────────────────────── */
+.timeline {
+  position: relative;
+  max-width: 760px;
+  padding-left: var(--space-8);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-blue) 0%,
+    var(--color-green) 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .timeline { padding-left: var(--space-12); }
+  .timeline::before { left: 28px; }
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: var(--space-8);
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-marker {
+  position: absolute;
+  left: calc(-1 * var(--space-8) - 4px);
+  top: 4px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .timeline-marker { left: calc(-1 * var(--space-12) - 4px); }
+}
+
+.timeline-marker--now {
+  background-color: var(--color-green);
+}
+
+.timeline-item--now .timeline-content {
+  border-color: var(--color-green);
+}
+
+.timeline-content {
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.timeline-content:hover {
+  border-color: var(--color-blue);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-content h3 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.timeline-content p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  line-height: 1.75;
+}
+
+/* ── EQUIPE ──────────────────────────────────────────────────── */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 480px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .team-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.team-card {
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-4);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.team-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.team-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.team-avatar--blue  { background-color: var(--color-blue-light); color: var(--color-blue); }
+.team-avatar--green { background-color: #d1fae5; color: var(--color-green); }
+.team-avatar--coral { background-color: #fde8de; color: var(--color-coral); }
+.team-avatar--teal  { background-color: #cffafe; color: #0e7490; }
+
+.team-name {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.team-role {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-blue);
+  margin-top: calc(-1 * var(--space-2));
+}
+
+.team-bio {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.team-social { display: flex; justify-content: center; }
+
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-500);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.team-social-link:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.team-note {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  margin-top: var(--space-6);
+  font-style: italic;
+}
+
+/* ── IMPRENSA ────────────────────────────────────────────────── */
+.press-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) { .press-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.press-item {
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.press-quote {
+  font-size: var(--text-sm);
+  color: var(--color-gray-700);
+  line-height: 1.8;
+  font-style: italic;
+  flex: 1;
+}
+
+.press-quote::before { content: '\201C'; }
+.press-quote::after  { content: '\201D'; }
+
+.press-source {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-blue);
+  letter-spacing: .04em;
+}
