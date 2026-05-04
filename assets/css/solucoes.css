@@ -1,0 +1,515 @@
+/* ============================================================
+   CVAT Brasil — solucoes.css
+   Estilos compartilhados pelas páginas de soluções
+   ============================================================ */
+
+/* ── HERO ────────────────────────────────────────────────────── */
+.sol-hero {
+  padding-block: var(--space-20) var(--space-16);
+  position: relative;
+  overflow: hidden;
+  color: var(--color-white);
+}
+
+.sol-hero--blue {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 60%, #3b82f6 100%);
+}
+.sol-hero--indigo {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #4338ca 100%);
+}
+.sol-hero--teal {
+  background: linear-gradient(135deg, #0d3d56 0%, #0e7490 60%, #22d3ee 100%);
+}
+.sol-hero--green {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 60%, #059669 100%);
+}
+
+.sol-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.sol-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .sol-hero-inner { grid-template-columns: 1fr 420px; gap: var(--space-16); }
+}
+
+.sol-hero-content h1 {
+  color: var(--color-white);
+  margin-block: var(--space-4) var(--space-5);
+}
+
+.sol-hero-accent { color: #93c5fd; }
+.sol-hero-accent--teal { color: #67e8f9; }
+.sol-hero-accent--green { color: #6ee7b7; }
+.sol-hero-accent--indigo { color: #a5b4fc; }
+
+.sol-hero-desc {
+  font-size: var(--text-base);
+  color: rgba(255,255,255,.82);
+  line-height: 1.8;
+  margin-bottom: var(--space-8);
+  max-width: 560px;
+}
+
+.sol-hero-ctas {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Métricas hero */
+.sol-hero-metrics {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.sol-hero-metric-value {
+  display: block;
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+}
+
+.sol-hero-metric-label {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,.65);
+}
+
+/* Painel visual hero */
+.sol-hero-panel {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: 0 24px 64px rgba(0,0,0,.25);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sol-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.sol-panel-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.sol-panel-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-blue-light);
+  color: var(--color-blue);
+}
+
+.sol-panel-score {
+  text-align: center;
+  padding-block: var(--space-2);
+}
+
+.sol-panel-score-value {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--color-blue);
+  line-height: 1;
+}
+
+.sol-panel-score-label {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  margin-top: 4px;
+}
+
+/* Barras no painel */
+.sol-panel-bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sol-panel-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sol-panel-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--color-gray-600);
+}
+
+.sol-panel-bar-track {
+  height: 8px;
+  background-color: var(--color-gray-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.sol-panel-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--color-blue) 0%, #60a5fa 100%);
+}
+
+.sol-panel-bar-fill--green  { background: linear-gradient(90deg, var(--color-green) 0%, #6ee7b7 100%); }
+.sol-panel-bar-fill--coral  { background: linear-gradient(90deg, var(--color-coral) 0%, #fca5a5 100%); }
+.sol-panel-bar-fill--yellow { background: linear-gradient(90deg, #d97706 0%, #fcd34d 100%); }
+
+/* ── SEÇÃO: COMO FUNCIONA ────────────────────────────────────── */
+.sol-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  counter-reset: sol-step;
+}
+
+@media (min-width: 768px) { .sol-steps { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .sol-steps { grid-template-columns: repeat(4, 1fr); } }
+
+.sol-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .sol-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: calc(100% + var(--space-2));
+    width: calc(var(--space-8) - var(--space-2) * 2);
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-gray-300) 0%, transparent 100%);
+    border-radius: 1px;
+  }
+}
+
+.sol-step-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: var(--text-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+}
+
+.sol-step-num--green  { background-color: var(--color-green); }
+.sol-step-num--teal   { background-color: #0e7490; }
+
+.sol-step-body { flex: 1; }
+
+.sol-step-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.sol-step-desc {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  line-height: 1.7;
+}
+
+/* ── SEÇÃO: FUNCIONALIDADES ──────────────────────────────────── */
+.sol-features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px)  { .sol-features-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .sol-features-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.sol-feature-card {
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.sol-feature-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.sol-feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-blue-light);
+  color: var(--color-blue);
+}
+
+.sol-feature-icon--green { background-color: #d1fae5; color: var(--color-green); }
+.sol-feature-icon--teal  { background-color: #cffafe; color: #0e7490; }
+.sol-feature-icon--coral { background-color: #fde8de; color: var(--color-coral); }
+
+.sol-feature-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.sol-feature-desc {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  line-height: 1.7;
+}
+
+/* ── SEÇÃO: RESULTADOS / MÉTRICAS ────────────────────────────── */
+.sol-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) { .sol-metrics-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.sol-metric-card {
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.sol-metric-value {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--color-blue);
+}
+
+.sol-metric-value--green { color: var(--color-green); }
+.sol-metric-value--coral { color: var(--color-coral); }
+
+.sol-metric-label {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  line-height: 1.5;
+}
+
+/* ── SEÇÃO: PARA QUEM ────────────────────────────────────────── */
+.sol-audience-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) { .sol-audience-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.sol-audience-card {
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  background-color: var(--color-white);
+}
+
+.sol-audience-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-blue-light);
+  color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sol-audience-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-1);
+}
+
+.sol-audience-desc {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  line-height: 1.6;
+}
+
+/* ── RELATÓRIO / PREVIEW ─────────────────────────────────────── */
+.sol-report-preview {
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.sol-report-bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--color-blue) 0%, #60a5fa 100%);
+}
+
+.sol-report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-gray-200);
+  background-color: var(--color-gray-100);
+}
+
+.sol-report-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.sol-report-body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ── FAQ ─────────────────────────────────────────────────────── */
+.sol-faq {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+/* ── TESTEMUNHO ──────────────────────────────────────────────── */
+.sol-testimonial {
+  max-width: 780px;
+  margin-inline: auto;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+}
+
+.sol-testimonial-quote {
+  font-size: var(--text-lg);
+  color: var(--color-gray-700);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: var(--space-5);
+}
+
+.sol-testimonial-quote::before { content: '\201C'; }
+.sol-testimonial-quote::after  { content: '\201D'; }
+
+.sol-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.sol-testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sol-testimonial-avatar--green { background-color: var(--color-green); }
+.sol-testimonial-avatar--teal  { background-color: #0e7490; }
+
+.sol-testimonial-name {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.sol-testimonial-role {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+}
+
+/* ── CHECKLIST ───────────────────────────────────────────────── */
+.sol-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sol-checklist li {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  font-size: var(--text-sm);
+  color: var(--color-gray-700);
+  line-height: 1.6;
+}
+
+.sol-checklist li::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 50%;
+  background-color: var(--color-blue-light);
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6l2.5 2.5L10 3.5' stroke='%231d4ed8' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.sol-checklist--green li::before {
+  background-color: #d1fae5;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6l2.5 2.5L10 3.5' stroke='%23059669' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
