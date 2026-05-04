@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Páginas de confirmação e formulários — sem valor para buscadores
+Disallow: /pages/obrigado
+Disallow: /pages/obrigado.html
+
+# Sitemap
+Sitemap: https://cvatbrasil.com.br/sitemap.xml
