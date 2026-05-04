@@ -14,9 +14,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: var(--space-16);
+    gap: var(--space-10);
+    min-width: 0; /* impede que o grid expanda além do container */
   }
 }
+
+.hero-inner > * { min-width: 0; } /* impede que filhos do grid causem overflow */
 
 .hero-highlight {
   font-style: normal;
@@ -26,6 +29,7 @@
 .hero-visual {
   display: none;
   position: relative;
+  overflow: visible; /* os floats precisam aparecer fora do card */
 }
 
 @media (min-width: 1024px) {

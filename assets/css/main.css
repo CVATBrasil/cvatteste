@@ -84,6 +84,7 @@ body {
   background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  overflow-x: hidden; /* impede barra de rolagem horizontal */
 }
 
 img, video, svg {
@@ -224,6 +225,7 @@ em     { font-style: italic; }
 
 /* Grid utilitário */
 .grid { display: grid; gap: var(--space-6); }
+.grid > * { min-width: 0; }
 .grid-2 { grid-template-columns: 1fr; }
 .grid-3 { grid-template-columns: 1fr; }
 .grid-4 { grid-template-columns: 1fr; }
