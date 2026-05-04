@@ -8,14 +8,18 @@
 
 /**
  * Resolve o caminho do componente relativo à raiz do site,
- * independente da profundidade da página atual.
+ * independente da profundidade da página atual ou do subdiretório de hospedagem.
+ * Usa o src do próprio script (sempre URL absoluta) para calcular a raiz.
  */
 function resolveComponentPath(component) {
-  /* Em produção (Vercel/Netlify) usa caminho absoluto a partir da raiz */
-  if (window.location.hostname !== 'localhost' && !window.location.hostname.includes('127.0.0.1')) {
-    return `/components/${component}`;
+  const scripts = Array.from(document.querySelectorAll('script[src]'));
+  const mainScript = scripts.find(s => s.getAttribute('src').includes('main.js'));
+  if (mainScript) {
+    /* mainScript.src é sempre URL absoluta; main.js fica em <root>/assets/js/main.js */
+    const base = mainScript.src.replace(/assets\/js\/main\.js(\?.*)?$/, '');
+    return `${base}components/${component}`;
   }
-  /* Em dev local resolve relativo à profundidade da página */
+  /* Fallback: path relativo pela profundidade */
   const depth = (window.location.pathname.match(/\//g) || []).length - 1;
   const prefix = depth > 0 ? '../'.repeat(depth) : './';
   return `${prefix}components/${component}`;
