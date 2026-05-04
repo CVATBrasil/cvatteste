@@ -8,14 +8,15 @@
 
     <!-- Logo -->
     <a href="/index.html" class="header-logo" aria-label="CVAT Brasil — página inicial">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-        <rect width="36" height="36" rx="8" fill="var(--color-blue)"/>
-        <path d="M10 18C10 13.582 13.582 10 18 10C20.48 10 22.71 11.074 24.27 12.79L21.44 15.19C20.6 14.446 19.35 14 18 14C15.79 14 14 15.79 14 18C14 20.21 15.79 22 18 22C19.35 22 20.6 21.554 21.44 20.81L24.27 23.21C22.71 24.926 20.48 26 18 26C13.582 26 10 22.418 10 18Z" fill="white"/>
-        <path d="M22 15H26V21H22V15Z" fill="var(--color-green)"/>
+      <!-- Ícone: quadrado laranja com C branco -->
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" rx="8" fill="#F04923"/>
+        <!-- C shape: arco externo raio 13 + arco interno raio 8, abertura à direita ±45° -->
+        <path d="M 27.2 10.5 A 13 13 0 1 0 27.2 27.5 L 23.8 24.2 A 8.5 8.5 0 1 1 23.8 13.8 Z" fill="white"/>
       </svg>
       <span class="header-logo-text">
-        <span class="header-logo-brand">CVAT</span>
-        <span class="header-logo-suffix">Brasil</span>
+        <span class="header-logo-brand">VAT</span>
+        <span class="header-logo-suffix">Personal Value Profile</span>
       </span>
     </a>
 
@@ -224,16 +225,16 @@
 .header-logo-brand {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--color-blue);
-  letter-spacing: .04em;
+  font-size: 1.3rem;
+  color: #0A1628;
+  letter-spacing: .02em;
 }
 
 .header-logo-suffix {
   font-family: var(--font-body);
-  font-size: var(--text-xs);
+  font-size: .6rem;
   color: var(--color-gray-500);
-  letter-spacing: .06em;
+  letter-spacing: .04em;
 }
 
 /* ── NAV (desktop) ───────────────────────────────────────────── */
