@@ -1,6 +1,6 @@
 /**
  * CVAT Brasil — forms.js
- * Validação em tempo real e submit via Formspree para o formulário
+ * Validação em tempo real e submit via API PHP para o formulário
  * de diagnóstico. Sem reload.
  */
 

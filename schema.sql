@@ -88,4 +88,26 @@ CREATE TABLE IF NOT EXISTS `leads` (
   KEY `idx_ativo` (`ativo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- ------------------------------------------------------------
+-- Tabela: diagnosticos  (submissões do diagnóstico gratuito)
+-- ------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `diagnosticos` (
+  `id`            INT UNSIGNED  NOT NULL AUTO_INCREMENT,
+  `nome`          VARCHAR(255)  NOT NULL,
+  `email`         VARCHAR(255)  NOT NULL,
+  `telefone`      VARCHAR(50)   NOT NULL,
+  `cargo`         VARCHAR(100)  NOT NULL,
+  `empresa`       VARCHAR(255)  NOT NULL,
+  `setor`         VARCHAR(100)  NOT NULL,
+  `colaboradores` VARCHAR(20)   NOT NULL,
+  `interesse`     ENUM('clima','nr01','saude-mental','tudo') NOT NULL,
+  `desafio`       TEXT          DEFAULT NULL,
+  `ip`            VARCHAR(45)   DEFAULT NULL,
+  `lido`          TINYINT(1)    NOT NULL DEFAULT 0,
+  `criado_em`     TIMESTAMP     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `idx_lido` (`lido`),
+  KEY `idx_criado_em` (`criado_em`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 SET FOREIGN_KEY_CHECKS = 1;
