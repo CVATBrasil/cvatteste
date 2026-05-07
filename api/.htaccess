@@ -1,0 +1,8 @@
+Options -Indexes
+
+# Protege config.php de acesso direto (redundante — PHP nunca expõe código,
+# mas bloqueia caso o servidor sirva .php como texto em configs incorretas)
+<Files "config.php">
+    Order deny,allow
+    Deny from all
+</Files>

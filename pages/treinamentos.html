@@ -270,16 +270,21 @@
 
       const grid = document.getElementById('trein-grid');
 
-      /* Resolve root URL from main.js src — same technique as resolveComponentPath */
+      /* Resolve base URL from main.js src (absolute URL no browser) */
       const mainSrc = document.querySelector('script[src*="main.js"]')?.src ?? '';
-      const dataBase = mainSrc
-        ? mainSrc.replace(/assets\/js\/main\.js(\?.*)?$/, '') + 'data/'
-        : '../data/';
+      const siteRoot = mainSrc ? mainSrc.replace(/assets\/js\/main\.js(\?.*)?$/, '') : null;
+      const apiUrl   = siteRoot ? siteRoot + 'api/treinamentos.php' : null;
+      const jsonUrl  = siteRoot ? siteRoot + 'data/treinamentos.json' : '../data/treinamentos.json';
 
-      fetch(dataBase + 'treinamentos.json')
-        .then(r => r.json())
+      /* Tenta API PHP primeiro; cai para JSON em dev local */
+      const load = apiUrl
+        ? fetch(apiUrl).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .catch(() => fetch(jsonUrl).then(r => r.json()))
+        : fetch(jsonUrl).then(r => r.json());
+
+      load
         .then(items => { if (grid) grid.innerHTML = items.map(renderCard).join(''); })
-        .catch(err => console.warn('[CVAT] treinamentos.json não carregado', err));
+        .catch(err => console.warn('[CVAT] treinamentos não carregados', err));
 
       /* Filter — queries grid at click time so it works on dynamic cards */
       document.querySelectorAll('.trein-filter-btn').forEach(btn => {

@@ -233,19 +233,24 @@
         </article>`;
       }
 
-      /* ── Data path ── */
-      const mainSrc = document.querySelector('script[src*="main.js"]')?.src ?? '';
-      const dataBase = mainSrc
-        ? mainSrc.replace(/assets\/js\/main\.js(\?.*)?$/, '') + 'data/'
-        : '../../data/';
+      /* ── Data / API path ── */
+      const mainSrc  = document.querySelector('script[src*="main.js"]')?.src ?? '';
+      const siteRoot = mainSrc ? mainSrc.replace(/assets\/js\/main\.js(\?.*)?$/, '') : null;
+      const apiUrl   = siteRoot ? siteRoot + 'api/blog.php' : null;
+      const jsonUrl  = siteRoot ? siteRoot + 'data/blog.json' : '../../data/blog.json';
 
       const featWrap    = document.getElementById('blog-featured-wrap');
       const grid        = document.getElementById('blog-grid');
       const empty       = document.getElementById('blog-empty');
       const loadMoreTxt = document.querySelector('.blog-load-more-text');
 
-      fetch(dataBase + 'blog.json')
-        .then(r => r.json())
+      /* Tenta API PHP primeiro; cai para JSON em dev local */
+      const load = apiUrl
+        ? fetch(apiUrl).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .catch(() => fetch(jsonUrl).then(r => r.json()))
+        : fetch(jsonUrl).then(r => r.json());
+
+      load
         .then(items => {
           const featured = items.find(i => i.destaque);
           const cards    = items.filter(i => !i.destaque);
@@ -258,7 +263,7 @@
           setupInteractions();
         })
         .catch(err => {
-          console.warn('[CVAT] blog.json não carregado', err);
+          console.warn('[CVAT] blog não carregado', err);
           setupInteractions();
         });
 
