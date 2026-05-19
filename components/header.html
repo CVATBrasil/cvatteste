@@ -187,13 +187,13 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--color-white);
-  border-bottom: 1.5px solid var(--color-gray-200);
+  background-color: #011633;
+  border-bottom: 1.5px solid rgba(255,255,255,.08);
   transition: box-shadow var(--transition);
 }
 
 .site-header.scrolled {
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 2px 16px rgba(0,0,0,.35);
 }
 
 .header-inner {
@@ -216,7 +216,7 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.3rem;
-  color: #011633;
+  color: var(--color-white);
   letter-spacing: .02em;
 }
 
@@ -244,7 +244,7 @@
   padding: var(--space-2) var(--space-2);
   font-size: .8rem;
   font-weight: 600;
-  color: var(--color-gray-700);
+  color: rgba(255,255,255,.85);
   border-radius: var(--radius-md);
   transition: color var(--transition), background-color var(--transition);
   background: none;
@@ -264,11 +264,11 @@
 
 .nav-link:hover,
 .nav-link:focus-visible {
-  color: var(--color-blue);
-  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  background-color: rgba(255,255,255,.1);
 }
 
-.nav-link.active { color: var(--color-blue); }
+.nav-link.active { color: var(--color-white); }
 
 .nav-badge {
   display: inline-block;
@@ -395,13 +395,13 @@
   cursor: pointer;
 }
 
-.hamburger:hover { background-color: var(--color-gray-100); }
+.hamburger:hover { background-color: rgba(255,255,255,.1); }
 
 .hamburger-bar {
   display: block;
   width: 22px;
   height: 2px;
-  background-color: var(--color-gray-700);
+  background-color: var(--color-white);
   border-radius: 2px;
   transition: transform var(--transition), opacity var(--transition);
   transform-origin: center;
