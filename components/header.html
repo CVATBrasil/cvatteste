@@ -1,0 +1,504 @@
+<!-- ============================================================
+     CVAT Brasil — components/header.html
+     Nav sticky, mega-menu dropdowns, hamburguer mobile
+     Carregado via fetch() em todas as páginas
+     ============================================================ -->
+<header class="site-header" id="site-header" role="banner">
+  <div class="header-inner container">
+
+    <!-- Logo -->
+    <a href="/index.html" class="header-logo" aria-label="CVAT Brasil — página inicial">
+      <!-- Ícone: quadrado laranja com C branco -->
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" rx="8" fill="#ff5722"/>
+        <path d="M 27.2 10.5 A 13 13 0 1 0 27.2 27.5 L 23.8 24.2 A 8.5 8.5 0 1 1 23.8 13.8 Z" fill="white"/>
+      </svg>
+      <span class="header-logo-brand">VAT</span>
+    </a>
+
+    <!-- Nav principal (desktop) -->
+    <nav class="header-nav" id="header-nav" role="navigation" aria-label="Navegação principal">
+      <ul class="nav-list" role="list">
+
+        <!-- Soluções (dropdown) -->
+        <li class="nav-item has-dropdown">
+          <button class="nav-link nav-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-solucoes">
+            Soluções
+            <svg class="nav-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="dropdown" id="dropdown-solucoes" role="region">
+            <ul class="dropdown-list" role="list">
+              <li>
+                <a href="/pages/solucoes/cvat.html" class="dropdown-link">
+                  <span class="dropdown-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="var(--color-blue)" stroke-width="1.8"/><path d="M7 10l2 2 4-4" stroke="var(--color-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span>
+                    <strong>CVAT</strong>
+                    <small>Avaliação de clima e cultura</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="/pages/solucoes/hse-it.html" class="dropdown-link">
+                  <span class="dropdown-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="3" stroke="var(--color-blue)" stroke-width="1.8"/><path d="M7 10h6M10 7v6" stroke="var(--color-blue)" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  </span>
+                  <span>
+                    <strong>HSE-IT</strong>
+                    <small>Saúde, segurança e meio ambiente</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="/pages/solucoes/copsoq.html" class="dropdown-link">
+                  <span class="dropdown-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3a7 7 0 100 14A7 7 0 0010 3z" stroke="var(--color-blue)" stroke-width="1.8"/><path d="M10 7v4l2.5 2.5" stroke="var(--color-blue)" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  </span>
+                  <span>
+                    <strong>COPSOQ III</strong>
+                    <small>Riscos psicossociais no trabalho</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="/pages/solucoes/gestor-nr01.html" class="dropdown-link">
+                  <span class="dropdown-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 5h12M4 10h8M4 15h10" stroke="var(--color-blue)" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  </span>
+                  <span>
+                    <strong>Gestor NR-01</strong>
+                    <small>Plataforma de gestão de compliance</small>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Para quem (dropdown) -->
+        <li class="nav-item has-dropdown">
+          <button class="nav-link nav-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-paraquem">
+            Para quem
+            <svg class="nav-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="dropdown" id="dropdown-paraquem" role="region">
+            <ul class="dropdown-list" role="list">
+              <li>
+                <a href="/pages/para-empresas.html" class="dropdown-link">
+                  <span class="dropdown-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="7" width="16" height="11" rx="2" stroke="var(--color-blue)" stroke-width="1.8"/><path d="M7 7V5a3 3 0 016 0v2" stroke="var(--color-blue)" stroke-width="1.8"/></svg>
+                  </span>
+                  <span>
+                    <strong>Para Empresas</strong>
+                    <small>Diretores, gestores e lideranças</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="/pages/para-rh.html" class="dropdown-link">
+                  <span class="dropdown-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="3" stroke="var(--color-blue)" stroke-width="1.8"/><path d="M4 17c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="var(--color-blue)" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  </span>
+                  <span>
+                    <strong>Para RH</strong>
+                    <small>Profissionais de recursos humanos</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="/pages/para-consultores.html" class="dropdown-link">
+                  <span class="dropdown-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 17l4-4m0 0l2-6 6-4-4 6-6 2z" stroke="var(--color-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span>
+                    <strong>Para Consultores</strong>
+                    <small>Psicólogos e consultores de SST</small>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- NR-01 -->
+        <li class="nav-item">
+          <a href="/pages/nr01.html" class="nav-link">
+            NR-01
+            <span class="nav-badge">Novo</span>
+          </a>
+        </li>
+
+        <!-- Treinamentos -->
+        <li class="nav-item">
+          <a href="/pages/treinamentos.html" class="nav-link">Treinamentos</a>
+        </li>
+
+        <!-- Blog -->
+        <li class="nav-item">
+          <a href="/pages/blog/index.html" class="nav-link">Blog</a>
+        </li>
+
+        <!-- Sobre -->
+        <li class="nav-item">
+          <a href="/pages/sobre.html" class="nav-link">Sobre</a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Ações (desktop) -->
+    <div class="header-actions">
+      <a href="/pages/diagnostico.html" class="btn btn-secondary btn-sm">
+        Diagnóstico grátis
+      </a>
+      <a href="/pages/contato.html" class="btn btn-primary btn-sm">
+        Falar com especialista
+      </a>
+    </div>
+
+    <!-- Botão hamburguer (mobile) -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-label="Abrir menu de navegação"
+      aria-expanded="false"
+      aria-controls="header-nav"
+      type="button"
+    >
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+
+  </div><!-- /.header-inner -->
+
+  <!-- Overlay mobile -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+</header>
+
+<style>
+/* ── HEADER BASE ──────────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #011633;
+  border-bottom: 1.5px solid rgba(255,255,255,.08);
+  transition: box-shadow var(--transition);
+}
+
+.site-header.scrolled {
+  box-shadow: 0 2px 16px rgba(0,0,0,.35);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--header-height);
+}
+
+/* ── LOGO ────────────────────────────────────────────────────── */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.header-logo-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--color-white);
+  letter-spacing: .02em;
+}
+
+/* ── NAV (desktop) ───────────────────────────────────────────── */
+.header-nav {
+  display: none;
+  margin-left: auto;
+}
+
+@media (min-width: 1024px) {
+  .header-nav { display: flex; }
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-2);
+  font-size: .8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.85);
+  border-radius: var(--radius-md);
+  transition: color var(--transition), background-color var(--transition);
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (min-width: 1280px) {
+  .nav-list { gap: var(--space-1); }
+  .nav-link {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-sm);
+    gap: var(--space-2);
+  }
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--color-white);
+  background-color: rgba(255,255,255,.1);
+}
+
+.nav-link.active { color: var(--color-white); }
+
+.nav-badge {
+  display: inline-block;
+  padding: 1px var(--space-2);
+  background-color: var(--color-coral);
+  color: var(--color-white);
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  border-radius: var(--radius-full);
+  line-height: 1.6;
+}
+
+.nav-chevron {
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-chevron {
+  transform: rotate(180deg);
+}
+
+/* ── DROPDOWN ────────────────────────────────────────────────── */
+.nav-item { position: relative; }
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 280px;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-3);
+  animation: dropdownIn .15s ease;
+}
+
+@keyframes dropdownIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.dropdown.open { display: block; }
+
+.dropdown-list { display: flex; flex-direction: column; gap: var(--space-1); }
+
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-3);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition);
+  text-decoration: none;
+}
+
+.dropdown-link:hover,
+.dropdown-link:focus-visible {
+  background-color: var(--color-blue-light);
+}
+
+.dropdown-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dropdown-link strong {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-gray-900);
+  font-weight: 600;
+}
+
+.dropdown-link small {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  margin-top: 1px;
+}
+
+/* ── HEADER ACTIONS (desktop) ────────────────────────────────── */
+.header-actions {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .header-actions { display: flex; }
+}
+
+/* Botões do header um pouco menores em 1024–1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .header-actions .btn {
+    padding-inline: var(--space-3);
+    font-size: .75rem;
+  }
+}
+
+/* ── HAMBURGUER ──────────────────────────────────────────────── */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  margin-left: auto;
+  transition: background-color var(--transition);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger:hover { background-color: rgba(255,255,255,.1); }
+
+.hamburger-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-white);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+  transform-origin: center;
+}
+
+.hamburger[aria-expanded="true"] .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger[aria-expanded="true"] .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger[aria-expanded="true"] .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (min-width: 1024px) {
+  .hamburger { display: none; }
+}
+
+/* ── NAV MOBILE ──────────────────────────────────────────────── */
+@media (max-width: 1023px) {
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    bottom: 0;
+    width: min(320px, 85vw);
+    background-color: var(--color-white);
+    border-left: 1.5px solid var(--color-gray-200);
+    overflow-y: auto;
+    padding: var(--space-6) var(--space-5);
+    transform: translateX(100%);
+    transition: transform .28s cubic-bezier(.4,0,.2,1);
+    z-index: 999;
+  }
+
+  .header-nav.open {
+    transform: translateX(0);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-1);
+  }
+
+  .nav-link {
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  /* Dropdown mobile: accordion */
+  .dropdown {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-left: 3px solid var(--color-blue-light);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin-left: var(--space-4);
+    margin-top: var(--space-2);
+    padding: var(--space-2);
+    background-color: var(--color-gray-100);
+    animation: none;
+  }
+
+  /* CTA mobile no final do menu */
+  .header-nav::after {
+    content: '';
+    display: block;
+    margin-top: auto;
+  }
+
+  .nav-mobile-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-8);
+    padding-top: var(--space-6);
+    border-top: 1.5px solid var(--color-gray-200);
+  }
+}
+
+/* ── OVERLAY ─────────────────────────────────────────────────── */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: var(--header-height);
+  background-color: rgba(0,0,0,.4);
+  z-index: 998;
+  backdrop-filter: blur(2px);
+}
+
+.nav-overlay.visible { display: block; }
+</style>

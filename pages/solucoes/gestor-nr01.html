@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Gestor NR-01 — Plataforma de Gestão de Conformidade | CVAT Brasil</title>
+  <meta name="description" content="O Gestor NR-01 é a plataforma da CVAT Brasil para gerenciar a conformidade com a NR-01 atualizada: PGR, GRO, planos de ação, prazos e evidências em um painel centralizado." />
+  <link rel="canonical" href="https://cvatbrasil.com.br/pages/solucoes/gestor-nr01" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://cvatbrasil.com.br/pages/solucoes/gestor-nr01" />
+  <meta property="og:title"       content="Gestor NR-01 — Plataforma de Gestão de Conformidade" />
+  <meta property="og:description" content="PGR, GRO, planos de ação e evidências centralizados. Gerencie a conformidade NR-01 sem planilhas e sem risco de autuação." />
+  <meta property="og:image"       content="https://cvatbrasil.com.br/assets/img/og-gestor-nr01.webp" />
+  <meta property="og:locale"      content="pt_BR" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../assets/css/solucoes.css" />
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+  <div class="page-loader" id="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
+  <div id="header-placeholder"></div>
+
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="sol-hero sol-hero--green" aria-labelledby="gnr-hero-heading">
+      <div class="container">
+        <div class="sol-hero-inner">
+
+          <div class="sol-hero-content" data-reveal>
+            <span class="section-label" style="color:rgba(255,255,255,.65)">Gestão de conformidade</span>
+            <h1 id="gnr-hero-heading">
+              Chega de planilha para<br />
+              <span class="sol-hero-accent--green">gerenciar a NR-01</span>
+            </h1>
+            <p class="sol-hero-desc">
+              O Gestor NR-01 centraliza o PGR, o GRO, os planos de ação e todas as evidências de conformidade em uma plataforma única — com alertas de prazo, status por área e documentação pronta para auditorias do MTE.
+            </p>
+            <div class="sol-hero-ctas">
+              <a href="../diagnostico.html" class="btn btn-primary">Solicitar demonstração gratuita</a>
+              <a href="../contato.html" class="btn btn-ghost" style="color:var(--color-white);border-color:rgba(255,255,255,.4)">Falar com especialista</a>
+            </div>
+
+            <div class="sol-hero-metrics">
+              <div>
+                <span class="sol-hero-metric-value">R$ 0</span>
+                <span class="sol-hero-metric-label">risco de autuação MTE</span>
+              </div>
+              <div>
+                <span class="sol-hero-metric-value">100%</span>
+                <span class="sol-hero-metric-label">documentação organizada</span>
+              </div>
+              <div>
+                <span class="sol-hero-metric-value">&lt;2h</span>
+                <span class="sol-hero-metric-label">para onboarding completo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Painel de preview -->
+          <div class="sol-hero-panel" data-reveal data-reveal-delay="2" aria-hidden="true">
+            <div class="sol-panel-header">
+              <span class="sol-panel-title">Gestor NR-01 — Painel</span>
+              <span class="sol-panel-badge" style="background:#d1fae5;color:var(--color-green);">Em conformidade ✔</span>
+            </div>
+
+            <!-- Status geral -->
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-2);">
+              <div style="text-align:center;padding:var(--space-3);background:#d1fae5;border-radius:var(--radius-md);">
+                <div style="font-size:22px;font-weight:700;color:var(--color-green);font-family:var(--font-heading)">12</div>
+                <div style="font-size:10px;color:var(--color-gray-600)">ações concluídas</div>
+              </div>
+              <div style="text-align:center;padding:var(--space-3);background:#fef3c7;border-radius:var(--radius-md);">
+                <div style="font-size:22px;font-weight:700;color:#d97706;font-family:var(--font-heading)">4</div>
+                <div style="font-size:10px;color:var(--color-gray-600)">em andamento</div>
+              </div>
+              <div style="text-align:center;padding:var(--space-3);background:var(--color-gray-100);border-radius:var(--radius-md);">
+                <div style="font-size:22px;font-weight:700;color:var(--color-gray-500);font-family:var(--font-heading)">2</div>
+                <div style="font-size:10px;color:var(--color-gray-600)">a iniciar</div>
+              </div>
+            </div>
+
+            <!-- Lista de ações -->
+            <div style="display:flex;flex-direction:column;gap:var(--space-2);">
+              <div style="display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);background:var(--color-gray-100);border-radius:var(--radius-md);font-size:12px;">
+                <span style="color:var(--color-green);font-weight:700">✔</span>
+                <span style="flex:1;color:var(--color-gray-700)">PGR — Mapeamento de riscos psicossociais</span>
+                <span style="color:var(--color-gray-400);font-size:11px">concluído</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);background:var(--color-gray-100);border-radius:var(--radius-md);font-size:12px;">
+                <span style="color:var(--color-green);font-weight:700">✔</span>
+                <span style="flex:1;color:var(--color-gray-700)">COPSOQ III — Coleta e análise</span>
+                <span style="color:var(--color-gray-400);font-size:11px">concluído</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);background:#fef9c3;border-radius:var(--radius-md);font-size:12px;">
+                <span style="color:#d97706;font-weight:700">◑</span>
+                <span style="flex:1;color:var(--color-gray-700)">Treinamento de líderes — NR-01</span>
+                <span style="color:#d97706;font-size:11px;font-weight:600">vence em 12d</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);background:var(--color-gray-100);border-radius:var(--radius-md);font-size:12px;">
+                <span style="color:var(--color-gray-400);font-weight:700">○</span>
+                <span style="flex:1;color:var(--color-gray-500)">GRO — Revisão anual</span>
+                <span style="color:var(--color-gray-400);font-size:11px">jan/2026</span>
+              </div>
+            </div>
+
+            <div style="font-size:11px;color:var(--color-gray-400);text-align:center">
+              Dados ilustrativos · Última atualização: hoje
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── O PROBLEMA ─────────────────────────────────────────── -->
+    <section class="section" style="background-color:var(--color-gray-100);" aria-labelledby="problema-heading">
+      <div class="container">
+        <div style="max-width:820px;margin-inline:auto;" data-reveal>
+          <span class="section-label">O problema que o Gestor NR-01 resolve</span>
+          <h2 id="problema-heading" style="margin-block:var(--space-3) var(--space-5);">
+            A NR-01 não é um evento — é um processo contínuo
+          </h2>
+          <p style="font-size:var(--text-base);color:var(--color-gray-600);line-height:1.8;margin-bottom:var(--space-6);">
+            A maioria das empresas faz o diagnóstico, monta o PGR e arquiva o relatório. Meses depois, a fiscalização chega e descobre que as ações não foram implementadas, os prazos venceram e nenhuma evidência foi guardada. A autuação é certa — mesmo para quem tinha boas intenções.
+          </p>
+          <p style="font-size:var(--text-base);color:var(--color-gray-600);line-height:1.8;">
+            O Gestor NR-01 foi criado para fechar esse gap: transforma o plano de ação em um processo gerenciado, com responsáveis definidos, prazos visíveis, evidências armazenadas e status de conformidade atualizado em tempo real.
+          </p>
+
+          <!-- Trio de dores -->
+          <div style="display:grid;grid-template-columns:1fr;gap:var(--space-4);margin-top:var(--space-8);">
+            <div style="display:grid;grid-template-columns:1fr;gap:var(--space-4);">
+              <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-5);background:var(--color-white);border:1.5px solid var(--color-gray-200);border-top:3px solid var(--color-coral);border-radius:var(--radius-lg);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex-shrink:0;color:var(--color-coral);margin-top:2px"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <div>
+                  <div style="font-size:var(--text-sm);font-weight:700;color:var(--color-gray-900);margin-bottom:var(--space-1)">Planos que ficam na gaveta</div>
+                  <p style="font-size:var(--text-xs);color:var(--color-gray-500);line-height:1.6">O relatório de diagnóstico é entregue, o plano de ação é criado — e depois ninguém sabe o que foi feito, por quem e quando.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-5);background:var(--color-white);border:1.5px solid var(--color-gray-200);border-top:3px solid var(--color-coral);border-radius:var(--radius-lg);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex-shrink:0;color:var(--color-coral);margin-top:2px"><rect x="3" y="4" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                <div>
+                  <div style="font-size:var(--text-sm);font-weight:700;color:var(--color-gray-900);margin-bottom:var(--space-1)">Prazos legais perdidos</div>
+                  <p style="font-size:var(--text-xs);color:var(--color-gray-500);line-height:1.6">A revisão anual do GRO, o prazo de renovação do PGR e os ciclos de treinamento passam sem que ninguém perceba — até a auditoria chegar.</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-5);background:var(--color-white);border:1.5px solid var(--color-gray-200);border-top:3px solid var(--color-coral);border-radius:var(--radius-lg);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex-shrink:0;color:var(--color-coral);margin-top:2px"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                <div>
+                  <div style="font-size:var(--text-sm);font-weight:700;color:var(--color-gray-900);margin-bottom:var(--space-1)">Evidências espalhadas</div>
+                  <p style="font-size:var(--text-xs);color:var(--color-gray-500);line-height:1.6">Atas, listas de presença, e-mails de aprovação e relatórios salvos em pastas diferentes — impossível montar o dossiê quando o auditor pede.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FUNCIONALIDADES ────────────────────────────────────── -->
+    <section class="section" aria-labelledby="features-heading">
+      <div class="container">
+        <div style="text-align:center;max-width:600px;margin-inline:auto;margin-bottom:var(--space-12);" data-reveal>
+          <span class="section-label">Funcionalidades</span>
+          <h2 id="features-heading" style="margin-block:var(--space-3) var(--space-4);">Tudo para gerenciar a NR-01 sem stress</h2>
+        </div>
+
+        <div class="sol-features-grid">
+
+          <div class="sol-feature-card" data-reveal data-reveal-delay="1">
+            <div class="sol-feature-icon sol-feature-icon--green">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 17V9l7-5 7 5v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 17v-5h4v5" stroke="currentColor" stroke-width="1.8"/></svg>
+            </div>
+            <div class="sol-feature-title">PGR e GRO digitais</div>
+            <p class="sol-feature-desc">Monte e mantenha o Programa de Gerenciamento de Riscos e o GRO diretamente na plataforma, com templates prontos e versionamento automático.</p>
+          </div>
+
+          <div class="sol-feature-card" data-reveal data-reveal-delay="2">
+            <div class="sol-feature-icon sol-feature-icon--green">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="3" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M16 2v4M6 2v4M3 10h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 15l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="sol-feature-title">Plano de ação gerenciado</div>
+            <p class="sol-feature-desc">Cada ação tem owner, prazo, status e campo de evidência. Os responsáveis recebem lembretes automáticos por e-mail conforme a data se aproxima.</p>
+          </div>
+
+          <div class="sol-feature-card" data-reveal data-reveal-delay="3">
+            <div class="sol-feature-icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M11 2C6 2 2 6 2 11s4 9 9 9 9-4 9-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M14 2a8 8 0 016 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="15 7 20 2 20 7 15 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="sol-feature-title">Alertas de prazo legal</div>
+            <p class="sol-feature-desc">O sistema monitora os prazos obrigatórios da NR-01 e notifica o RH com antecedência configurável — nenhuma revisão ou renovação passa em branco.</p>
+          </div>
+
+          <div class="sol-feature-card" data-reveal data-reveal-delay="1">
+            <div class="sol-feature-icon sol-feature-icon--green">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 6h14M4 11h14M4 16h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <div class="sol-feature-title">Repositório de evidências</div>
+            <p class="sol-feature-desc">Armazene atas, listas de presença, relatórios de diagnóstico, aprovações e comunicados vinculados a cada ação — tudo num dossiê organizado e exportável.</p>
+          </div>
+
+          <div class="sol-feature-card" data-reveal data-reveal-delay="2">
+            <div class="sol-feature-icon sol-feature-icon--coral">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><polyline points="3 17 8 12 13 15 19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="sol-feature-title">Dashboard de conformidade</div>
+            <p class="sol-feature-desc">Visão consolidada do status de conformidade por área, por tipo de risco e por prazo — para o RH e para a diretoria acompanharem em tempo real.</p>
+          </div>
+
+          <div class="sol-feature-card" data-reveal data-reveal-delay="3">
+            <div class="sol-feature-icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M15 3l4 4-8 8H7v-4l8-8z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="sol-feature-title">Relatório para auditoria</div>
+            <p class="sol-feature-desc">Exporte um dossiê completo em PDF — com PGR, GRO, evidências das ações e histórico de conformidade — em minutos, sem montar nada na mão.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COMO FUNCIONA ──────────────────────────────────────── -->
+    <section class="section" style="background-color:var(--color-gray-100);" aria-labelledby="como-heading">
+      <div class="container">
+        <div style="text-align:center;max-width:600px;margin-inline:auto;margin-bottom:var(--space-12);" data-reveal>
+          <span class="section-label">Como funciona</span>
+          <h2 id="como-heading" style="margin-block:var(--space-3) var(--space-4);">Do onboarding à conformidade contínua</h2>
+        </div>
+
+        <div class="sol-steps" data-reveal>
+          <div class="sol-step">
+            <div class="sol-step-num sol-step-num--green">1</div>
+            <div class="sol-step-body">
+              <h3 class="sol-step-title">Onboarding guiado</h3>
+              <p class="sol-step-desc">Importamos os dados do seu diagnóstico CVAT ou COPSOQ III, configuramos as áreas e cadastramos os responsáveis. Tudo pronto em menos de 2 horas.</p>
+            </div>
+          </div>
+          <div class="sol-step">
+            <div class="sol-step-num sol-step-num--green">2</div>
+            <div class="sol-step-body">
+              <h3 class="sol-step-title">Montagem do PGR e GRO</h3>
+              <p class="sol-step-desc">Use nossos templates para estruturar o Programa de Gerenciamento de Riscos com os riscos identificados, controles existentes e metas de melhoria.</p>
+            </div>
+          </div>
+          <div class="sol-step">
+            <div class="sol-step-num sol-step-num--green">3</div>
+            <div class="sol-step-body">
+              <h3 class="sol-step-title">Distribuição do plano de ação</h3>
+              <p class="sol-step-desc">Cada ação recebe um responsável e prazo. O sistema envia e-mails automáticos de lembrete e atualiza o status conforme as evidências são enviadas.</p>
+            </div>
+          </div>
+          <div class="sol-step">
+            <div class="sol-step-num sol-step-num--green">4</div>
+            <div class="sol-step-body">
+              <h3 class="sol-step-title">Monitoramento e revisão</h3>
+              <p class="sol-step-desc">Acompanhe o progresso no dashboard. Na revisão anual do GRO, atualize os dados e gere o relatório de auditoria com um clique.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── INTEGRAÇÃO COM O ECOSSISTEMA ───────────────────────── -->
+    <section class="section" aria-labelledby="ecossistema-heading">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr;gap:var(--space-10);align-items:center;" data-reveal>
+          <div style="max-width:700px;margin-inline:auto;text-align:center;">
+            <span class="section-label">Integração com o ecossistema CVAT</span>
+            <h2 id="ecossistema-heading" style="margin-block:var(--space-3) var(--space-5);">
+              Mais poderoso quando conectado ao diagnóstico
+            </h2>
+            <p style="font-size:var(--text-base);color:var(--color-gray-600);line-height:1.8;margin-bottom:var(--space-8);">
+              O Gestor NR-01 funciona standalone — mas alcança seu máximo potencial quando alimentado pelos dados do CVAT ou do COPSOQ III. O diagnóstico gera o plano de ação; o Gestor acompanha a execução.
+            </p>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-4);text-align:left;">
+              <div class="sol-audience-card">
+                <div class="sol-audience-icon" style="background:#e0e7ff;color:#4338ca;">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M10 6v4l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <div class="sol-audience-title">CVAT</div>
+                  <p class="sol-audience-desc">Diagnóstico completo gera plano de ação importado automaticamente.</p>
+                </div>
+              </div>
+              <div class="sol-audience-card">
+                <div class="sol-audience-icon" style="background:#cffafe;color:#0e7490;">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <div class="sol-audience-title">HSE-IT</div>
+                  <p class="sol-audience-desc">Rastreio rápido identifica prioridades que entram direto no plano.</p>
+                </div>
+              </div>
+              <div class="sol-audience-card">
+                <div class="sol-audience-icon" style="background:#e0e7ff;color:#4338ca;">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 5h12M4 10h12M4 15h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <div class="sol-audience-title">COPSOQ III</div>
+                  <p class="sol-audience-desc">Avaliação aprofundada alimenta o PGR com evidências científicas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MÉTRICAS ───────────────────────────────────────────── -->
+    <section class="section" style="background-color:var(--color-gray-100);" aria-labelledby="metricas-heading">
+      <div class="container">
+        <div style="text-align:center;max-width:600px;margin-inline:auto;margin-bottom:var(--space-10);" data-reveal>
+          <span class="section-label">Resultados</span>
+          <h2 id="metricas-heading" style="margin-block:var(--space-3) var(--space-4);">O que as empresas reportam após 6 meses</h2>
+        </div>
+
+        <div class="sol-metrics-grid" data-reveal>
+          <div class="sol-metric-card">
+            <span class="sol-metric-value sol-metric-value--green">−78%</span>
+            <span class="sol-metric-label">tempo gasto em preparação para auditorias</span>
+          </div>
+          <div class="sol-metric-card">
+            <span class="sol-metric-value">100%</span>
+            <span class="sol-metric-label">das ações com prazo monitorado e owner definido</span>
+          </div>
+          <div class="sol-metric-card">
+            <span class="sol-metric-value sol-metric-value--green">0</span>
+            <span class="sol-metric-label">autuações MTE entre os clientes ativos na plataforma</span>
+          </div>
+          <div class="sol-metric-card">
+            <span class="sol-metric-value">3×</span>
+            <span class="sol-metric-label">mais ações concluídas no prazo vs. gestão por planilha</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TESTEMUNHO ─────────────────────────────────────────── -->
+    <section class="section" aria-labelledby="testemunho-heading">
+      <div class="container">
+        <h2 id="testemunho-heading" class="sr-only">Depoimento de cliente</h2>
+        <div class="sol-testimonial" data-reveal>
+          <p class="sol-testimonial-quote">
+            Antes do Gestor NR-01, eu passava duas semanas inteiras preparando a documentação antes de cada visita da fiscalização. Hoje gero o dossiê completo em 20 minutos — e ainda tenho o histórico de tudo que foi feito nos últimos 3 anos organizado por área.
+          </p>
+          <div class="sol-testimonial-author">
+            <div class="sol-testimonial-avatar sol-testimonial-avatar--green">CS</div>
+            <div>
+              <div class="sol-testimonial-name">Camila Souza</div>
+              <div class="sol-testimonial-role">Coordenadora de SST · Grupo Logística Norte (1.200 colaboradores)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ───────────────────────────────────────────────── -->
+    <section class="section" style="background-color:var(--color-gray-100);" aria-labelledby="faq-heading">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:var(--space-10);" data-reveal>
+          <span class="section-label">Perguntas frequentes</span>
+          <h2 id="faq-heading" style="margin-block:var(--space-3) 0;">Dúvidas sobre o Gestor NR-01</h2>
+        </div>
+
+        <div class="sol-faq" data-reveal>
+
+          <details class="faq-item">
+            <summary class="faq-question">O Gestor NR-01 funciona sem ter feito o diagnóstico CVAT?</summary>
+            <div class="faq-answer">
+              <p>Sim. O Gestor NR-01 pode ser utilizado de forma standalone — você cadastra manualmente os riscos identificados, os controles existentes e as ações do plano. Para quem já realizou o diagnóstico CVAT ou COPSOQ III, o processo é ainda mais ágil porque os dados são importados automaticamente.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Quantos usuários podem acessar a plataforma?</summary>
+            <div class="faq-answer">
+              <p>O número de usuários é ilimitado na maioria dos planos. Você pode adicionar gestores de área como responsáveis por ações específicas, sem que eles precisem ter acesso ao diagnóstico completo — cada perfil vê apenas o que é relevante para sua função.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">A plataforma se adapta a empresas com múltiplas unidades?</summary>
+            <div class="faq-answer">
+              <p>Sim. O Gestor NR-01 suporta estruturas multissites com painéis individuais por unidade e uma visão consolidada para o RH corporativo. Grupos com várias empresas também podem gerenciar todos os CNPJs em um único acesso.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">O relatório gerado é aceito pela fiscalização do MTE?</summary>
+            <div class="faq-answer">
+              <p>O dossiê exportado pelo Gestor NR-01 contém o PGR estruturado, o GRO, o histórico de ações com evidências e o registro de revisões periódicas — todos os elementos exigidos pela NR-01 e verificados pelos auditores do Ministério do Trabalho.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Há um período de experiência gratuito?</summary>
+            <div class="faq-answer">
+              <p>Sim. Oferecemos uma demonstração guiada de 60 minutos e acesso de teste por 14 dias, sem compromisso de contratação. Durante o teste, você já pode cadastrar os dados reais da sua empresa e avaliar se a plataforma atende sua necessidade antes de decidir.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA FINAL ──────────────────────────────────────────── -->
+    <section class="section cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-inner" data-reveal>
+          <span class="section-label" style="color:rgba(255,255,255,.65)">Sem planilha, sem risco</span>
+          <h2 id="cta-heading" class="cta-title">Gerencie a NR-01 com a plataforma certa</h2>
+          <p class="cta-desc">Demonstração gratuita de 60 minutos. Veja o Gestor NR-01 funcionando com os dados da sua empresa.</p>
+          <div class="cta-actions">
+            <a href="../diagnostico.html" class="btn btn-white">Solicitar demonstração gratuita</a>
+            <a href="../contato.html"    class="btn btn-ghost-white">Falar com especialista</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../../assets/js/main.js" defer></script>
+
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+  </style>
+</body>
+</html>

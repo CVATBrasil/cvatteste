@@ -1,0 +1,415 @@
+/* ============================================================
+   CVAT Brasil — diagnostico.css
+   Estilos da página de diagnóstico (formulário lead magnet)
+   ============================================================ */
+
+/* ── HERO SPLIT ──────────────────────────────────────────────── */
+.diag-hero {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+}
+
+.diag-hero-inner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .diag-hero-inner { flex-direction: row; min-height: calc(100vh - var(--header-height)); }
+}
+
+/* ── LADO ESQUERDO ───────────────────────────────────────────── */
+.diag-hero-left {
+  background: linear-gradient(145deg, var(--color-blue-dark) 0%, var(--color-blue) 100%);
+  color: var(--color-white);
+  padding-block: var(--space-12) var(--space-10);
+}
+
+@media (min-width: 1024px) {
+  .diag-hero-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.diag-hero-left-inner {
+  max-width: 520px;
+}
+
+.diag-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: rgba(255,255,255,.15);
+  color: var(--color-white);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-5);
+}
+
+.diag-hero-left h1 {
+  color: var(--color-white);
+  margin-bottom: var(--space-5);
+}
+
+.diag-hero-accent {
+  color: #93c5fd;
+}
+
+.diag-hero-desc {
+  font-size: var(--text-base);
+  color: rgba(255,255,255,.85);
+  line-height: 1.8;
+  margin-bottom: var(--space-8);
+}
+
+/* Benefícios */
+.diag-benefits-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  margin-bottom: var(--space-4);
+}
+
+.diag-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.diag-benefit-item {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.diag-benefit-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background-color: rgba(255,255,255,.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.diag-benefit-icon svg { color: var(--color-white); }
+.diag-benefit-icon svg path, .diag-benefit-icon svg rect { stroke: var(--color-white); }
+
+.diag-benefit-item strong {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-1);
+}
+
+.diag-benefit-item p {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,.75);
+  line-height: 1.6;
+}
+
+/* Prova social */
+.diag-social-proof {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background-color: rgba(255,255,255,.08);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.diag-avatars {
+  display: flex;
+}
+
+.diag-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .65rem;
+  margin-left: -8px;
+  flex-shrink: 0;
+}
+
+.diag-avatars .diag-avatar:first-child { margin-left: 0; }
+
+.diag-social-text {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,.85);
+  line-height: 1.5;
+}
+
+.diag-social-text strong { color: var(--color-white); }
+
+/* ── LADO DIREITO (FORMULÁRIO) ───────────────────────────────── */
+.diag-hero-right {
+  background-color: var(--color-gray-100);
+  padding-block: var(--space-10);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .diag-hero-right {
+    width: 520px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    padding-block: var(--space-12);
+    align-items: flex-start;
+  }
+}
+
+.diag-form-wrapper {
+  width: 100%;
+  max-width: 460px;
+  padding-inline: var(--space-5);
+}
+
+@media (min-width: 1024px) {
+  .diag-form-wrapper { padding-inline: var(--space-6); }
+}
+
+.diag-form-header {
+  margin-bottom: var(--space-6);
+}
+
+.diag-form-title {
+  font-size: var(--text-xl);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.diag-form-subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+}
+
+/* ── BARRA DE PROGRESSO ──────────────────────────────────────── */
+.diag-progress {
+  height: 4px;
+  background-color: var(--color-gray-200);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-6);
+  overflow: hidden;
+}
+
+.diag-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-blue), var(--color-green));
+  border-radius: var(--radius-full);
+  transition: width .3s ease;
+}
+
+/* ── FORMULÁRIO ──────────────────────────────────────────────── */
+.diag-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.diag-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 480px) {
+  .diag-form-row { grid-template-columns: 1fr 1fr; gap: 0 var(--space-4); }
+}
+
+/* ── INTEREST CARDS ──────────────────────────────────────────── */
+.diag-interest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.diag-interest-option {
+  cursor: pointer;
+}
+
+.diag-interest-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.diag-interest-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-3);
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-gray-700);
+  transition: border-color var(--transition), background-color var(--transition), color var(--transition);
+  min-height: 80px;
+  cursor: pointer;
+}
+
+.diag-interest-card svg { color: var(--color-gray-500); transition: color var(--transition); }
+
+.diag-interest-option:hover .diag-interest-card,
+.diag-interest-option input:focus-visible + .diag-interest-card {
+  border-color: var(--color-blue);
+  background-color: var(--color-blue-light);
+  color: var(--color-blue);
+}
+
+.diag-interest-card.selected,
+.diag-interest-option input:checked + .diag-interest-card {
+  border-color: var(--color-blue);
+  background-color: var(--color-blue-light);
+  color: var(--color-blue);
+}
+
+.diag-interest-card.selected svg,
+.diag-interest-option input:checked + .diag-interest-card svg { color: var(--color-blue); }
+
+/* ── OPCIONAIS / CONTADORES ──────────────────────────────────── */
+.diag-optional {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  font-weight: 400;
+  margin-left: var(--space-1);
+}
+
+.diag-char-count {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  text-align: right;
+  margin-top: var(--space-1);
+}
+
+/* ── CONSENTIMENTO LGPD ──────────────────────────────────────── */
+.diag-consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  cursor: pointer;
+}
+
+.diag-consent-checkbox {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin-top: 1px;
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: 4px;
+  cursor: pointer;
+  accent-color: var(--color-blue);
+}
+
+.diag-consent-text {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  line-height: 1.7;
+}
+
+.diag-consent-text a {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
+/* ── BOTÃO SUBMIT ────────────────────────────────────────────── */
+.diag-submit {
+  position: relative;
+  overflow: hidden;
+}
+
+.diag-submit.loading {
+  pointer-events: none;
+  opacity: .8;
+}
+
+.diag-submit.loading::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,.4);
+  border-top-color: var(--color-white);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  right: var(--space-5);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ── GARANTIAS ───────────────────────────────────────────────── */
+.diag-guarantees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2) var(--space-5);
+  margin-top: var(--space-4);
+}
+
+.diag-guarantee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+}
+
+/* ── ESTADO DE SUCESSO ───────────────────────────────────────── */
+.diag-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  gap: var(--space-4);
+}
+
+.diag-success-icon { margin-bottom: var(--space-2); }
+
+.diag-success-title {
+  font-size: var(--text-xl);
+  color: var(--color-gray-900);
+}
+
+.diag-success-desc {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  line-height: 1.8;
+  max-width: 380px;
+}
+
+.diag-success-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+  margin-top: var(--space-2);
+}

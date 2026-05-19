@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "titulo": "NR-01 na Prática",
+    "descricao": "Capacitação completa sobre a NR-01 atualizada: identificação de riscos psicossociais, elaboração do PGR e conformidade legal.",
+    "modalidade": "Online ao vivo",
+    "cor": "blue",
+    "categorias": ["rh"],
+    "publico": "RH, SESMT e Gestores de SST",
+    "topicos": [
+      "O que muda com a atualização de 2025",
+      "Como identificar riscos psicossociais",
+      "Elaboração do PGR passo a passo",
+      "Documentação e evidências para fiscalização"
+    ],
+    "cta_texto": "Solicitar treinamento",
+    "cta_link": "/pages/contato.html"
+  },
+  {
+    "id": 2,
+    "titulo": "Liderança e Saúde Mental",
+    "descricao": "Como líderes podem identificar sinais de sofrimento psíquico, criar ambientes seguros e agir preventivamente sem substituir o papel clínico.",
+    "modalidade": "Presencial ou Online",
+    "cor": "blue",
+    "categorias": ["lideranca"],
+    "publico": "Líderes e Gestores",
+    "topicos": [
+      "Sinais de alerta em equipes",
+      "Comunicação empática e não violenta",
+      "Segurança psicológica na prática",
+      "Quando e como encaminhar para suporte"
+    ],
+    "cta_texto": "Solicitar treinamento",
+    "cta_link": "/pages/contato.html"
+  },
+  {
+    "id": 3,
+    "titulo": "Prevenção ao Burnout",
+    "descricao": "Reconhecimento precoce, fatores organizacionais de risco e estratégias de prevenção baseadas em evidências para equipes e lideranças.",
+    "modalidade": "Online ao vivo",
+    "cor": "green",
+    "categorias": ["rh", "equipes"],
+    "publico": "Equipes e RH",
+    "topicos": [
+      "O que é burnout e o que não é",
+      "Fatores organizacionais de risco",
+      "Prevenção primária, secundária e terciária",
+      "Plano de ação para sua equipe"
+    ],
+    "cta_texto": "Solicitar treinamento",
+    "cta_link": "/pages/contato.html"
+  },
+  {
+    "id": 4,
+    "titulo": "COPSOQ III na Prática",
+    "descricao": "Como aplicar, tabular e interpretar o COPSOQ III no contexto brasileiro — da coleta à devolutiva para a liderança.",
+    "modalidade": "Online ao vivo",
+    "cor": "coral",
+    "categorias": ["rh"],
+    "publico": "RH e Consultores",
+    "topicos": [
+      "Estrutura e dimensões do COPSOQ III",
+      "Aplicação e gestão da coleta",
+      "Análise e benchmarking nacional",
+      "Como apresentar os resultados"
+    ],
+    "cta_texto": "Solicitar treinamento",
+    "cta_link": "/pages/contato.html"
+  },
+  {
+    "id": 5,
+    "titulo": "Segurança Psicológica",
+    "descricao": "Baseado na pesquisa de Amy Edmondson e no modelo do Google: como criar times onde as pessoas se sentem seguras para contribuir e inovar.",
+    "modalidade": "Presencial ou Online",
+    "cor": "green",
+    "categorias": ["lideranca", "equipes"],
+    "publico": "Líderes e Equipes",
+    "topicos": [
+      "O que é e o que não é segurança psicológica",
+      "Os 4 estágios do modelo Edmondson",
+      "Práticas de liderança que constroem confiança",
+      "Como medir e acompanhar a evolução"
+    ],
+    "cta_texto": "Solicitar treinamento",
+    "cta_link": "/pages/contato.html"
+  },
+  {
+    "id": 6,
+    "titulo": "Trabalho Remoto e Saúde Mental",
+    "descricao": "Desafios específicos do trabalho remoto e híbrido: isolamento, fronteiras trabalho-vida, comunicação assíncrona e bem-estar digital.",
+    "modalidade": "EAD (assíncrono)",
+    "cor": "coral",
+    "categorias": ["equipes"],
+    "publico": "Equipes Remotas e RH",
+    "topicos": [
+      "Riscos específicos do trabalho remoto",
+      "Rotinas e rituais de equipe à distância",
+      "Ergonomia digital e desconexão",
+      "Políticas de home office saudável"
+    ],
+    "cta_texto": "Solicitar treinamento",
+    "cta_link": "/pages/contato.html"
+  }
+]

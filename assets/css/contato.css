@@ -1,0 +1,245 @@
+/* ============================================================
+   CVAT Brasil — contato.css
+   Estilos da página de contato
+   ============================================================ */
+
+/* ── SPLIT LAYOUT ────────────────────────────────────────────── */
+.contato-split {
+  min-height: calc(100vh - var(--header-height));
+}
+
+.contato-split-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--header-height));
+}
+
+@media (min-width: 1024px) {
+  .contato-split-inner { flex-direction: row; }
+}
+
+/* ── LADO ESQUERDO ───────────────────────────────────────────── */
+.contato-info {
+  background: linear-gradient(145deg, var(--color-blue-dark) 0%, var(--color-blue) 100%);
+  color: var(--color-white);
+  padding-block: var(--space-12) var(--space-10);
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .contato-info {
+    flex: 1;
+    padding-block: var(--space-16);
+  }
+}
+
+.contato-info-inner {
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .contato-info-inner {
+    padding-inline: var(--space-12) var(--space-8);
+    max-width: 560px;
+    margin-inline: 0 auto;
+  }
+}
+
+.contato-info h1 {
+  color: var(--color-white);
+  margin-block: var(--space-4) var(--space-5);
+}
+
+.contato-accent { color: #93c5fd; }
+
+.contato-info-desc {
+  font-size: var(--text-base);
+  color: rgba(255,255,255,.8);
+  line-height: 1.8;
+  margin-bottom: var(--space-8);
+}
+
+/* Motivos de contato */
+.contato-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.contato-reason {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.contato-reason-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background-color: rgba(255,255,255,.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  flex-shrink: 0;
+}
+
+.contato-reason strong {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.contato-reason p {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,.7);
+  line-height: 1.5;
+}
+
+/* Contatos diretos */
+.contato-direct {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.contato-direct-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,.85);
+  transition: color var(--transition);
+  text-decoration: none;
+}
+
+.contato-direct-item:hover { color: var(--color-white); }
+
+.contato-direct-item svg { flex-shrink: 0; }
+
+/* ── LADO DIREITO: FORMULÁRIO ────────────────────────────────── */
+.contato-form-side {
+  background-color: var(--color-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: var(--space-12);
+}
+
+@media (min-width: 1024px) {
+  .contato-form-side {
+    width: 520px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    padding-block: var(--space-16);
+    align-items: flex-start;
+    padding-top: var(--space-12);
+  }
+}
+
+.contato-form-wrapper {
+  width: 100%;
+  max-width: 460px;
+  padding-inline: var(--space-5);
+}
+
+@media (min-width: 1024px) {
+  .contato-form-wrapper { padding-inline: var(--space-6); }
+}
+
+.contato-form-header { margin-bottom: var(--space-6); }
+
+.contato-form-title {
+  font-size: var(--text-xl);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-1);
+}
+
+.contato-form-subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+}
+
+/* Linha dupla */
+.contato-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 480px) {
+  .contato-form-row { grid-template-columns: 1fr 1fr; gap: 0 var(--space-4); }
+}
+
+/* Nota abaixo do botão */
+.contato-form-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  margin-top: var(--space-3);
+}
+
+/* Consentimento — reutiliza classes do diagnostico.css mas definidas aqui também */
+.diag-consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  cursor: pointer;
+}
+
+.diag-consent-checkbox {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin-top: 1px;
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: 4px;
+  cursor: pointer;
+  accent-color: var(--color-blue);
+}
+
+.diag-consent-text {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  line-height: 1.7;
+}
+
+.diag-consent-text a {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
+/* ── ESTADO DE SUCESSO ───────────────────────────────────────── */
+.contato-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-4);
+}
+
+.contato-success-icon { margin-bottom: var(--space-2); }
+
+.contato-success h3 {
+  font-size: var(--text-xl);
+  color: var(--color-gray-900);
+}
+
+.contato-success p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  line-height: 1.8;
+  max-width: 340px;
+}

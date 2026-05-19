@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ── Homepage ──────────────────────────────────────────── -->
+  <url>
+    <loc>https://cvatbrasil.com.br/</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ── Soluções ──────────────────────────────────────────── -->
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/solucoes/cvat</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/solucoes/hse-it</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/solucoes/copsoq</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/solucoes/gestor-nr01</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── NR-01 ─────────────────────────────────────────────── -->
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/nr01</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── Para quem ─────────────────────────────────────────── -->
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/para-empresas</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/para-rh</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/para-consultores</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── Treinamentos ───────────────────────────────────────── -->
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/treinamentos</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── Blog ──────────────────────────────────────────────── -->
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/blog/</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── Sobre ─────────────────────────────────────────────── -->
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/sobre</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── Diagnóstico (formulário) ──────────────────────────── -->
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/diagnostico</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── Contato ───────────────────────────────────────────── -->
+  <url>
+    <loc>https://cvatbrasil.com.br/pages/contato</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
