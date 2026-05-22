@@ -17,8 +17,17 @@ define('DB_PASS',    'sua_senha');        // senha do banco
 define('DB_CHARSET', 'utf8mb4');
 
 /**
- * E-mail que receberá cópia das mensagens do formulário de contato.
- * Deixe vazio para não enviar e-mail (apenas salvar no banco).
+ * E-mail de destino das notificações dos formulários.
+ * Deixe MAIL_TO vazio para desativar o envio (apenas salva no banco).
  */
-define('MAIL_TO',   'contato@cvatbrasil.com.br');
-define('MAIL_FROM', 'noreply@cvatbrasil.com.br');
+define('MAIL_TO',        'cvat@cvatbrasil.com.br');
+define('MAIL_FROM_NAME', 'CVAT Brasil');
+
+/**
+ * SMTP autenticado (Hostinger).
+ * Use o e-mail e senha criados em: Painel → E-mails → Contas de e-mail
+ */
+define('SMTP_HOST', 'smtp.hostinger.com');
+define('SMTP_PORT', 465);
+define('SMTP_USER', 'cvat@cvatbrasil.com.br');  // remetente autenticado
+define('SMTP_PASS', 'sua-senha-de-email');        // senha da conta de e-mail

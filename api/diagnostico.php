@@ -8,6 +8,7 @@
 
 declare(strict_types=1);
 require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/mailer.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     errorResponse('Método não permitido', 405);
@@ -75,7 +76,7 @@ try {
     errorResponse('Erro ao salvar solicitação. Tente novamente.', 500);
 }
 
-/* ── Notificação por e-mail ── */
+/* ── Notificação por e-mail via SMTP ── */
 if (defined('MAIL_TO') && MAIL_TO !== '') {
     $subject = 'Nova solicitação de diagnóstico gratuito — CVAT Brasil';
     $body    = "Nome: {$nome}\n"
@@ -88,14 +89,7 @@ if (defined('MAIL_TO') && MAIL_TO !== '') {
              . "Interesse: {$interesse}\n"
              . ($desafio ? "\nDesafio:\n{$desafio}" : '');
 
-    $headers = implode("\r\n", [
-        'From: ' . MAIL_FROM,
-        'Reply-To: ' . $email,
-        'Content-Type: text/plain; charset=UTF-8',
-        'X-Mailer: CVAT Brasil / PHP',
-    ]);
-
-    @mail(MAIL_TO, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, $headers);
+    smtpSend(MAIL_TO, $subject, $body, $email);
 }
 
 jsonResponse(['ok' => true, 'message' => 'Solicitação recebida! Você receberá o diagnóstico em até 48h.']);
