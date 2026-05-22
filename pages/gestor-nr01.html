@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor NR-01: Liderança, Estratégia e Cultura de Segurança — CVAT Brasil</title>
+  <meta name="description" content="Formação de extensão universitária (60h) para atuar como Gestor de NR-01. Reconhecimento MEC • Certificado Anhanguera." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cvatbrasil.com.br/pages/gestor-nr01" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #011633;
+      --accent: #ff5722;
+      --accent-hover: #e64a19;
+      --muted: #657089;
+      --bg: #ffffff;
+      --card: #f6f8fb;
+      --ok: #18b47b;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 20px;
+      --max: 1140px;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--bg);
+      color: #2b3650;
+      line-height: 1.6;
+    }
+
+    /* ── LAYOUT ── */
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    .gnr-section { padding: 48px 20px; }
+    .grid { display: grid; gap: 24px; }
+    .two { grid-template-columns: 1.2fr .8fr; }
+    .cols-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 900px) {
+      .two, .cols-2, .cols-3 { grid-template-columns: 1fr; }
+    }
+
+    /* ── TIPOGRAFIA ── */
+    h1, h2, h3 { color: var(--ink); margin: 0 0 12px; }
+    h2 { font-size: clamp(22px, 3vw, 30px); font-weight: 700; }
+    h3 { font-size: clamp(16px, 2vw, 20px); font-weight: 700; }
+    p { margin: 0 0 16px; }
+    .muted { color: var(--muted); }
+    .footnote { font-size: .9rem; color: var(--muted); }
+    .title-xl {
+      font-size: clamp(26px, 4.5vw, 42px);
+      font-weight: 900;
+      line-height: 1.15;
+      margin: 0 0 14px;
+      color: #fff;
+    }
+    .subtitle {
+      font-size: clamp(15px, 2vw, 17px);
+      color: #e6edf7;
+      line-height: 1.65;
+      max-width: 820px;
+    }
+
+    /* ── BOTÕES ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .btn-ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.6); }
+    .btn-ghost:hover { background: rgba(255,255,255,.1); }
+    .btn-ghost-dark { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
+    .btn-ghost-dark:hover { background: var(--ink); color: #fff; }
+
+    /* ── CARDS ── */
+    .card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .card-muted {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .module { border-left: 4px solid var(--accent); padding-left: 16px; }
+
+    /* ── LISTAS ── */
+    .list { display: grid; gap: 10px; margin: 12px 0 0; list-style: none; padding: 0; }
+    .list li {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+    .check {
+      width: 20px; height: 20px;
+      border-radius: 6px;
+      background: var(--ok);
+      position: relative;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .check::after {
+      content: "";
+      position: absolute;
+      left: 5px; top: 2px;
+      width: 8px; height: 12px;
+      border: 3px solid #fff;
+      border-top: 0; border-left: 0;
+      transform: rotate(45deg);
+    }
+
+    /* ── BADGES ── */
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 0; }
+    .badge {
+      background: var(--card);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    /* ── HERO ── */
+    .hero-wrap {
+      background:
+        linear-gradient(135deg, rgba(1,22,51,.93), rgba(11,42,102,.86)),
+        url('https://gestornr01.com.br/wp-content/uploads/2025/04/cvat-background-1-1-1-1-1-300x169.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: var(--radius);
+      padding: 56px 40px;
+      box-shadow: var(--shadow);
+      color: #fff;
+    }
+    .hero-btns { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* ── ASIDE CARD ── */
+    .aside-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .seals {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .seals img { max-height: 100px; width: auto; display: block; }
+
+    /* ── INSTRUTOR ── */
+    .instrutor-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .instrutor-card img {
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 14px rgba(0,0,0,.15);
+      flex-shrink: 0;
+    }
+
+    /* ── FAQ ── */
+    .faq dt { font-weight: 900; color: var(--ink); margin-top: 16px; font-size: 1rem; }
+    .faq dd { margin: 6px 0 10px 0; }
+
+    /* ── PREÇO ── */
+    .price { font-size: 38px; font-weight: 900; color: var(--ink); line-height: 1; }
+    .strike { color: #9aa3b2; text-decoration: line-through; font-weight: 700; font-size: 18px; }
+
+    /* ── CTA BARRA STICKY ── */
+    .cta-bar {
+      position: sticky;
+      bottom: 16px;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .cta-wrap {
+      background: #101828;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 999px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      box-shadow: var(--shadow);
+      pointer-events: all;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .cta-wrap span { font-size: .95rem; font-weight: 500; }
+    .cta-wrap .btn { padding: 10px 20px; font-size: 14px; }
+
+    /* ── FUNDO ALTERNADO ── */
+    .bg-muted { background: var(--card); }
+
+    /* ── RODAPÉ SIMPLES ── */
+    .page-footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.65);
+      text-align: center;
+      padding: 20px;
+      font-size: .85rem;
+    }
+    .page-footer a { color: rgba(255,255,255,.8); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- ══ HERO ════════════════════════════════════════════════════ -->
+<section class="gnr-section" id="inicio">
+  <div class="container grid two">
+
+    <!-- Coluna principal -->
+    <div class="hero-wrap">
+      <span class="hero-badge" aria-label="Curso de Extensão Universitária">
+        🎓 Extensão Universitária &bull; 60h &bull; Reconhecimento MEC
+      </span>
+
+      <h1 class="title-xl">
+        Gestor NR-01: Riscos Psicossociais e Cultura de Bem-Estar com o CVAT
+      </h1>
+
+      <p class="subtitle">
+        Formação de extensão universitária (60h) para atuar como <strong>Gestor de NR-01</strong>:
+        implemente e gerencie a norma de forma <strong>proativa e 360º</strong>, com foco em <strong>riscos psicossociais</strong>,
+        integrando o <strong>CVAT</strong> ao <strong>GRO/PGR</strong> por meio do <strong>Framework PROATIVA-SST</strong> para
+        fortalecer uma cultura organizacional <strong>saudável, segura e produtiva</strong>.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#programa" class="btn btn-primary">Ver programa</a>
+        <a href="#preco" class="btn btn-ghost">Fazer inscrição</a>
+      </div>
+    </div>
+
+    <!-- Aside -->
+    <aside class="aside-card" aria-label="Resumo do curso">
+      <div class="seals">
+        <img src="https://gestornr01.com.br/wp-content/uploads/2025/10/logo-anhanguera.png" alt="Anhanguera Educacional" />
+        <img src="https://gestornr01.com.br/wp-content/uploads/2025/10/selo-mec.png" alt="Reconhecimento MEC" />
+      </div>
+      <p style="font-size:.9rem;color:var(--ink);margin-bottom:16px;">
+        <strong>Curso de Extensão Universitária (60h)</strong><br>
+        Reconhecido pelo MEC e certificado pela <strong>Anhanguera Educacional</strong>, em parceria com o <strong>CVAT Brasil</strong>.
+      </p>
+
+      <h3>Você vai conseguir:</h3>
+      <ul class="list">
+        <li><span class="check"></span><span>Planejar e liderar a implantação da NR-01</span></li>
+        <li><span class="check"></span><span>Integrar CVAT, GRO/PGR e ISO 45003</span></li>
+        <li><span class="check"></span><span>Engajar líderes e reduzir resistências</span></li>
+        <li><span class="check"></span><span>Construir indicadores e monitoramento contínuo</span></li>
+        <li><span class="check"></span><span>Conectar SST a resultados de negócio e ESG</span></li>
+      </ul>
+    </aside>
+
+  </div>
+</section>
+
+<!-- ══ PARA QUEM ════════════════════════════════════════════════ -->
+<section class="gnr-section bg-muted" id="para-quem">
+  <div class="container cols-3">
+    <div class="card">
+      <h3>Para quem é</h3>
+      <p>Para quem já atua com SST, RH ou consultoria e quer assumir o papel de <strong>gestor estratégico</strong> da NR-01 — liderando pessoas, processos e indicadores.</p>
+      <div class="badges">
+        <span class="badge">Gestores</span>
+        <span class="badge">Líderes SST</span>
+        <span class="badge">Eng. Segurança</span>
+        <span class="badge">Consultores Sêniores</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Competências-chave</h3>
+      <ul class="list">
+        <li><span class="check"></span><span>Planejamento, governança e priorização</span></li>
+        <li><span class="check"></span><span>Gestão de stakeholders e comunicação interna</span></li>
+        <li><span class="check"></span><span>Indicadores, painéis e rituais de gestão</span></li>
+        <li><span class="check"></span><span>Alinhamento a ESG e risco reputacional</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Formato</h3>
+      <p>Aulas gravadas, estudos de caso, modelos editáveis e suporte. Acesso por 6 meses. Certificado Anhanguera Educacional.</p>
+      <div class="badges">
+        <span class="badge">On-demand</span>
+        <span class="badge">Templates</span>
+        <span class="badge">Certificado</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MÉTODO ══════════════════════════════════════════════════ -->
+<section class="gnr-section" id="metodo">
+  <div class="container cols-2">
+    <div class="card">
+      <h2>Método PROATIVA-SST</h2>
+      <br>
+      <p>
+        <strong>PROATIVA-SST</strong> é um framework de gestão estratégica de Segurança e Saúde no Trabalho,
+        desenhado para transformar a abordagem reativa em um ciclo contínuo de excelência e prevenção.
+        Ele se desdobra em seis fases interconectadas:
+      </p>
+    </div>
+    <div class="card">
+      <h3>PROATIVA-SST</h3>
+      <ul class="list" style="margin-top:12px;">
+        <li><span class="check"></span><span><strong>Preparar:</strong> Estabelecer a base e o compromisso.</span></li>
+        <li><span class="check"></span><span><strong>Reconhecer:</strong> Entender o cenário atual e os desafios.</span></li>
+        <li><span class="check"></span><span><strong>Organizar:</strong> Planejar e estruturar as soluções.</span></li>
+        <li><span class="check"></span><span><strong>Agir:</strong> Executar as ações e implementar as mudanças.</span></li>
+        <li><span class="check"></span><span><strong>Verificar:</strong> Monitorar, medir e auditar os resultados.</span></li>
+        <li><span class="check"></span><span><strong>Evoluir:</strong> Ajustar, otimizar e buscar a melhoria contínua.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROGRAMA ════════════════════════════════════════════════ -->
+<section class="gnr-section bg-muted" id="programa">
+  <div class="container">
+    <h2>Programa do Curso</h2>
+    <p class="muted">Da base normativa à cultura de bem-estar: a jornada completa do Gestor NR-01.</p>
+
+    <div class="cols-2" style="margin-top:24px;">
+
+      <div class="card module">
+        <h3>Módulo 1 — Fundamentos da NR-01 e a Evolução da SST</h3>
+        <ul class="list">
+          <li><span class="check"></span><span>Histórico das NRs e papel da NR-01</span></li>
+          <li><span class="check"></span><span>GRO e PGR — fundamentos da gestão de riscos</span></li>
+          <li><span class="check"></span><span>Método PROATIVA-SST — visão geral das fases</span></li>
+          <li><span class="check"></span><span>Saúde integral no trabalho (físico, mental e social)</span></li>
+        </ul>
+      </div>
+
+      <div class="card module">
+        <h3>Módulo 2 — Riscos Psicossociais na NR-01: O Novo Paradigma</h3>
+        <ul class="list">
+          <li><span class="check"></span><span>Definição e classificação dos riscos psicossociais</span></li>
+          <li><span class="check"></span><span>Impactos nos indivíduos e nas organizações</span></li>
+          <li><span class="check"></span><span>A nova NR-01 e as obrigações legais</span></li>
+        </ul>
+      </div>
+
+      <div class="card module">
+        <h3>Módulo 3 — O CVAT e o Framework PROATIVA-SST: Ferramentas do Gestor</h3>
+        <ul class="list">
+          <li><span class="check"></span><span>Introdução ao CVAT e relatórios aplicáveis</span></li>
+          <li><span class="check"></span><span>Conexão entre CVAT e riscos psicossociais</span></li>
+        </ul>
+      </div>
+
+      <div class="card module">
+        <h3>Módulo 4 — Diagnóstico e Reconhecimento de Riscos com CVAT</h3>
+        <ul class="list">
+          <li><span class="check"></span><span>Aplicação prática do CVAT e áreas de análise</span></li>
+          <li><span class="check"></span><span>Interpretação de relatórios e identificação de gaps</span></li>
+          <li><span class="check"></span><span>Construção do mapa comportamental da empresa</span></li>
+        </ul>
+      </div>
+
+      <div class="card module">
+        <h3>Módulo 5 — Organização e Planejamento de Estratégias</h3>
+        <ul class="list">
+          <li><span class="check"></span><span>Cultura organizacional e alinhamento com a NR-01</span></li>
+          <li><span class="check"></span><span>Segmentação dos colaboradores (alto, médio e baixo compliance)</span></li>
+          <li><span class="check"></span><span>Personalização de treinamentos e capacitação de líderes</span></li>
+        </ul>
+      </div>
+
+      <div class="card module">
+        <h3>Módulo 6 — Ação e Implementação de Medidas</h3>
+        <ul class="list">
+          <li><span class="check"></span><span>Painel de indicadores comportamentais e monitoramento</span></li>
+          <li><span class="check"></span><span>Feedback e reaplicação periódica do CVAT</span></li>
+          <li><span class="check"></span><span>Comunicação interna, engajamento e embaixadores de segurança</span></li>
+          <li><span class="check"></span><span>Reconhecimento e incentivos</span></li>
+        </ul>
+      </div>
+
+      <div class="card module">
+        <h3>Módulo 7 — Verificação e Monitoramento Contínuo (PGR)</h3>
+        <ul class="list">
+          <li><span class="check"></span><span>Integração dos riscos psicossociais ao PGR</span></li>
+          <li><span class="check"></span><span>Plano de ação com base no CVAT</span></li>
+          <li><span class="check"></span><span>Estudos de caso e práticas de elaboração</span></li>
+        </ul>
+      </div>
+
+      <div class="card module">
+        <h3>Módulo 8 — Aprimoramento e Transformação: O Futuro do Gestor NR-01</h3>
+        <ul class="list">
+          <li><span class="check"></span><span>Superando resistências e o estigma da saúde mental</span></li>
+          <li><span class="check"></span><span>Cultura de bem-estar como vantagem competitiva</span></li>
+          <li><span class="check"></span><span>Futuro da SST — tecnologias e inteligência artificial</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESULTADOS ══════════════════════════════════════════════ -->
+<section class="gnr-section" id="resultados">
+  <div class="container cols-2">
+    <div class="card">
+      <h2>Resultados para a organização</h2>
+      <ul class="list">
+        <li><span class="check"></span><span>Implementação da NR-01 com governança e previsibilidade</span></li>
+        <li><span class="check"></span><span>Engajamento de lideranças e redução de resistências</span></li>
+        <li><span class="check"></span><span>Indicadores claros e relatórios executivos</span></li>
+        <li><span class="check"></span><span>Conexão com ESG e reputação corporativa</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Recursos prontos para uso</h3>
+      <ul class="list">
+        <li><span class="check"></span><span>Matriz de riscos, dashboards, playbook de comunicação interna e roteiro de implantação por sprints.</span></li>
+      </ul>
+      <h3 style="margin-top:18px;">Base conceitual</h3>
+      <ul class="list">
+        <li><span class="check"></span><span>Integração de gestão (GRO/PGR), comportamento (CVAT), riscos psicossociais (ISO 45003) e cultura organizacional — traduzidos em método, indicadores e rotinas de gestão.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INSTRUTORES ════════════════════════════════════════════ -->
+<section class="gnr-section bg-muted" id="instrutores">
+  <div class="container">
+    <h2>Quem lidera sua jornada</h2>
+    <p class="muted" style="margin-bottom:28px;">Do diagnóstico à transformação cultural, esta jornada é guiada por quem vive a segurança de dentro das organizações.</p>
+
+    <div class="cols-2">
+      <div class="card">
+        <div class="instrutor-card">
+          <img src="https://gestornr01.com.br/wp-content/uploads/2025/10/foto-alan-silverio.jpg" alt="Prof. Alan Silvério" />
+          <div>
+            <p>
+              <strong>Alan Silvério</strong> — Engenheiro de Segurança do Trabalho, especialista em Gestão de Saúde, Segurança e Meio Ambiente (HSE)
+              e em Gestão de Riscos Ocupacionais. Coautor do <em>Framework PROATIVA-SST</em>, atua na integração das normas
+              <strong>NR-01</strong>, <strong>ISO 45003</strong> e <strong>GRO/PGR</strong>. Ampla experiência em treinamentos corporativos, auditorias e
+              implantação de sistemas de gestão.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="instrutor-card">
+          <img src="https://gestornr01.com.br/wp-content/uploads/2025/10/foto-clovis-soler.jpg" alt="Prof. Dr. Clovis Soler" />
+          <div>
+            <p>
+              <strong>Clovis Soler</strong> — Professor Doutor em Administração de Empresas e pesquisador em Cultura Organizacional e Comportamento no Trabalho.
+              Fundador e diretor do <strong>CVAT Brasil</strong>, responsável pela adaptação do <strong>CVAT</strong> para o contexto brasileiro.
+              Coautor do <em>Framework GESTOR NR-01</em>, com foco em <strong>valores pessoais</strong>, <strong>cultura organizacional</strong> e <strong>gestão de riscos psicossociais</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ═════════════════════════════════════════════════════ -->
+<section class="gnr-section" id="faq">
+  <div class="container">
+    <div class="card" style="max-width:800px;margin:0 auto;">
+      <h2>Perguntas frequentes</h2>
+      <dl class="faq">
+        <dt>Preciso conhecer o CVAT antes?</dt>
+        <dd>Não é obrigatório. O curso aborda a integração do CVAT no contexto de gestão, e você terá materiais de apoio.</dd>
+
+        <dt>O curso é para técnicos ou gestores?</dt>
+        <dd>É focado em <strong>gestão</strong>. Se você quer a camada técnica do CVAT aplicado, recomendamos o curso "CVAT Aplicado à NR-01".</dd>
+
+        <dt>Qual é a carga horária do curso?</dt>
+        <dd>Conforme constará no Certificado, <strong>60 horas</strong>, com muitas atividades práticas para você se tornar um Gestor NR-01 com projetos lucrativos.</dd>
+
+        <dt>Há certificação?</dt>
+        <dd>Sim. Certificado de conclusão emitido pela <strong>Anhanguera Educacional</strong>, reconhecido pelo <strong>MEC</strong>.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PREÇO / CTA ═════════════════════════════════════════════ -->
+<section class="gnr-section bg-muted" id="preco">
+  <div class="container cols-2">
+
+    <div class="card">
+      <h2>Inscreva-se agora</h2>
+      <p class="muted">Formação avançada &bull; 6 meses de acesso &bull; Materiais editáveis</p>
+      <p style="margin:16px 0 4px;"><span class="strike">R$ 1.297</span></p>
+      <p class="price">R$ 997,00</p>
+      <p class="muted" style="margin-top:6px;">ou 12x no cartão de R$ 99,70</p>
+
+      <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
+        <a
+          href="https://pay.voompcreators.com.br/11031/offer/e0NDzt"
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Quero me inscrever no Gestor NR-01"
+        >
+          Quero me inscrever
+        </a>
+        <a
+          href="https://wa.me/5511952460875?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Gestor%20NR-01!"
+          class="btn btn-ghost-dark"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Falar com atendimento"
+        >
+          Falar com atendimento
+        </a>
+      </div>
+      <p class="footnote" style="margin-top:12px;">Condição promocional por tempo limitado. Garantia total de 7 dias.</p>
+    </div>
+
+    <div class="card">
+      <h3>Você recebe</h3>
+      <ul class="list">
+        <li><span class="check"></span><span>8 módulos on-demand + estudos de caso</span></li>
+        <li><span class="check"></span><span>Apresentações executivas e materiais de apoio</span></li>
+        <li><span class="check"></span><span>Playbook de comitê e comunicação interna</span></li>
+        <li><span class="check"></span><span>Roteiro de implantação por sprints</span></li>
+        <li><span class="check"></span><span>Suporte técnico e pedagógico</span></li>
+        <li><span class="check"></span><span>Certificado MEC — Anhanguera Educacional</span></li>
+        <li><span class="check"></span><span><strong>Crédito CVAT Valores Pessoais</strong></span></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ CTA STICKY ═════════════════════════════════════════════ -->
+<div class="cta-bar" aria-hidden="true">
+  <div class="cta-wrap">
+    <span>Pronto para liderar a NR-01 com estratégia e cultura?</span>
+    <a href="#preco" class="btn btn-primary">Começar agora</a>
+  </div>
+</div>
+
+<!-- ══ RODAPÉ ══════════════════════════════════════════════════ -->
+<footer class="page-footer">
+  <p>© CVAT Brasil &bull; Todos os direitos reservados &bull; <a href="https://cvatbrasil.com.br">cvatbrasil.com.br</a></p>
+</footer>
+
+</body>
+</html>
