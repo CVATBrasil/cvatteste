@@ -3,10 +3,10 @@
  * Envio de e-mail via SMTP autenticado (SSL/TLS, porta 465).
  * Usa apenas funções nativas do PHP — sem dependências externas.
  *
- * Configuração em config.php:
+ * Requer em config.php:
  *   define('SMTP_HOST', 'smtp.hostinger.com');
  *   define('SMTP_PORT', 465);
- *   define('SMTP_USER', 'cvat@cvatbrasil.com.br');
+ *   define('SMTP_USER', 'cvat@cvatbrasil.com');
  *   define('SMTP_PASS', 'sua-senha');
  */
 
@@ -19,6 +19,7 @@ function smtpSend(
     string $replyTo = ''
 ): bool {
     if (!defined('SMTP_HOST') || !defined('SMTP_USER') || !defined('SMTP_PASS')) {
+        error_log('smtpSend: constantes SMTP não definidas em config.php');
         return false;
     }
 
@@ -29,72 +30,77 @@ function smtpSend(
 
     $socket = @fsockopen('ssl://' . $host, $port, $errno, $errstr, 10);
     if (!$socket) {
-        error_log("SMTP connect failed: {$errno} {$errstr}");
+        error_log("smtpSend: conexão falhou — {$errno} {$errstr}");
         return false;
     }
 
+    stream_set_timeout($socket, 10);
+
+    /* Lê resposta linha a linha (suporta respostas multi-linha como EHLO) */
     $read = static function () use ($socket): string {
-        $data = '';
-        while (!feof($socket)) {
-            $line = fgets($socket, 515);
-            if ($line === false) break;
-            $data .= $line;
+        $out = '';
+        while (($line = fgets($socket, 515)) !== false) {
+            $out .= $line;
             if (isset($line[3]) && $line[3] === ' ') break;
         }
-        return $data;
+        return $out;
     };
 
-    $send = static function (string $cmd) use ($socket): void {
-        fwrite($socket, $cmd . "\r\n");
-    };
+    $read(); // saudação 220
 
-    $read(); // saudação do servidor
+    fwrite($socket, "EHLO localhost\r\n");
+    $read(); // 250-... (multi-linha)
 
-    $send('EHLO ' . (gethostname() ?: 'localhost'));
-    $read();
+    fwrite($socket, "AUTH LOGIN\r\n");
+    $read(); // 334 VXNlcm5hbWU6
 
-    $send('AUTH LOGIN');
-    $read();
+    fwrite($socket, base64_encode($user) . "\r\n");
+    $read(); // 334 UGFzc3dvcmQ6
 
-    $send(base64_encode($user));
-    $read();
+    fwrite($socket, base64_encode($pass) . "\r\n");
+    $authResp = $read(); // 235 Authentication successful
 
-    $send(base64_encode($pass));
-    $resp = $read();
-    if (strpos($resp, '235') === false) {
-        error_log('SMTP auth failed: ' . $resp);
+    if (strpos($authResp, '235') === false) {
+        error_log('smtpSend: autenticação falhou — ' . trim($authResp));
         fclose($socket);
         return false;
     }
 
-    $send('MAIL FROM:<' . $user . '>');
+    fwrite($socket, "MAIL FROM:<{$user}>\r\n");
     $read();
 
-    $send('RCPT TO:<' . $to . '>');
-    $read();
+    fwrite($socket, "RCPT TO:<{$to}>\r\n");
+    $rcptResp = $read();
+    if (strpos($rcptResp, '250') === false) {
+        error_log('smtpSend: RCPT TO rejeitado — ' . trim($rcptResp));
+        fclose($socket);
+        return false;
+    }
 
-    $send('DATA');
-    $read();
+    fwrite($socket, "DATA\r\n");
+    $read(); // 354
 
     $fromName  = defined('MAIL_FROM_NAME') ? MAIL_FROM_NAME : 'CVAT Brasil';
-    $replyLine = $replyTo ? "Reply-To: {$replyTo}\r\n" : '';
+    $replyLine = $replyTo !== '' ? "Reply-To: {$replyTo}\r\n" : '';
 
-    $message = "From: {$fromName} <{$user}>\r\n"
+    $headers = "From: {$fromName} <{$user}>\r\n"
              . "To: {$to}\r\n"
              . $replyLine
              . 'Subject: =?UTF-8?B?' . base64_encode($subject) . "?=\r\n"
              . "MIME-Version: 1.0\r\n"
              . "Content-Type: text/plain; charset=UTF-8\r\n"
-             . "Content-Transfer-Encoding: base64\r\n"
-             . "\r\n"
-             . chunk_split(base64_encode($body))
-             . "\r\n.";
+             . "\r\n";
 
-    $send($message);
-    $read();
+    fwrite($socket, $headers . $body . "\r\n.\r\n");
+    $sendResp = $read(); // 250 queued
 
-    $send('QUIT');
+    fwrite($socket, "QUIT\r\n");
     fclose($socket);
+
+    if (strpos($sendResp, '250') === false) {
+        error_log('smtpSend: envio não confirmado — ' . trim($sendResp));
+        return false;
+    }
 
     return true;
 }
