@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 require_once __DIR__ . '/db.php';
-require_once __DIR__ . '/mailer.php';
+if (file_exists(__DIR__ . '/mailer.php')) require_once __DIR__ . '/mailer.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     errorResponse('Método não permitido', 405);
@@ -77,19 +77,22 @@ try {
 }
 
 /* ── Notificação por e-mail via SMTP ── */
-if (defined('MAIL_TO') && MAIL_TO !== '') {
-    $subject = 'Nova solicitação de diagnóstico gratuito — CVAT Brasil';
-    $body    = "Nome: {$nome}\n"
-             . "E-mail: {$email}\n"
-             . "Telefone: {$telefone}\n"
-             . "Cargo: {$cargo}\n"
-             . "Empresa: {$empresa}\n"
-             . "Setor: {$setor}\n"
-             . "Colaboradores: {$colaboradores}\n"
-             . "Interesse: {$interesse}\n"
-             . ($desafio ? "\nDesafio:\n{$desafio}" : '');
-
-    smtpSend(MAIL_TO, $subject, $body, $email);
+if (function_exists('smtpSend') && defined('MAIL_TO') && MAIL_TO !== '') {
+    try {
+        $subject = 'Nova solicitação de diagnóstico gratuito — CVAT Brasil';
+        $body    = "Nome: {$nome}\n"
+                 . "E-mail: {$email}\n"
+                 . "Telefone: {$telefone}\n"
+                 . "Cargo: {$cargo}\n"
+                 . "Empresa: {$empresa}\n"
+                 . "Setor: {$setor}\n"
+                 . "Colaboradores: {$colaboradores}\n"
+                 . "Interesse: {$interesse}\n"
+                 . ($desafio ? "\nDesafio:\n{$desafio}" : '');
+        smtpSend(MAIL_TO, $subject, $body, $email);
+    } catch (Throwable $e) {
+        error_log('diagnostico.php smtpSend: ' . $e->getMessage());
+    }
 }
 
 jsonResponse(['ok' => true, 'message' => 'Solicitação recebida! Você receberá o diagnóstico em até 48h.']);
