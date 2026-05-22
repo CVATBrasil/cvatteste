@@ -32,8 +32,46 @@
   <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="stylesheet" href="./assets/css/components.css" />
 
-  <!-- Favicon placeholder -->
   <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://cvatbrasil.com.br/#organization",
+        "name": "CVAT Brasil",
+        "url": "https://cvatbrasil.com.br",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cvatbrasil.com.br/assets/img/favicon.svg"
+        },
+        "description": "Plataforma de diagnóstico organizacional, saúde mental e conformidade NR-01 para empresas brasileiras.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contato@cvatbrasil.com.br",
+          "contactType": "customer service",
+          "availableLanguage": "Portuguese"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://cvatbrasil.com.br/#website",
+        "url": "https://cvatbrasil.com.br",
+        "name": "CVAT Brasil",
+        "description": "Diagnóstico organizacional, saúde mental e conformidade NR-01.",
+        "publisher": { "@id": "https://cvatbrasil.com.br/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://cvatbrasil.com.br/pages/blog/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
