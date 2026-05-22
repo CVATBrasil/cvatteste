@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabalhe Conosco — Braspress</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #fff;
+      color: #004f9e;
+    }
+
+    /* ── HERO ──────────────────────────────────────────────── */
+    .hero {
+      width: 100%;
+      min-height: 400px;
+      background-image: url('https://cvatbrasil.com/wp-content/uploads/2025/04/Divulgacao-das-novas-carretas-1-scaled-1-1-1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* ── TÍTULO BRASPRESS ──────────────────────────────────── */
+    .brand-title {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .brand-title h1 {
+      font-family: 'Stardos Stencil', serif;
+      font-weight: 700;
+      font-size: clamp(64px, 10vw, 120px);
+      color: #F95825;
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── CONTEÚDO PRINCIPAL ────────────────────────────────── */
+    .content {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    /* Coluna esquerda — imagem quadrada */
+    .content-photo img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Coluna direita — texto */
+    .content-text h2 {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 700;
+      color: #004f9e;
+      line-height: 1.1;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+
+    .content-text p {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #004f9e;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .content-text p:last-of-type {
+      margin-bottom: 36px;
+    }
+
+    /* Botão */
+    .btn-teste {
+      display: inline-block;
+      background: #F95825;
+      color: #fff;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 16px 32px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-teste:hover,
+    .btn-teste:focus {
+      background: #d94a1a;
+      outline: none;
+    }
+
+    /* ── RESPONSIVO ────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 200px;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-bottom: 60px;
+      }
+
+      .brand-title {
+        padding: 28px 20px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO: imagem de fundo caminhões Braspress -->
+  <div class="hero" role="img" aria-label="Frota de carretas Braspress"></div>
+
+  <!-- Título da marca -->
+  <div class="brand-title">
+    <h1>BRASPRESS</h1>
+  </div>
+
+  <!-- Conteúdo principal: foto + texto -->
+  <div class="content">
+
+    <!-- Coluna esquerda: foto quadrada -->
+    <div class="content-photo">
+      <img
+        src="https://cvatbrasil.com/wp-content/uploads/2025/04/473569579_1068395335300834_3718489782122241921_n-1-1.jpg"
+        alt="Equipe Braspress"
+        width="600"
+        height="600"
+        loading="eager"
+      />
+    </div>
+
+    <!-- Coluna direita: texto e botão -->
+    <div class="content-text">
+      <h2>TRABALHE CONOSCO</h2>
+
+      <p>
+        A Braspress, líder no transporte de cargas fracionadas no Brasil, está em constante crescimento e busca profissionais talentosos para fazer parte do nosso time.
+      </p>
+
+      <p>
+        Acreditamos que nossos colaboradores são o alicerce do nosso sucesso. Por isso, investimos no desenvolvimento profissional e no bem-estar de cada membro da nossa equipe.
+      </p>
+
+      <p>
+        Se você tem paixão pelo que faz, busca desafios e quer crescer em uma empresa sólida e inovadora, essa é a sua oportunidade.
+      </p>
+
+      <p>
+        Candidate-se agora e venha fazer parte da família Braspress. Juntos, continuaremos a escrever a história de uma empresa que transforma o Brasil!
+      </p>
+
+      <a
+        href="https://www.sistemacvat.com/ui/production/pesquisa.php?coach=NDIy"
+        class="btn-teste"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        FAÇA O TESTE COMPORTAMENTAL!
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
