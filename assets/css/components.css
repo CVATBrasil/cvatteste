@@ -687,3 +687,170 @@
 @media (min-width: 480px) {
   .cta-actions { flex-direction: row; }
 }
+
+/* ── PROFILE CARDS (escolha seu perfil) ─────────────────────── */
+.profile-cards-section {
+  padding-block: var(--space-10);
+}
+
+.profile-cards-lead {
+  text-align: center;
+  font-size: var(--text-base);
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-6);
+}
+
+.profile-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 2px solid transparent;
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.profile-card--blue  { background: var(--color-blue-light); }
+.profile-card--blue:hover  { border-color: var(--color-blue); }
+.profile-card--green { background: #e6f7f1; }
+.profile-card--green:hover { border-color: var(--color-green); }
+.profile-card--coral { background: #fdf0eb; }
+.profile-card--coral:hover { border-color: var(--color-coral); }
+
+.profile-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-card--blue  .profile-card-icon { background: var(--color-blue);  color: #fff; }
+.profile-card--green .profile-card-icon { background: var(--color-green); color: #fff; }
+.profile-card--coral .profile-card-icon { background: var(--color-coral); color: #fff; }
+
+.profile-card h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-gray-900);
+}
+
+.profile-card p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-700);
+  flex: 1;
+}
+
+.profile-card-arrow {
+  align-self: flex-end;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.profile-card--blue  .profile-card-arrow { color: var(--color-blue); }
+.profile-card--green .profile-card-arrow { color: var(--color-green); }
+.profile-card--coral .profile-card-arrow { color: var(--color-coral); }
+
+/* ── PROBLEM SECTION ─────────────────────────────────────────── */
+.problem-section {
+  text-align: center;
+}
+
+.problem-inner {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.problem-title {
+  margin-block: var(--space-3) var(--space-5);
+  line-height: 1.35;
+}
+
+.problem-highlight {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-blue);
+  font-family: var(--font-display);
+}
+
+/* ── NEXT STEPS SECTION ─────────────────────────────────────── */
+.nextstep-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.nextstep-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.nextstep-card:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.nextstep-card--blue  { background: var(--color-blue-light); }
+.nextstep-card--blue:hover  { border-color: var(--color-blue); }
+.nextstep-card--green { background: #e6f7f1; }
+.nextstep-card--green:hover { border-color: var(--color-green); }
+.nextstep-card--coral { background: #fdf0eb; }
+.nextstep-card--coral:hover { border-color: var(--color-coral); }
+
+.nextstep-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nextstep-card--blue  .nextstep-icon { background: var(--color-blue);  color: #fff; }
+.nextstep-card--green .nextstep-icon { background: var(--color-green); color: #fff; }
+.nextstep-card--coral .nextstep-icon { background: var(--color-coral); color: #fff; }
+
+.nextstep-body {
+  flex: 1;
+}
+
+.nextstep-body h4 {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-1);
+}
+
+.nextstep-body p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-700);
+}
+
+.nextstep-card-arrow {
+  color: var(--color-gray-500);
+  flex-shrink: 0;
+}
