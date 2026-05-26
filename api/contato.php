@@ -9,6 +9,7 @@
 
 declare(strict_types=1);
 require_once __DIR__ . '/db.php';
+if (file_exists(__DIR__ . '/mailer.php')) require_once __DIR__ . '/mailer.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     errorResponse('Método não permitido', 405);
@@ -57,24 +58,20 @@ try {
     errorResponse('Erro ao salvar mensagem. Tente novamente.', 500);
 }
 
-/* ── Notificação por e-mail (requer MAIL_TO definido em config.php) ── */
-if (defined('MAIL_TO') && MAIL_TO !== '') {
-    $subject = $assunto ?: 'Nova mensagem de contato — CVAT Brasil';
-    $body    = "Nome: {$nome}\n"
-             . "E-mail: {$email}\n"
-             . ($empresa  ? "Empresa: {$empresa}\n"  : '')
-             . ($cargo    ? "Cargo: {$cargo}\n"      : '')
-             . ($telefone ? "Telefone: {$telefone}\n": '')
-             . "\n--- Mensagem ---\n{$mensagem}";
-
-    $headers = implode("\r\n", [
-        'From: ' . MAIL_FROM,
-        'Reply-To: ' . $email,
-        'Content-Type: text/plain; charset=UTF-8',
-        'X-Mailer: CVAT Brasil / PHP',
-    ]);
-
-    @mail(MAIL_TO, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, $headers);
+/* ── Notificação por e-mail via SMTP ── */
+if (function_exists('smtpSend') && defined('MAIL_TO') && MAIL_TO !== '') {
+    try {
+        $subject = $assunto ?: 'Nova mensagem de contato — CVAT Brasil';
+        $body    = "Nome: {$nome}\n"
+                 . "E-mail: {$email}\n"
+                 . ($empresa  ? "Empresa: {$empresa}\n"  : '')
+                 . ($cargo    ? "Cargo: {$cargo}\n"      : '')
+                 . ($telefone ? "Telefone: {$telefone}\n": '')
+                 . "\n--- Mensagem ---\n{$mensagem}";
+        smtpSend(MAIL_TO, $subject, $body, $email);
+    } catch (Throwable $e) {
+        error_log('contato.php smtpSend: ' . $e->getMessage());
+    }
 }
 
 jsonResponse(['ok' => true, 'message' => 'Mensagem recebida! Retornaremos em até 24h.']);
