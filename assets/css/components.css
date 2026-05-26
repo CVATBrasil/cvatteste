@@ -554,6 +554,15 @@
 .testimonial-avatar--green { background-color: #d1fae5; color: var(--color-green); }
 .testimonial-avatar--coral { background-color: #fde8de; color: var(--color-coral); }
 
+.testimonial-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--color-gray-200);
+}
+
 .testimonial-name {
   display: block;
   font-style: normal;
