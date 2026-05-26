@@ -541,10 +541,11 @@ em     { font-style: italic; }
 .hero h1 {
   color: var(--color-white);
   margin-bottom: var(--space-5);
+  font-size: clamp(1rem, 2vw, 1.6rem);
 }
 
 .hero-desc {
-  font-size: var(--text-lg);
+  font-size: var(--text-sm);
   color: rgba(255,255,255,.85);
   margin-bottom: var(--space-8);
   max-width: 560px;
