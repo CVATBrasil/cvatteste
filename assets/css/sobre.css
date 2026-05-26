@@ -346,3 +346,120 @@
   color: var(--color-blue);
   letter-spacing: .04em;
 }
+
+/* ── CITAÇÃO NO HERO ─────────────────────────────────────────── */
+.sobre-quote {
+  border-left: 4px solid #93c5fd;
+  padding-left: var(--space-4);
+  margin-block: var(--space-5);
+}
+
+.sobre-quote p {
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: rgba(255,255,255,.9);
+  line-height: 1.6;
+  margin-bottom: var(--space-1);
+}
+
+.sobre-quote cite {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,.6);
+  font-style: normal;
+}
+
+/* ── PERFIL (foto + bio lado a lado) ─────────────────────────── */
+.sobre-perfil {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  align-items: flex-start;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .sobre-perfil {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .sobre-perfil--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.sobre-perfil-foto {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.sobre-perfil-foto img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.sobre-perfil-nome {
+  margin-top: var(--space-3);
+  font-weight: 700;
+  font-size: var(--text-base);
+  color: var(--color-gray-900);
+  text-align: center;
+}
+
+.sobre-perfil-bio {
+  flex: 1;
+}
+
+.sobre-perfil-bio p {
+  font-size: var(--text-base);
+  color: var(--color-gray-600);
+  line-height: 1.85;
+  margin-bottom: var(--space-4);
+}
+
+.sobre-perfil-bio p:last-child { margin-bottom: 0; }
+
+/* ── CVAT NO MUNDO ────────────────────────────────────────────── */
+.sobre-mundo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  align-items: flex-start;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .sobre-mundo {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.sobre-mundo-img {
+  flex-shrink: 0;
+}
+
+.sobre-mundo-img img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  width: 280px;
+  height: auto;
+}
+
+.sobre-mundo-texto {
+  flex: 1;
+}
+
+.sobre-mundo-texto p {
+  font-size: var(--text-base);
+  color: var(--color-gray-600);
+  line-height: 1.85;
+  margin-bottom: var(--space-4);
+}
+
+.sobre-mundo-texto p:last-child { margin-bottom: 0; }
