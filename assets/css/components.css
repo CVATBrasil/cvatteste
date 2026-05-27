@@ -250,21 +250,41 @@
   margin-bottom: var(--space-6);
 }
 
-.logo-strip {
+/* Marquee infinito */
+.logo-marquee {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.logo-marquee-track {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: var(--space-6) var(--space-10);
+  gap: var(--space-8);
+  width: max-content;
+  animation: marqueeScroll 40s linear infinite;
+}
+
+.logo-marquee-track:hover { animation-play-state: paused; }
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 .logo-item {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: var(--text-lg);
-  color: var(--color-gray-200);
+  font-size: var(--text-sm);
+  color: var(--color-gray-400);
   letter-spacing: .02em;
   user-select: none;
+  white-space: nowrap;
+  padding: var(--space-2) var(--space-4);
+  border: 1.5px solid var(--color-gray-200);
+  border-radius: var(--radius-full);
+  background-color: var(--color-white);
 }
 
 /* ── MÉTRICAS ────────────────────────────────────────────────── */
