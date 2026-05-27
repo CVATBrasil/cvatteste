@@ -8,6 +8,34 @@ if (($_GET['key'] ?? '') !== 'cvat2026') {
 }
 
 header('Content-Type: text/html; charset=UTF-8');
+
+function runCmd(string $cmd): array {
+    $output = ''; $code = -1;
+
+    if (function_exists('proc_open')) {
+        $desc = [1 => ['pipe','w'], 2 => ['pipe','w']];
+        $proc = proc_open($cmd, $desc, $pipes, __DIR__);
+        if (is_resource($proc)) {
+            $output  = stream_get_contents($pipes[1]);
+            $output .= stream_get_contents($pipes[2]);
+            fclose($pipes[1]); fclose($pipes[2]);
+            $code = proc_close($proc);
+        }
+    } elseif (function_exists('shell_exec')) {
+        $output = shell_exec($cmd . ' 2>&1') ?? '';
+        $code   = 0;
+    } elseif (function_exists('exec')) {
+        $lines = []; exec($cmd . ' 2>&1', $lines, $code);
+        $output = implode("\n", $lines);
+    } elseif (function_exists('system')) {
+        ob_start(); system($cmd . ' 2>&1', $code); $output = ob_get_clean();
+    } else {
+        $output = 'Nenhuma função de execução disponível no servidor.';
+        $code   = -1;
+    }
+
+    return ['output' => trim($output), 'code' => $code];
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -15,42 +43,40 @@ header('Content-Type: text/html; charset=UTF-8');
 <meta charset="UTF-8">
 <title>Deploy — CVAT Brasil</title>
 <style>
-  body { font-family: sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; }
+  body { font-family: sans-serif; max-width: 640px; margin: 60px auto; padding: 0 20px; }
   h2   { color: #1e40af; }
-  pre  { background: #f1f5f9; border-radius: 8px; padding: 16px; font-size: .9rem; white-space: pre-wrap; word-break: break-all; }
-  .ok  { color: #16a34a; font-weight: 700; }
-  .err { color: #dc2626; font-weight: 700; }
+  pre  { background: #f1f5f9; border-radius: 8px; padding: 16px; font-size: .85rem; white-space: pre-wrap; word-break: break-all; line-height: 1.6; }
+  .ok  { color: #16a34a; font-weight: 700; font-size: 1.1rem; }
+  .err { color: #dc2626; font-weight: 700; font-size: 1.1rem; }
+  .info{ color: #6b7280; font-size: .85rem; margin-top: 12px; }
 </style>
 </head>
 <body>
 <h2>Deploy CVAT Brasil</h2>
 <?php
 
-$repoPath = __DIR__;
+// Funções disponíveis
+$available = array_filter(['proc_open','shell_exec','exec','system','passthru'], 'function_exists');
+echo '<p class="info">Funções disponíveis: ' . implode(', ', $available) . '</p>';
 
-// Garante que estamos no repositório correto
-chdir($repoPath);
+// git pull
+$pull = runCmd('git -C ' . escapeshellarg(__DIR__) . ' pull origin main');
 
-// Executa git pull
-$output = [];
-$return = 0;
-exec('git pull origin main 2>&1', $output, $return);
-
-$texto = implode("\n", $output);
-
-if ($return === 0) {
+if ($pull['code'] === 0) {
     echo '<p class="ok">✅ Deploy realizado com sucesso!</p>';
 } else {
-    echo '<p class="err">❌ Erro no deploy (código ' . $return . ')</p>';
+    echo '<p class="err">❌ Erro no deploy (código ' . $pull['code'] . ')</p>';
 }
 
-echo '<pre>' . htmlspecialchars($texto) . '</pre>';
+echo '<pre>' . htmlspecialchars($pull['output'] ?: '(sem saída)') . '</pre>';
 
-// Mostra o último commit aplicado
-$commit = shell_exec('git log -1 --pretty=format:"%h — %s (%ar)" 2>&1');
-echo '<p><strong>Último commit:</strong> ' . htmlspecialchars($commit) . '</p>';
+// último commit
+$log = runCmd('git -C ' . escapeshellarg(__DIR__) . ' log -1 --pretty=format:"%h — %s (%ar)"');
+if ($log['output']) {
+    echo '<p><strong>Último commit:</strong> ' . htmlspecialchars($log['output']) . '</p>';
+}
 
-echo '<p style="color:#6b7280;font-size:.85rem">Execute novamente se precisar puxar mais atualizações.</p>';
+echo '<p class="info">Acesse novamente para puxar novas atualizações.</p>';
 ?>
 </body>
 </html>
