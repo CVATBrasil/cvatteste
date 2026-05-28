@@ -326,35 +326,33 @@
 
       function renderCard(item) {
         const cats   = item.categorias || [];
-        const cat    = cats[0] || 'default';
         const topics = (item.topicos || []).slice(0, 4).map(t =>
           `<li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>${t}</li>`
         ).join('');
 
-        /* Se tiver página de vendas: botão principal vai para ela */
         const ctaHref = item.pagina_url || item.cta_link;
         const ctaText = item.pagina_url ? 'Ver curso completo →' : item.cta_texto;
-        const ctaClass = item.pagina_url ? 'btn btn-primary btn-sm' : 'btn btn-outline btn-sm';
 
-        /* Quando há página de vendas, oferece também atalho de contato */
         const extraCta = item.pagina_url
-          ? `<a href="${item.cta_link}" class="btn btn-outline btn-sm" style="width:100%;justify-content:center;margin-top:6px">${item.cta_texto}</a>`
+          ? `<a href="${item.cta_link}" class="trein-card-cta-sec">${item.cta_texto}</a>`
           : '';
 
         return `<article class="trein-card" data-cats="${cats.join(' ')}">
-          <div class="trein-card-top trein-card-top--${item.cor}">
-            <div class="trein-card-top-icon">${icons[cat] || icons['default']}</div>
-            <span class="trein-card-modality">${item.modalidade}</span>
+          <div class="trein-card-head">
+            <h3 class="trein-card-title">${item.titulo}</h3>
           </div>
           <div class="trein-card-body">
-            <span class="badge badge-${item.cor}" style="align-self:flex-start">${item.publico || cat}</span>
-            <h3 class="trein-card-title">${item.titulo}</h3>
+            <span class="trein-card-public trein-card-public--${item.cor}">${item.publico || cats[0] || ''}</span>
             <p class="trein-card-desc">${item.descricao}</p>
             <ul class="trein-card-topics" role="list">${topics}</ul>
           </div>
           <div class="trein-card-footer">
             <a href="${ctaHref}" class="btn btn-primary btn-sm" style="width:100%;justify-content:center">${ctaText}</a>
             ${extraCta}
+          </div>
+          <div class="trein-card-bottom trein-card-bottom--${item.cor}">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="2" width="12" height="12" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2.5 2.5L11 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            EAD (Gravado)
           </div>
         </article>`;
       }
