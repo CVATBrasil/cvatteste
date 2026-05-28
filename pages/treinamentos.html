@@ -340,9 +340,9 @@
         return `<article class="trein-card" data-cats="${cats.join(' ')}">
           <div class="trein-card-head">
             <h3 class="trein-card-title">${item.titulo}</h3>
+            <span class="trein-card-public trein-card-public--${item.cor}">${item.publico || cats[0] || ''}</span>
           </div>
           <div class="trein-card-body">
-            <span class="trein-card-public trein-card-public--${item.cor}">${item.publico || cats[0] || ''}</span>
             <p class="trein-card-desc">${item.descricao}</p>
             <ul class="trein-card-topics" role="list">${topics}</ul>
           </div>
