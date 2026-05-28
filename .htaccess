@@ -5,11 +5,11 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# ── 2. Diretórios com arquivo .html correspondente → redireciona
-#       Ex: /pages/treinamentos/ → /pages/treinamentos.html
+# ── 2. Diretórios com arquivo .html correspondente → serve internamente
+#       Ex: /pages/treinamentos/ serve treinamentos.html sem redirecionar
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+?)/?$ /$1.html [R=301,L]
+RewriteRule ^(.+?)/?$ $1.html [L]
 
 # ── 3. Redireciona URLs com .html → URL limpa (301) ───────────
 RewriteCond %{THE_REQUEST} \s/(.+)\.html[\s?] [NC]
