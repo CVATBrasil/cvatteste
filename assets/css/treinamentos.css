@@ -192,8 +192,12 @@
   margin-top: var(--space-8);
 }
 
-@media (min-width: 768px) {
-  .trein-trilhas-grid { grid-template-columns: repeat(3, 1fr); }
+@media (min-width: 640px) {
+  .trein-trilhas-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .trein-trilhas-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 .trein-trilha-card {

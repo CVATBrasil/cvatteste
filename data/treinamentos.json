@@ -1,114 +1,26 @@
 [
   {
-    "id": 1,
-    "titulo": "Especialista em Valores Pessoais CVAT",
-    "descricao": "Formação completa sobre valores pessoais aplicados ao comportamento humano, tomada de decisão, carreira, relacionamentos e desenvolvimento profissional utilizando a metodologia CVAT.",
-    "modalidade": "EAD (assíncrono)",
-    "cor": "blue",
-    "categorias": ["CVAT"],
-    "publico": "Profissionais de RH, coaches, terapeutas, consultores, líderes e profissionais de desenvolvimento humano",
-    "topicos": [
-      "O que são valores pessoais",
-      "Como os valores influenciam comportamento e decisões",
-      "Interpretação prática do CVAT",
-      "Aplicação em carreira e relacionamentos",
-      "Desenvolvimento pessoal e profissional"
-    ],
-    "cta_texto": "Solicitar treinamento",
-    "cta_link": "/pages/contato.html",
-    "pagina_url": null
-  },
-  {
-    "id": 2,
-    "titulo": "Especialista em Carreira CVAT",
-    "descricao": "Capacitação voltada ao entendimento de perfil profissional, escolhas de carreira, potencial humano e direcionamento profissional utilizando os indicadores comportamentais do CVAT.",
-    "modalidade": "EAD (assíncrono)",
-    "cor": "blue",
-    "categorias": ["CVAT"],
-    "publico": "Consultores de carreira, RH, mentores, coaches e profissionais de desenvolvimento humano",
-    "topicos": [
-      "Mapeamento de perfil profissional",
-      "Escolha e transição de carreira",
-      "Valores e motivadores profissionais",
-      "Orientação profissional estratégica",
-      "Plano de desenvolvimento de carreira"
-    ],
-    "cta_texto": "Solicitar treinamento",
-    "cta_link": "/pages/contato.html",
-    "pagina_url": null
-  },
-  {
-    "id": 3,
-    "titulo": "Especialista em Relacionamentos CVAT",
-    "descricao": "Formação aplicada ao entendimento de perfis comportamentais e valores pessoais nos relacionamentos interpessoais, familiares, profissionais e afetivos.",
-    "modalidade": "EAD (assíncrono)",
-    "cor": "green",
-    "categorias": ["CVAT"],
-    "publico": "Coaches, terapeutas, psicólogos, RH e profissionais de desenvolvimento humano",
-    "topicos": [
-      "Dinâmica dos relacionamentos",
-      "Conflitos comportamentais",
-      "Compatibilidade de valores",
-      "Comunicação interpessoal",
-      "Aplicações práticas do CVAT em relacionamentos"
-    ],
-    "cta_texto": "Solicitar treinamento",
-    "cta_link": "/pages/contato.html",
-    "pagina_url": null
-  },
-  {
-    "id": 4,
-    "titulo": "CVAT Aplicado ao Desenvolvimento Pessoal e Profissional",
-    "descricao": "Curso voltado à aplicação prática do CVAT no autoconhecimento, desenvolvimento de competências, liderança, produtividade e crescimento pessoal e profissional.",
+    "id": 9,
+    "titulo": "COPSOQ – Formação Avançada em Riscos Psicossociais no Trabalho",
+    "descricao": "Capacitação avançada sobre riscos psicossociais utilizando o protocolo COPSOQ, com foco em diagnóstico organizacional, prevenção e gestão da saúde mental no trabalho.",
     "modalidade": "EAD (assíncrono)",
     "cor": "coral",
-    "categorias": ["CVAT"],
-    "publico": "Profissionais em desenvolvimento, estudantes, líderes e consultores",
-    "topicos": [
-      "Autoconhecimento aplicado",
-      "Competências comportamentais",
-      "Desenvolvimento profissional",
-      "Produtividade e comportamento",
-      "Aplicações práticas do CVAT"
-    ],
+    "categorias": ["NR-01", "MEC"],
+    "publico": "RH, SESMT, psicólogos, consultores e pesquisadores",
+    "topicos": ["Modelo COPSOQ","Diagnóstico psicossocial","Saúde mental organizacional","Fatores de risco no trabalho","Estratégias de prevenção"],
     "cta_texto": "Solicitar treinamento",
     "cta_link": "/pages/contato.html",
-    "pagina_url": null
+    "pagina_url": "/pages/treinamentos/copsoq.html"
   },
   {
-    "id": 5,
-    "titulo": "Gestor NR-01",
-    "descricao": "Formação prática para gestores e profissionais que desejam compreender e implementar a NR-01 com foco em riscos psicossociais, PGR e gestão organizacional preventiva.",
+    "id": 8,
+    "titulo": "HSE-IT – Avaliação Psicossocial do Trabalho",
+    "descricao": "Formação sobre avaliação psicossocial no trabalho com foco em riscos psicossociais, saúde mental ocupacional e utilização do protocolo HSE-IT em organizações.",
     "modalidade": "EAD (assíncrono)",
     "cor": "green",
-    "categorias": ["NR-01"],
-    "publico": "Empresários, gestores, RH, SESMT e consultores",
-    "topicos": [
-      "Atualizações da NR-01",
-      "Riscos psicossociais",
-      "PGR aplicado",
-      "Gestão preventiva",
-      "Documentação e conformidade legal"
-    ],
-    "cta_texto": "Solicitar treinamento",
-    "cta_link": "/pages/contato.html",
-    "pagina_url": null
-  },
-  {
-    "id": 6,
-    "titulo": "CVAT Aplicado à NR-01",
-    "descricao": "Capacitação voltada à utilização do CVAT como ferramenta de apoio na identificação de riscos psicossociais, clima organizacional e fatores humanos relacionados à NR-01.",
-    "modalidade": "EAD (assíncrono)",
-    "cor": "coral",
-    "categorias": ["NR-01", "CVAT"],
-    "publico": "RH, consultores, SESMT e gestores organizacionais",
-    "topicos": [
-      "CVAT e riscos psicossociais",
-      "Mapeamento comportamental",
-      "Clima organizacional",
-      "Fatores humanos na NR-01",
-      "Indicadores comportamentais preventivos"
-    ],
+    "categorias": ["NR-01", "MEC"],
+    "publico": "Psicólogos, RH, SESMT, consultores e gestores",
+    "topicos": ["Avaliação psicossocial","Riscos psicossociais","Saúde mental no trabalho","Aplicação do HSE-IT","Prevenção organizacional"],
     "cta_texto": "Solicitar treinamento",
     "cta_link": "/pages/contato.html",
     "pagina_url": null
@@ -121,53 +33,87 @@
     "cor": "coral",
     "categorias": ["NR-01"],
     "publico": "Consultores, profissionais de SST, RH e empreendedores",
-    "topicos": [
-      "Mercado da NR-01",
-      "Como vender consultoria",
-      "Estruturação de serviços",
-      "Posicionamento comercial",
-      "Oportunidades em riscos psicossociais"
-    ],
+    "topicos": ["Mercado da NR-01","Como vender consultoria","Estruturação de serviços","Posicionamento comercial","Oportunidades em riscos psicossociais"],
     "cta_texto": "Solicitar treinamento",
     "cta_link": "/pages/contato.html",
     "pagina_url": null
   },
   {
-    "id": 8,
-    "titulo": "HSE-IT – Avaliação Psicossocial do Trabalho",
-    "descricao": "Formação sobre avaliação psicossocial no trabalho com foco em riscos psicossociais, saúde mental ocupacional e utilização do protocolo HSE-IT em organizações.",
-    "modalidade": "EAD (assíncrono)",
-    "cor": "green",
-    "categorias": ["NR-01"],
-    "publico": "Psicólogos, RH, SESMT, consultores e gestores",
-    "topicos": [
-      "Avaliação psicossocial",
-      "Riscos psicossociais",
-      "Saúde mental no trabalho",
-      "Aplicação do HSE-IT",
-      "Prevenção organizacional"
-    ],
-    "cta_texto": "Solicitar treinamento",
-    "cta_link": "/pages/contato.html",
-    "pagina_url": null
-  },
-  {
-    "id": 9,
-    "titulo": "COPSOQ – Formação Avançada em Riscos Psicossociais no Trabalho",
-    "descricao": "Capacitação avançada sobre riscos psicossociais utilizando o protocolo COPSOQ, com foco em diagnóstico organizacional, prevenção e gestão da saúde mental no trabalho.",
+    "id": 6,
+    "titulo": "CVAT Aplicado à NR-01",
+    "descricao": "Capacitação voltada à utilização do CVAT como ferramenta de apoio na identificação de riscos psicossociais, clima organizacional e fatores humanos relacionados à NR-01.",
     "modalidade": "EAD (assíncrono)",
     "cor": "coral",
-    "categorias": ["NR-01"],
-    "publico": "RH, SESMT, psicólogos, consultores e pesquisadores",
-    "topicos": [
-      "Modelo COPSOQ",
-      "Diagnóstico psicossocial",
-      "Saúde mental organizacional",
-      "Fatores de risco no trabalho",
-      "Estratégias de prevenção"
-    ],
+    "categorias": ["NR-01", "CVAT"],
+    "publico": "RH, consultores, SESMT e gestores organizacionais",
+    "topicos": ["CVAT e riscos psicossociais","Mapeamento comportamental","Clima organizacional","Fatores humanos na NR-01","Indicadores comportamentais preventivos"],
     "cta_texto": "Solicitar treinamento",
     "cta_link": "/pages/contato.html",
-    "pagina_url": "/pages/treinamentos/copsoq.html"
+    "pagina_url": null
+  },
+  {
+    "id": 5,
+    "titulo": "Gestor NR-01",
+    "descricao": "Formação prática para gestores e profissionais que desejam compreender e implementar a NR-01 com foco em riscos psicossociais, PGR e gestão organizacional preventiva.",
+    "modalidade": "EAD (assíncrono)",
+    "cor": "green",
+    "categorias": ["NR-01", "MEC"],
+    "publico": "Empresários, gestores, RH, SESMT e consultores",
+    "topicos": ["Atualizações da NR-01","Riscos psicossociais","PGR aplicado","Gestão preventiva","Documentação e conformidade legal"],
+    "cta_texto": "Solicitar treinamento",
+    "cta_link": "/pages/contato.html",
+    "pagina_url": null
+  },
+  {
+    "id": 4,
+    "titulo": "CVAT Aplicado ao Desenvolvimento Pessoal e Profissional",
+    "descricao": "Curso voltado à aplicação prática do CVAT no autoconhecimento, desenvolvimento de competências, liderança, produtividade e crescimento pessoal e profissional.",
+    "modalidade": "EAD (assíncrono)",
+    "cor": "coral",
+    "categorias": ["CVAT", "MEC"],
+    "publico": "Profissionais em desenvolvimento, estudantes, líderes e consultores",
+    "topicos": ["Autoconhecimento aplicado","Competências comportamentais","Desenvolvimento profissional","Produtividade e comportamento","Aplicações práticas do CVAT"],
+    "cta_texto": "Solicitar treinamento",
+    "cta_link": "/pages/contato.html",
+    "pagina_url": null
+  },
+  {
+    "id": 3,
+    "titulo": "Especialista em Relacionamentos CVAT",
+    "descricao": "Formação aplicada ao entendimento de perfis comportamentais e valores pessoais nos relacionamentos interpessoais, familiares, profissionais e afetivos.",
+    "modalidade": "EAD (assíncrono)",
+    "cor": "green",
+    "categorias": ["CVAT"],
+    "publico": "Coaches, terapeutas, psicólogos, RH e profissionais de desenvolvimento humano",
+    "topicos": ["Dinâmica dos relacionamentos","Conflitos comportamentais","Compatibilidade de valores","Comunicação interpessoal","Aplicações práticas do CVAT em relacionamentos"],
+    "cta_texto": "Solicitar treinamento",
+    "cta_link": "/pages/contato.html",
+    "pagina_url": null
+  },
+  {
+    "id": 2,
+    "titulo": "Especialista em Carreira CVAT",
+    "descricao": "Capacitação voltada ao entendimento de perfil profissional, escolhas de carreira, potencial humano e direcionamento profissional utilizando os indicadores comportamentais do CVAT.",
+    "modalidade": "EAD (assíncrono)",
+    "cor": "blue",
+    "categorias": ["CVAT"],
+    "publico": "Consultores de carreira, RH, mentores, coaches e profissionais de desenvolvimento humano",
+    "topicos": ["Mapeamento de perfil profissional","Escolha e transição de carreira","Valores e motivadores profissionais","Orientação profissional estratégica","Plano de desenvolvimento de carreira"],
+    "cta_texto": "Solicitar treinamento",
+    "cta_link": "/pages/contato.html",
+    "pagina_url": null
+  },
+  {
+    "id": 1,
+    "titulo": "Especialista em Valores Pessoais CVAT",
+    "descricao": "Formação completa sobre valores pessoais aplicados ao comportamento humano, tomada de decisão, carreira, relacionamentos e desenvolvimento profissional utilizando a metodologia CVAT.",
+    "modalidade": "EAD (assíncrono)",
+    "cor": "blue",
+    "categorias": ["CVAT"],
+    "publico": "Profissionais de RH, coaches, terapeutas, consultores, líderes e profissionais de desenvolvimento humano",
+    "topicos": ["O que são valores pessoais","Como os valores influenciam comportamento e decisões","Interpretação prática do CVAT","Aplicação em carreira e relacionamentos","Desenvolvimento pessoal e profissional"],
+    "cta_texto": "Solicitar treinamento",
+    "cta_link": "/pages/contato.html",
+    "pagina_url": null
   }
 ]

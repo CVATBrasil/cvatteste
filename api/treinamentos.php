@@ -18,7 +18,7 @@ try {
                 categorias, publico, topicos, cta_texto, cta_link, pagina_url
          FROM treinamentos
          WHERE ativo = 1
-         ORDER BY ordem, id'
+         ORDER BY ordem DESC, id DESC'
     );
 
     $rows = $stmt->fetchAll();
