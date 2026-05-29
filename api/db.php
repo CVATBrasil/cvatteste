@@ -43,7 +43,7 @@ function setCorsHeaders(): void
     header('Access-Control-Allow-Headers: Content-Type, Accept');
 }
 
-function jsonResponse(mixed $data, int $status = 200): never
+function jsonResponse($data, int $status = 200): void
 {
     setCorsHeaders();
     http_response_code($status);
@@ -52,7 +52,7 @@ function jsonResponse(mixed $data, int $status = 200): never
     exit;
 }
 
-function errorResponse(string $message, int $status = 400): never
+function errorResponse(string $message, int $status = 400): void
 {
     jsonResponse(['error' => $message], $status);
 }
