@@ -126,6 +126,7 @@
   text-transform: uppercase;
   color: rgba(255,255,255,.5);
   margin-bottom: var(--space-3);
+  text-align: center;
 }
 
 .course-price-amount {
