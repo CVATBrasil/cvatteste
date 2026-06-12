@@ -7,7 +7,7 @@
   <div class="header-inner container">
 
     <!-- Logo -->
-    <a href="/pages/treinamentos.html" class="header-logo" aria-label="CVAT Brasil — página inicial">
+    <a href="/index.html" class="header-logo" aria-label="CVAT Brasil — página inicial">
       <img
         src="/assets/img/logo_cvat.jpg"
         onerror="this.onerror=null;this.src='https://cvatbrasil.com/wp-content/uploads/2025/04/logo_cvat-removebg-preview-1-300x100.png'"
@@ -21,24 +21,41 @@
     <nav class="header-nav" id="header-nav" role="navigation" aria-label="Navegação principal">
       <ul class="nav-list" role="list">
 
-        <!-- Treinamentos -->
         <li class="nav-item">
-          <a href="/pages/treinamentos.html" class="nav-link">Treinamentos</a>
+          <a href="/index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/pages/para-empresas.html" class="nav-link">Empresa</a>
+        </li>
+        <li class="nav-item">
+          <a href="/pages/para-rh.html" class="nav-link">Profissionais de RH</a>
+        </li>
+        <li class="nav-item">
+          <a href="/pages/para-consultores.html" class="nav-link">Consultores</a>
+        </li>
+        <li class="nav-item">
+          <a href="/pages/treinamentos.html" class="nav-link">Treinamentos CVAT</a>
+        </li>
+        <li class="nav-item">
+          <a href="/pages/blog/index.html" class="nav-link">Blog</a>
         </li>
 
       </ul>
+
+      <!-- CTAs (mobile) -->
+      <div class="nav-mobile-ctas">
+        <a href="/pages/diagnostico.html" class="btn btn-secondary">Diagnóstico Grátis</a>
+        <a href="/pages/contato.html" class="btn btn-primary">Falar com Especialista</a>
+      </div>
     </nav>
 
     <!-- Ações (desktop) -->
     <div class="header-actions">
-      <a href="/pages/login.html" class="btn btn-sm" style="border:1.5px solid var(--color-gray-300);color:var(--color-blue-dark);background:transparent;">
-        Entrar
-      </a>
       <a href="/pages/diagnostico.html" class="btn btn-secondary btn-sm">
-        Diagnóstico grátis
+        Diagnóstico Grátis
       </a>
       <a href="/pages/contato.html" class="btn btn-primary btn-sm">
-        Falar com especialista
+        Falar com Especialista
       </a>
     </div>
 
@@ -237,6 +254,11 @@
   font-size: var(--text-xs);
   color: var(--color-gray-500);
   margin-top: 1px;
+}
+
+/* ── CTAs mobile (ocultos em desktop) ───────────────────────── */
+.nav-mobile-ctas {
+  display: none;
 }
 
 /* ── HEADER ACTIONS (desktop) ────────────────────────────────── */
