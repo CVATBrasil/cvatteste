@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSEYX6K0FM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HSEYX6K0FM');
+  </script>
+  <title>Acesso ao Sistema — CVAT Brasil</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+  <style>
+    .login-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-gray-100);
+      padding: var(--space-8);
+    }
+    .login-card {
+      background-color: var(--color-white);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      padding: var(--space-10) var(--space-12);
+      width: 100%;
+      max-width: 460px;
+      text-align: center;
+    }
+    .login-logo {
+      margin-bottom: var(--space-8);
+    }
+    .login-logo img {
+      height: 48px;
+      display: block;
+      margin: 0 auto;
+    }
+    .login-title {
+      font-size: var(--text-xl);
+      font-family: var(--font-display);
+      color: var(--color-blue-dark);
+      margin-bottom: var(--space-2);
+    }
+    .login-subtitle {
+      font-size: var(--text-sm);
+      color: var(--color-gray-500);
+      margin-bottom: var(--space-8);
+    }
+    .login-options {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+    .login-option {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      padding: var(--space-5) var(--space-6);
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--color-gray-200);
+      text-decoration: none;
+      text-align: left;
+      transition: border-color var(--transition), background-color var(--transition), box-shadow var(--transition);
+      color: inherit;
+    }
+    .login-option:hover {
+      border-color: var(--color-blue);
+      background-color: var(--color-blue-light);
+      box-shadow: var(--shadow-sm);
+    }
+    .login-option-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .login-option-icon--blue { background-color: var(--color-blue); color: var(--color-white); }
+    .login-option-icon--coral { background-color: var(--color-coral); color: var(--color-white); }
+    .login-option-label {
+      font-weight: 700;
+      font-size: var(--text-base);
+      color: var(--color-gray-900);
+      display: block;
+    }
+    .login-option-desc {
+      font-size: var(--text-xs);
+      color: var(--color-gray-500);
+      display: block;
+      margin-top: 2px;
+    }
+    .login-option-arrow {
+      margin-left: auto;
+      color: var(--color-gray-400);
+      flex-shrink: 0;
+    }
+    .login-back {
+      display: block;
+      margin-top: var(--space-6);
+      font-size: var(--text-sm);
+      color: var(--color-gray-400);
+      text-decoration: none;
+    }
+    .login-back:hover { color: var(--color-blue); }
+  </style>
+</head>
+<body>
+  <main class="login-page" id="main-content">
+    <div class="login-card">
+
+      <div class="login-logo">
+        <img
+          src="/assets/img/logo_cvat.jpg"
+          onerror="this.onerror=null;this.src='https://cvatbrasil.com/wp-content/uploads/2025/04/logo_cvat-removebg-preview-1-300x100.png'"
+          alt="CVAT Brasil"
+          height="48"
+        />
+      </div>
+
+      <h1 class="login-title">Acesso ao Sistema</h1>
+      <p class="login-subtitle">Escolha a plataforma que deseja acessar</p>
+
+      <div class="login-options">
+
+        <a href="https://sistemacvat.com/ui/production/index.php" target="_blank" rel="noopener noreferrer" class="login-option">
+          <div class="login-option-icon login-option-icon--blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <span class="login-option-label">Sistema C-VAT</span>
+            <span class="login-option-desc">Plataforma principal de relatórios</span>
+          </div>
+          <svg class="login-option-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <a href="https://cvat.com.br/admin/index.php" target="_blank" rel="noopener noreferrer" class="login-option">
+          <div class="login-option-icon login-option-icon--coral">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <span class="login-option-label">Sistema Novo</span>
+            <span class="login-option-desc">Plataforma administrativa</span>
+          </div>
+          <svg class="login-option-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+      </div>
+
+      <a href="/index.html" class="login-back">← Voltar para o site</a>
+
+    </div>
+  </main>
+</body>
+</html>

@@ -365,6 +365,18 @@
   transform: translateY(-50%);
 }
 
+/* ── IFRAME EMBED (GoHighLevel) ──────────────────────────────── */
+.diag-iframe-wrap {
+  min-height: 828px;
+  width: 100%;
+}
+
+.diag-iframe-wrap iframe {
+  width: 100%;
+  border: none;
+  display: block;
+}
+
 /* ── GARANTIAS ───────────────────────────────────────────────── */
 .diag-guarantees {
   display: flex;

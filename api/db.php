@@ -22,9 +22,10 @@ function getDB(): PDO
     static $pdo = null;
     if ($pdo !== null) return $pdo;
 
+    $charset = defined('DB_CHARSET') ? DB_CHARSET : 'utf8mb4';
     $dsn = sprintf(
         'mysql:host=%s;dbname=%s;charset=%s',
-        DB_HOST, DB_NAME, DB_CHARSET
+        DB_HOST, DB_NAME, $charset
     );
     $pdo = new PDO($dsn, DB_USER, DB_PASS, [
         PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -43,7 +44,7 @@ function setCorsHeaders(): void
     header('Access-Control-Allow-Headers: Content-Type, Accept');
 }
 
-function jsonResponse(mixed $data, int $status = 200): never
+function jsonResponse($data, int $status = 200): void
 {
     setCorsHeaders();
     http_response_code($status);
@@ -52,7 +53,7 @@ function jsonResponse(mixed $data, int $status = 200): never
     exit;
 }
 
-function errorResponse(string $message, int $status = 400): never
+function errorResponse(string $message, int $status = 400): void
 {
     jsonResponse(['error' => $message], $status);
 }

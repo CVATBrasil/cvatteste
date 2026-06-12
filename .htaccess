@@ -5,12 +5,26 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# ── 2. Redireciona URLs com .html → URL limpa (301) ───────────
+# ── 2. Raiz do site → Treinamentos (Home provisória) ──────────
+RewriteRule ^(index\.html)?$ /pages/treinamentos [R=302,L]
+
+# ── 3. Diretórios com arquivo .html correspondente → serve internamente
+#       Ex: /pages/treinamentos/ serve treinamentos.html sem redirecionar
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# ── 3. Redireciona URLs com .html → URL limpa (301) ───────────
 RewriteCond %{THE_REQUEST} \s/(.+)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
 
-# ── 3. Serve arquivos .html sem extensão na URL ───────────────
+# ── 4. Serve arquivos .html sem extensão na URL ───────────────
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
+
+# ── 5. Retorna 404 explícito para arquivos não encontrados ─────
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ - [R=404,L]

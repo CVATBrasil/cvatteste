@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSEYX6K0FM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HSEYX6K0FM');
+  </script>
+
   <!-- SEO -->
   <title>Diagnóstico Gratuito de Clima e NR-01 — CVAT Brasil</title>
   <meta name="description" content="Solicite seu diagnóstico gratuito de clima organizacional e conformidade NR-01. Resultado em até 48h, sem compromisso e sem cartão de crédito." />
@@ -142,298 +151,43 @@
               <p class="diag-form-subtitle">Preencha os dados abaixo — leva menos de 2 minutos</p>
             </div>
 
-            <!-- Indicador de progresso -->
-            <div class="diag-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso do formulário" id="diag-progress">
-              <div class="diag-progress-bar" id="diag-progress-bar"></div>
+            <!-- Formulário GoHighLevel -->
+            <div class="diag-iframe-wrap">
+              <iframe
+                src="https://sistema.frcdigital.com.br/widget/form/bjAbLGKYIuO2ng9t82ev"
+                id="inline-bjAbLGKYIuO2ng9t82ev"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="[FORM] - CVAT Brasil"
+                data-height="828"
+                data-layout-iframe-id="inline-bjAbLGKYIuO2ng9t82ev"
+                data-form-id="bjAbLGKYIuO2ng9t82ev"
+                title="Formulário de diagnóstico gratuito CVAT Brasil"
+                style="width:100%;border:none;display:block;"
+                loading="lazy"
+              ></iframe>
+              <script src="https://sistema.frcdigital.com.br/js/form_embed.js"></script>
             </div>
 
-            <form
-              id="diag-form"
-              class="diag-form"
-              action="/api/diagnostico.php"
-              method="POST"
-              novalidate
-              aria-label="Formulário de diagnóstico gratuito"
-            >
-              <!-- Campo honeypot anti-spam -->
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-
-              <!-- Linha 1: Nome -->
-              <div class="form-group">
-                <label for="nome" class="form-label">
-                  Nome completo <span class="required" aria-hidden="true">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  class="form-input"
-                  placeholder="Seu nome completo"
-                  autocomplete="name"
-                  required
-                  aria-required="true"
-                  aria-describedby="nome-error"
-                  minlength="3"
-                />
-                <span class="form-error" id="nome-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <!-- Linha 2: E-mail + Telefone -->
-              <div class="diag-form-row">
-                <div class="form-group">
-                  <label for="email" class="form-label">
-                    E-mail corporativo <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="form-input"
-                    placeholder="voce@empresa.com.br"
-                    autocomplete="email"
-                    required
-                    aria-required="true"
-                    aria-describedby="email-error"
-                  />
-                  <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
-                </div>
-                <div class="form-group">
-                  <label for="telefone" class="form-label">
-                    WhatsApp <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="telefone"
-                    name="telefone"
-                    class="form-input"
-                    placeholder="(11) 9 9999-9999"
-                    autocomplete="tel"
-                    required
-                    aria-required="true"
-                    aria-describedby="telefone-error"
-                    inputmode="numeric"
-                  />
-                  <span class="form-error" id="telefone-error" role="alert" aria-live="polite"></span>
-                </div>
-              </div>
-
-              <!-- Linha 3: Cargo + Empresa -->
-              <div class="diag-form-row">
-                <div class="form-group">
-                  <label for="cargo" class="form-label">
-                    Cargo <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <select
-                    id="cargo"
-                    name="cargo"
-                    class="form-select"
-                    required
-                    aria-required="true"
-                    aria-describedby="cargo-error"
-                  >
-                    <option value="" disabled selected>Selecione seu cargo</option>
-                    <option value="diretor-rh">Diretor(a) de RH</option>
-                    <option value="gerente-rh">Gerente de RH</option>
-                    <option value="analista-rh">Analista de RH</option>
-                    <option value="sesmt">Profissional de SESMT</option>
-                    <option value="diretor-geral">Diretor(a) Geral / CEO</option>
-                    <option value="gestor-area">Gestor(a) de Área</option>
-                    <option value="consultor">Consultor(a) Externo(a)</option>
-                    <option value="outro">Outro</option>
-                  </select>
-                  <span class="form-error" id="cargo-error" role="alert" aria-live="polite"></span>
-                </div>
-                <div class="form-group">
-                  <label for="empresa" class="form-label">
-                    Empresa <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="empresa"
-                    name="empresa"
-                    class="form-input"
-                    placeholder="Nome da empresa"
-                    autocomplete="organization"
-                    required
-                    aria-required="true"
-                    aria-describedby="empresa-error"
-                  />
-                  <span class="form-error" id="empresa-error" role="alert" aria-live="polite"></span>
-                </div>
-              </div>
-
-              <!-- Linha 4: Setor + Nº colaboradores -->
-              <div class="diag-form-row">
-                <div class="form-group">
-                  <label for="setor" class="form-label">
-                    Setor de atuação <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <select
-                    id="setor"
-                    name="setor"
-                    class="form-select"
-                    required
-                    aria-required="true"
-                    aria-describedby="setor-error"
-                  >
-                    <option value="" disabled selected>Selecione o setor</option>
-                    <option value="industria">Indústria</option>
-                    <option value="comercio">Comércio</option>
-                    <option value="servicos">Serviços</option>
-                    <option value="saude">Saúde</option>
-                    <option value="educacao">Educação</option>
-                    <option value="financeiro">Financeiro / Seguros</option>
-                    <option value="tecnologia">Tecnologia</option>
-                    <option value="construcao">Construção Civil</option>
-                    <option value="logistica">Logística / Transporte</option>
-                    <option value="agronegocio">Agronegócio</option>
-                    <option value="governo">Governo / Público</option>
-                    <option value="outro">Outro</option>
-                  </select>
-                  <span class="form-error" id="setor-error" role="alert" aria-live="polite"></span>
-                </div>
-                <div class="form-group">
-                  <label for="colaboradores" class="form-label">
-                    Nº de colaboradores <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <select
-                    id="colaboradores"
-                    name="colaboradores"
-                    class="form-select"
-                    required
-                    aria-required="true"
-                    aria-describedby="colaboradores-error"
-                  >
-                    <option value="" disabled selected>Quantos colaboradores?</option>
-                    <option value="1-19">Até 19</option>
-                    <option value="20-49">20 a 49</option>
-                    <option value="50-99">50 a 99</option>
-                    <option value="100-299">100 a 299</option>
-                    <option value="300-999">300 a 999</option>
-                    <option value="1000+">Acima de 1.000</option>
-                  </select>
-                  <span class="form-error" id="colaboradores-error" role="alert" aria-live="polite"></span>
-                </div>
-              </div>
-
-              <!-- Linha 5: Interesse principal -->
-              <div class="form-group">
-                <label class="form-label">
-                  Qual é seu interesse principal?
-                  <span class="required" aria-hidden="true">*</span>
-                </label>
-                <div class="diag-interest-grid" role="group" aria-required="true" aria-describedby="interesse-error">
-                  <label class="diag-interest-option">
-                    <input type="radio" name="interesse" value="clima" required />
-                    <span class="diag-interest-card">
-                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M11 2a9 9 0 100 18A9 9 0 0011 2z" stroke="currentColor" stroke-width="1.8"/><path d="M7 11l2.5 2.5 5.5-5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                      <span>Clima organizacional</span>
-                    </span>
-                  </label>
-                  <label class="diag-interest-option">
-                    <input type="radio" name="interesse" value="nr01" required />
-                    <span class="diag-interest-card">
-                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="3" y="3" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 11h8M7 8h5M7 14h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                      <span>Conformidade NR-01</span>
-                    </span>
-                  </label>
-                  <label class="diag-interest-option">
-                    <input type="radio" name="interesse" value="saude-mental" required />
-                    <span class="diag-interest-card">
-                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M11 19.5S3 14 3 8a5 5 0 019-3 5 5 0 019 3c0 6-8 11.5-8 11.5z" stroke="currentColor" stroke-width="1.8"/></svg>
-                      <span>Saúde mental</span>
-                    </span>
-                  </label>
-                  <label class="diag-interest-option">
-                    <input type="radio" name="interesse" value="tudo" required />
-                    <span class="diag-interest-card">
-                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M11 2v3M11 17v3M2 11h3M17 11h3M4.93 4.93l2.12 2.12M14.95 14.95l2.12 2.12M4.93 17.07l2.12-2.12M14.95 7.05l2.12-2.12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                      <span>Tudo acima</span>
-                    </span>
-                  </label>
-                </div>
-                <span class="form-error" id="interesse-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <!-- Linha 6: Desafio principal (opcional) -->
-              <div class="form-group">
-                <label for="desafio" class="form-label">
-                  Qual é o seu maior desafio hoje?
-                  <span class="diag-optional">(opcional)</span>
-                </label>
-                <textarea
-                  id="desafio"
-                  name="desafio"
-                  class="form-textarea"
-                  placeholder="Ex: turnover alto, dificuldade em engajar equipes remotas, preparação para fiscalização do MTE..."
-                  rows="3"
-                  maxlength="500"
-                  aria-describedby="desafio-count"
-                ></textarea>
-                <span class="diag-char-count" id="desafio-count" aria-live="polite">0 / 500</span>
-              </div>
-
-              <!-- Consentimento LGPD -->
-              <div class="form-group">
-                <label class="diag-consent-label">
-                  <input
-                    type="checkbox"
-                    id="lgpd"
-                    name="lgpd"
-                    required
-                    aria-required="true"
-                    aria-describedby="lgpd-error"
-                    class="diag-consent-checkbox"
-                  />
-                  <span class="diag-consent-text">
-                    Concordo com a
-                    <a href="/pages/privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>
-                    e autorizo a CVAT Brasil a entrar em contato por e-mail e WhatsApp com o resultado do diagnóstico e conteúdos relacionados.
-                  </span>
-                </label>
-                <span class="form-error" id="lgpd-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <!-- Botão de envio -->
-              <button type="submit" class="btn btn-coral btn-lg btn-full diag-submit" id="diag-submit">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 4v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                <span id="diag-submit-text">Solicitar diagnóstico gratuito</span>
-              </button>
-
-              <!-- Garantias embaixo do botão -->
-              <div class="diag-guarantees">
-                <span class="diag-guarantee-item">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="var(--color-green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Sem compromisso
-                </span>
-                <span class="diag-guarantee-item">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="var(--color-green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  LGPD compliant
-                </span>
-                <span class="diag-guarantee-item">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="var(--color-green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Resultado em 48h
-                </span>
-              </div>
-
-            </form>
-
-            <!-- Estado de sucesso (oculto por padrão) -->
-            <div class="diag-success hidden" id="diag-success" role="status" aria-live="polite">
-              <div class="diag-success-icon" aria-hidden="true">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#d1fae5" stroke="var(--color-green)" stroke-width="2"/><path d="M14 24l7 7 13-13" stroke="var(--color-green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <h3 class="diag-success-title">Solicitação enviada com sucesso!</h3>
-              <p class="diag-success-desc">
-                Nossa equipe analisará as informações e você receberá o diagnóstico executivo no e-mail informado em até <strong>48 horas úteis</strong>.
-              </p>
-              <p class="diag-success-desc">
-                Enquanto isso, confira nosso conteúdo sobre NR-01 e saúde mental no trabalho:
-              </p>
-              <div class="diag-success-actions">
-                <a href="./nr01.html" class="btn btn-primary">Ver página NR-01</a>
-                <a href="./blog/index.html" class="btn btn-secondary">Ir para o Blog</a>
-              </div>
+            <!-- Garantias embaixo do formulário -->
+            <div class="diag-guarantees" style="padding:var(--space-4) var(--space-6) var(--space-5);">
+              <span class="diag-guarantee-item">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="var(--color-green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Sem compromisso
+              </span>
+              <span class="diag-guarantee-item">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="var(--color-green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                LGPD compliant
+              </span>
+              <span class="diag-guarantee-item">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="var(--color-green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Resultado em 48h
+              </span>
             </div>
 
           </div>

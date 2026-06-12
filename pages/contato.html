@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSEYX6K0FM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HSEYX6K0FM');
+  </script>
+
   <title>Fale com a CVAT Brasil — Contato e Demonstração</title>
   <meta name="description" content="Entre em contato com a CVAT Brasil para solicitar demonstração, proposta de treinamento ou tirar dúvidas sobre nossas soluções de diagnóstico e NR-01." />
   <link rel="canonical" href="https://cvatbrasil.com.br/pages/contato" />
@@ -123,137 +132,27 @@
               <p class="contato-form-subtitle">Respondemos em até 24h em dias úteis</p>
             </div>
 
-            <form
-              id="contato-form"
-              action="/api/contato.php"
-              method="POST"
-              novalidate
-              aria-label="Formulário de contato"
-            >
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-
-              <div class="contato-form-row">
-                <div class="form-group">
-                  <label for="ct-nome" class="form-label">
-                    Nome <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="text" id="ct-nome" name="nome"
-                    class="form-input" placeholder="Seu nome"
-                    autocomplete="name" required aria-required="true"
-                    aria-describedby="ct-nome-error"
-                  />
-                  <span class="form-error" id="ct-nome-error" role="alert" aria-live="polite"></span>
-                </div>
-                <div class="form-group">
-                  <label for="ct-empresa" class="form-label">
-                    Empresa <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="text" id="ct-empresa" name="empresa"
-                    class="form-input" placeholder="Nome da empresa"
-                    autocomplete="organization" required aria-required="true"
-                    aria-describedby="ct-empresa-error"
-                  />
-                  <span class="form-error" id="ct-empresa-error" role="alert" aria-live="polite"></span>
-                </div>
-              </div>
-
-              <div class="contato-form-row">
-                <div class="form-group">
-                  <label for="ct-email" class="form-label">
-                    E-mail <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="email" id="ct-email" name="email"
-                    class="form-input" placeholder="voce@empresa.com.br"
-                    autocomplete="email" required aria-required="true"
-                    aria-describedby="ct-email-error"
-                  />
-                  <span class="form-error" id="ct-email-error" role="alert" aria-live="polite"></span>
-                </div>
-                <div class="form-group">
-                  <label for="ct-telefone" class="form-label">Telefone / WhatsApp</label>
-                  <input
-                    type="tel" id="ct-telefone" name="telefone"
-                    class="form-input" placeholder="(11) 9 9999-9999"
-                    autocomplete="tel" inputmode="numeric"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="ct-assunto" class="form-label">
-                  Assunto <span class="required" aria-hidden="true">*</span>
-                </label>
-                <select
-                  id="ct-assunto" name="assunto"
-                  class="form-select" required aria-required="true"
-                  aria-describedby="ct-assunto-error"
-                >
-                  <option value="" disabled selected>Selecione o assunto</option>
-                  <option value="demonstracao">Solicitar demonstração da plataforma</option>
-                  <option value="proposta-diagnostico">Proposta — Diagnóstico de Clima</option>
-                  <option value="proposta-nr01">Proposta — Gestor NR-01</option>
-                  <option value="proposta-treinamento">Proposta — Treinamento</option>
-                  <option value="duvida-nr01">Dúvida técnica sobre NR-01</option>
-                  <option value="consultor">Plano para Consultores</option>
-                  <option value="parceria">Parceria ou revendedor</option>
-                  <option value="outro">Outro assunto</option>
-                </select>
-                <span class="form-error" id="ct-assunto-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="ct-mensagem" class="form-label">
-                  Mensagem <span class="required" aria-hidden="true">*</span>
-                </label>
-                <textarea
-                  id="ct-mensagem" name="mensagem"
-                  class="form-textarea" rows="5"
-                  placeholder="Descreva sua necessidade, dúvida ou o contexto da empresa..."
-                  required aria-required="true"
-                  aria-describedby="ct-mensagem-error"
-                  maxlength="1000"
-                ></textarea>
-                <span class="form-error" id="ct-mensagem-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <div class="form-group">
-                <label class="diag-consent-label">
-                  <input
-                    type="checkbox" id="ct-lgpd" name="lgpd"
-                    required aria-required="true"
-                    aria-describedby="ct-lgpd-error"
-                    class="diag-consent-checkbox"
-                  />
-                  <span class="diag-consent-text">
-                    Concordo com a
-                    <a href="/pages/privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>
-                    e autorizo o contato da CVAT Brasil por e-mail e telefone.
-                  </span>
-                </label>
-                <span class="form-error" id="ct-lgpd-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-lg btn-full" id="ct-submit">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10l14-7-7 14v-7H3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span id="ct-submit-text">Enviar mensagem</span>
-              </button>
-
-              <p class="contato-form-note">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="var(--color-green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Respondemos em até 24h em dias úteis
-              </p>
-            </form>
-
-            <!-- Sucesso -->
-            <div class="contato-success hidden" id="contato-success" role="status" aria-live="polite" tabindex="-1">
-              <div class="contato-success-icon" aria-hidden="true">
-                <svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="24" fill="#d1fae5" stroke="var(--color-green)" stroke-width="2"/><path d="M15 26l8 8 14-14" stroke="var(--color-green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <h3>Mensagem enviada!</h3>
-              <p>Nossa equipe retornará em até <strong>24 horas úteis</strong>. Verifique também sua caixa de spam.</p>
+            <!-- Formulário GoHighLevel -->
+            <div class="contato-iframe-wrap">
+              <iframe
+                src="https://sistema.frcdigital.com.br/widget/form/tfcMPt8argEXooljAnpZ"
+                id="inline-tfcMPt8argEXooljAnpZ"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="[FORM] - Newsletter"
+                data-height="632"
+                data-layout-iframe-id="inline-tfcMPt8argEXooljAnpZ"
+                data-form-id="tfcMPt8argEXooljAnpZ"
+                title="Formulário de contato CVAT Brasil"
+                style="width:100%;border:none;display:block;"
+                loading="lazy"
+              ></iframe>
+              <script src="https://sistema.frcdigital.com.br/js/form_embed.js"></script>
             </div>
 
           </div>
@@ -311,84 +210,5 @@
 
   <div id="footer-placeholder"></div>
   <script src="../assets/js/main.js" defer></script>
-
-  <script>
-    /* Validação e submit do formulário de contato */
-    (function () {
-      const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-      function validate(id, rule) {
-        const el  = document.getElementById(id);
-        const err = document.getElementById(id + '-error');
-        if (!el) return true;
-
-        const val = el.type === 'checkbox' ? el.checked : el.value.trim();
-        let msg = '';
-
-        if (rule.required && !val) msg = rule.requiredMsg || 'Campo obrigatório.';
-        else if (rule.email && !EMAIL_RE.test(val)) msg = 'E-mail inválido.';
-        else if (rule.min && typeof val === 'string' && val.length < rule.min) msg = `Mínimo ${rule.min} caracteres.`;
-
-        el.classList.toggle('error', !!msg);
-        el.classList.toggle('success', !msg && !!val);
-        if (err) { err.textContent = msg; err.classList.toggle('visible', !!msg); }
-        return !msg;
-      }
-
-      function maskPhone(v) {
-        const d = v.replace(/\D/g, '').slice(0, 11);
-        if (d.length <= 2)  return `(${d}`;
-        if (d.length <= 7)  return `(${d.slice(0,2)}) ${d.slice(2)}`;
-        return `(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}`;
-      }
-
-      document.getElementById('ct-telefone')?.addEventListener('input', function () {
-        this.value = maskPhone(this.value);
-      });
-
-      document.getElementById('contato-form')?.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
-        const ok = [
-          validate('ct-nome',     { required: true, min: 2, requiredMsg: 'Informe seu nome.' }),
-          validate('ct-empresa',  { required: true, min: 2, requiredMsg: 'Informe a empresa.' }),
-          validate('ct-email',    { required: true, email: true, requiredMsg: 'Informe seu e-mail.' }),
-          validate('ct-assunto',  { required: true, requiredMsg: 'Selecione um assunto.' }),
-          validate('ct-mensagem', { required: true, min: 10, requiredMsg: 'Escreva sua mensagem.' }),
-          validate('ct-lgpd',     { required: true, requiredMsg: 'Aceite a política de privacidade.' }),
-        ].every(Boolean);
-
-        if (!ok) {
-          this.querySelector('.error')?.focus();
-          return;
-        }
-
-        const btn  = document.getElementById('ct-submit');
-        const text = document.getElementById('ct-submit-text');
-        btn.disabled = true;
-        text.textContent = 'Enviando…';
-
-        try {
-          const res = await fetch(this.action, {
-            method:  'POST',
-            headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-            body:    JSON.stringify(Object.fromEntries(new FormData(this).entries())),
-          });
-
-          if (res.ok) {
-            this.classList.add('hidden');
-            const suc = document.getElementById('contato-success');
-            suc.classList.remove('hidden');
-            suc.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            suc.focus();
-          } else throw new Error();
-        } catch {
-          window.CVAT?.showToast('Erro ao enviar. Tente novamente em instantes.', 'error');
-          btn.disabled = false;
-          text.textContent = 'Enviar mensagem';
-        }
-      });
-    })();
-  </script>
 </body>
 </html>

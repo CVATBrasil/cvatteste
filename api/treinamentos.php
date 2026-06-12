@@ -15,10 +15,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 try {
     $stmt = getDB()->query(
         'SELECT id, titulo, descricao, modalidade, cor,
-                categorias, publico, topicos, cta_texto, cta_link
+                categorias, publico, topicos, cta_texto, cta_link, pagina_url
          FROM treinamentos
          WHERE ativo = 1
-         ORDER BY ordem, id'
+         ORDER BY ordem DESC, id DESC'
     );
 
     $rows = $stmt->fetchAll();
@@ -27,6 +27,7 @@ try {
         $row['id']         = (int) $row['id'];
         $row['categorias'] = json_decode($row['categorias'], true) ?? [];
         $row['topicos']    = json_decode($row['topicos'], true) ?? [];
+        $row['pagina_url'] = $row['pagina_url'] ?: null;
     }
 
     jsonResponse($rows);

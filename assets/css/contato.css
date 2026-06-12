@@ -220,6 +220,18 @@
   text-decoration: underline;
 }
 
+/* ── IFRAME EMBED (GoHighLevel) ──────────────────────────────── */
+.contato-iframe-wrap {
+  min-height: 632px;
+  width: 100%;
+}
+
+.contato-iframe-wrap iframe {
+  width: 100%;
+  border: none;
+  display: block;
+}
+
 /* ── ESTADO DE SUCESSO ───────────────────────────────────────── */
 .contato-success {
   display: flex;
