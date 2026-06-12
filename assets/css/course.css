@@ -130,21 +130,6 @@
   margin-bottom: var(--space-5);
 }
 
-.price-title {
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  color: var(--color-white);
-  text-align: center;
-  margin-bottom: var(--space-2);
-}
-
-.price-subtitle {
-  font-size: var(--text-sm);
-  color: rgba(255,255,255,.6);
-  text-align: center;
-  margin-bottom: var(--space-6);
-}
-
 .price-benefits {
   display: flex;
   flex-direction: column;
@@ -157,13 +142,6 @@
 .price-benefits li {
   font-size: var(--text-sm);
   color: rgba(255,255,255,.8);
-}
-
-.price-security {
-  font-size: var(--text-xs);
-  color: rgba(255,255,255,.45);
-  text-align: center;
-  margin-top: var(--space-4);
 }
 
 /* ── BREADCRUMB ───────────────────────────────────────────── */
