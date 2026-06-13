@@ -276,72 +276,6 @@
   .course-about-inner.cols-3 { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* ── BLOCO DE TEXTO (parágrafos) ──────────────────────────── */
-.content-block {
-  max-width: 720px;
-  margin-inline: auto;
-}
-
-.content-block p {
-  color: var(--color-gray-700);
-  line-height: 1.75;
-}
-
-/* ── PARA QUEM ────────────────────────────────────────────── */
-.course-audience-grid {
-  display: grid;
-  gap: var(--space-4);
-}
-
-@media (min-width: 640px) {
-  .course-audience-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 1024px) {
-  .course-audience-grid { grid-template-columns: repeat(4, 1fr); }
-}
-
-.course-audience-card {
-  background: var(--color-white);
-  border: 1.5px solid var(--color-gray-200);
-  border-radius: var(--radius-xl);
-  padding: var(--space-6);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  transition: box-shadow var(--transition), border-color var(--transition);
-}
-
-.course-audience-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-blue-light);
-}
-
-.course-audience-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-lg);
-  background: var(--color-blue-light);
-  color: var(--color-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.course-audience-title {
-  font-family: var(--font-display);
-  font-size: var(--text-base);
-  font-weight: 700;
-  color: var(--color-gray-900);
-}
-
-.course-audience-desc {
-  font-size: var(--text-sm);
-  color: var(--color-gray-500);
-  line-height: 1.6;
-}
-
 /* ── MÉTRICAS ─────────────────────────────────────────────── */
 .course-metrics {
   background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
@@ -582,29 +516,6 @@
   font-size: var(--text-sm);
   color: var(--color-gray-500);
   line-height: 1.6;
-}
-
-/* Variante "comparativo" do cert-card */
-.course-cert-card.compare {
-  display: block;
-}
-
-.course-cert-card.compare h4 {
-  font-size: var(--text-lg);
-  font-weight: 700;
-  color: var(--color-gray-900);
-  margin-bottom: var(--space-4);
-}
-
-.course-cert-card.compare ul {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.course-cert-card.compare li {
-  font-size: var(--text-sm);
-  color: var(--color-gray-700);
 }
 
 /* ── INSTRUTOR ────────────────────────────────────────────── */
