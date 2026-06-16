@@ -633,6 +633,26 @@
 
 .faq-item.open .faq-answer { display: block; }
 
+/* ── CTA INTERMEDIÁRIO ────────────────────────────────────── */
+.course-mid-cta {
+  margin-top: var(--space-12);
+  padding: var(--space-8) var(--space-6);
+  background: var(--color-gray-100);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.course-mid-cta-text {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
 /* ── CTA FINAL ────────────────────────────────────────────── */
 .course-cta-section {
   padding-block: var(--space-16);
