@@ -343,6 +343,7 @@
 
 .course-benefit-item:hover { box-shadow: var(--shadow-md); }
 
+.course-benefit-item:has(> h3),
 .course-benefit-item:has(> h4) {
   flex-direction: column;
   align-items: flex-start;
@@ -360,6 +361,7 @@
   flex-shrink: 0;
 }
 
+.course-benefit-item h3,
 .course-benefit-item h4 {
   font-size: var(--text-sm);
   font-weight: 700;
@@ -505,6 +507,7 @@
   flex-shrink: 0;
 }
 
+.course-cert-text h3,
 .course-cert-text h4 {
   font-size: var(--text-base);
   font-weight: 700;
