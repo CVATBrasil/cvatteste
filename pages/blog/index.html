@@ -199,9 +199,12 @@
       }
 
       function renderFeatured(item) {
+        const featImg = item.imagem
+          ? `<img src="${item.imagem}" alt="${item.titulo}" loading="eager" style="width:100%;height:100%;object-fit:cover;" />`
+          : `<div class="blog-featured-img-placeholder">${featSvg[item.cor] || featSvg.blue}</div>`;
         return `<article class="blog-featured" data-cat="${item.categoria}" aria-labelledby="post-featured-title">
           <div class="blog-featured-img" aria-hidden="true">
-            <div class="blog-featured-img-placeholder">${featSvg[item.cor] || featSvg.blue}</div>
+            ${featImg}
           </div>
           <div class="blog-featured-body">
             <div class="blog-featured-meta">
@@ -229,11 +232,12 @@
 
       function renderCard(item, idx) {
         const postId = `post-dyn-${item.id}-title`;
+        const cardImg = item.imagem
+          ? `<img src="${item.imagem}" alt="${item.titulo}" loading="lazy" style="width:100%;height:100%;object-fit:cover;" />`
+          : `<div class="blog-card-img-placeholder blog-card-img-placeholder--${item.cor}">${cardSvg[item.cor] || cardSvg.blue}</div>`;
         return `<article class="blog-card" data-cat="${item.categoria}" aria-labelledby="${postId}">
           <div class="blog-card-img" aria-hidden="true">
-            <div class="blog-card-img-placeholder blog-card-img-placeholder--${item.cor}">
-              ${cardSvg[item.cor] || cardSvg.blue}
-            </div>
+            ${cardImg}
           </div>
           <div class="blog-card-body">
             <div class="blog-card-meta">
