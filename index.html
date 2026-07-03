@@ -203,12 +203,7 @@
     .cs-proof { background: var(--royal-dark); color: var(--white); }
     .cs-proof-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: var(--space-6); align-items: center; }
     .cs-proof-media { display: flex; gap: var(--space-2); }
-    .cs-proof-media .ph {
-      flex: 1; aspect-ratio: 3/4; border-radius: var(--radius);
-      background: rgba(255,255,255,.06); border: 1px dashed rgba(255,255,255,.35);
-      display: flex; align-items: center; justify-content: center; text-align: center;
-      font-family: var(--font-mono); font-size: .7rem; color: rgba(255,255,255,.55); padding: var(--space-2);
-    }
+    .cs-proof-media img { box-shadow: 0 8px 32px rgba(0,0,0,.4); }
     .cs-proof-stat {
       font-family: var(--font-mono); font-weight: 600; color: var(--orange);
       font-size: clamp(3.5rem, 7vw, 5.5rem); line-height: 1;
@@ -420,8 +415,12 @@
     <section class="cs-section cs-proof" aria-labelledby="cs-proof-heading">
       <div class="cs-container cs-proof-grid">
         <div class="cs-proof-media">
-          <div class="ph">foto-perfil.jpg<br>(substituir)</div>
-          <div class="ph">capa-tese-doutorado.jpg<br>(substituir)</div>
+          <img src="./assets/img/foto-perfil.jpg"
+               alt="Clóvis Soler — Doutor em Administração de Empresas"
+               style="flex:1;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius);display:block;" />
+          <img src="./assets/img/capa-tese-doutorado.jpg"
+               alt="Tese de doutorado — base científica do CVAT Sales"
+               style="flex:1;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius);display:block;" />
         </div>
         <div>
           <span class="eyebrow" style="color:var(--orange)">Baseado em pesquisa de doutorado</span>
