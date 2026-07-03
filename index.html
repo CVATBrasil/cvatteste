@@ -4,42 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSEYX6K0FM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-HSEYX6K0FM');
-  </script>
+  <title>CVAT Sales — Descubra o Perfil Comportamental da sua Equipe de Vendas</title>
+  <meta name="description" content="Identifique o perfil comportamental real de cada vendedor da sua equipe. Baseado em pesquisa de doutorado, o CVAT Sales vai além de técnica de venda." />
+  <link rel="canonical" href="https://cvatbrasil.com/" />
 
-  <!-- SEO primário -->
-  <title>CVAT Brasil — Diagnóstico de Clima e Saúde Mental nas Empresas</title>
-  <meta name="description" content="Plataforma de diagnóstico organizacional, saúde mental e conformidade NR-01. Ferramentas CVAT, COPSOQ III e Gestor NR-01 para empresas brasileiras." />
-  <link rel="canonical" href="https://cvatbrasil.com.br/" />
-
-  <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://cvatbrasil.com.br/" />
-  <meta property="og:title"       content="CVAT Brasil — Diagnóstico de Clima e Saúde Mental" />
-  <meta property="og:description" content="Ferramentas científicas para diagnóstico organizacional, riscos psicossociais e conformidade com a NR-01." />
-  <meta property="og:image"       content="https://cvatbrasil.com.br/assets/img/og-home.webp" />
+  <meta property="og:url"         content="https://cvatbrasil.com/" />
+  <meta property="og:title"       content="CVAT Sales — Descubra o Perfil da sua Equipe de Vendas" />
+  <meta property="og:description" content="O perfil comportamental real de cada vendedor. Muito além de Hunter, Closer ou Farmer." />
   <meta property="og:locale"      content="pt_BR" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="CVAT Brasil — Clima e Saúde Mental" />
-  <meta name="twitter:description" content="Diagnóstico organizacional, COPSOQ III e conformidade NR-01 para empresas." />
-  <meta name="twitter:image"       content="https://cvatbrasil.com.br/assets/img/og-home.webp" />
-
-  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" /></noscript>
 
-  <!-- CSS -->
+  <!-- CSS global (base, header e footer) -->
   <link rel="stylesheet" href="./assets/css/main.css" />
-  <link rel="stylesheet" href="./assets/css/components.css" />
 
   <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
 
@@ -50,434 +32,446 @@
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://cvatbrasil.com.br/#organization",
+        "@id": "https://cvatbrasil.com/#organization",
         "name": "CVAT Brasil",
-        "url": "https://cvatbrasil.com.br",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://cvatbrasil.com.br/assets/img/favicon.svg"
-        },
-        "description": "Plataforma de diagnóstico organizacional, saúde mental e conformidade NR-01 para empresas brasileiras.",
+        "url": "https://cvatbrasil.com",
+        "logo": { "@type": "ImageObject", "url": "https://cvatbrasil.com/assets/img/favicon.svg" },
+        "description": "Diagnóstico comportamental de equipes comerciais baseado em pesquisa de doutorado.",
         "contactPoint": {
           "@type": "ContactPoint",
-          "email": "cvat@cvatbrasil.com",
           "contactType": "customer service",
           "availableLanguage": "Portuguese"
         }
       },
       {
         "@type": "WebSite",
-        "@id": "https://cvatbrasil.com.br/#website",
-        "url": "https://cvatbrasil.com.br",
-        "name": "CVAT Brasil",
-        "description": "Diagnóstico organizacional, saúde mental e conformidade NR-01.",
-        "publisher": { "@id": "https://cvatbrasil.com.br/#organization" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://cvatbrasil.com.br/pages/blog/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "@id": "https://cvatbrasil.com/#website",
+        "url": "https://cvatbrasil.com",
+        "name": "CVAT Sales",
+        "publisher": { "@id": "https://cvatbrasil.com/#organization" }
       }
     ]
   }
   </script>
+
+  <!-- GA4 — carregado de forma não-bloqueante -->
+  <script>
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-HSEYX6K0FM';
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HSEYX6K0FM');
+    });
+  </script>
+
+  <!-- ============================================================
+       DESIGN TOKENS — CVAT Sales
+  ============================================================ -->
+  <style>
+    :root {
+      --oxford:      #011633;
+      --royal-dark:  #022B64;
+      --orange:      #FF5722;
+      --white:       #FFFFFF;
+      --platinum:    #E7E7E7;
+      --ink:         var(--oxford);
+      --ink-soft:    #4A5A70;
+      --line:        #D8DCE2;
+      --font-display:'Sora', sans-serif;
+      --font-body:   'Inter', sans-serif;
+      --font-mono:   'IBM Plex Mono', monospace;
+      --radius: 10px;
+      --max:    1120px;
+      --space-1:.5rem;  --space-2:1rem;   --space-3:1.5rem;
+      --space-4:2rem;   --space-5:3rem;   --space-6:4rem;
+      --space-7:6rem;   --space-8:8rem;
+    }
+
+    /* ── Reset mínimo ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    /* ── Tipografia base da página ── */
+    #main-content {
+      font-family: var(--font-body);
+      color: var(--ink);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    #main-content img { max-width: 100%; display: block; }
+    #main-content a { color: inherit; }
+    #main-content h1,
+    #main-content h2,
+    #main-content h3 { font-family: var(--font-display); margin: 0; line-height: 1.15; }
+
+    .cs-container { max-width: var(--max); margin: 0 auto; padding: 0 var(--space-3); }
+    .cs-section   { padding: var(--space-7) 0; }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* ── Botões ── */
+    .cs-btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-family: var(--font-body); font-weight: 700; font-size: 1rem;
+      padding: .95rem 1.75rem; border-radius: 999px;
+      text-decoration: none; border: 2px solid transparent;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .cs-btn:hover { transform: translateY(-2px); }
+    .cs-btn--orange { background: var(--orange); color: var(--white); }
+    .cs-btn--orange:hover { background: #E64A19; }
+    .cs-btn--outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,.4); }
+    .cs-btn--outline:hover { border-color: var(--white); }
+
+    /* ── Elemento de assinatura (radar 16 eixos) ── */
+    .fingerprint-wrap { display: flex; justify-content: center; align-items: center; }
+    .fingerprint-wrap svg { width: 100%; max-width: 380px; height: auto; }
+    @media (prefers-reduced-motion: no-preference) {
+      .fp-shape { animation: fp-draw 1.6s ease-out forwards; }
+      @keyframes fp-draw {
+        from { stroke-dashoffset: 900; opacity: 0; }
+        to   { stroke-dashoffset: 0;   opacity: 1; }
+      }
+    }
+
+    /* ── HERO ── */
+    .cs-hero {
+      background: var(--oxford);
+      color: var(--white);
+      padding: var(--space-8) 0 var(--space-7);
+    }
+    .cs-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: var(--space-6);
+      align-items: center;
+    }
+    .cs-hero .eyebrow { color: var(--orange); }
+    .cs-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-top: var(--space-2);
+      max-width: 22ch;
+    }
+    .cs-hero p.lede {
+      margin-top: var(--space-3);
+      font-size: 1.15rem;
+      color: rgba(255,255,255,.78);
+      max-width: 46ch;
+    }
+    .cs-hero-actions { margin-top: var(--space-4); display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+    /* ── DIFERENCIAÇÃO ── */
+    .cs-diff { background: var(--platinum); }
+    .cs-diff-header { max-width: 46ch; margin: 0 auto var(--space-5); text-align: center; }
+    .cs-diff-header .eyebrow { color: var(--royal-dark); justify-content: center; display: flex; }
+    .cs-diff-header h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-top: var(--space-2); }
+    .cs-diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+    .cs-diff-card {
+      background: var(--white); border-radius: var(--radius); padding: var(--space-4);
+      border: 1px solid var(--line);
+    }
+    .cs-diff-card h3 {
+      font-family: var(--font-mono); font-size: .8rem; letter-spacing: .06em;
+      text-transform: uppercase; font-weight: 600; margin-bottom: var(--space-3);
+      color: var(--ink-soft);
+    }
+    .cs-diff-card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
+    .cs-diff-card li { padding-left: 1.3rem; position: relative; color: var(--ink-soft); }
+    .cs-diff-card li::before { content: "—"; position: absolute; left: 0; color: var(--ink-soft); }
+    .cs-diff-card--us { background: var(--oxford); color: var(--white); border-color: var(--oxford); }
+    .cs-diff-card--us h3 { color: var(--orange); }
+    .cs-diff-card--us li { color: rgba(255,255,255,.9); font-weight: 500; }
+    .cs-diff-card--us li::before { content: "✓"; color: var(--orange); }
+    .cs-diff-quote {
+      margin: var(--space-5) auto 0; max-width: 60ch; text-align: center;
+      font-family: var(--font-display); font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+      font-weight: 600; color: var(--oxford);
+    }
+
+    /* ── PROVA ── */
+    .cs-proof { background: var(--royal-dark); color: var(--white); }
+    .cs-proof-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: var(--space-6); align-items: center; }
+    .cs-proof-media { display: flex; gap: var(--space-2); }
+    .cs-proof-media .ph {
+      flex: 1; aspect-ratio: 3/4; border-radius: var(--radius);
+      background: rgba(255,255,255,.06); border: 1px dashed rgba(255,255,255,.35);
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      font-family: var(--font-mono); font-size: .7rem; color: rgba(255,255,255,.55); padding: var(--space-2);
+    }
+    .cs-proof-stat {
+      font-family: var(--font-mono); font-weight: 600; color: var(--orange);
+      font-size: clamp(3.5rem, 7vw, 5.5rem); line-height: 1;
+    }
+    .cs-proof-stat + p { font-size: 1.05rem; color: rgba(255,255,255,.75); margin-top: var(--space-1); max-width: 42ch; }
+    .cs-proof h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); margin-top: var(--space-3); max-width: 34ch; }
+    .cs-proof-text { margin-top: var(--space-3); color: rgba(255,255,255,.82); max-width: 56ch; }
+
+    /* ── 16 DIMENSÕES ── */
+    .cs-dims { background: var(--white); }
+    .cs-dims-header { text-align: center; max-width: 50ch; margin: 0 auto var(--space-5); }
+    .cs-dims-header .eyebrow { color: var(--royal-dark); justify-content: center; display: flex; }
+    .cs-dims-header h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-top: var(--space-2); }
+    .cs-dims-header p { margin-top: var(--space-2); color: var(--ink-soft); }
+    .cs-dims-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; }
+    .cs-dim-chip {
+      border: 1px solid var(--line); border-radius: var(--radius);
+      padding: var(--space-2); display: flex; align-items: baseline; gap: .6rem;
+    }
+    .cs-dim-chip .n { font-family: var(--font-mono); font-size: .75rem; color: var(--orange); font-weight: 600; }
+    .cs-dim-chip .t { font-size: .9rem; font-weight: 500; }
+
+    /* ── AUTORIDADE ── */
+    .cs-authority { background: var(--platinum); }
+    .cs-authority-grid { display: grid; grid-template-columns: .55fr 1.45fr; gap: var(--space-5); align-items: center; }
+    .cs-authority-photo {
+      aspect-ratio: 1/1; border-radius: var(--radius);
+      background: rgba(1,22,51,.06); border: 1px dashed rgba(1,22,51,.3);
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      font-family: var(--font-mono); font-size: .7rem; color: var(--ink-soft); padding: var(--space-2);
+      overflow: hidden;
+    }
+    .cs-authority-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); }
+    .cs-authority h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
+    .cs-authority ul { list-style: none; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: .75rem; }
+    .cs-authority li { padding-left: 1.5rem; position: relative; color: var(--ink-soft); }
+    .cs-authority li::before {
+      content: ""; position: absolute; left: 0; top: .5em;
+      width: 8px; height: 8px; border-radius: 50%; background: var(--orange);
+    }
+    .cs-authority li strong { color: var(--ink); }
+
+    /* ── PROVA SOCIAL ── */
+    .cs-social { background: var(--white); text-align: center; }
+    .cs-social .eyebrow { justify-content: center; display: flex; color: var(--ink-soft); }
+    .cs-logos { margin-top: var(--space-4); display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); }
+    .cs-logo-ph {
+      width: 150px; height: 64px; border: 1px dashed var(--line); border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-mono); font-size: .65rem; color: var(--ink-soft); text-align: center; padding: .4rem;
+    }
+
+    /* ── LINK DISCRETO ── */
+    .cs-more { background: var(--platinum); padding: var(--space-4) 0; text-align: center; }
+    .cs-more a { font-size: .95rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; color: var(--ink); }
+
+    /* ── CTA FINAL ── */
+    .cs-cta-final { background: var(--oxford); color: var(--white); text-align: center; padding: var(--space-7) 0; }
+    .cs-cta-final h2 { font-size: clamp(1.6rem, 3.2vw, 2.3rem); max-width: 32ch; margin: 0 auto; }
+    .cs-cta-final p { margin: var(--space-2) auto 0; color: rgba(255,255,255,.75); max-width: 44ch; }
+    .cs-cta-final .cs-btn { margin-top: var(--space-4); }
+
+    /* ── Responsivo ── */
+    @media (max-width: 860px) {
+      .cs-hero-grid,
+      .cs-proof-grid,
+      .cs-authority-grid { grid-template-columns: 1fr; }
+      .cs-hero-grid { text-align: left; }
+      .fingerprint-wrap { order: -1; max-width: 260px; margin: 0 auto var(--space-4); }
+      .cs-diff-grid { grid-template-columns: 1fr; }
+      .cs-dims-grid { grid-template-columns: repeat(2, 1fr); }
+      .cs-proof-media { max-width: 320px; }
+    }
+    @media (max-width: 480px) {
+      .cs-dims-grid { grid-template-columns: 1fr 1fr; }
+      .cs-section   { padding: var(--space-6) 0; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Skip navigation -->
   <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+  <div class="page-loader" id="page-loader" aria-hidden="true"><div class="loader-spinner"></div></div>
 
-  <!-- Page loader -->
-  <div class="page-loader" id="page-loader" aria-hidden="true">
-    <div class="loader-spinner"></div>
-  </div>
-
-  <!-- Header (injetado via fetch) -->
   <div id="header-placeholder"></div>
 
-  <!-- ════════════════════════════════════════════════════════
-       CONTEÚDO PRINCIPAL
-  ════════════════════════════════════════════════════════ -->
   <main id="main-content">
 
-    <!-- ── HERO ─────────────────────────────────────────────── -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h1 id="hero-heading">
-            Transforme dados sobre pessoas<br />
-            em <em class="hero-highlight">decisões melhores</em><br />
-            para sua empresa.
-          </h1>
-          <p class="hero-desc">
-            Diagnósticos organizacionais, avaliações comportamentais, treinamentos reconhecidos pelo MEC, certificações profissionais e consultoria para desenvolver equipes, líderes e culturas organizacionais.
-          </p>
-
-          <div class="hero-actions">
-            <a href="./pages/diagnostico.html" class="btn btn-coral btn-lg">Fazer Diagnóstico Gratuito</a>
-            <a href="./pages/contato.html" class="btn btn-ghost btn-lg">Falar com um Especialista</a>
-          </div>
-
-          <div class="hero-trust">
-            <span class="hero-trust-item">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              +50.000 testes realizados
-            </span>
-            <span class="hero-trust-item">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              +1.200 profissionais habilitados
-            </span>
-            <span class="hero-trust-item">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Metodologia validada desde 1980
-            </span>
+    <!-- ══════════════ HERO ══════════════ -->
+    <section class="cs-hero" aria-labelledby="cs-hero-heading">
+      <div class="cs-container cs-hero-grid">
+        <div>
+          <span class="eyebrow">CVAT SALES — Diagnóstico comportamental de equipes comerciais</span>
+          <h1 id="cs-hero-heading">Chegou a hora de resolver o principal problema da gestão da sua equipe de vendas: contratar, formar e manter os vendedores certos.</h1>
+          <p class="lede">O CVAT Sales identifica o perfil comportamental real de cada vendedor — a base que a maioria das contratações e treinamentos ignora.</p>
+          <div class="cs-hero-actions">
+            <a href="https://wa.me/5511982878486" class="cs-btn cs-btn--orange" target="_blank" rel="noopener noreferrer">Falar com um especialista</a>
+            <a href="./pages/treinamentos.html" class="cs-btn cs-btn--outline">Ver treinamentos</a>
           </div>
         </div>
-
-        <!-- Painel visual do hero -->
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-card hero-card--main">
-            <div class="hero-card-header">
-              <span class="hero-card-dot hero-card-dot--green"></span>
-              <span class="hero-card-dot hero-card-dot--yellow"></span>
-              <span class="hero-card-dot hero-card-dot--red"></span>
-              <span class="hero-card-title-bar">Perfil C-VAT — Relatório Individual</span>
-            </div>
-            <div class="hero-card-body">
-              <div class="hero-metric">
-                <span class="hero-metric-label">Perfil Analítico / Colaborativo</span>
-                <div class="hero-metric-bar-wrap">
-                  <div class="hero-metric-bar" style="--w:82%"></div>
-                  <span class="hero-metric-value">82%</span>
-                </div>
-              </div>
-              <div class="hero-metric">
-                <span class="hero-metric-label">Orientação a Resultados</span>
-                <div class="hero-metric-bar-wrap">
-                  <div class="hero-metric-bar hero-metric-bar--green" style="--w:74%"></div>
-                  <span class="hero-metric-value">74%</span>
-                </div>
-              </div>
-              <div class="hero-metric">
-                <span class="hero-metric-label">Resiliência</span>
-                <div class="hero-metric-bar-wrap">
-                  <div class="hero-metric-bar hero-metric-bar--coral" style="--w:68%"></div>
-                  <span class="hero-metric-value">68%</span>
-                </div>
-              </div>
-              <div class="hero-card-chips">
-                <span class="badge badge-green">Valores ✓</span>
-                <span class="badge badge-blue">Comportamentos ✓</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-float hero-float--top">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3l2 4 4.5.7-3.25 3.17.77 4.5L10 13.25l-4.02 2.12.77-4.5L3.5 7.7 8 7z" fill="var(--color-blue)" stroke="var(--color-blue)" stroke-width=".5"/></svg>
-            <span>+50 mil testes realizados</span>
-          </div>
-          <div class="hero-float hero-float--bottom">
-            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 4v4l3 3" stroke="var(--color-green)" stroke-width="2" stroke-linecap="round"/></svg>
-            <span>Premiado na Ásia — 2015</span>
-          </div>
+        <div class="fingerprint-wrap" aria-hidden="true">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="rgba(255,255,255,.18)" stroke-width="1" fill="none">
+              <circle cx="200" cy="200" r="150" />
+              <circle cx="200" cy="200" r="110" />
+              <circle cx="200" cy="200" r="70" />
+              <circle cx="200" cy="200" r="30" />
+            </g>
+            <g id="axes" stroke="rgba(255,255,255,.14)" stroke-width="1"></g>
+            <polygon class="fp-shape" fill="rgba(255,87,34,.16)" stroke="#FF5722" stroke-width="2.5"
+              stroke-dasharray="900" stroke-dashoffset="900"
+              points="200,55 232,64 261,84 283,112 296,146 298,182 291,218 275,251 250,277 219,293 184,297 150,290 118,272 93,246 78,213 73,178 79,143 96,112 122,88 154,68 180,58" />
+          </svg>
         </div>
-
       </div>
     </section>
 
-    <!-- ── COMO PODEMOS AJUDAR VOCÊ ──────────────────────────── -->
-    <section class="personas-section section" id="para-voce" aria-labelledby="personas-heading">
-      <div class="container">
-        <header class="section-header centered" data-reveal>
-          <span class="section-label">Mais de uma solução. Um ecossistema completo para o desenvolvimento organizacional.</span>
-          <h2 id="personas-heading" class="section-title">Como podemos ajudar você?</h2>
-          <p class="section-desc">
-            Empresas crescem quando conseguem alinhar estratégia, cultura, liderança e pessoas. A CVAT oferece uma plataforma completa para diagnosticar problemas, desenvolver profissionais e apoiar decisões com mais segurança.
-          </p>
-        </header>
-
-        <div class="personas-grid">
-
-          <!-- Persona 1: Empresa -->
-          <article class="persona-card" data-reveal data-reveal-delay="1" aria-labelledby="persona-empresa">
-            <div class="persona-icon persona-icon--blue">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="3" y="10" width="22" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M9 10V7a5 5 0 0110 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <h3 id="persona-empresa" class="persona-title">Sou uma Empresa</h3>
-            <ul class="persona-benefits" role="list">
-              <li>Diagnóstico de Saúde Organizacional</li>
-              <li>Consultoria Recorrente CVAT</li>
-              <li>Cultura Organizacional</li>
-              <li>Desenvolvimento de Lideranças</li>
-              <li>NR-01 e Riscos Psicossociais</li>
-              <li>Dashboards e Indicadores</li>
+    <!-- ══════════════ DIFERENCIAÇÃO ══════════════ -->
+    <section class="cs-section cs-diff" aria-labelledby="cs-diff-heading">
+      <div class="cs-container">
+        <div class="cs-diff-header">
+          <span class="eyebrow">A diferença real</span>
+          <h2 id="cs-diff-heading">Enquanto o mercado vende técnica, nós identificamos o perfil.</h2>
+        </div>
+        <div class="cs-diff-grid">
+          <div class="cs-diff-card">
+            <h3>O que o mercado oferece</h3>
+            <ul>
+              <li>Treinamento de técnicas de venda</li>
+              <li>Scripts e roteiros prontos</li>
+              <li>Softwares de gestão de funil</li>
             </ul>
-            <a href="./pages/para-empresas.html" class="btn btn-primary persona-cta">
-              Conhecer Soluções para Empresas
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </article>
-
-          <!-- Persona 2: RH -->
-          <article class="persona-card persona-card--featured" data-reveal data-reveal-delay="2" aria-labelledby="persona-rh">
-            <div class="persona-icon persona-icon--white">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><circle cx="14" cy="10" r="4" stroke="currentColor" stroke-width="2"/><path d="M6 24c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <h3 id="persona-rh" class="persona-title">Sou Profissional de RH</h3>
-            <ul class="persona-benefits" role="list">
-              <li>Plataforma de Gestão</li>
-              <li>Avaliações e Relatórios</li>
-              <li>Certificações Profissionais</li>
-              <li>Créditos para Aplicações</li>
-              <li>Formação Continuada</li>
-              <li>Inteligência Artificial Aplicada</li>
-            </ul>
-            <a href="./pages/para-rh.html" class="btn btn-ghost persona-cta">
-              Conhecer Soluções para RH
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </article>
-
-          <!-- Persona 3: Consultor -->
-          <article class="persona-card" data-reveal data-reveal-delay="3" aria-labelledby="persona-consultor">
-            <div class="persona-icon persona-icon--green">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M5 23l5-5m0 0l3-9 9-5-5 9-9 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 id="persona-consultor" class="persona-title">Sou Consultor</h3>
-            <ul class="persona-benefits" role="list">
-              <li>Certificações Reconhecidas pelo MEC</li>
-              <li>Plataforma CVAT</li>
-              <li>Aplicação de Diagnósticos</li>
-              <li>Relatórios Profissionais</li>
-              <li>Créditos para Utilização</li>
-              <li>Suporte Especializado</li>
-            </ul>
-            <a href="./pages/para-consultores.html" class="btn btn-primary persona-cta">
-              Conhecer Soluções para Consultores
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── DESCUBRA OS GARGALOS DA SUA ORGANIZAÇÃO ───────────── -->
-    <section class="problem-section section bg-blue-light" aria-labelledby="diagnostico-heading">
-      <div class="container problem-inner" data-reveal>
-        <span class="section-label">Diagnóstico gratuito</span>
-        <h2 id="diagnostico-heading" class="section-title problem-title">
-          Descubra os gargalos da sua organização
-        </h2>
-        <p class="problem-highlight">
-          O Diagnóstico de Saúde Organizacional avalia 4 dimensões essenciais da sua empresa.
-        </p>
-        <ul class="persona-benefits" role="list" style="display:inline-flex; text-align:left; margin:var(--space-6) auto 0; max-width:360px;">
-          <li>Planejamento e Gestão</li>
-          <li>Cultura Organizacional</li>
-          <li>Gestão de Pessoas</li>
-          <li>Saúde Organizacional</li>
-        </ul>
-        <div style="margin-top:var(--space-8);">
-          <a href="./pages/diagnostico.html" class="btn btn-coral btn-lg">Iniciar Diagnóstico Gratuito</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── TREINAMENTOS CVAT ─────────────────────────────────── -->
-    <section class="section" aria-labelledby="treinamentos-heading">
-      <div class="container">
-        <header class="section-header centered" data-reveal>
-          <span class="section-label">Academia CVAT</span>
-          <h2 id="treinamentos-heading" class="section-title">Treinamentos CVAT</h2>
-          <p class="section-desc">
-            Formações e certificações reconhecidas para quem quer aplicar a metodologia CVAT com profundidade — do diagnóstico individual à gestão de riscos psicossociais.
-          </p>
-        </header>
-
-        <div style="display:flex; flex-wrap:wrap; gap:var(--space-3); justify-content:center;" data-reveal>
-          <a href="./pages/treinamentos.html#cursos" class="badge badge-blue">Especialista em Valores Pessoais</a>
-          <a href="./pages/treinamentos.html#cursos" class="badge badge-green">Especialista em Carreira</a>
-          <a href="./pages/treinamentos.html#cursos" class="badge badge-coral">Especialista em Relacionamentos</a>
-          <a href="./pages/treinamentos.html#cursos" class="badge badge-blue">Gestor NR-01</a>
-          <a href="./pages/treinamentos.html#cursos" class="badge badge-green">COPSOQ</a>
-          <a href="./pages/treinamentos.html#cursos" class="badge badge-coral">HSE-IT</a>
-          <a href="./pages/treinamentos.html#cursos" class="badge badge-blue">CVAT Aplicado</a>
-        </div>
-
-        <div style="text-align:center; margin-top:var(--space-8);">
-          <a href="./pages/treinamentos.html" class="btn btn-primary btn-lg">Ver Todos os Treinamentos</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── SOLUÇÕES ESPECIALIZADAS ───────────────────────────── -->
-    <section class="solutions-section section bg-gray-100" id="solucoes" aria-labelledby="solutions-heading">
-      <div class="container">
-        <header class="section-header centered" data-reveal>
-          <span class="section-label">Soluções Especializadas</span>
-          <h2 id="solutions-heading" class="section-title">
-            Ferramentas validadas<br />para cada desafio
-          </h2>
-        </header>
-
-        <div class="solutions-list">
-
-          <article class="solution-item" data-reveal data-reveal-delay="1">
-            <div class="solution-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4a12 12 0 100 24A12 12 0 0016 4z" stroke="var(--color-blue)" stroke-width="2"/><path d="M16 10v6l4 4" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="solution-content">
-              <h3 class="solution-title">COPSOQ</h3>
-              <p class="solution-desc">Avaliação avançada de riscos psicossociais no trabalho.</p>
-              <a href="./pages/solucoes/copsoq.html" class="solution-link">
-                Saiba Mais
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <article class="solution-item" data-reveal data-reveal-delay="2">
-            <div class="solution-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="16" rx="3" stroke="var(--color-blue)" stroke-width="2"/><path d="M10 14h4m-4 4h8" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/><path d="M22 14l-3 4" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="solution-content">
-              <h3 class="solution-title">HSE-IT</h3>
-              <p class="solution-desc">Avaliação psicossocial aplicada à gestão de saúde, segurança e bem-estar.</p>
-              <a href="./pages/solucoes/hse-it.html" class="solution-link">
-                Saiba Mais
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <article class="solution-item" data-reveal data-reveal-delay="3">
-            <div class="solution-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="5" width="20" height="22" rx="3" stroke="var(--color-blue)" stroke-width="2"/><path d="M11 12h10M11 17h10M11 22h6" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="solution-content">
-              <h3 class="solution-title">Gestor NR-01</h3>
-              <p class="solution-desc">Capacitação prática para adequação às exigências relacionadas aos riscos psicossociais.</p>
-              <a href="./pages/solucoes/gestor-nr01.html" class="solution-link">
-                Saiba Mais
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CONTEÚDO PARA EMPRESAS, RH E CONSULTORES ──────────── -->
-    <section class="section" aria-labelledby="blog-heading">
-      <div class="container">
-        <header class="section-header centered" data-reveal>
-          <span class="section-label">Blog CVAT Brasil</span>
-          <h2 id="blog-heading" class="section-title">Conteúdo para Empresas, RH e Consultores</h2>
-          <p class="section-desc">
-            Artigos práticos sobre gestão de pessoas, cultura organizacional, liderança e conformidade com a NR-01.
-          </p>
-        </header>
-
-        <div class="nextstep-grid" data-reveal>
-
-          <a href="./pages/blog/index.html" class="nextstep-card nextstep-card--blue">
-            <div class="nextstep-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M8 13h8M8 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="nextstep-body">
-              <h4>Como contratar e desenvolver equipes de vendas</h4>
-              <p>Ler no blog</p>
-            </div>
-            <svg class="nextstep-card-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-
-          <a href="./pages/blog/index.html" class="nextstep-card nextstep-card--green">
-            <div class="nextstep-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M8 13h8M8 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="nextstep-body">
-              <h4>Os custos invisíveis do turnover</h4>
-              <p>Ler no blog</p>
-            </div>
-            <svg class="nextstep-card-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-
-          <a href="./pages/blog/index.html" class="nextstep-card nextstep-card--coral">
-            <div class="nextstep-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M8 13h8M8 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="nextstep-body">
-              <h4>Os sinais de uma liderança sobrecarregada</h4>
-              <p>Ler no blog</p>
-            </div>
-            <svg class="nextstep-card-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-
-          <a href="./pages/blog/index.html" class="nextstep-card nextstep-card--blue">
-            <div class="nextstep-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M8 13h8M8 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="nextstep-body">
-              <h4>Como fortalecer a cultura organizacional</h4>
-              <p>Ler no blog</p>
-            </div>
-            <svg class="nextstep-card-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-
-          <a href="./pages/blog/index.html" class="nextstep-card nextstep-card--green">
-            <div class="nextstep-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M8 13h8M8 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="nextstep-body">
-              <h4>NR-01 e riscos psicossociais na prática</h4>
-              <p>Ler no blog</p>
-            </div>
-            <svg class="nextstep-card-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-
-        </div>
-
-        <div style="text-align:center; margin-top:var(--space-8);">
-          <a href="./pages/blog/index.html" class="btn btn-primary btn-lg">Acessar Blog</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CTA FINAL ─────────────────────────────────────────── -->
-    <section class="cta-section" aria-labelledby="cta-heading">
-      <div class="container">
-        <div class="cta-inner" data-reveal>
-          <div class="cta-text">
-            <span class="section-label" style="color: rgba(255,255,255,.7)">Fale com a CVAT</span>
-            <h2 id="cta-heading" class="cta-title">
-              Ainda não sabe qual solução é a melhor?
-            </h2>
-            <p class="cta-desc">
-              Converse com um especialista da CVAT e descubra o caminho certo para sua empresa, sua equipe de RH ou sua consultoria.
-            </p>
           </div>
-          <div class="cta-actions">
-            <a href="./pages/contato.html" class="btn btn-coral btn-lg">
-              Agendar Conversa
-            </a>
-            <a href="https://wa.me/5511982878486" class="btn btn-ghost btn-lg" rel="noopener noreferrer" target="_blank">
-              Chamar no WhatsApp
-            </a>
+          <div class="cs-diff-card cs-diff-card--us">
+            <h3>O que a CVAT oferece</h3>
+            <ul>
+              <li>O perfil comportamental real de cada vendedor — muito além de Hunter, Closer ou Farmer</li>
+              <li>Análise individual, de equipe e de liderança comercial</li>
+              <li>Base científica para decidir quem contratar, promover ou remanejar</li>
+            </ul>
           </div>
         </div>
+        <p class="cs-diff-quote">"Tratar os iguais de forma igual. E os diferentes, de forma diferente."</p>
+      </div>
+    </section>
+
+    <!-- ══════════════ PROVA / DADO DE PESQUISA ══════════════ -->
+    <section class="cs-section cs-proof" aria-labelledby="cs-proof-heading">
+      <div class="cs-container cs-proof-grid">
+        <div class="cs-proof-media">
+          <div class="ph">foto-perfil.jpg<br>(substituir)</div>
+          <div class="ph">capa-tese-doutorado.jpg<br>(substituir)</div>
+        </div>
+        <div>
+          <span class="eyebrow" style="color:var(--orange)">Baseado em pesquisa de doutorado</span>
+          <div class="cs-proof-stat">12×</div>
+          <p>o salário do vendedor é o custo médio estimado de uma contratação errada</p>
+          <h2 id="cs-proof-heading">Vendedor ideal não é intuição. É ciência aplicada.</h2>
+          <p class="cs-proof-text">Em pesquisa de doutorado aplicada ao setor farmacêutico, foram mapeados três perfis de desempenho — baixo, médio e alto — revelando os padrões comportamentais que realmente diferenciam um vendedor de resultado. Para um vendedor com salário de R$10 mil, uma contratação equivocada pode custar R$120 mil ou mais à empresa, considerando o tempo até a identificação do erro e a substituição.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 16 DIMENSÕES ══════════════ -->
+    <section class="cs-section cs-dims" aria-labelledby="cs-dims-heading">
+      <div class="cs-container">
+        <div class="cs-dims-header">
+          <span class="eyebrow">O mapa comportamental do vendedor</span>
+          <h2 id="cs-dims-heading">16 dimensões. Nenhum achismo.</h2>
+          <p>Cada vendedor é avaliado em 16 dimensões comportamentais específicas para vendas — a mesma estrutura usada na pesquisa de doutorado que fundamenta o CVAT Sales.</p>
+        </div>
+        <div class="cs-dims-grid">
+          <div class="cs-dim-chip"><span class="n">01</span><span class="t">Prospecção</span></div>
+          <div class="cs-dim-chip"><span class="n">02</span><span class="t">Senso de urgência</span></div>
+          <div class="cs-dim-chip"><span class="n">03</span><span class="t">Follow up</span></div>
+          <div class="cs-dim-chip"><span class="n">04</span><span class="t">Capricho e detalhe</span></div>
+          <div class="cs-dim-chip"><span class="n">05</span><span class="t">Resiliência emocional</span></div>
+          <div class="cs-dim-chip"><span class="n">06</span><span class="t">Empatia</span></div>
+          <div class="cs-dim-chip"><span class="n">07</span><span class="t">Sociabilidade</span></div>
+          <div class="cs-dim-chip"><span class="n">08</span><span class="t">Cultivo da relação</span></div>
+          <div class="cs-dim-chip"><span class="n">09</span><span class="t">Agressividade</span></div>
+          <div class="cs-dim-chip"><span class="n">10</span><span class="t">Imagem</span></div>
+          <div class="cs-dim-chip"><span class="n">11</span><span class="t">Persuasão e negociação</span></div>
+          <div class="cs-dim-chip"><span class="n">12</span><span class="t">Influência</span></div>
+          <div class="cs-dim-chip"><span class="n">13</span><span class="t">Argumentação</span></div>
+          <div class="cs-dim-chip"><span class="n">14</span><span class="t">Planejamento</span></div>
+          <div class="cs-dim-chip"><span class="n">15</span><span class="t">Comunicação e apresentação</span></div>
+          <div class="cs-dim-chip"><span class="n">16</span><span class="t">Adaptabilidade</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ AUTORIDADE ══════════════ -->
+    <section class="cs-section cs-authority" aria-labelledby="cs-authority-heading">
+      <div class="cs-container cs-authority-grid">
+        <div class="cs-authority-photo">
+          <img src="./assets/img/clovis-soler.jpg" alt="Clóvis Soler — Doutor em Administração de Empresas"
+               onerror="this.style.display='none';this.parentElement.innerHTML='foto-perfil.jpg<br>(substituir)'" />
+        </div>
+        <div>
+          <span class="eyebrow" style="color:var(--royal-dark)">Quem está por trás da metodologia</span>
+          <h2 id="cs-authority-heading">Não é uma ferramenta genérica de RH.</h2>
+          <ul>
+            <li><strong>Doutor em Administração de Empresas</strong>, professor universitário e consultor empresarial, com atuação em desenvolvimento organizacional, cultura e comportamento humano.</li>
+            <li><strong>Representante oficial do CVAT no Brasil</strong>, com mais de 1.000 alunos formados.</li>
+            <li>Atende empresas de todos os portes em gestão de pessoas, liderança e riscos psicossociais.</li>
+            <li><strong>Responsável pelo desenvolvimento do software Gestor NR01</strong> (metodologia HSE-IT/COPSOQ), pela estruturação do modelo de relatório e pela apresentação técnica do método aos órgãos competentes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ PROVA SOCIAL ══════════════ -->
+    <section class="cs-section cs-social" aria-labelledby="cs-social-heading">
+      <div class="cs-container">
+        <span class="eyebrow" id="cs-social-heading">Quem já mapeou a equipe com a CVAT</span>
+        <div class="cs-logos">
+          <div class="cs-logo-ph">logo-empresa-1</div>
+          <div class="cs-logo-ph">logo-empresa-2</div>
+          <div class="cs-logo-ph">logo-empresa-3</div>
+          <div class="cs-logo-ph">logo-empresa-4</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ LINK DISCRETO ══════════════ -->
+    <div class="cs-more">
+      <a href="./pages/treinamentos.html">Existe um CVAT para cada necessidade da sua empresa →</a>
+    </div>
+
+    <!-- ══════════════ CTA FINAL ══════════════ -->
+    <section class="cs-cta-final" aria-labelledby="cs-cta-heading">
+      <div class="cs-container">
+        <h2 id="cs-cta-heading">Não enfrente isso sozinho.</h2>
+        <p>Vamos modelar o perfil dos seus principais vendedores e mostrar exatamente onde estão os gargalos da sua equipe.</p>
+        <a href="https://wa.me/5511982878486" class="cs-btn cs-btn--orange" target="_blank" rel="noopener noreferrer">Falar com um especialista</a>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer (injetado via fetch) -->
   <div id="footer-placeholder"></div>
 
-  <!-- JS -->
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/forms.js" defer></script>
+
+  <script>
+    /* Gera os 16 eixos do radar via JS */
+    (function () {
+      const ns = "http://www.w3.org/2000/svg";
+      const g  = document.getElementById("axes");
+      if (!g) return;
+      const cx = 200, cy = 200, r = 150, n = 16;
+      for (let i = 0; i < n; i++) {
+        const angle = (Math.PI * 2 * i) / n - Math.PI / 2;
+        const line  = document.createElementNS(ns, "line");
+        line.setAttribute("x1", cx); line.setAttribute("y1", cy);
+        line.setAttribute("x2", cx + r * Math.cos(angle));
+        line.setAttribute("y2", cy + r * Math.sin(angle));
+        g.appendChild(line);
+      }
+    })();
+  </script>
 
 </body>
 </html>
