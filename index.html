@@ -70,25 +70,22 @@
 
   <!-- ============================================================
        DESIGN TOKENS — CVAT Sales
+       Prefixo --cs-* para não conflitar com o design system global
   ============================================================ -->
   <style>
     :root {
-      --oxford:      #011633;
-      --royal-dark:  #022B64;
-      --orange:      #FF5722;
-      --white:       #FFFFFF;
-      --platinum:    #E7E7E7;
-      --ink:         var(--oxford);
-      --ink-soft:    #4A5A70;
-      --line:        #D8DCE2;
-      --font-display:'Sora', sans-serif;
-      --font-body:   'Inter', sans-serif;
-      --font-mono:   'IBM Plex Mono', monospace;
-      --radius: 10px;
-      --max:    1120px;
-      --space-1:.5rem;  --space-2:1rem;   --space-3:1.5rem;
-      --space-4:2rem;   --space-5:3rem;   --space-6:4rem;
-      --space-7:6rem;   --space-8:8rem;
+      /* Cores exclusivas do CVAT Sales */
+      --cs-oxford:     #011633;
+      --cs-royal-dark: #022B64;
+      --cs-orange:     #FF5722;
+      --cs-platinum:   #E7E7E7;
+      --cs-ink-soft:   #4A5A70;
+      --cs-line:       #D8DCE2;
+      --cs-mono:       'IBM Plex Mono', monospace;
+      /* Espaçamento próprio (--space-* do global tem escala diferente) */
+      --cs-sp1: .5rem;  --cs-sp2: 1rem;   --cs-sp3: 1.5rem;
+      --cs-sp4: 2rem;   --cs-sp5: 3rem;   --cs-sp6: 4rem;
+      --cs-sp7: 6rem;   --cs-sp8: 8rem;
     }
 
     /* ── Reset mínimo ── */
@@ -97,8 +94,8 @@
 
     /* ── Tipografia base da página ── */
     #main-content {
-      font-family: var(--font-body);
-      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      color: var(--cs-oxford);
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
     }
@@ -106,13 +103,13 @@
     #main-content a { color: inherit; }
     #main-content h1,
     #main-content h2,
-    #main-content h3 { font-family: var(--font-display); margin: 0; line-height: 1.15; }
+    #main-content h3 { font-family: 'Sora', sans-serif; margin: 0; line-height: 1.15; }
 
-    .cs-container { max-width: var(--max); margin: 0 auto; padding: 0 var(--space-3); }
-    .cs-section   { padding: var(--space-7) 0; }
+    .cs-container { max-width: 1120px; margin: 0 auto; padding: 0 var(--cs-sp3); }
+    .cs-section   { padding: var(--cs-sp7) 0; }
 
     .eyebrow {
-      font-family: var(--font-mono);
+      font-family: var(--cs-mono);
       font-size: .75rem;
       letter-spacing: .12em;
       text-transform: uppercase;
@@ -122,16 +119,16 @@
     /* ── Botões ── */
     .cs-btn {
       display: inline-flex; align-items: center; gap: .5rem;
-      font-family: var(--font-body); font-weight: 700; font-size: 1rem;
+      font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1rem;
       padding: .95rem 1.75rem; border-radius: 999px;
       text-decoration: none; border: 2px solid transparent;
       transition: transform .15s ease, background .15s ease, border-color .15s ease;
     }
     .cs-btn:hover { transform: translateY(-2px); }
-    .cs-btn--orange { background: var(--orange); color: var(--white); }
+    .cs-btn--orange { background: var(--cs-orange); color: #ffffff; }
     .cs-btn--orange:hover { background: #E64A19; }
-    .cs-btn--outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,.4); }
-    .cs-btn--outline:hover { border-color: var(--white); }
+    .cs-btn--outline { background: transparent; color: #ffffff; border-color: rgba(255,255,255,.4); }
+    .cs-btn--outline:hover { border-color: #ffffff; }
 
     /* ── Elemento de assinatura (radar 16 eixos) ── */
     .fingerprint-wrap { display: flex; justify-content: center; align-items: center; }
@@ -146,84 +143,85 @@
 
     /* ── HERO ── */
     .cs-hero {
-      background: var(--oxford);
-      color: var(--white);
-      padding: var(--space-8) 0 var(--space-7);
+      background: var(--cs-oxford);
+      color: #ffffff;
+      padding: var(--cs-sp8) 0 var(--cs-sp7);
     }
     .cs-hero-grid {
       display: grid;
       grid-template-columns: 1.15fr .85fr;
-      gap: var(--space-6);
+      gap: var(--cs-sp6);
       align-items: center;
     }
-    .cs-hero .eyebrow { color: var(--orange); }
+    .cs-hero .eyebrow { color: var(--cs-orange); }
     .cs-hero h1 {
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 700;
-      margin-top: var(--space-2);
+      color: #ffffff;
+      margin-top: var(--cs-sp2);
       max-width: 22ch;
     }
     .cs-hero p.lede {
-      margin-top: var(--space-3);
+      margin-top: var(--cs-sp3);
       font-size: 1.15rem;
       color: rgba(255,255,255,.78);
       max-width: 46ch;
     }
-    .cs-hero-actions { margin-top: var(--space-4); display: flex; gap: var(--space-2); flex-wrap: wrap; }
+    .cs-hero-actions { margin-top: var(--cs-sp4); display: flex; gap: var(--cs-sp2); flex-wrap: wrap; }
 
     /* ── DIFERENCIAÇÃO ── */
-    .cs-diff { background: var(--platinum); }
-    .cs-diff-header { max-width: 46ch; margin: 0 auto var(--space-5); text-align: center; }
-    .cs-diff-header .eyebrow { color: var(--royal-dark); justify-content: center; display: flex; }
-    .cs-diff-header h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-top: var(--space-2); }
-    .cs-diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+    .cs-diff { background: var(--cs-platinum); }
+    .cs-diff-header { max-width: 46ch; margin: 0 auto var(--cs-sp5); text-align: center; }
+    .cs-diff-header .eyebrow { color: var(--cs-royal-dark); justify-content: center; display: flex; }
+    .cs-diff-header h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-top: var(--cs-sp2); }
+    .cs-diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--cs-sp3); }
     .cs-diff-card {
-      background: var(--white); border-radius: var(--radius); padding: var(--space-4);
-      border: 1px solid var(--line);
+      background: #ffffff; border-radius: 10px; padding: var(--cs-sp4);
+      border: 1px solid var(--cs-line);
     }
     .cs-diff-card h3 {
-      font-family: var(--font-mono); font-size: .8rem; letter-spacing: .06em;
-      text-transform: uppercase; font-weight: 600; margin-bottom: var(--space-3);
-      color: var(--ink-soft);
+      font-family: var(--cs-mono); font-size: .8rem; letter-spacing: .06em;
+      text-transform: uppercase; font-weight: 600; margin-bottom: var(--cs-sp3);
+      color: var(--cs-ink-soft);
     }
     .cs-diff-card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .65rem; }
-    .cs-diff-card li { padding-left: 1.3rem; position: relative; color: var(--ink-soft); }
-    .cs-diff-card li::before { content: "—"; position: absolute; left: 0; color: var(--ink-soft); }
-    .cs-diff-card--us { background: var(--oxford); color: var(--white); border-color: var(--oxford); }
-    .cs-diff-card--us h3 { color: var(--orange); }
+    .cs-diff-card li { padding-left: 1.3rem; position: relative; color: var(--cs-ink-soft); }
+    .cs-diff-card li::before { content: "—"; position: absolute; left: 0; color: var(--cs-ink-soft); }
+    .cs-diff-card--us { background: var(--cs-oxford); color: #ffffff; border-color: var(--cs-oxford); }
+    .cs-diff-card--us h3 { color: var(--cs-orange); }
     .cs-diff-card--us li { color: rgba(255,255,255,.9); font-weight: 500; }
-    .cs-diff-card--us li::before { content: "✓"; color: var(--orange); }
+    .cs-diff-card--us li::before { content: "✓"; color: var(--cs-orange); }
     .cs-diff-quote {
-      margin: var(--space-5) auto 0; max-width: 60ch; text-align: center;
-      font-family: var(--font-display); font-size: clamp(1.2rem, 2.4vw, 1.6rem);
-      font-weight: 600; color: var(--oxford);
+      margin: var(--cs-sp5) auto 0; max-width: 60ch; text-align: center;
+      font-family: 'Sora', sans-serif; font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+      font-weight: 600; color: var(--cs-oxford);
     }
 
     /* ── PROVA ── */
-    .cs-proof { background: var(--royal-dark); color: var(--white); }
-    .cs-proof-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: var(--space-6); align-items: center; }
-    .cs-proof-media { display: flex; gap: var(--space-2); }
+    .cs-proof { background: var(--cs-royal-dark); color: #ffffff; }
+    .cs-proof-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: var(--cs-sp6); align-items: center; }
+    .cs-proof-media { display: flex; gap: var(--cs-sp2); }
     .cs-proof-media img { box-shadow: 0 8px 32px rgba(0,0,0,.4); }
     .cs-proof-stat {
-      font-family: var(--font-mono); font-weight: 600; color: var(--orange);
+      font-family: var(--cs-mono); font-weight: 600; color: var(--cs-orange);
       font-size: clamp(3.5rem, 7vw, 5.5rem); line-height: 1;
     }
-    .cs-proof-stat + p { font-size: 1.05rem; color: rgba(255,255,255,.75); margin-top: var(--space-1); max-width: 42ch; }
-    .cs-proof h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); margin-top: var(--space-3); max-width: 34ch; }
-    .cs-proof-text { margin-top: var(--space-3); color: rgba(255,255,255,.82); max-width: 56ch; }
+    .cs-proof-stat + p { font-size: 1.05rem; color: rgba(255,255,255,.75); margin-top: var(--cs-sp1); max-width: 42ch; }
+    .cs-proof h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); color: #ffffff; margin-top: var(--cs-sp3); max-width: 34ch; }
+    .cs-proof-text { margin-top: var(--cs-sp3); color: rgba(255,255,255,.82); max-width: 56ch; }
 
     /* ── 16 DIMENSÕES ── */
-    .cs-dims { background: var(--white); }
-    .cs-dims-header { text-align: center; max-width: 50ch; margin: 0 auto var(--space-5); }
-    .cs-dims-header .eyebrow { color: var(--royal-dark); justify-content: center; display: flex; }
-    .cs-dims-header h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-top: var(--space-2); }
+    .cs-dims { background: #ffffff; }
+    .cs-dims-header { text-align: center; max-width: 50ch; margin: 0 auto var(--cs-sp5); }
+    .cs-dims-header .eyebrow { color: var(--cs-royal-dark); justify-content: center; display: flex; }
+    .cs-dims-header h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-top: var(--cs-sp2); }
 
     /* ── E-BOOK ── */
-    .cs-ebook { background: var(--oxford); color: var(--white); }
+    .cs-ebook { background: var(--cs-oxford); color: #ffffff; }
     .cs-ebook-grid {
       display: grid;
       grid-template-columns: .45fr .55fr;
-      gap: var(--space-6);
+      gap: var(--cs-sp6);
       align-items: center;
     }
     .cs-ebook-cover {
@@ -241,9 +239,9 @@
       position: absolute;
       top: -12px;
       right: 0;
-      background: var(--orange);
-      color: var(--white);
-      font-family: var(--font-mono);
+      background: var(--cs-orange);
+      color: #ffffff;
+      font-family: var(--cs-mono);
       font-size: .7rem;
       font-weight: 600;
       letter-spacing: .06em;
@@ -253,17 +251,18 @@
     }
     .cs-ebook-form h2 {
       font-size: clamp(1.4rem, 2.6vw, 1.9rem);
-      margin: var(--space-2) 0 var(--space-2);
+      color: #ffffff;
+      margin: var(--cs-sp2) 0 var(--cs-sp2);
       max-width: 30ch;
     }
     .cs-ebook-form > p {
       color: rgba(255,255,255,.72);
-      margin: 0 0 var(--space-3);
+      margin: 0 0 var(--cs-sp3);
       max-width: 44ch;
     }
     .cs-ebook-iframe-wrap {
-      background: var(--white);
-      border-radius: var(--radius);
+      background: #ffffff;
+      border-radius: 10px;
       overflow: hidden;
       min-height: 440px;
     }
@@ -271,61 +270,61 @@
       width: 100%;
       min-height: 440px;
       border: none;
-      border-radius: var(--radius);
+      border-radius: 10px;
       display: block;
     }
     @media (max-width: 860px) {
       .cs-ebook-grid { grid-template-columns: 1fr; }
       .cs-ebook-cover img { max-width: 260px; }
     }
-    .cs-dims-header p { margin-top: var(--space-2); color: var(--ink-soft); }
+    .cs-dims-header p { margin-top: var(--cs-sp2); color: var(--cs-ink-soft); }
     .cs-dims-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; }
     .cs-dim-chip {
-      border: 1px solid var(--line); border-radius: var(--radius);
-      padding: var(--space-2); display: flex; align-items: baseline; gap: .6rem;
+      border: 1px solid var(--cs-line); border-radius: 10px;
+      padding: var(--cs-sp2); display: flex; align-items: baseline; gap: .6rem;
     }
-    .cs-dim-chip .n { font-family: var(--font-mono); font-size: .75rem; color: var(--orange); font-weight: 600; }
+    .cs-dim-chip .n { font-family: var(--cs-mono); font-size: .75rem; color: var(--cs-orange); font-weight: 600; }
     .cs-dim-chip .t { font-size: .9rem; font-weight: 500; }
 
     /* ── AUTORIDADE ── */
-    .cs-authority { background: var(--platinum); }
-    .cs-authority-grid { display: grid; grid-template-columns: .55fr 1.45fr; gap: var(--space-5); align-items: center; }
+    .cs-authority { background: var(--cs-platinum); }
+    .cs-authority-grid { display: grid; grid-template-columns: .55fr 1.45fr; gap: var(--cs-sp5); align-items: center; }
     .cs-authority-photo {
-      aspect-ratio: 1/1; border-radius: var(--radius);
+      aspect-ratio: 1/1; border-radius: 10px;
       background: rgba(1,22,51,.06); border: 1px dashed rgba(1,22,51,.3);
       display: flex; align-items: center; justify-content: center; text-align: center;
-      font-family: var(--font-mono); font-size: .7rem; color: var(--ink-soft); padding: var(--space-2);
+      font-family: var(--cs-mono); font-size: .7rem; color: var(--cs-ink-soft); padding: var(--cs-sp2);
       overflow: hidden;
     }
-    .cs-authority-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); }
+    .cs-authority-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
     .cs-authority h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
-    .cs-authority ul { list-style: none; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: .75rem; }
-    .cs-authority li { padding-left: 1.5rem; position: relative; color: var(--ink-soft); }
+    .cs-authority ul { list-style: none; margin: var(--cs-sp3) 0 0; padding: 0; display: grid; gap: .75rem; }
+    .cs-authority li { padding-left: 1.5rem; position: relative; color: var(--cs-ink-soft); }
     .cs-authority li::before {
       content: ""; position: absolute; left: 0; top: .5em;
-      width: 8px; height: 8px; border-radius: 50%; background: var(--orange);
+      width: 8px; height: 8px; border-radius: 50%; background: var(--cs-orange);
     }
-    .cs-authority li strong { color: var(--ink); }
+    .cs-authority li strong { color: var(--cs-oxford); }
 
     /* ── PROVA SOCIAL ── */
-    .cs-social { background: var(--white); text-align: center; }
-    .cs-social .eyebrow { justify-content: center; display: flex; color: var(--ink-soft); }
-    .cs-logos { margin-top: var(--space-4); display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); }
+    .cs-social { background: #ffffff; text-align: center; }
+    .cs-social .eyebrow { justify-content: center; display: flex; color: var(--cs-ink-soft); }
+    .cs-logos { margin-top: var(--cs-sp4); display: flex; flex-wrap: wrap; justify-content: center; gap: var(--cs-sp3); }
     .cs-logo-ph {
-      width: 150px; height: 64px; border: 1px dashed var(--line); border-radius: var(--radius);
+      width: 150px; height: 64px; border: 1px dashed var(--cs-line); border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-mono); font-size: .65rem; color: var(--ink-soft); text-align: center; padding: .4rem;
+      font-family: var(--cs-mono); font-size: .65rem; color: var(--cs-ink-soft); text-align: center; padding: .4rem;
     }
 
     /* ── LINK DISCRETO ── */
-    .cs-more { background: var(--platinum); padding: var(--space-4) 0; text-align: center; }
-    .cs-more a { font-size: .95rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; color: var(--ink); }
+    .cs-more { background: var(--cs-platinum); padding: var(--cs-sp4) 0; text-align: center; }
+    .cs-more a { font-size: .95rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; color: var(--cs-oxford); }
 
     /* ── CTA FINAL ── */
-    .cs-cta-final { background: var(--oxford); color: var(--white); text-align: center; padding: var(--space-7) 0; }
-    .cs-cta-final h2 { font-size: clamp(1.6rem, 3.2vw, 2.3rem); max-width: 32ch; margin: 0 auto; }
-    .cs-cta-final p { margin: var(--space-2) auto 0; color: rgba(255,255,255,.75); max-width: 44ch; }
-    .cs-cta-final .cs-btn { margin-top: var(--space-4); }
+    .cs-cta-final { background: var(--cs-oxford); color: #ffffff; text-align: center; padding: var(--cs-sp7) 0; }
+    .cs-cta-final h2 { font-size: clamp(1.6rem, 3.2vw, 2.3rem); color: #ffffff; max-width: 32ch; margin: 0 auto; }
+    .cs-cta-final p { margin: var(--cs-sp2) auto 0; color: rgba(255,255,255,.75); max-width: 44ch; }
+    .cs-cta-final .cs-btn { margin-top: var(--cs-sp4); }
 
     /* ── Responsivo ── */
     @media (max-width: 860px) {
@@ -333,14 +332,14 @@
       .cs-proof-grid,
       .cs-authority-grid { grid-template-columns: 1fr; }
       .cs-hero-grid { text-align: left; }
-      .fingerprint-wrap { order: -1; max-width: 260px; margin: 0 auto var(--space-4); }
+      .fingerprint-wrap { order: -1; max-width: 260px; margin: 0 auto var(--cs-sp4); }
       .cs-diff-grid { grid-template-columns: 1fr; }
       .cs-dims-grid { grid-template-columns: repeat(2, 1fr); }
       .cs-proof-media { max-width: 320px; }
     }
     @media (max-width: 480px) {
       .cs-dims-grid { grid-template-columns: 1fr 1fr; }
-      .cs-section   { padding: var(--space-6) 0; }
+      .cs-section   { padding: var(--cs-sp6) 0; }
     }
   </style>
 </head>
@@ -415,12 +414,12 @@
     <section class="cs-section cs-proof" aria-labelledby="cs-proof-heading">
       <div class="cs-container cs-proof-grid">
         <div class="cs-proof-media">
-          <img src="./assets/img/foto-perfil.jpg"
-               alt="Clóvis Soler — Doutor em Administração de Empresas"
-               style="flex:1;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius);display:block;" />
+          <img src="./assets/img/ebook-equipes-comerciais.jpg"
+               alt="E-book: Como Contratar, Desenvolver e Reter Equipes Comerciais de Alta Performance"
+               style="flex:1;aspect-ratio:3/4;object-fit:cover;border-radius:10px;display:block;" />
           <img src="./assets/img/capa-tese-doutorado.jpg"
                alt="Tese de doutorado — base científica do CVAT Sales"
-               style="flex:1;aspect-ratio:3/4;object-fit:cover;border-radius:var(--radius);display:block;" />
+               style="flex:1;aspect-ratio:3/4;object-fit:cover;border-radius:10px;display:block;" />
         </div>
         <div>
           <span class="eyebrow" style="color:var(--orange)">Baseado em pesquisa de doutorado</span>
