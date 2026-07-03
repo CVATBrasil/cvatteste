@@ -222,6 +222,67 @@
     .cs-dims-header { text-align: center; max-width: 50ch; margin: 0 auto var(--space-5); }
     .cs-dims-header .eyebrow { color: var(--royal-dark); justify-content: center; display: flex; }
     .cs-dims-header h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-top: var(--space-2); }
+
+    /* ── E-BOOK ── */
+    .cs-ebook { background: var(--oxford); color: var(--white); }
+    .cs-ebook-grid {
+      display: grid;
+      grid-template-columns: .45fr .55fr;
+      gap: var(--space-6);
+      align-items: center;
+    }
+    .cs-ebook-cover {
+      position: relative;
+    }
+    .cs-ebook-cover img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 12px;
+      box-shadow: 0 24px 64px rgba(0,0,0,.55), 0 4px 16px rgba(0,0,0,.35);
+      display: block;
+      margin: 0 auto;
+    }
+    .cs-ebook-cover .cs-ebook-badge {
+      position: absolute;
+      top: -12px;
+      right: 0;
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .4rem .85rem;
+      border-radius: 999px;
+    }
+    .cs-ebook-form h2 {
+      font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+      margin: var(--space-2) 0 var(--space-2);
+      max-width: 30ch;
+    }
+    .cs-ebook-form > p {
+      color: rgba(255,255,255,.72);
+      margin: 0 0 var(--space-3);
+      max-width: 44ch;
+    }
+    .cs-ebook-iframe-wrap {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      min-height: 440px;
+    }
+    .cs-ebook-iframe-wrap iframe {
+      width: 100%;
+      min-height: 440px;
+      border: none;
+      border-radius: var(--radius);
+      display: block;
+    }
+    @media (max-width: 860px) {
+      .cs-ebook-grid { grid-template-columns: 1fr; }
+      .cs-ebook-cover img { max-width: 260px; }
+    }
     .cs-dims-header p { margin-top: var(--space-2); color: var(--ink-soft); }
     .cs-dims-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; }
     .cs-dim-chip {
@@ -400,6 +461,49 @@
         </div>
       </div>
     </section>
+
+    <!-- ══════════════ E-BOOK ══════════════ -->
+    <section class="cs-section cs-ebook" aria-labelledby="cs-ebook-heading">
+      <div class="cs-container cs-ebook-grid">
+
+        <!-- Capa do e-book -->
+        <div class="cs-ebook-cover">
+          <span class="cs-ebook-badge">Download gratuito</span>
+          <img
+            src="./assets/img/ebook-equipes-comerciais.jpg"
+            alt="Capa do e-book: Como Contratar, Desenvolver e Reter Equipes Comerciais de Alta Performance"
+            onerror="this.style.display='none'"
+          />
+        </div>
+
+        <!-- Formulário -->
+        <div class="cs-ebook-form">
+          <span class="eyebrow" style="color:var(--orange)">E-book gratuito</span>
+          <h2 id="cs-ebook-heading">Como Contratar, Desenvolver e Reter Equipes Comerciais de Alta Performance</h2>
+          <p>Preencha o formulário abaixo e receba o e-book no seu e-mail. Transforme vendedores em consultores estratégicos.</p>
+          <div class="cs-ebook-iframe-wrap">
+            <iframe
+              src="https://sistema.frcdigital.com.br/widget/form/IKEbqtiFt85A8wOkV4n4"
+              id="inline-IKEbqtiFt85A8wOkV4n4"
+              data-layout='{"id":"INLINE"}'
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="CVAT_PRE-INSCRICAO_CURSOS"
+              data-height="undefined"
+              data-layout-iframe-id="inline-IKEbqtiFt85A8wOkV4n4"
+              data-form-id="IKEbqtiFt85A8wOkV4n4"
+              title="CVAT_PRE-INSCRICAO_CURSOS"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <script src="https://sistema.frcdigital.com.br/js/form_embed.js"></script>
 
     <!-- ══════════════ AUTORIDADE ══════════════ -->
     <section class="cs-section cs-authority" aria-labelledby="cs-authority-heading">
