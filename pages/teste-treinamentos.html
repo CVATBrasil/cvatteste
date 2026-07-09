@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carregando…</title>
+<meta name="description" content="">
+
+<!-- Sanitização de campos *Html vindos da API. Se preferir não depender de CDN,
+     dá pra trocar por uma allowlist manual — deixei a função sanitizeHtml() isolada
+     no bloco de script principal para isso ser fácil de trocar depois. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+
+<style>
+  :root{
+    --ink:#011633;
+    --accent:#ff5722;
+    --accent-hover:#e64a19;
+    --muted:#657089;
+    --bg:#ffffff;
+    --card:#f6f8fb;
+    --ok:#18b47b;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+    --radius:20px;
+    --max:1140px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .gnr-section{padding:24px 20px;}
+  .container{max-width:var(--max);margin:0 auto;}
+  .grid{display:grid;gap:24px}
+  .two{grid-template-columns:1.2fr .8fr}
+  @media (max-width:900px){.two{grid-template-columns:1fr}}
+  h1,h2,h3{color:var(--ink);margin:0 0 12px}
+  p{color:#2b3650;line-height:1.6;margin:0 0 16px}
+  .muted{color:var(--muted)}
+  .btn{appearance:none;border:0;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:12px;font-weight:800;text-decoration:none;cursor:pointer;transition:.2s;font-size:1rem}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:var(--shadow)}
+  .btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+  .btn-ghost{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+  .btn[aria-disabled="true"]{opacity:.5;cursor:not-allowed;pointer-events:none}
+  .hero-card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+  .list{display:grid;gap:10px;margin:12px 0 0;padding:0}
+  .list li{list-style:none;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
+  .check{width:20px;height:20px;border-radius:6px;background:var(--ok);display:inline-block;position:relative;margin-top:3px;flex:0 0 auto}
+  .check::after{content:"";position:absolute;left:5px;top:2px;width:8px;height:12px;border:3px solid #fff;border-top:0;border-left:0;transform:rotate(45deg)}
+  .card{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 0}
+  .badge{background:var(--card);padding:8px 12px;border-radius:999px;font-size:.9rem;font-weight:700;color:var(--ink)}
+  .cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .cols-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media (max-width:900px){.cols-3,.cols-2{grid-template-columns:1fr}}
+  .module{border-left:4px solid var(--accent);padding-left:14px}
+  .cta-bar{position:sticky;bottom:16px;z-index:5;display:flex;justify-content:center}
+  .cta-wrap{background:#101828;color:#fff;padding:12px 16px;border-radius:999px;display:flex;gap:12px;align-items:center;box-shadow:var(--shadow);flex-wrap:wrap;justify-content:center}
+  .cta-wrap .btn{padding:10px 16px}
+  .price{font-size:36px;font-weight:900;color:var(--ink)}
+  .strike{color:#9aa3b2;text-decoration:line-through;font-weight:700}
+  .faq dt{font-weight:900;margin-top:12px}
+  .faq dd{margin:6px 0 14px}
+  .footnote{font-size:.9rem;color:var(--muted)}
+
+  .hero{
+    background:linear-gradient(135deg, rgba(1,22,51,0.92), rgba(11,42,102,0.85));
+    background-size:cover;background-position:center;
+    border-radius:var(--radius);padding:56px 34px;box-shadow:var(--shadow);color:#fff;
+  }
+  .hero.com-imagem{ background-image:linear-gradient(135deg, rgba(1,22,51,0.92), rgba(11,42,102,0.85)), var(--hero-img); }
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);border-radius:999px;padding:8px 14px;font-size:.9rem;font-weight:700;margin-bottom:14px}
+  .title-xl{font-size:clamp(28px,5vw,44px);font-weight:800;line-height:1.15;margin:0 0 12px;color:#fff}
+  .subtitle{font-size:clamp(16px,2.2vw,18px);color:#e6edf7;line-height:1.6;max-width:880px}
+
+  /* estados de carregamento / erro / rascunho */
+  #estado-carregando,#estado-erro{max-width:var(--max);margin:80px auto;padding:0 20px;text-align:center;color:var(--muted);font-family:inherit}
+  #estado-erro{color:#b3261e}
+  #estado-erro pre{white-space:pre-wrap;text-align:left;background:var(--card);padding:16px;border-radius:12px;font-size:.85rem;color:#2b3650}
+  .faixa-rascunho{background:#fff3cd;color:#7a5b00;text-align:center;padding:8px 16px;font-weight:700;font-size:.85rem}
+  .certificacoes{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:24px}
+  .certificacoes img{max-height:140px;width:auto;display:block}
+  .instrutor-card{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .instrutor-foto{flex:0 0 120px}
+  .instrutor-foto img{width:120px;height:120px;object-fit:cover;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+  .instrutor-texto{flex:1;min-width:240px}
+  .instrutor-texto p{margin:0}
+  .rodape-texto{padding-top:24px}
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+
+<template id="tpl-carregando">
+  <div id="estado-carregando">
+    <p>Carregando conteúdo…</p>
+  </div>
+</template>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------------------------------------------------------------------
+  // Configuração
+  // ---------------------------------------------------------------------
+  // A URL da API pode ser sobrescrita via querystring para facilitar teste
+  // de páginas diferentes, ex: ?api=http://sandbox.localhost/api/v1/paginas/cvat-sales.php
+  const params = new URLSearchParams(window.location.search);
+  const API_URL = params.get("api") || "https://sandbox.cvat.com.br/api/v1/paginas/treinamentos.php";
+
+  // Qual página buscar, ex: template.html?pagina=gestor-nr01
+  // Esse valor é repassado pra API como querystring (?pagina=gestor-nr01), e a API
+  // decide qual JSON devolver com base nele. Deve bater com o "pagina.slug" do JSON
+  // retornado (ver estrutura-json-conteudo.md).
+  const PAGINA_SLUG = params.get("pagina");
+
+  // Monta a URL final da API, preservando qualquer querystring que API_URL já tenha
+  // (ex: se alguém passar ?api=http://.../treinamentos.php?debug=1).
+  function buildApiUrl() {
+    const url = new URL(API_URL, window.location.href);
+    if (PAGINA_SLUG) url.searchParams.set("pagina", PAGINA_SLUG);
+    return url.toString();
+  }
+
+  // Tags permitidas nos campos *Html vindos da API (ver seção "Sanitização"
+  // no documento de estrutura do JSON — apenas ênfase inline, nada estrutural).
+  const TAGS_PERMITIDAS = ["b", "strong", "i", "em", "br"];
+
+  const app = document.getElementById("app");
+
+  // ---------------------------------------------------------------------
+  // Helpers de DOM
+  // ---------------------------------------------------------------------
+  function el(tag, attrs, children) {
+    const node = document.createElement(tag);
+    if (attrs) {
+      for (const k in attrs) {
+        if (k === "class") node.className = attrs[k];
+        else if (k === "html") node.innerHTML = attrs[k]; // já deve vir sanitizado
+        else if (k === "text") node.textContent = attrs[k];
+        else node.setAttribute(k, attrs[k]);
+      }
+    }
+    (children || []).forEach(c => { if (c) node.appendChild(c); });
+    return node;
+  }
+
+  function sanitizeHtml(html) {
+    if (!html) return "";
+    if (window.DOMPurify) {
+      return DOMPurify.sanitize(html, { ALLOWED_TAGS: TAGS_PERMITIDAS, ALLOWED_ATTR: [] });
+    }
+    // Fallback muito simples caso o CDN do DOMPurify não carregue (ex: sem internet).
+    // Escapa tudo e depois libera só as tags da allowlist — pior que DOMPurify, mas seguro.
+    console.warn("DOMPurify não carregou; usando sanitização de fallback.");
+    const escaped = html.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const re = new RegExp("&lt;(\\/?(?:" + TAGS_PERMITIDAS.join("|") + "))&gt;", "gi");
+    return escaped.replace(re, "<$1>");
+  }
+
+  // Cria um <span>/<p> a partir de um campo textoHtml (sanitizado).
+  function htmlNode(tag, html, extraAttrs) {
+    return el(tag, Object.assign({ html: sanitizeHtml(html) }, extraAttrs || {}));
+  }
+
+  // ---------------------------------------------------------------------
+  // CTA unificado: { label, tipo, valor }
+  // tipo: "ancora" | "url" | "whatsapp" | "checkoutDireto"
+  //
+  // Convenção de IDs: cada seção usa como id o NOME DA CHAVE do JSON
+  // (ex: "modulos", "faq", "instrutor", "preco"). Então um CTA do tipo
+  // "ancora" deve apontar "valor" para essa mesma chave — ex: para rolar
+  // até os módulos, valor = "modulos" (e não "programa" ou qualquer outro
+  // rótulo visual). "preco" e "instrutor" são exceções por herdarem o id
+  // singular já usado na página original (ver renderPreco/renderInstrutores).
+  // ---------------------------------------------------------------------
+  function ctaButton(cta, classe) {
+    if (!cta || !cta.label) return null;
+    const a = el("a", { class: classe, text: cta.label });
+
+    const tipo = cta.tipo || "ancora";
+    const valor = cta.valor || "";
+
+    if (!valor) {
+      // CTA sem valor configurado (ex: checkoutDireto ainda não preenchido pelo backend).
+      a.setAttribute("aria-disabled", "true");
+      a.setAttribute("href", "#");
+      a.title = "Link não configurado nesta página (campo \"valor\" vazio)";
+      console.warn(`CTA "${cta.label}" está sem "valor" definido (tipo: ${tipo}).`);
+      return a;
+    }
+
+    if (tipo === "ancora") {
+      a.setAttribute("href", "#" + valor);
+    } else {
+      // url, whatsapp, checkoutDireto: todos são links externos/abrem em nova aba
+      a.setAttribute("href", valor);
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+    }
+    a.setAttribute("aria-label", cta.label);
+    return a;
+  }
+
+  // ---------------------------------------------------------------------
+  // Seções
+  // ---------------------------------------------------------------------
+
+  function renderPagina(pagina) {
+    if (!pagina) return;
+    if (pagina.titulo) document.title = pagina.titulo;
+    if (pagina.descricao) {
+      document.querySelector('meta[name="description"]').setAttribute("content", pagina.descricao);
+    }
+    if (pagina.ativo === false) {
+      app.appendChild(el("div", { class: "faixa-rascunho", text: "⚠ Página inativa — modo de pré-visualização (\"ativo\": false)" }));
+    }
+  }
+
+  function renderHero(hero) {
+    if (!hero) return null;
+    const heroDiv = el("div", { class: "hero" + (hero.imagemUrl ? " com-imagem" : "") });
+    if (hero.imagemUrl) {
+      heroDiv.style.setProperty("--hero-img", `url('${hero.imagemUrl}')`);
+    }
+    if (hero.badge) heroDiv.appendChild(el("span", { class: "hero-badge", text: hero.badge }));
+    if (hero.titulo) heroDiv.appendChild(el("h1", { id: "hero-title", class: "title-xl", text: hero.titulo }));
+    if (hero.subtituloHtml) heroDiv.appendChild(htmlNode("p", hero.subtituloHtml, { class: "subtitle" }));
+
+    const ctaWrap = el("div", { style: "margin-top:24px;display:flex;gap:12px;flex-wrap:wrap" });
+    const primary = ctaButton(hero.ctaPrimario, "btn btn-primary");
+    const secondary = ctaButton(hero.ctaSecundario, "btn btn-ghost");
+    if (primary) ctaWrap.appendChild(primary);
+    if (secondary) ctaWrap.appendChild(secondary);
+    if (primary || secondary) heroDiv.appendChild(ctaWrap);
+
+    return el("section", { id: "hero", "aria-labelledby": hero.titulo ? "hero-title" : null },
+      [el("div", { class: "container" }, [heroDiv])]);
+  }
+
+  function renderVoceVaiConseguir(dados) {
+    if (!dados) return null;
+    const card = el("aside", { class: "hero-card", "aria-label": dados.titulo || "Resumo" });
+
+    if (dados.certificacoes && dados.certificacoes.length) {
+      const row = el("div", { class: "certificacoes" });
+      dados.certificacoes.forEach(c => {
+        row.appendChild(el("img", { src: c.imagemUrl, alt: c.imagemAlt || c.titulo || "", loading: "lazy" }));
+      });
+      if (dados.certificacaoTextoHtml) {
+        row.appendChild(htmlNode("div", dados.certificacaoTextoHtml, { style: "color:#011633;max-width:480px;font-size:.95rem;line-height:1.5" }));
+      }
+      card.appendChild(row);
+    }
+
+    if (dados.titulo) card.appendChild(el("h3", { text: dados.titulo }));
+    if (dados.itens && dados.itens.length) {
+      const ul = el("ul", { class: "list" });
+      dados.itens.forEach(item => {
+        ul.appendChild(el("li", null, [el("span", { class: "check" }), el("span", { text: item })]));
+      });
+      card.appendChild(ul);
+    }
+    return card;
+  }
+
+  function renderHeroENConseguir(hero, voceVaiConseguir) {
+    // Hero + resumo lateral ficam lado a lado (grid "two"), como no design original.
+    if (!hero && !voceVaiConseguir) return null;
+    const heroSection = renderHero(hero);
+    const resumo = renderVoceVaiConseguir(voceVaiConseguir);
+    const gridWrap = el("div", { class: "container grid two" });
+    if (hero) {
+      // reaproveita só o conteúdo interno do <section id="hero">, sem duplicar o wrapper
+      const innerContainer = heroSection.querySelector(".container").firstChild;
+      gridWrap.appendChild(innerContainer);
+    }
+    if (resumo) gridWrap.appendChild(resumo);
+    return el("section", { id: "gnr-hero", class: "gnr-section" }, [gridWrap]);
+  }
+
+  // Bloco reutilizável: { titulo?, textoHtml?, itens?[], badges?[], imagemUrl?, imagemAlt? }
+  function renderBloco(bloco, opts) {
+    opts = opts || {};
+    const wrapper = el(opts.cardClass !== false ? "div" : "div", { class: opts.cardClass || "card" });
+    if (bloco.imagemUrl) {
+      wrapper.classList.add("instrutor-card");
+      wrapper.appendChild(el("div", { class: "instrutor-foto" }, [
+        el("img", { src: bloco.imagemUrl, alt: bloco.imagemAlt || bloco.titulo || "", loading: "lazy" })
+      ]));
+      const textoDiv = el("div", { class: "instrutor-texto" });
+      if (bloco.textoHtml) textoDiv.appendChild(htmlNode("p", bloco.textoHtml));
+      wrapper.appendChild(textoDiv);
+      return wrapper;
+    }
+    if (bloco.titulo) wrapper.appendChild(el(opts.tituloTag || "h3", { text: bloco.titulo }));
+    if (bloco.textoHtml) wrapper.appendChild(htmlNode("p", bloco.textoHtml));
+    if (bloco.itens && bloco.itens.length) {
+      const ul = el("ul", { class: "list" });
+      bloco.itens.forEach(item => {
+        ul.appendChild(el("li", null, [el("span", { class: "check" }), el("span", { text: item })]));
+      });
+      wrapper.appendChild(ul);
+    }
+    if (bloco.badges && bloco.badges.length) {
+      const badgesDiv = el("div", { class: "badges" });
+      bloco.badges.forEach(b => badgesDiv.appendChild(el("span", { class: "badge", text: b })));
+      wrapper.appendChild(badgesDiv);
+    }
+    return wrapper;
+  }
+
+  function renderSecaoDeBlocos(chaveId, dados, colsClass) {
+    if (!dados || !dados.itens || !dados.itens.length) return null;
+    const container = el("div", { class: "container" });
+    if (dados.titulo) container.appendChild(el("h2", { id: chaveId + "-title", text: dados.titulo }));
+    if (dados.subtitulo) container.appendChild(el("p", { class: "muted", text: dados.subtitulo }));
+    const grid = el("div", { class: colsClass || "cols-3" });
+    dados.itens.forEach(bloco => grid.appendChild(renderBloco(bloco)));
+    container.appendChild(grid);
+    return el("section", { id: chaveId, class: "gnr-section", "aria-labelledby": dados.titulo ? chaveId + "-title" : null }, [container]);
+  }
+
+  function renderMetodo(metodo) {
+    if (!metodo) return null;
+    const container = el("div", { class: "container cols-2" });
+    const introCard = el("div", { class: "card" });
+    if (metodo.titulo) introCard.appendChild(el("h2", { text: metodo.titulo }));
+    if (metodo.introducaoHtml) introCard.appendChild(htmlNode("p", metodo.introducaoHtml));
+    container.appendChild(introCard);
+
+    if (metodo.itens && metodo.itens.length) {
+      const fasesCard = el("div", { class: "card" });
+      const ul = el("ul", { class: "list", style: "margin-top:12px" });
+      metodo.itens.forEach(fase => {
+        const label = fase.titulo ? `<b>${fase.titulo}:</b> ` : "";
+        ul.appendChild(el("li", null, [
+          el("span", { class: "check" }),
+          htmlNode("span", sanitizeHtml(label) + sanitizeHtml(fase.textoHtml || ""))
+        ]));
+      });
+      fasesCard.appendChild(ul);
+      container.appendChild(fasesCard);
+    }
+    return el("section", { id: "metodo", class: "gnr-section", style: "background:var(--card)" }, [container]);
+  }
+
+  function renderModulos(modulos) {
+    return renderSecaoDeBlocos("modulos", modulos, "cols-2");
+  }
+
+  function renderResultados(resultados) {
+    if (!resultados || !resultados.itens || !resultados.itens.length) return null;
+    const container = el("div", { class: "container cols-2" });
+    resultados.itens.forEach((bloco, i) => {
+      const card = el("div", { class: "card" });
+      // O primeiro bloco sem título herda o <h2> da seção.
+      if (i === 0 && !bloco.titulo && resultados.titulo) {
+        card.appendChild(el("h2", { id: "resultados-title", text: resultados.titulo }));
+      } else if (bloco.titulo) {
+        card.appendChild(el("h3", { text: bloco.titulo }));
+      }
+      if (bloco.textoHtml) card.appendChild(htmlNode("p", bloco.textoHtml));
+      if (bloco.itens && bloco.itens.length) {
+        const ul = el("ul", { class: "list" });
+        bloco.itens.forEach(item => ul.appendChild(el("li", null, [el("span", { class: "check" }), el("span", { text: item })])));
+        card.appendChild(ul);
+      }
+      container.appendChild(card);
+    });
+    return el("section", { id: "resultados", class: "gnr-section", "aria-labelledby": "resultados-title", style: "background:var(--card)" }, [container]);
+  }
+
+  function renderInstrutores(instrutores) {
+    if (!instrutores || !instrutores.itens || !instrutores.itens.length) return null;
+    const container = el("div", { class: "container" });
+    if (instrutores.titulo) container.appendChild(el("h2", { id: "instrutor-title", text: instrutores.titulo }));
+    if (instrutores.subtitulo) container.appendChild(el("p", { class: "muted", text: instrutores.subtitulo }));
+    const grid = el("div", { class: "cols-2" });
+    instrutores.itens.forEach(pessoa => {
+      grid.appendChild(el("div", { class: "card" }, [renderBloco(pessoa)]));
+    });
+    container.appendChild(grid);
+    return el("section", { id: "instrutor", class: "gnr-section", "aria-labelledby": instrutores.titulo ? "instrutor-title" : null }, [container]);
+  }
+
+  function renderAutoridade(autoridade) {
+    if (!autoridade || !autoridade.textoHtml) return null;
+    const container = el("div", { class: "container" }, [htmlNode("p", autoridade.textoHtml, { class: "footnote", style: "text-align:center;font-size:1rem" })]);
+    return el("section", { id: "autoridade", class: "gnr-section" }, [container]);
+  }
+
+  function renderFaq(faq) {
+    if (!faq || !faq.itens || !faq.itens.length) return null;
+    const container = el("div", { class: "container card" });
+    if (faq.titulo) container.appendChild(el("h2", { id: "faq-title", text: faq.titulo }));
+    const dl = el("dl", { class: "faq" });
+    faq.itens.forEach(item => {
+      dl.appendChild(el("dt", { text: item.titulo }));
+      dl.appendChild(htmlNode("dd", item.textoHtml));
+    });
+    container.appendChild(dl);
+    return el("section", { id: "faq", class: "gnr-section", "aria-labelledby": faq.titulo ? "faq-title" : null }, [container]);
+  }
+
+  function renderPreco(preco) {
+    if (!preco) return null;
+    const secId = preco.id || "preco";
+    const principal = el("div", { class: "card" });
+    if (preco.titulo) principal.appendChild(el("h2", { id: secId + "-title", text: preco.titulo }));
+    if (preco.subtitulo) principal.appendChild(el("p", { class: "muted", text: preco.subtitulo }));
+
+    if (!preco.semAncoragem && preco.precoOriginal) {
+      principal.appendChild(el("p", { style: "margin:12px 0 4px" }, [el("span", { class: "strike", text: preco.precoOriginal })]));
+    }
+    if (preco.precoExibido) principal.appendChild(el("p", { class: "price", text: preco.precoExibido }));
+    if (preco.parcelamento) principal.appendChild(el("p", { class: "muted", text: preco.parcelamento }));
+
+    const ctaWrap = el("div", { style: "margin-top:14px;display:flex;gap:12px;flex-wrap:wrap" });
+    const primary = ctaButton(preco.ctaPrimario, "btn btn-primary");
+    const secondary = ctaButton(preco.ctaSecundario, "btn btn-ghost");
+    if (primary) ctaWrap.appendChild(primary);
+    if (secondary) ctaWrap.appendChild(secondary);
+    if (primary || secondary) principal.appendChild(ctaWrap);
+
+    if (preco.garantiaHtml) principal.appendChild(htmlNode("p", preco.garantiaHtml, { class: "footnote", style: "margin-top:10px" }));
+
+    const container = el("div", { class: "container" + (preco.beneficios ? " cols-2" : "") }, [principal]);
+
+    if (preco.beneficios && preco.beneficios.itens && preco.beneficios.itens.length) {
+      const beneficiosCard = el("div", { class: "card" });
+      if (preco.beneficios.titulo) beneficiosCard.appendChild(el("h3", { text: preco.beneficios.titulo }));
+      const ul = el("ul", { class: "list" });
+      preco.beneficios.itens.forEach(item => {
+        ul.appendChild(el("li", null, [el("span", { class: "check" }), htmlNode("span", item)]));
+      });
+      beneficiosCard.appendChild(ul);
+      container.appendChild(beneficiosCard);
+    }
+
+    return el("section", { id: secId, class: "gnr-section", "aria-labelledby": preco.titulo ? secId + "-title" : null, style: "background:var(--card)" }, [container]);
+  }
+
+  function renderCtaFixa(ctaFixa) {
+    if (!ctaFixa) return null;
+    const wrap = el("div", { class: "cta-wrap" }, [htmlNode("span", ctaFixa.textoHtml)]);
+    const botao = ctaButton(ctaFixa.cta, "btn btn-primary");
+    if (botao) wrap.appendChild(botao);
+    return el("div", { class: "cta-bar", "aria-hidden": "true" }, [wrap]);
+  }
+
+  function renderRodape(rodape) {
+    if (!rodape || !rodape.textoHtml) return null;
+    return el("section", { class: "gnr-section rodape-texto" }, [
+      el("div", { class: "container" }, [htmlNode("p", rodape.textoHtml, { class: "footnote" })])
+    ]);
+  }
+
+  // ---------------------------------------------------------------------
+  // Orquestração
+  // ---------------------------------------------------------------------
+  function renderPage(data) {
+    app.innerHTML = "";
+    renderPagina(data.pagina);
+
+    const secoes = [
+      renderHeroENConseguir(data.hero, data.voceVaiConseguir),
+      renderSecaoDeBlocos("paraQuem", data.paraQuem, "cols-3"),
+      renderMetodo(data.metodo),
+      renderModulos(data.modulos),
+      renderResultados(data.resultados),
+      renderInstrutores(data.instrutores),
+      renderAutoridade(data.autoridade),
+      renderFaq(data.faq),
+      renderPreco(data.preco),
+    ];
+    secoes.forEach(sec => { if (sec) app.appendChild(sec); });
+
+    const ctaFixa = renderCtaFixa(data.ctaFixa);
+    if (ctaFixa) app.appendChild(ctaFixa);
+
+    const rodape = renderRodape(data.rodape);
+    if (rodape) app.appendChild(rodape);
+  }
+
+  function renderErro(mensagem, detalhe) {
+    app.innerHTML = "";
+    const box = el("div", { id: "estado-erro" }, [
+      el("h2", { text: "Não foi possível carregar o conteúdo" }),
+      el("p", { text: mensagem }),
+    ]);
+    if (detalhe) box.appendChild(el("pre", { text: detalhe }));
+    box.appendChild(el("p", { class: "muted", text: "URL testada: " + urlFinal + " (troque a API com ?api=... e a página com ?pagina=... na querystring)" }));
+    if (!PAGINA_SLUG) {
+      box.appendChild(el("p", { class: "muted", text: "Nenhum parâmetro \"pagina\" foi informado na URL — se a API exigir esse dado, adicione ?pagina=<slug> ao endereço desta página." }));
+    }
+    app.appendChild(box);
+  }
+
+  // ---------------------------------------------------------------------
+  // Carregamento
+  // ---------------------------------------------------------------------
+  app.appendChild(el("div", { id: "estado-carregando" }, [
+    el("p", { text: PAGINA_SLUG ? `Carregando conteúdo (página: ${PAGINA_SLUG})…` : "Carregando conteúdo…" })
+  ]));
+
+  if (!PAGINA_SLUG) {
+    console.warn('Nenhum parâmetro "pagina" na URL (ex: ?pagina=gestor-nr01) — a API foi chamada sem ele e pode devolver um conteúdo padrão ou um erro, dependendo de como o endpoint foi implementado.');
+  }
+
+  const urlFinal = buildApiUrl();
+
+  fetch(urlFinal, { headers: { "Accept": "application/json" } })
+    .then(resp => {
+      if (!resp.ok) throw new Error(`HTTP ${resp.status} ${resp.statusText}`);
+      return resp.json();
+    })
+    .then(data => renderPage(data))
+    .catch(err => {
+      renderErro(
+        "A chamada à API falhou (rede, CORS ou JSON inválido — veja o console para detalhes).",
+        String(err && err.stack ? err.stack : err)
+      );
+      console.error("Falha ao carregar/renderizar a página:", err);
+    });
+
+})();
+</script>
+</body>
+</html>
