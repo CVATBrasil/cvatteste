@@ -370,7 +370,7 @@
 
       const mainSrc = document.querySelector('script[src*="main.js"]')?.src ?? '';
       const siteRoot = mainSrc ? mainSrc.replace(/assets\/js\/main\.js(\?.*)?$/, '') : null;
-      const apiUrl   = siteRoot ? siteRoot + 'api/treinamentos.php' : null;
+      const apiUrl   = 'https://sandbox.cvat.com.br/api/v1/treinamentos.php';
       const jsonUrl  = siteRoot ? siteRoot + 'data/treinamentos.json' : '../data/treinamentos.json';
 
       const load = apiUrl
