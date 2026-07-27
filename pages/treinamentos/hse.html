@@ -48,7 +48,27 @@
       "@type": "CourseInstance",
       "courseMode": "online",
       "inLanguage": "pt-BR"
-    }
+    },
+    "syllabusSections": [
+      {
+        "@type": "Syllabus",
+        "name": "Módulo 1 — Antecedentes e Contexto do HSE-IT",
+        "description": "Evolução da Saúde Ocupacional, riscos psicossociais, origem e bases científicas do HSE-IT.",
+        "timeRequired": "PT10H"
+      },
+      {
+        "@type": "Syllabus",
+        "name": "Módulo 2 — Modelo Conceitual e Estrutura do HSE-IT",
+        "description": "Construto central, 35 itens, 7 dimensões, escala de medição, benchmarks e análise sistêmica.",
+        "timeRequired": "PT10H"
+      },
+      {
+        "@type": "Syllabus",
+        "name": "Módulo 3 — Aplicação e Uso Profissional do HSE-IT",
+        "description": "Metodologia de aplicação, interpretação de resultados, planos de ação estratégicos e casos práticos.",
+        "timeRequired": "PT10H"
+      }
+    ]
   }
   </script>
 
@@ -198,51 +218,121 @@
       color: var(--color-gray-700, #374151);
     }
 
-    /* ── 7 Dimensões ────────────────────────────────────────── */
-    .hse-dimensions {
+    /* ── Conteúdo Programático ──────────────────────────────── */
+    .hse-prog-layout {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: var(--space-5);
-      margin-top: var(--space-8);
+      grid-template-columns: 1fr 340px;
+      gap: var(--space-12);
+      align-items: start;
     }
-    .hse-dimension-card {
+    .hse-prog-modules {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+    .hse-prog-module {
       background: #fff;
       border: 1px solid var(--color-gray-200, #e5e7eb);
-      border-left: 4px solid var(--color-blue, #0052cc);
-      border-radius: 12px;
-      padding: var(--space-5) var(--space-6);
+      border-radius: 14px;
+      overflow: hidden;
     }
-    .hse-dimension-num {
+    .hse-prog-module-head {
+      background: var(--color-blue, #0052cc);
+      color: #fff;
+      padding: var(--space-4) var(--space-6);
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-3);
+    }
+    .hse-prog-module-num {
       font-size: .68rem;
       font-weight: 700;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: var(--color-blue, #0052cc);
-      margin-bottom: var(--space-1);
+      opacity: .75;
+      white-space: nowrap;
     }
-    .hse-dimension-name {
+    .hse-prog-module-title {
       font-family: 'Sora', sans-serif;
-      font-size: 1rem;
+      font-size: .95rem;
       font-weight: 700;
-      color: var(--color-gray-900, #111827);
-      margin-bottom: var(--space-2);
+      line-height: 1.3;
     }
-    .hse-dimension-desc {
-      font-size: .855rem;
-      color: var(--color-gray-600, #4b5563);
-      line-height: 1.6;
+    .hse-prog-module-h {
+      font-size: .75rem;
+      opacity: .7;
+      margin-left: auto;
+      white-space: nowrap;
     }
-    .hse-dimensions-close {
-      margin-top: var(--space-8);
+    .hse-prog-module-body {
       padding: var(--space-5) var(--space-6);
-      background: #fff;
-      border: 1px solid var(--color-gray-200, #e5e7eb);
-      border-left: 4px solid var(--color-coral, #e55a2b);
-      border-radius: 12px;
-      font-size: 1rem;
-      font-style: italic;
+    }
+    .hse-prog-pilar {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--color-blue, #0052cc);
+      margin-bottom: var(--space-3);
+    }
+    .hse-prog-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+    .hse-prog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: .855rem;
       color: var(--color-gray-700, #374151);
-      line-height: 1.6;
+      line-height: 1.5;
+    }
+    .hse-prog-list li::before {
+      content: '–';
+      color: var(--color-blue, #0052cc);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .hse-prog-cert {
+      position: sticky;
+      top: 100px;
+    }
+    .hse-prog-cert-img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 6px 32px rgba(0,0,0,.13);
+      display: block;
+    }
+    .hse-prog-cert-caption {
+      margin-top: var(--space-3);
+      font-size: .78rem;
+      color: var(--color-gray-500, #6b7280);
+      text-align: center;
+      line-height: 1.5;
+    }
+    .hse-prog-cta-line {
+      margin-top: var(--space-8);
+      text-align: center;
+      font-size: .95rem;
+      color: var(--color-gray-600, #4b5563);
+    }
+    .hse-prog-cta-line a {
+      color: var(--color-blue, #0052cc);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .hse-prog-cta-line a:hover { text-decoration: underline; }
+
+    @media (max-width: 900px) {
+      .hse-prog-layout {
+        grid-template-columns: 1fr;
+      }
+      .hse-prog-cert { position: static; }
     }
 
     /* ── Autor da Metodologia ───────────────────────────────── */
@@ -450,54 +540,98 @@
       </div>
     </section>
 
-    <!-- ══════════════ 3. AS 7 DIMENSÕES ══════════════ -->
-    <section class="section" style="background:var(--color-gray-100)" aria-labelledby="dimensoes-heading">
+    <!-- ══════════════ 3. CONTEÚDO PROGRAMÁTICO ══════════════ -->
+    <section class="section" style="background:var(--color-gray-100)" aria-labelledby="programa-heading">
       <div class="container">
         <header class="section-header centered" data-reveal>
           <span class="section-label">Conteúdo</span>
-          <h2 id="dimensoes-heading" class="section-title">As 7 dimensões que você aprende a aplicar e interpretar</h2>
+          <h2 id="programa-heading" class="section-title">Conteúdo Programático Completo</h2>
+          <p class="section-desc">3 módulos · 30 horas de formação estruturada</p>
         </header>
 
-        <div class="hse-dimensions">
-          <div class="hse-dimension-card" data-reveal data-reveal-delay="1">
-            <p class="hse-dimension-num">Dimensão 1</p>
-            <h3 class="hse-dimension-name">Demandas</h3>
-            <p class="hse-dimension-desc">Equilíbrio entre carga de trabalho e capacidade do profissional — quando esse equilíbrio rompe, surge o risco.</p>
+        <div class="hse-prog-layout" data-reveal>
+
+          <!-- Módulos -->
+          <div class="hse-prog-modules">
+
+            <div class="hse-prog-module">
+              <div class="hse-prog-module-head">
+                <span class="hse-prog-module-num">Módulo 1</span>
+                <span class="hse-prog-module-title">Antecedentes e Contexto do HSE-IT</span>
+                <span class="hse-prog-module-h">10h</span>
+              </div>
+              <div class="hse-prog-module-body">
+                <p class="hse-prog-pilar">Pilar 1 — Compreensão, Confiança e Legitimidade</p>
+                <ul class="hse-prog-list">
+                  <li>Evolução da Saúde Ocupacional: do modelo biomédico ao biopsicossocial</li>
+                  <li>Riscos psicossociais no trabalho: definição, impacto e legislação</li>
+                  <li>Origem do HSE-IT: desenvolvimento pela Health and Safety Executive (UK)</li>
+                  <li>Bases científicas e reconhecimento internacional da ferramenta</li>
+                  <li>O papel do HSE-IT na gestão preventiva moderna</li>
+                  <li>Aplicações práticas em diferentes contextos organizacionais</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="hse-prog-module">
+              <div class="hse-prog-module-head">
+                <span class="hse-prog-module-num">Módulo 2</span>
+                <span class="hse-prog-module-title">Modelo Conceitual e Estrutura do HSE-IT</span>
+                <span class="hse-prog-module-h">10h</span>
+              </div>
+              <div class="hse-prog-module-body">
+                <p class="hse-prog-pilar">Pilar 2 — Funcionamento Interno e Lógica da Ferramenta</p>
+                <ul class="hse-prog-list">
+                  <li>O construto central do HSE-IT: riscos psicossociais como fenômeno organizacional</li>
+                  <li>O que o HSE-IT mede e o que não mede (limites e escopo)</li>
+                  <li>Estrutura geral do instrumento: 35 itens e 7 dimensões</li>
+                  <li>As 7 dimensões: Demanda, Controle, Suporte do Gestor, Suporte dos Colegas, Relacionamentos, Papel, Mudança</li>
+                  <li>Escala de medição, pontuação e lógica dos dados</li>
+                  <li>Benchmarks e interpretação de zonas de risco</li>
+                  <li>Análise sistêmica e cruzamento de indicadores</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="hse-prog-module">
+              <div class="hse-prog-module-head">
+                <span class="hse-prog-module-num">Módulo 3</span>
+                <span class="hse-prog-module-title">Aplicação e Uso Profissional do HSE-IT</span>
+                <span class="hse-prog-module-h">10h</span>
+              </div>
+              <div class="hse-prog-module-body">
+                <p class="hse-prog-pilar">Pilar 3 — Competência, Decisão e Ação</p>
+                <ul class="hse-prog-list">
+                  <li>Como aplicar corretamente o HSE-IT: metodologia e boas práticas</li>
+                  <li>Cuidados metodológicos e éticos na coleta de dados</li>
+                  <li>Leitura e interpretação de resultados: padrões, contexto e narrativa</li>
+                  <li>Erros mais comuns na interpretação e como evitá-los</li>
+                  <li>Transformando resultados em planos de ação estratégicos</li>
+                  <li>Priorização de intervenções primárias (causa-raiz)</li>
+                  <li>Integração do HSE-IT com indicadores de RH e Saúde Ocupacional</li>
+                  <li>Casos práticos e aplicações reais em diferentes setores</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
-          <div class="hse-dimension-card" data-reveal data-reveal-delay="2">
-            <p class="hse-dimension-num">Dimensão 2</p>
-            <h3 class="hse-dimension-name">Controle</h3>
-            <p class="hse-dimension-desc">Autonomia como fator de proteção psicossocial — quem tem controle sobre o próprio trabalho resiste melhor à pressão.</p>
+
+          <!-- Certificado -->
+          <div class="hse-prog-cert">
+            <img
+              src="../../assets/img/hse-certificado-modelo.png"
+              alt="Modelo de certificado HSE-IT, 60h, reconhecimento MEC, Anhanguera/Pitágoras Unopar"
+              class="hse-prog-cert-img"
+              loading="lazy"
+            />
+            <p class="hse-prog-cert-caption">Modelo real do certificado emitido ao final do curso · 60h · Reconhecimento MEC via Anhanguera/Pitágoras Unopar</p>
           </div>
-          <div class="hse-dimension-card" data-reveal data-reveal-delay="3">
-            <p class="hse-dimension-num">Dimensão 3</p>
-            <h3 class="hse-dimension-name">Suporte do Gestor</h3>
-            <p class="hse-dimension-desc">Liderança como arquiteta do ambiente — o gestor determina, mais do que qualquer outra variável, a saúde da equipe.</p>
-          </div>
-          <div class="hse-dimension-card" data-reveal data-reveal-delay="4">
-            <p class="hse-dimension-num">Dimensão 4</p>
-            <h3 class="hse-dimension-name">Suporte dos Colegas</h3>
-            <p class="hse-dimension-desc">Resiliência coletiva — equipes com suporte interpessoal absorvem melhor sobrecarga e incerteza.</p>
-          </div>
-          <div class="hse-dimension-card" data-reveal data-reveal-delay="5">
-            <p class="hse-dimension-num">Dimensão 5</p>
-            <h3 class="hse-dimension-name">Relacionamentos</h3>
-            <p class="hse-dimension-desc">Segurança psicológica — ambientes onde conflito e assédio estão presentes aumentam exponencialmente o risco psicossocial.</p>
-          </div>
-          <div class="hse-dimension-card" data-reveal data-reveal-delay="6">
-            <p class="hse-dimension-num">Dimensão 6</p>
-            <h3 class="hse-dimension-name">Papel</h3>
-            <p class="hse-dimension-desc">Clareza e redução de ansiedade — ambiguidade de papel é um dos preditores mais consistentes de burnout.</p>
-          </div>
-          <div class="hse-dimension-card" data-reveal data-reveal-delay="7">
-            <p class="hse-dimension-num">Dimensão 7</p>
-            <h3 class="hse-dimension-name">Mudança</h3>
-            <p class="hse-dimension-desc">Gestão da incerteza e justiça organizacional — como as mudanças são conduzidas afeta diretamente o bem-estar e a confiança institucional.</p>
-          </div>
+
         </div>
 
-        <p class="hse-dimensions-close" data-reveal>
-          Cada dimensão vira indicador mensurável, comparável e defensável — não opinião.
+        <p class="hse-prog-cta-line" data-reveal>
+          Pronto para dominar o método correto de avaliação psicossocial?
+          <a href="https://pay.voompcreators.com.br/13415/offer/0foQeo" target="_blank" rel="noopener noreferrer">→ Garantir minha vaga</a>
         </p>
       </div>
     </section>
