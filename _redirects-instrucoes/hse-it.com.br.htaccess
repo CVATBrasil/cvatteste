@@ -1,0 +1,41 @@
+# ============================================================
+# hse-it.com.br — Redirects 301 para cvatbrasil.com
+# Arquivo: .htaccess (colocar na raiz do domínio hse-it.com.br)
+# ============================================================
+
+Options -Indexes
+RewriteEngine On
+
+# Forçar HTTPS primeiro
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ── Páginas específicas mapeadas ─────────────────────────────
+
+# HSE-IT (página principal deste domínio)
+RewriteRule ^hse/?$                 https://cvatbrasil.com/pages/treinamentos/hse.html [R=301,L]
+RewriteRule ^hse-it/?$              https://cvatbrasil.com/pages/treinamentos/hse.html [R=301,L]
+RewriteRule ^metodologia/?$         https://cvatbrasil.com/pages/treinamentos/hse.html [R=301,L]
+RewriteRule ^avaliacao/?$           https://cvatbrasil.com/pages/treinamentos/hse.html [R=301,L]
+
+# COPSOQ
+RewriteRule ^copsoq/?$              https://cvatbrasil.com/pages/treinamentos/copsoq.html [R=301,L]
+RewriteRule ^copsoq-iii/?$          https://cvatbrasil.com/pages/treinamentos/copsoq.html [R=301,L]
+
+# Treinamentos
+RewriteRule ^treinamentos/?$        https://cvatbrasil.com/pages/treinamentos.html [R=301,L]
+RewriteRule ^cursos?/?$             https://cvatbrasil.com/pages/treinamentos.html [R=301,L]
+
+# NR-01
+RewriteRule ^nr-?01/?$              https://cvatbrasil.com/pages/nr01.html [R=301,L]
+RewriteRule ^riscos-psicossociais/?$ https://cvatbrasil.com/pages/nr01.html [R=301,L]
+
+# Blog / artigos
+RewriteRule ^blog/?$                https://cvatbrasil.com/pages/blog/ [R=301,L]
+RewriteRule ^blog/(.+)/?$           https://cvatbrasil.com/pages/blog/$1 [R=301,L]
+
+# Contato
+RewriteRule ^contato/?$             https://cvatbrasil.com/pages/contato.html [R=301,L]
+
+# ── Qualquer outra URL → home ────────────────────────────────
+RewriteRule ^(.*)$                  https://cvatbrasil.com/ [R=301,L]
