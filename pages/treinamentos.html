@@ -13,14 +13,14 @@
     gtag('config', 'G-HSEYX6K0FM');
   </script>
 
-  <title>Treinamentos C-VAT — Formação em Valores Pessoais e Cultura Organizacional</title>
-  <meta name="description" content="Certificações e treinamentos C-VAT para consultores, RH e líderes. Metodologia usada em +7 países, +50.000 testes realizados." />
+  <title>Catálogo de Treinamentos — CVAT Brasil</title>
+  <meta name="description" content="Todos os treinamentos CVAT Brasil: formações em cultura organizacional, valores, avaliação psicossocial (HSE-IT, COPSOQ III) e conformidade NR-01. Metodologia aplicada em +7 países." />
   <link rel="canonical" href="https://cvatbrasil.com/pages/treinamentos" />
 
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://cvatbrasil.com/pages/treinamentos" />
-  <meta property="og:title"       content="Treinamentos C-VAT — CVAT Brasil" />
-  <meta property="og:description" content="Certificações e treinamentos C-VAT para consultores, RH e líderes." />
+  <meta property="og:title"       content="Catálogo de Treinamentos — CVAT Brasil" />
+  <meta property="og:description" content="Formações para profissionais que constroem gestão de pessoas, cultura e conformidade com base em método." />
   <meta property="og:locale"      content="pt_BR" />
 
   <script type="application/ld+json">
@@ -43,6 +43,258 @@
   <link rel="stylesheet" href="../assets/css/treinamentos.css" />
 
   <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
+
+  <style>
+    /* ── Catálogo estático ─────────────────────────────────── */
+    .cat-hero {
+      background: linear-gradient(135deg, #0f1f3d 0%, #1a3560 60%, #0f1f3d 100%);
+      padding: var(--space-16) 0 var(--space-14);
+      position: relative;
+      overflow: hidden;
+    }
+    .cat-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 20% 50%, rgba(0,102,255,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cat-hero-inner {
+      position: relative;
+      max-width: 780px;
+    }
+    .cat-hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: var(--space-5);
+    }
+    .cat-hero-title {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: var(--space-5);
+    }
+    .cat-hero-sub {
+      font-size: 1.125rem;
+      color: rgba(255,255,255,.82);
+      line-height: 1.65;
+      max-width: 640px;
+      margin-bottom: var(--space-8);
+    }
+    .cat-hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+    }
+    .cat-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 10px;
+      padding: 10px 18px;
+      color: #fff;
+    }
+    .cat-hero-badge strong {
+      font-size: 1.25rem;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .cat-hero-badge span {
+      font-size: .78rem;
+      color: rgba(255,255,255,.7);
+      line-height: 1.3;
+    }
+
+    /* ── Grupos de produto ─────────────────────────────────── */
+    .cat-group {
+      padding: var(--space-14) 0;
+    }
+    .cat-group + .cat-group {
+      border-top: 1px solid var(--color-gray-200, #e5e7eb);
+    }
+    .cat-group-header {
+      margin-bottom: var(--space-8);
+    }
+    .cat-group-label {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--color-blue, #0052cc);
+      margin-bottom: var(--space-2);
+    }
+    .cat-group-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-gray-900, #111827);
+      line-height: 1.3;
+    }
+
+    .cat-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: var(--space-6);
+    }
+
+    .cat-card {
+      background: #fff;
+      border: 1px solid var(--color-gray-200, #e5e7eb);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .cat-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,.10);
+      transform: translateY(-2px);
+    }
+    .cat-card-top {
+      padding: var(--space-7) var(--space-7) var(--space-5);
+      flex: 1;
+    }
+    .cat-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-4);
+    }
+    .cat-tag {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .cat-tag--blue   { background: #dbeafe; color: #1d4ed8; }
+    .cat-tag--coral  { background: #fee2e2; color: #b91c1c; }
+    .cat-tag--green  { background: #d1fae5; color: #065f46; }
+    .cat-tag--purple { background: #ede9fe; color: #6d28d9; }
+    .cat-tag--gray   { background: #f3f4f6; color: #374151; }
+
+    .cat-card-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--color-gray-900, #111827);
+      line-height: 1.35;
+      margin-bottom: var(--space-3);
+    }
+    .cat-card-desc {
+      font-size: .9rem;
+      color: var(--color-gray-600, #4b5563);
+      line-height: 1.65;
+      margin-bottom: var(--space-4);
+    }
+    .cat-card-topics {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+    .cat-card-topics li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: .855rem;
+      color: var(--color-gray-700, #374151);
+      line-height: 1.5;
+    }
+    .cat-card-topics li svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--color-blue, #0052cc);
+    }
+
+    .cat-card-footer {
+      padding: var(--space-5) var(--space-7) var(--space-6);
+      border-top: 1px solid var(--color-gray-100, #f3f4f6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .cat-card-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--color-blue, #0052cc);
+      color: #fff;
+      font-size: .9rem;
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .cat-card-cta:hover {
+      background: #003fa3;
+      transform: translateY(-1px);
+    }
+    .cat-card-cta--coral {
+      background: var(--color-coral, #e55a2b);
+    }
+    .cat-card-cta--coral:hover {
+      background: #c44a21;
+    }
+    .cat-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      font-size: .75rem;
+      color: var(--color-gray-500, #6b7280);
+    }
+    .cat-card-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* ── Linha final customizado ───────────────────────────── */
+    .cat-custom-bar {
+      background: var(--color-gray-50, #f9fafb);
+      border-top: 1px solid var(--color-gray-200, #e5e7eb);
+      padding: var(--space-10) 0;
+      text-align: center;
+    }
+    .cat-custom-text {
+      font-size: 1.05rem;
+      color: var(--color-gray-700, #374151);
+    }
+    .cat-custom-text a {
+      color: var(--color-blue, #0052cc);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .cat-custom-text a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .cat-cards { grid-template-columns: 1fr; }
+      .cat-hero-badges { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
 
@@ -52,358 +304,214 @@
 
   <main id="main-content">
 
-    <!-- ── HERO ─────────────────────────────────────────────── -->
-    <section class="trein-hero" aria-labelledby="trein-hero-heading">
-      <div class="container trein-hero-inner">
-
-        <!-- Coluna esquerda -->
-        <div class="trein-hero-content" data-reveal>
-          <span class="trein-hero-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M11.017 2.814a1 1 0 011.966 0l1.051 5.558a2 2 0 001.594 1.594l5.558 1.051a1 1 0 010 1.966l-5.558 1.051a2 2 0 00-1.594 1.594l-1.051 5.558a1 1 0 01-1.966 0l-1.051-5.558a2 2 0 00-1.594-1.594l-5.558-1.051a1 1 0 010-1.966l5.558-1.051a2 2 0 001.594-1.594z" stroke="currentColor" stroke-width="1.5"/></svg>
-            Formação profissional C-VAT
-          </span>
-          <h1 id="trein-hero-heading">
-            Domine a metodologia
-            <span class="trein-hero-accent">C-VAT</span>
-            e transforme pessoas e organizações.
-          </h1>
-          <p class="trein-hero-desc">
-            Treinamentos certificados para consultores, profissionais de RH e líderes que querem decisões mais precisas sobre pessoas — com base científica.
-          </p>
-          <div class="trein-hero-actions">
-            <a href="./contato.html" class="btn btn-coral btn-lg">Solicitar proposta</a>
-            <a href="#cursos" class="trein-hero-link">
-              Ver todos os treinamentos
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+    <!-- ── HERO ───────────────────────────────────────────────── -->
+    <section class="cat-hero" aria-labelledby="cat-hero-heading">
+      <div class="container cat-hero-inner" data-reveal>
+        <span class="cat-hero-label">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 10h16M4 14h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Catálogo
+        </span>
+        <h1 id="cat-hero-heading" class="cat-hero-title">Todos os treinamentos<br />CVAT Brasil</h1>
+        <p class="cat-hero-sub">Formações para profissionais que constroem gestão de pessoas, cultura e conformidade com base em método, não em achismo.</p>
+        <div class="cat-hero-badges" role="list">
+          <div class="cat-hero-badge" role="listitem">
+            <strong>+50 mil</strong>
+            <span>testes<br />realizados</span>
           </div>
-          <div class="trein-hero-stats">
-            <div class="trein-hero-stat">
-              <span class="trein-hero-stat-num">+50 mil</span>
-              <span class="trein-hero-stat-label">testes realizados</span>
-            </div>
-            <div class="trein-hero-stat">
-              <span class="trein-hero-stat-num">+1.200</span>
-              <span class="trein-hero-stat-label">profissionais habilitados</span>
-            </div>
-            <div class="trein-hero-stat">
-              <span class="trein-hero-stat-num">7+</span>
-              <span class="trein-hero-stat-label">países com a metodologia</span>
-            </div>
+          <div class="cat-hero-badge" role="listitem">
+            <strong>+1.200</strong>
+            <span>profissionais<br />habilitados</span>
+          </div>
+          <div class="cat-hero-badge" role="listitem">
+            <strong>7+</strong>
+            <span>países com<br />a metodologia</span>
           </div>
         </div>
-
-        <!-- Coluna direita: card em destaque -->
-        <div class="trein-hero-card-wrap" aria-hidden="true">
-          <div class="trein-featured-card">
-            <div class="trein-featured-card-label">Em destaque</div>
-            <h3 class="trein-featured-card-title">Formação de Consultores C-VAT</h3>
-            <p class="trein-featured-card-desc">
-              Certificação completa para aplicar o C-VAT profissionalmente. Metodologia usada em mais de 7 países.
-            </p>
-            <a href="./contato.html" class="trein-featured-card-cta">
-              Quero me certificar
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <div class="trein-featured-card-grid">
-              <div class="trein-featured-card-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 9.6H22l-7.2 5.2 2.4 9.2L12 21l-5.2 5 2.4-9.2L2 11.6h7.6z" stroke="currentColor" stroke-width="1.5"/></svg>
-                Certificado
-              </div>
-              <div class="trein-featured-card-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                Turmas ao vivo
-              </div>
-              <div class="trein-featured-card-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 7v14M3 18a1 1 0 01-1-1V4a1 1 0 011-1h5a4 4 0 014 4 4 4 0 014-4h5a1 1 0 011 1v13a1 1 0 01-1 1h-6a3 3 0 00-3 3 3 3 0 00-3-3z" stroke="currentColor" stroke-width="1.5"/></svg>
-                Material exclusivo
-              </div>
-              <div class="trein-featured-card-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 01-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 011-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 011.52 0C14.51 3.81 17 5 19 5a1 1 0 011 1z" stroke="currentColor" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Base científica
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- ── TRILHAS DE FORMAÇÃO ──────────────────────────────── -->
-    <section class="trein-trilhas section" aria-labelledby="trilhas-heading">
+    <!-- ── GRUPO 1 — Cultura, valores e atitudes ──────────────── -->
+    <section class="cat-group" aria-labelledby="grupo1-heading">
       <div class="container">
-        <header class="section-header centered" data-reveal>
-          <span class="section-label">Trilhas de formação</span>
-          <h2 id="trilhas-heading" class="section-title">Qual é o seu perfil?</h2>
-          <p class="section-desc">Cada trilha foi desenhada para um objetivo específico — escolha a que melhor descreve onde você está hoje.</p>
+        <header class="cat-group-header" data-reveal>
+          <span class="cat-group-label">Grupo 1</span>
+          <h2 id="grupo1-heading" class="cat-group-title">Cultura, valores e atitudes organizacionais</h2>
         </header>
 
-        <div class="trein-trilhas-grid">
+        <div class="cat-cards">
 
-          <!-- Empresário / Gestor -->
-          <a href="#cursos" data-filter-trilha="NR-01" class="trein-trilha-card" data-reveal data-reveal-delay="1">
-            <span class="trein-trilha-icon trein-trilha-icon--blue">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="15" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 12v4M10 14h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-            <h3 class="trein-trilha-title">Empresário / Gestor</h3>
-            <p class="trein-trilha-desc">Garanta a conformidade com a NR-01, estruture o PGR e transforme riscos psicossociais em gestão preventiva.</p>
-            <div class="trein-trilha-footer">
-              <span>NR-01 e Psicossociais</span>
-              <span class="trein-trilha-cta">Explorar <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <!-- Card: CVAT Base -->
+          <article class="cat-card" data-reveal data-reveal-delay="1">
+            <div class="cat-card-top">
+              <div class="cat-card-tags">
+                <span class="cat-tag cat-tag--blue">Curso Base</span>
+              </div>
+              <h3 class="cat-card-title">CVAT — Cultura, Valores e Atitudes</h3>
+              <p class="cat-card-desc">Fundamentos teóricos e práticos da metodologia CVAT para diagnóstico de perfil comportamental e cultura organizacional.</p>
+              <ul class="cat-card-topics" role="list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Fundamentos do modelo de valores pessoais
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Leitura e interpretação do perfil CVAT
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Diagnóstico de fit cultural e seleção
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Certificado de habilitação para aplicação
+                </li>
+              </ul>
             </div>
-          </a>
+            <div class="cat-card-footer">
+              <a href="./contato.html" class="cat-card-cta">
+                Ver curso
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
 
-          <!-- Profissional de RH -->
-          <a href="#cursos" data-filter-trilha="todos" class="trein-trilha-card" data-reveal data-reveal-delay="2">
-            <span class="trein-trilha-icon trein-trilha-icon--blue">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-            <h3 class="trein-trilha-title">Profissional de RH</h3>
-            <p class="trein-trilha-desc">Use o CVAT e os protocolos psicossociais para decisões de seleção, desenvolvimento e cultura com base em dados.</p>
-            <div class="trein-trilha-footer">
-              <span>Todos os treinamentos</span>
-              <span class="trein-trilha-cta">Explorar <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <!-- Card: CVAT Aplicado -->
+          <article class="cat-card" data-reveal data-reveal-delay="2">
+            <div class="cat-card-top">
+              <div class="cat-card-tags">
+                <span class="cat-tag cat-tag--purple">Curso Avançado</span>
+              </div>
+              <h3 class="cat-card-title">CVAT Aplicado — Casos reais e práticas avançadas</h3>
+              <p class="cat-card-desc">Aprofundamento prático da metodologia com análise de casos reais, aplicações avançadas e desenvolvimento de intervenções de cultura.</p>
+              <ul class="cat-card-topics" role="list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Análise aprofundada de casos reais
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Intervenções de cultura em equipes e líderes
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Diagnóstico organizacional com dados CVAT
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Pré-requisito: conclusão do Curso Base CVAT
+                </li>
+              </ul>
             </div>
-          </a>
-
-          <!-- Consultor Empresarial -->
-          <a href="#cursos" data-filter-trilha="todos" class="trein-trilha-card" data-reveal data-reveal-delay="3">
-            <span class="trein-trilha-icon trein-trilha-icon--coral">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 21c0-3.5 3-6 7-6s7 2.5 7 6M12 3a4 4 0 100 8 4 4 0 000-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 8l2 2-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <h3 class="trein-trilha-title">Consultor Empresarial</h3>
-            <p class="trein-trilha-desc">Amplie seu portfólio com diagnósticos de valores, NR-01 e avaliações psicossociais para empresas clientes.</p>
-            <div class="trein-trilha-footer">
-              <span>Todos os treinamentos</span>
-              <span class="trein-trilha-cta">Explorar <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div class="cat-card-footer">
+              <a href="./contato.html" class="cat-card-cta">
+                Ver curso
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
-          </a>
-
-          <!-- Profissional de DH -->
-          <a href="#cursos" data-filter-trilha="CVAT" class="trein-trilha-card" data-reveal data-reveal-delay="4">
-            <span class="trein-trilha-icon trein-trilha-icon--green">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <h3 class="trein-trilha-title">Profissional de DH</h3>
-            <p class="trein-trilha-desc">Psicólogos, terapeutas, coaches e mentores — aplique o CVAT no desenvolvimento humano, carreira e relacionamentos.</p>
-            <div class="trein-trilha-footer">
-              <span>Metodologia CVAT</span>
-              <span class="trein-trilha-cta">Explorar <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            </div>
-          </a>
+          </article>
 
         </div>
       </div>
     </section>
 
-    <!-- ── CATÁLOGO DE CURSOS ────────────────────────────────── -->
-    <section class="section bg-gray-100" id="cursos" aria-labelledby="cursos-heading">
+    <!-- ── GRUPO 2 — Higiene, saúde e segurança ───────────────── -->
+    <section class="cat-group" style="background: var(--color-gray-50, #f9fafb);" aria-labelledby="grupo2-heading">
       <div class="container">
-        <header class="section-header centered" data-reveal>
-          <span class="section-label">Catálogo completo</span>
-          <h2 id="cursos-heading" class="section-title">Todos os treinamentos</h2>
-          <p class="section-desc">Filtre pelo seu perfil ou veja todos os treinamentos disponíveis.</p>
+        <header class="cat-group-header" data-reveal>
+          <span class="cat-group-label">Grupo 2</span>
+          <h2 id="grupo2-heading" class="cat-group-title">Higiene, saúde e segurança no trabalho</h2>
         </header>
 
-        <div class="trein-filters" role="group" aria-label="Filtrar treinamentos">
-          <button class="trein-filter-btn trein-filter-btn--active" data-filter="todos" type="button">Todos</button>
-          <button class="trein-filter-btn" data-filter="CVAT" type="button">Metodologia CVAT</button>
-          <button class="trein-filter-btn" data-filter="NR-01" type="button">NR-01 e Psicossociais</button>
-          <button class="trein-filter-btn" data-filter="MEC" type="button">✓ MEC</button>
-        </div>
+        <div class="cat-cards">
 
-        <div class="trein-grid" id="trein-grid">
-          <!-- preloader enquanto carrega -->
-          <div class="trein-skeleton"></div>
-          <div class="trein-skeleton"></div>
-          <div class="trein-skeleton"></div>
-        </div>
+          <!-- Card: HSE-IT -->
+          <article class="cat-card" data-reveal data-reveal-delay="1">
+            <div class="cat-card-top">
+              <div class="cat-card-tags">
+                <span class="cat-tag cat-tag--green">Formação HSE-IT</span>
+                <span class="cat-tag cat-tag--gray">60h</span>
+                <span class="cat-tag cat-tag--gray">✓ MEC</span>
+              </div>
+              <h3 class="cat-card-title">Formação em Avaliação Psicossocial do Trabalho — HSE-IT</h3>
+              <p class="cat-card-desc">Formação completa para aplicar o protocolo HSE-IT na avaliação de riscos psicossociais, com reconhecimento pelo MEC.</p>
+              <ul class="cat-card-topics" role="list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Protocolo HSE-IT: metodologia e aplicação
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Identificação e avaliação de riscos psicossociais
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Elaboração de laudos e relatórios de conformidade
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Alinhado às exigências da NR-01 e PGR
+                </li>
+              </ul>
+            </div>
+            <div class="cat-card-footer">
+              <a href="./contato.html" class="cat-card-cta">
+                Ver curso
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
 
-        <p class="trein-more" data-reveal>
-          Quer um treinamento customizado para sua empresa?
-          <a href="./contato.html" class="color-blue" style="font-weight:600">Fale com um especialista</a>.
-        </p>
-      </div>
-    </section>
+          <!-- Card: COPSOQ III -->
+          <article class="cat-card" data-reveal data-reveal-delay="2">
+            <div class="cat-card-top">
+              <div class="cat-card-tags">
+                <span class="cat-tag cat-tag--coral">Curso COPSOQ</span>
+              </div>
+              <h3 class="cat-card-title">COPSOQ III — Avaliação de Fatores Psicossociais</h3>
+              <p class="cat-card-desc">Formação para aplicar o questionário COPSOQ III na identificação e quantificação de fatores de risco psicossocial no trabalho.</p>
+              <ul class="cat-card-topics" role="list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Fundamentos e versões do COPSOQ (I, II e III)
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Aplicação, pontuação e interpretação dos dados
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Elaboração de relatório psicossocial
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  10 créditos CVAT incluídos • Garantia 7 dias
+                </li>
+              </ul>
+            </div>
+            <div class="cat-card-footer">
+              <a href="./treinamentos/copsoq.html" class="cat-card-cta cat-card-cta--coral">
+                Ver curso
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
 
-    <!-- ── FORMATOS ───────────────────────────────────────────── -->
-    <section class="section" aria-labelledby="formatos-heading">
-      <div class="container">
-        <header class="section-header centered" data-reveal>
-          <span class="section-label">Como entregamos</span>
-          <h2 id="formatos-heading" class="section-title">Formatos de treinamento</h2>
-        </header>
-        <div class="grid grid-3" style="gap:var(--space-5)">
-          <div class="card" data-reveal data-reveal-delay="1">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="5" width="20" height="14" rx="2" stroke="var(--color-blue)" stroke-width="2"/><path d="M9 19v2M17 19v2M7 21h12" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="card-title">Online ao vivo</h3>
-            <p class="card-body">Sessões via videoconferência com instrutor ao vivo, dinâmicas interativas e espaço para perguntas. Ideal para equipes distribuídas geograficamente.</p>
-          </div>
-          <div class="card" data-reveal data-reveal-delay="2">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 20V8l9-5 9 5v12" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="13" width="8" height="7" rx="1" stroke="var(--color-blue)" stroke-width="2"/></svg>
-            </div>
-            <h3 class="card-title">Presencial in company</h3>
-            <p class="card-body">Treinamento na sede da empresa, com imersão total, dinâmicas de grupo e aplicação prática ao contexto real da organização.</p>
-          </div>
-          <div class="card" data-reveal data-reveal-delay="3">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3a10 10 0 100 20A10 10 0 0013 3z" stroke="var(--color-blue)" stroke-width="2"/><path d="M13 7v6l4 4" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="card-title">Presencial ou Online</h3>
-            <p class="card-body">Flexibilidade total para turmas fechadas. Adaptamos o formato ao contexto da empresa, ao número de participantes e à agenda disponível.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── PROCESSO ──────────────────────────────────────────── -->
-    <section class="section bg-gray-100" aria-labelledby="processo-heading">
-      <div class="container">
-        <header class="section-header centered" data-reveal>
-          <span class="section-label">Como contratar</span>
-          <h2 id="processo-heading" class="section-title">Da solicitação à turma em<br />menos de uma semana</h2>
-        </header>
-        <ol class="steps-list" role="list">
-          <li class="step-item" data-reveal data-reveal-delay="1">
-            <div class="step-number" aria-hidden="true">01</div>
-            <div class="step-content">
-              <h3 class="step-title">Solicite uma proposta</h3>
-              <p class="step-desc">Preencha o formulário de contato informando o treinamento de interesse, número de participantes e formato preferido.</p>
-            </div>
-          </li>
-          <li class="step-item" data-reveal data-reveal-delay="2">
-            <div class="step-number" aria-hidden="true">02</div>
-            <div class="step-content">
-              <h3 class="step-title">Reunião de alinhamento</h3>
-              <p class="step-desc">Um especialista entra em contato em até 24h para entender o contexto e customizar o conteúdo para a sua realidade.</p>
-            </div>
-          </li>
-          <li class="step-item" data-reveal data-reveal-delay="3">
-            <div class="step-number" aria-hidden="true">03</div>
-            <div class="step-content">
-              <h3 class="step-title">Proposta personalizada</h3>
-              <p class="step-desc">Receba a proposta com conteúdo programático, carga horária, formato e investimento em até 48h.</p>
-            </div>
-          </li>
-          <li class="step-item" data-reveal data-reveal-delay="4">
-            <div class="step-number" aria-hidden="true">04</div>
-            <div class="step-content">
-              <h3 class="step-title">Turma realizada e certificada</h3>
-              <p class="step-desc">Treinamento aplicado com avaliação de reação e emissão de certificados digitais para todos os participantes.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ── CTA ───────────────────────────────────────────────── -->
-    <section class="trein-cta-section" aria-labelledby="trein-cta-heading">
-      <div class="container">
-        <div class="trein-cta-inner" data-reveal>
-          <div class="trein-cta-blob" aria-hidden="true"></div>
-          <div class="trein-cta-text">
-            <h2 id="trein-cta-heading" class="trein-cta-title">
-              Construa uma prática profissional<br />sólida com o C-VAT.
-            </h2>
-            <p class="trein-cta-desc">
-              Treinamentos isolados ou programas completos — montamos a grade certa para o seu objetivo.
-            </p>
-          </div>
-          <div class="trein-cta-actions">
-            <a href="./contato.html" class="btn btn-coral btn-lg">Solicitar proposta</a>
-            <a href="./diagnostico.html" class="trein-cta-link">Diagnóstico grátis primeiro</a>
-          </div>
         </div>
       </div>
     </section>
+
+    <!-- ── LINHA FINAL ─────────────────────────────────────────── -->
+    <div class="cat-custom-bar">
+      <p class="cat-custom-text">
+        Quer um treinamento customizado para sua empresa?
+        <a href="./contato.html">Fale com um especialista →</a>
+      </p>
+    </div>
 
   </main>
 
   <div id="footer-placeholder"></div>
   <script src="../assets/js/main.js" defer></script>
 
-  <script>
-    (function () {
-      const icons = {
-        'CVAT':  '<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="9" r="4" stroke="currentColor" stroke-width="2"/><path d="M5 23c0-3.5 3-6 7-6h4c4 0 7 2.5 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 5l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
-        'NR-01': '<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="3" stroke="currentColor" stroke-width="2"/><path d="M9 14l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-        default: '<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="8" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 8V6a5 5 0 0110 0v2" stroke="currentColor" stroke-width="2"/></svg>',
-      };
-
-      function renderCard(item) {
-        const cats   = item.categorias || [];
-        const topics = (item.topicos || []).slice(0, 4).map(t =>
-          `<li><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>${t}</li>`
-        ).join('');
-
-        const ctaHref = item.pagina_url || item.cta_link;
-        const ctaText = item.pagina_url ? 'Ver curso completo →' : item.cta_texto;
-
-        const extraCta = item.pagina_url
-          ? `<a href="${item.cta_link}" class="trein-card-cta-sec">${item.cta_texto}</a>`
-          : '';
-
-        return `<article class="trein-card" data-cats="${cats.join(' ')}">
-          <div class="trein-card-head">
-            <h3 class="trein-card-title">${item.titulo}</h3>
-            <span class="trein-card-public trein-card-public--${item.cor}">${item.publico || cats[0] || ''}</span>
-          </div>
-          <div class="trein-card-body">
-            <p class="trein-card-desc">${item.descricao}</p>
-            <ul class="trein-card-topics" role="list">${topics}</ul>
-          </div>
-          <div class="trein-card-footer">
-            <a href="${ctaHref}" class="btn btn-primary btn-sm" style="width:100%;justify-content:center">${ctaText}</a>
-            ${extraCta}
-          </div>
-          <div class="trein-card-bottom trein-card-bottom--${item.cor}">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="2" width="12" height="12" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2.5 2.5L11 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            EAD (Gravado)
-          </div>
-        </article>`;
-      }
-
-      const grid = document.getElementById('trein-grid');
-
-      const mainSrc = document.querySelector('script[src*="main.js"]')?.src ?? '';
-      const siteRoot = mainSrc ? mainSrc.replace(/assets\/js\/main\.js(\?.*)?$/, '') : null;
-      const apiUrl   = 'https://sandbox.cvat.com.br/api/v1/treinamentos.php';
-      const jsonUrl  = siteRoot ? siteRoot + 'data/treinamentos.json' : '../data/treinamentos.json';
-
-      const load = apiUrl
-        ? fetch(apiUrl).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-            .catch(() => fetch(jsonUrl).then(r => r.json()))
-        : fetch(jsonUrl).then(r => r.json());
-
-      load
-        .then(items => { if (grid) grid.innerHTML = items.map(renderCard).join(''); })
-        .catch(err => { console.warn('[CVAT] treinamentos não carregados', err); if (grid) grid.innerHTML = ''; });
-
-      /* Filtros */
-      function applyFilter(filter) {
-        document.querySelectorAll('.trein-filter-btn').forEach(b => b.classList.remove('trein-filter-btn--active'));
-        document.querySelector(`.trein-filter-btn[data-filter="${filter}"]`)?.classList.add('trein-filter-btn--active');
-        grid?.querySelectorAll('.trein-card').forEach(card => {
-          const cats = (card.dataset.cats || '').split(' ');
-          card.style.display = (filter === 'todos' || cats.includes(filter)) ? '' : 'none';
-        });
-      }
-
-      document.querySelectorAll('.trein-filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
-      });
-
-      /* Trilhas → ativa filtro correspondente */
-      document.querySelectorAll('[data-filter-trilha]').forEach(link => {
-        link.addEventListener('click', (e) => {
-          const filter = link.dataset.filterTrilha;
-          setTimeout(() => applyFilter(filter), 50);
-        });
-      });
-    })();
-  </script>
 </body>
 </html>
