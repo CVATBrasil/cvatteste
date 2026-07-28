@@ -14,7 +14,7 @@
   </script>
 
   <title>Catálogo de Treinamentos — CVAT Brasil</title>
-  <meta name="description" content="Todos os treinamentos CVAT Brasil: formações em cultura organizacional, valores, avaliação psicossocial (HSE-IT, COPSOQ III) e conformidade NR-01. Metodologia aplicada em +7 países." />
+  <meta name="description" content="Todos os treinamentos CVAT Brasil: formações em cultura organizacional, valores, avaliação psicossocial (HSE-IT, COPSOQ) e conformidade NR-01. Metodologia aplicada em +7 países." />
   <link rel="canonical" href="https://cvatbrasil.com/pages/treinamentos" />
 
   <meta property="og:type"        content="website" />
@@ -215,6 +215,42 @@
       text-decoration: underline;
     }
 
+    /* ── Grupo em destaque (NR-01) ────────────────────────────── */
+    .cat-group--destaque {
+      background: var(--color-gray-50, #f9fafb);
+    }
+    .cat-group--destaque .cat-card {
+      border-color: #cbd5e1;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+    }
+    .cat-group--destaque .cat-card:hover {
+      box-shadow: 0 10px 36px rgba(0,0,0,.13);
+    }
+
+    /* ── Selos de credencial dentro do card ─────────────────── */
+    .cat-card-seals {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: var(--space-4);
+      padding-top: var(--space-3);
+      border-top: 1px solid var(--color-gray-100, #f3f4f6);
+    }
+    .cat-card-seal {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 3px 9px;
+      font-size: .68rem;
+      font-weight: 600;
+      color: #475569;
+      white-space: nowrap;
+    }
+    .cat-card-seal svg { flex-shrink: 0; }
+
     @media (max-width: 640px) {
       .cat-cards { grid-template-columns: 1fr; }
       .cat-hero-badges { flex-direction: column; align-items: flex-start; }
@@ -306,12 +342,120 @@
       </div>
     </section>
 
-    <!-- ── GRUPO 1 — Cultura, valores e atitudes ──────────────── -->
-    <section class="cat-group" aria-labelledby="grupo1-heading">
+    <!-- ── GRUPO 1 — NR-01 e Riscos Psicossociais ────────────── -->
+    <section class="cat-group cat-group--destaque" aria-labelledby="grupo1-heading">
       <div class="container">
         <header class="cat-group-header" data-reveal>
           <span class="cat-group-label">Grupo 1</span>
-          <h2 id="grupo1-heading" class="cat-group-title">Cultura, valores e atitudes organizacionais</h2>
+          <h2 id="grupo1-heading" class="cat-group-title">NR-01 e Riscos Psicossociais</h2>
+        </header>
+
+        <div class="cat-cards">
+
+          <!-- Card: HSE-IT -->
+          <article class="cat-card" data-reveal data-reveal-delay="1">
+            <div class="cat-card-top">
+              <div class="cat-card-tags">
+                <span class="cat-tag cat-tag--green">Formação HSE-IT</span>
+                <span class="cat-tag cat-tag--gray">60h</span>
+                <span class="cat-tag cat-tag--gray">✓ MEC</span>
+              </div>
+              <h3 class="cat-card-title">Formação em Avaliação Psicossocial do Trabalho — HSE-IT</h3>
+              <p class="cat-card-desc">Formação completa para aplicar o protocolo HSE-IT na avaliação de riscos psicossociais, com reconhecimento pelo MEC.</p>
+              <ul class="cat-card-topics" role="list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Protocolo HSE-IT: metodologia e aplicação
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Identificação e avaliação de riscos psicossociais
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Elaboração de laudos e relatórios de conformidade
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Alinhado às exigências da NR-01 e PGR
+                </li>
+              </ul>
+              <div class="cat-card-seals" aria-label="Credenciais">
+                <span class="cat-card-seal">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.4 9.6H22l-7.2 5.2 2.4 9.2L12 21l-5.2 5 2.4-9.2L2 11.6h7.6z" stroke="currentColor" stroke-width="1.8"/></svg>
+                  Certificado MEC
+                </span>
+                <span class="cat-card-seal">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 01-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 011-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 011.52 0C14.51 3.81 17 5 19 5a1 1 0 011 1z" stroke="currentColor" stroke-width="1.8"/></svg>
+                  HSE-IT · Health &amp; Safety Executive UK
+                </span>
+              </div>
+            </div>
+            <div class="cat-card-footer">
+              <a href="./treinamentos/hse.html" class="cat-card-cta cat-card-cta--coral">
+                Ver curso
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card: COPSOQ -->
+          <article class="cat-card" data-reveal data-reveal-delay="2">
+            <div class="cat-card-top">
+              <div class="cat-card-tags">
+                <span class="cat-tag cat-tag--coral">Curso COPSOQ</span>
+                <span class="cat-tag cat-tag--gray">60h</span>
+                <span class="cat-tag cat-tag--gray">✓ MEC</span>
+              </div>
+              <h3 class="cat-card-title">COPSOQ — Avaliação de Fatores Psicossociais</h3>
+              <p class="cat-card-desc">Formação para aplicar o COPSOQ na identificação e quantificação de fatores de risco psicossocial no trabalho, com reconhecimento pelo MEC.</p>
+              <ul class="cat-card-topics" role="list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Fundamentos e bases científicas do COPSOQ
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Aplicação, pontuação e interpretação dos dados
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Elaboração de relatório psicossocial
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  2 créditos COPSOQ inclusos · Garantia 7 dias
+                </li>
+              </ul>
+              <div class="cat-card-seals" aria-label="Credenciais">
+                <span class="cat-card-seal">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.4 9.6H22l-7.2 5.2 2.4 9.2L12 21l-5.2 5 2.4-9.2L2 11.6h7.6z" stroke="currentColor" stroke-width="1.8"/></svg>
+                  Certificado MEC
+                </span>
+                <span class="cat-card-seal">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                  COPSOQ Network · +30 países
+                </span>
+              </div>
+            </div>
+            <div class="cat-card-footer">
+              <a href="./treinamentos/copsoq.html" class="cat-card-cta cat-card-cta--coral">
+                Ver curso
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GRUPO 2 — Cursos CVAT ──────────────────────────────── -->
+    <section class="cat-group" aria-labelledby="grupo2-heading">
+      <div class="container">
+        <header class="cat-group-header" data-reveal>
+          <span class="cat-group-label">Grupo 2</span>
+          <h2 id="grupo2-heading" class="cat-group-title">Cursos CVAT</h2>
         </header>
 
         <div class="cat-cards">
@@ -380,92 +524,6 @@
             </div>
             <div class="cat-card-footer">
               <a href="./contato.html" class="cat-card-cta">
-                Ver curso
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── GRUPO 2 — Higiene, saúde e segurança ───────────────── -->
-    <section class="cat-group" style="background: var(--color-gray-50, #f9fafb);" aria-labelledby="grupo2-heading">
-      <div class="container">
-        <header class="cat-group-header" data-reveal>
-          <span class="cat-group-label">Grupo 2</span>
-          <h2 id="grupo2-heading" class="cat-group-title">Higiene, saúde e segurança no trabalho</h2>
-        </header>
-
-        <div class="cat-cards">
-
-          <!-- Card: HSE-IT -->
-          <article class="cat-card" data-reveal data-reveal-delay="1">
-            <div class="cat-card-top">
-              <div class="cat-card-tags">
-                <span class="cat-tag cat-tag--green">Formação HSE-IT</span>
-                <span class="cat-tag cat-tag--gray">60h</span>
-                <span class="cat-tag cat-tag--gray">✓ MEC</span>
-              </div>
-              <h3 class="cat-card-title">Formação em Avaliação Psicossocial do Trabalho — HSE-IT</h3>
-              <p class="cat-card-desc">Formação completa para aplicar o protocolo HSE-IT na avaliação de riscos psicossociais, com reconhecimento pelo MEC.</p>
-              <ul class="cat-card-topics" role="list">
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Protocolo HSE-IT: metodologia e aplicação
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Identificação e avaliação de riscos psicossociais
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Elaboração de laudos e relatórios de conformidade
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Alinhado às exigências da NR-01 e PGR
-                </li>
-              </ul>
-            </div>
-            <div class="cat-card-footer">
-              <a href="./treinamentos/hse.html" class="cat-card-cta">
-                Ver curso
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card: COPSOQ III -->
-          <article class="cat-card" data-reveal data-reveal-delay="2">
-            <div class="cat-card-top">
-              <div class="cat-card-tags">
-                <span class="cat-tag cat-tag--coral">Curso COPSOQ</span>
-              </div>
-              <h3 class="cat-card-title">COPSOQ III — Avaliação de Fatores Psicossociais</h3>
-              <p class="cat-card-desc">Formação para aplicar o questionário COPSOQ III na identificação e quantificação de fatores de risco psicossocial no trabalho.</p>
-              <ul class="cat-card-topics" role="list">
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Fundamentos e versões do COPSOQ (I, II e III)
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Aplicação, pontuação e interpretação dos dados
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Elaboração de relatório psicossocial
-                </li>
-                <li>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  10 créditos CVAT incluídos • Garantia 7 dias
-                </li>
-              </ul>
-            </div>
-            <div class="cat-card-footer">
-              <a href="./treinamentos/copsoq.html" class="cat-card-cta cat-card-cta--coral">
                 Ver curso
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
