@@ -563,9 +563,15 @@
       color: rgba(255,255,255,.9);
     }
 
-    /* ── Título "Passo a passo" — reduzido para caber em uma linha ── */
+    /* ── Bloco "Passo a passo" — título + itens com fonte reduzida ── */
     #como-funciona-heading {
       font-size: clamp(1.2rem, 2.4vw, 1.75rem);
+    }
+    [aria-labelledby="como-funciona-heading"] .course-about-inner h3 {
+      font-size: var(--text-base);
+    }
+    [aria-labelledby="como-funciona-heading"] .course-about-inner p {
+      font-size: var(--text-sm);
     }
 
     @media (max-width: 768px) {
