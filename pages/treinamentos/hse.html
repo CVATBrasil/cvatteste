@@ -205,7 +205,7 @@
       font-weight: 700;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: var(--color-blue, #0052cc);
+      color: var(--color-blue, #011633);
     }
     .hse-case-title {
       font-family: 'Sora', sans-serif;
@@ -236,10 +236,9 @@
 
     /* ── Conteúdo Programático ──────────────────────────────── */
     .hse-prog-layout {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: var(--space-12);
-      align-items: start;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-10);
     }
     .hse-prog-modules {
       display: flex;
@@ -253,7 +252,7 @@
       overflow: hidden;
     }
     .hse-prog-module-head {
-      background: var(--color-blue, #0052cc);
+      background: var(--color-blue, #011633);
       color: #fff;
       padding: var(--space-4) var(--space-6);
       display: flex;
@@ -288,7 +287,7 @@
       font-weight: 700;
       letter-spacing: .08em;
       text-transform: uppercase;
-      color: var(--color-blue, #0052cc);
+      color: var(--color-blue, #011633);
       margin-bottom: var(--space-3);
     }
     .hse-prog-list {
@@ -309,14 +308,15 @@
     }
     .hse-prog-list li::before {
       content: '–';
-      color: var(--color-blue, #0052cc);
+      color: var(--color-blue, #011633);
       font-weight: 700;
       flex-shrink: 0;
       margin-top: 1px;
     }
     .hse-prog-cert {
-      position: sticky;
-      top: 100px;
+      max-width: 65%;
+      margin: 0 auto;
+      text-align: center;
     }
     .hse-prog-cert-img {
       width: 100%;
@@ -338,17 +338,14 @@
       color: var(--color-gray-600, #4b5563);
     }
     .hse-prog-cta-line a {
-      color: var(--color-blue, #0052cc);
+      color: var(--color-blue, #011633);
       font-weight: 700;
       text-decoration: none;
     }
     .hse-prog-cta-line a:hover { text-decoration: underline; }
 
-    @media (max-width: 900px) {
-      .hse-prog-layout {
-        grid-template-columns: 1fr;
-      }
-      .hse-prog-cert { position: static; }
+    @media (max-width: 768px) {
+      .hse-prog-cert { max-width: 95%; }
     }
 
     /* ── Autor da Metodologia ───────────────────────────────── */
@@ -375,7 +372,7 @@
       font-weight: 700;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: var(--color-blue, #0052cc);
+      color: var(--color-blue, #011633);
       margin-bottom: var(--space-3);
     }
     .hse-autor-name {
@@ -454,7 +451,7 @@
       width: 24%;
     }
     .hse-comp-table thead th:last-child {
-      background: var(--color-blue, #0052cc);
+      background: var(--color-blue, #011633);
       color: #fff;
       border-radius: 0 12px 0 0;
     }
@@ -482,7 +479,7 @@
     .hse-comp-table tbody td:last-child {
       color: var(--color-gray-900, #111827);
       font-weight: 600;
-      background: rgba(0,82,204,.04);
+      background: rgba(1,22,51,.04);
     }
     .hse-comp-table tbody tr:last-child td:last-child {
       border-radius: 0 0 12px 0;
@@ -492,7 +489,7 @@
       padding: var(--space-5) var(--space-7);
       background: #fff;
       border: 1px solid var(--color-gray-200, #e5e7eb);
-      border-left: 4px solid var(--color-blue, #0052cc);
+      border-left: 4px solid var(--color-blue, #011633);
       border-radius: 12px;
       font-size: .95rem;
       font-style: italic;
@@ -627,7 +624,7 @@
         </div>
 
         <aside class="course-price-card" aria-label="Resumo da oferta">
-          <div style="background:#0b1a35;border-radius:20px;padding:16px 20px;">
+          <div style="background:#011633;border-radius:20px;padding:16px 20px;">
             <img
               src="../../assets/img/hse_it_3d.png"
               alt="Certificado HSE-IT reconhecido pelo MEC — Anhanguera/Pitágoras Unopar"
@@ -856,7 +853,7 @@
               class="hse-prog-cert-img"
               loading="lazy"
             />
-            <p class="hse-prog-cert-caption">Modelo real do certificado emitido ao final do curso · 60h · Reconhecimento MEC via Anhanguera/Pitágoras Unopar</p>
+            <p class="hse-prog-cert-caption">Modelo do certificado · 60h · Reconhecimento MEC via Anhanguera/Pitágoras Unopar</p>
           </div>
 
         </div>

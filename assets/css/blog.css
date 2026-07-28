@@ -5,7 +5,7 @@
 
 /* ── HERO ────────────────────────────────────────────────────── */
 .blog-hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 60%, #3b82f6 100%);
+  background: linear-gradient(135deg, #000e1f 0%, #011633 55%, #012754 100%);
   color: var(--color-white);
   padding-block: var(--space-20) var(--space-16);
   position: relative;

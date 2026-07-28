@@ -6,9 +6,9 @@
 /* ── 1. DESIGN TOKENS ──────────────────────────────────────── */
 :root {
   /* Cores */
-  --color-blue:       #1A56DB;
-  --color-blue-dark:  #1040B0;
-  --color-blue-light: #EBF1FF;
+  --color-blue:       #011633;
+  --color-blue-dark:  #000e1f;
+  --color-blue-light: #e8edf5;
   --color-green:      #0E9C6B;
   --color-coral:      #E05C2A;
   --color-gray-900:   #111827;
@@ -295,7 +295,7 @@ em     { font-style: italic; }
 .btn-primary:focus-visible {
   background-color: var(--color-blue-dark);
   border-color: var(--color-blue-dark);
-  box-shadow: 0 4px 14px rgba(26,86,219,.35);
+  box-shadow: 0 4px 14px rgba(1,22,51,.35);
 }
 
 /* Secundário (outline) */
@@ -463,7 +463,7 @@ em     { font-style: italic; }
 .form-select:focus,
 .form-textarea:focus {
   border-color: var(--color-blue);
-  box-shadow: 0 0 0 3px rgba(26,86,219,.15);
+  box-shadow: 0 0 0 3px rgba(1,22,51,.15);
 }
 
 .form-input.error,
@@ -519,7 +519,7 @@ em     { font-style: italic; }
 /* ── 11. HERO ────────────────────────────────────────────────── */
 .hero {
   padding-block: var(--space-20) var(--space-16);
-  background: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-blue) 60%, #2563eb 100%);
+  background: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-blue) 60%, #012754 100%);
   color: var(--color-white);
   overflow: hidden;
   position: relative;

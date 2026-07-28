@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-.artigo-hero--blue  { background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 60%, #3b82f6 100%); }
+.artigo-hero--blue  { background: linear-gradient(135deg, #000e1f 0%, #011633 55%, #012754 100%); }
 .artigo-hero--green { background: linear-gradient(135deg, #064e3b 0%, #065f46 60%, #0E9C6B 100%); }
 .artigo-hero--coral { background: linear-gradient(135deg, #7c2d12 0%, #9a3412 60%, #E05C2A 100%); }
 
@@ -224,14 +224,14 @@
 
 /* Destaque / blockquote */
 .artigo-destaque {
-  border-left: 4px solid #1d4ed8;
-  background: #eff6ff;
+  border-left: 4px solid var(--color-blue);
+  background: var(--color-blue-light);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   padding: var(--space-5) var(--space-6);
   margin: var(--space-8) 0;
   font-size: var(--text-lg);
   font-style: italic;
-  color: #1e3a8a;
+  color: var(--color-blue);
   line-height: 1.7;
 }
 
@@ -331,7 +331,7 @@
 
 /* CTA lateral */
 .artigo-cta-box {
-  background: linear-gradient(135deg, #011633 0%, #1040B0 100%);
+  background: linear-gradient(135deg, #000e1f 0%, #011633 100%);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
   color: var(--color-white);
