@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Redirecionando...</title>
+  <!-- Fallback para ambientes sem JS ou webviews restritos -->
+  <meta http-equiv="refresh" content="0;url=https://api.whatsapp.com/send/?phone=5511982878486&text=Ol%C3%A1+Clovis%2C+vim+do+seu+perfil+no+LinkedIn+e+quero+entender+como+a+avalia%C3%A7%C3%A3o+de+riscos+psicossociais+pode+ajudar+minha+empresa.&type=phone_number&app_absent=0">
+
+  <!-- GA4 — carregado antes do body para ter a lib disponível no redirect -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSEYX6K0FM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HSEYX6K0FM', { send_page_view: false });
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: sans-serif;
+      font-size: 1rem;
+      color: #334155;
+      background: #f8fafc;
+    }
+  </style>
+</head>
+<body>
+
+  <p>Redirecionando para o WhatsApp...</p>
+
+  <script>
+    (function () {
+      var WA_URL = 'https://api.whatsapp.com/send/?phone=5511982878486' +
+        '&text=Ol%C3%A1+Clovis%2C+vim+do+seu+perfil+no+LinkedIn+e+quero+entender' +
+        '+como+a+avalia%C3%A7%C3%A3o+de+riscos+psicossociais+pode+ajudar+minha+empresa.' +
+        '&type=phone_number&app_absent=0';
+
+      var done = false;
+      function doRedirect() {
+        if (done) return;
+        done = true;
+        window.location.replace(WA_URL);
+      }
+
+      // Fallback: redireciona após 150ms mesmo se o GA não confirmar
+      var fallback = setTimeout(doRedirect, 150);
+
+      // Dispara evento GA4; callback executa o redirect quando o hit é enviado
+      gtag('event', 'linkedin_redirect_click', {
+        event_category: 'linkedin',
+        event_label: 'whatsapp_contact',
+        event_callback: function () {
+          clearTimeout(fallback);
+          doRedirect();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
