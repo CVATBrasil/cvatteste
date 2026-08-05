@@ -658,10 +658,41 @@
             </span>
           </div>
 
-          <a href="#inscricao" style="color:rgba(255,255,255,.85);font-size:.95rem;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:2px;">
+          <a href="#inscricao" class="hero-cta-btn">
             Garantir minha vaga
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="15" height="15" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
+
+          <style>
+            .hero-cta-btn {
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+              background: #FF7752;
+              color: #fff;
+              font-size: 1rem;
+              font-weight: 700;
+              letter-spacing: .01em;
+              text-decoration: none;
+              padding: 14px 30px;
+              border-radius: 999px;
+              border: 2px solid #FF7752;
+              box-shadow: 0 4px 18px rgba(255,119,82,.35);
+              transition: background .22s ease, color .22s ease,
+                          box-shadow .22s ease, transform .18s ease;
+            }
+            .hero-cta-btn:hover,
+            .hero-cta-btn:focus-visible {
+              background: #fff;
+              color: #FF7752;
+              box-shadow: 0 8px 28px rgba(255,119,82,.45);
+              transform: translateY(-2px) scale(1.03);
+            }
+            .hero-cta-btn:active {
+              transform: translateY(0) scale(1);
+              box-shadow: 0 4px 12px rgba(255,119,82,.3);
+            }
+          </style>
 
         </div>
 
