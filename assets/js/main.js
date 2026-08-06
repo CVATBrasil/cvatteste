@@ -334,10 +334,11 @@ function debounce(fn, ms = 150) {
 /* ── 9. BOOTSTRAP ────────────────────────────────────────────── */
 
 async function bootstrap() {
-  /* Carrega header e footer nos placeholders */
+  /* Carrega header, footer e seção de clientes nos placeholders */
   await Promise.all([
     loadComponent('#header-placeholder', 'header.html'),
     loadComponent('#footer-placeholder', 'footer.html'),
+    loadComponent('#clientes-placeholder', 'clientes-section.html'),
   ]);
 
   /* Inicia comportamentos após componentes carregados */

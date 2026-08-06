@@ -45,8 +45,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 2rem 1.25rem;
+      justify-content: flex-start;
+      padding: 4rem 1.25rem 0;
       text-align: center;
     }
 
@@ -178,6 +178,19 @@
     <p class="footer-note">Respondo em até 24h em dias úteis.</p>
 
   </div>
+
+  <div id="clientes-placeholder"></div>
+
+  <script>
+    (function () {
+      var el = document.getElementById('clientes-placeholder');
+      if (!el) return;
+      fetch('/components/clientes-section.html')
+        .then(function (r) { return r.text(); })
+        .then(function (html) { el.innerHTML = html; })
+        .catch(function () {});
+    })();
+  </script>
 
 </body>
 </html>
