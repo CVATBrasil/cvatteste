@@ -1,0 +1,711 @@
+{
+  "clean": [],
+  "failed": [],
+  "errors": [
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2020/12/Lideranca.jpg",
+      "filename": "Lideranca.jpg",
+      "articles": [
+        "descubra-o-que-e-lideranca-e-o-segredo-para-ser-um-lider-bem-sucedido.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2020/12/team-of-happy-financiers-reading-report-on-company-progress-scaled-1.jpg",
+      "filename": "team-of-happy-financiers-reading-report-on-company-progress-scaled-1.jpg",
+      "articles": [
+        "blog-entenda-o-que-e-o-departamento-pessoal-e-suas-principais-funcoes.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/01/Rotatividade-1.jpg",
+      "filename": "Rotatividade-1.jpg",
+      "articles": [
+        "index.html",
+        "o-que-e-a-rotatividade-nas-empresas-e-a-sua-solucao.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/04/Design-sem-nome-38.png",
+      "filename": "Design-sem-nome-38.png",
+      "articles": [
+        "fit-cultural.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/04/O-Coaching-como-um-Negocio.jpg",
+      "filename": "O-Coaching-como-um-Negocio.jpg",
+      "articles": [
+        "index.html",
+        "o-coaching-como-um-negocio.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/05/Banner-de-Artigo-1.png",
+      "filename": "Banner-de-Artigo-1.png",
+      "articles": [
+        "gestao-de-rh.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/05/Design-sem-nome-37.png",
+      "filename": "Design-sem-nome-37.png",
+      "articles": [
+        "autoconhecimento.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/05/pexels-pixabay-327540-scaled-1.jpg",
+      "filename": "pexels-pixabay-327540-scaled-1.jpg",
+      "articles": [
+        "index.html",
+        "venda-spin.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/06/Design-sem-nome-33.png",
+      "filename": "Design-sem-nome-33.png",
+      "articles": [
+        "index.html",
+        "recrutamento-e-selecao.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/06/Design-sem-nome-34.png",
+      "filename": "Design-sem-nome-34.png",
+      "articles": [
+        "index.html",
+        "marketing.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/06/Design-sem-nome-35.png",
+      "filename": "Design-sem-nome-35.png",
+      "articles": [
+        "descoberta-da-vocacao.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/06/Design-sem-nome-36.png",
+      "filename": "Design-sem-nome-36.png",
+      "articles": [
+        "index.html",
+        "index.html",
+        "qual-carreira-seguir.html",
+        "transicao-de-carreira.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/07/Design-sem-nome-28.png",
+      "filename": "Design-sem-nome-28.png",
+      "articles": [
+        "index.html",
+        "turnover-organizacional.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/08/Design-sem-nome-23.png",
+      "filename": "Design-sem-nome-23.png",
+      "articles": [
+        "index.html",
+        "lideranca-organizacional.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/08/Design-sem-nome-25.png",
+      "filename": "Design-sem-nome-25.png",
+      "articles": [
+        "index.html",
+        "recrutamento.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/08/Design-sem-nome-26.png",
+      "filename": "Design-sem-nome-26.png",
+      "articles": [
+        "analise-comportamental.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/08/Design-sem-nome-27.png",
+      "filename": "Design-sem-nome-27.png",
+      "articles": [
+        "index.html",
+        "onboarding.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2021/12/Inicial-Site.png",
+      "filename": "Inicial-Site.png",
+      "articles": [
+        "cvat-como-ferramenta-para-o-desenvolvimento-de-liderancas.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2023/12/Design-sem-nome-18.png",
+      "filename": "Design-sem-nome-18.png",
+      "articles": [
+        "index.html",
+        "voce-esta-feliz-com-a-sua-carreira-descubra-aspectos-que-nao-considerou.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/08/lideranca-autentica.jpg",
+      "filename": "lideranca-autentica.jpg",
+      "articles": [
+        "index.html",
+        "lideranca-autentica-uma-jornada-de-valores-pessoais.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/10/Design-sem-nome-4.png",
+      "filename": "Design-sem-nome-4.png",
+      "articles": [
+        "index.html",
+        "valores-pessoais-cultura-e-estrategia-empresarial-a-base-de-empresas-familiares.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/10/Design-sem-nome-9.png",
+      "filename": "Design-sem-nome-9.png",
+      "articles": [
+        "a-jornada-do-lider-entendendo-os-quatro-grandes-periodos-da-lideranca.html",
+        "index.html",
+        "index.html",
+        "valores-pessoais-cultura-estrategia-e-o-papel-da-consultoria-cvat-em-empresas-fa.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-39.png",
+      "filename": "Design-sem-nome-39.png",
+      "articles": [
+        "clima-cultura-absenteismo-e-rotatividade-os-desafios-que-todo-profissional-de-rh.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-40.png",
+      "filename": "Design-sem-nome-40.png",
+      "articles": [
+        "index.html",
+        "lideranca-engajamento-e-produtividade-a-chave-para-superar-absenteismo-e-rotativ.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-41.png",
+      "filename": "Design-sem-nome-41.png",
+      "articles": [
+        "gestao-de-conflitos-e-comunicacao-eficaz-a-base-para-um-ambiente-de-trabalho-sau.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-42.png",
+      "filename": "Design-sem-nome-42.png",
+      "articles": [
+        "aspectos-positivos-e-negativos-da-rotatividade-nas-organizacoes.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-43.png",
+      "filename": "Design-sem-nome-43.png",
+      "articles": [
+        "absenteismo-por-que-e-fundamental-tratar-esse-problema-na-empresa.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-44.png",
+      "filename": "Design-sem-nome-44.png",
+      "articles": [
+        "index.html",
+        "produtividade-como-alinhar-expectativas-e-potencial-dos-colaboradores.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-45.png",
+      "filename": "Design-sem-nome-45.png",
+      "articles": [
+        "index.html",
+        "seus-colaboradores-estao-motivados-e-insatisfeitos-como-isso-e-possivel.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-46.png",
+      "filename": "Design-sem-nome-46.png",
+      "articles": [
+        "a-evolucao-da-cidadania-organizacional-de-respeito-a-um-ambiente-saudavel.html",
+        "a-segunda-fase-da-lideranca-do-conhecimento-a-acao-estrategica.html",
+        "index.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-47.png",
+      "filename": "Design-sem-nome-47.png",
+      "articles": [
+        "index.html",
+        "os-cinco-maiores-problemas-organizacionais-ontem-e-hoje.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-48.png",
+      "filename": "Design-sem-nome-48.png",
+      "articles": [
+        "consultores-empresariais-como-o-cvat-pode-transformar-seu-trabalho-e-sua-carreir.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-49.png",
+      "filename": "Design-sem-nome-49.png",
+      "articles": [
+        "index.html",
+        "o-primeiro-contato-como-o-consultor-pode-criar-um-oceano-azul-na-decisao-do-clie.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-50.png",
+      "filename": "Design-sem-nome-50.png",
+      "articles": [
+        "consultores-como-atender-de-pequenos-negocios-a-grandes-empresas-com-o-cvat.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-51.png",
+      "filename": "Design-sem-nome-51.png",
+      "articles": [
+        "a-transicao-para-a-lideranca-um-desafio-estrategico-para-consultores-e-rhs.html",
+        "index.html",
+        "index.html",
+        "por-que-as-pessoas-contratam-consultorias.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-52.png",
+      "filename": "Design-sem-nome-52.png",
+      "articles": [
+        "como-o-cvat-pode-ajudar-consultores-a-resolver-conflitos-criticos-nas-empresas.html",
+        "desvendando-os-misterios-dos-valores-pessoais-comportamento-e-personalidade.html",
+        "index.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Design-sem-nome-55.png",
+      "filename": "Design-sem-nome-55.png",
+      "articles": [
+        "consultores-grandes-problemas-grandes-ganhos-entenda-o-valor-do-seu-trabalho.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2024/12/Ferramenta-para-o-Desenvolvimento-de-Liderancas-4.png",
+      "filename": "Ferramenta-para-o-Desenvolvimento-de-Liderancas-4.png",
+      "articles": [
+        "a-terceira-fase-da-lideranca-lideres-e-equipes.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/03/5.png",
+      "filename": "5.png",
+      "articles": [
+        "consultor-empresarial-o-chamado-uma-jornada-de-excelencia-e-transformacao.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/03/7.png",
+      "filename": "7.png",
+      "articles": [
+        "consultor-empresarial-o-primeiro-pergaminho.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/03/8.png",
+      "filename": "8.png",
+      "articles": [
+        "consultor-empresarial-o-segundo-pergaminho.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/03/DALL·E-2025-03-31-15.46.34-An-artistic-metaphorical-illustration-of-the-Four-Water-Tanks-of-Life-representing-the-four-pillars-of-personal-success.-Each-water-tank-is-large-an.webp",
+      "filename": "DALL·E-2025-03-31-15.46.34-An-artistic-metaphorical-illustration-of-the-Four-Water-Tanks-of-Life-representing-the-four-pillars-of-personal-success.-Each-water-tank-is-large-an.webp",
+      "articles": [
+        "as-quatro-caixas-dagua-uma-metafora-para-o-sucesso-pessoal.html",
+        "index.html"
+      ],
+      "error": "'ascii' codec can't encode character '\\xb7' in position 36: ordinal not in range(128)"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/03/Design-sem-nome-56.png",
+      "filename": "Design-sem-nome-56.png",
+      "articles": [
+        "a-ultima-etapa-da-lideranca-altissimo-desempenho.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/04/Design-sem-nome-34-1024x576.png",
+      "filename": "Design-sem-nome-34-1024x576.png",
+      "articles": [
+        "relacoes-intergeracionais-no-trabalho.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/04/Design-sem-nome-35-1024x576.png",
+      "filename": "Design-sem-nome-35-1024x576.png",
+      "articles": [
+        "relacoes-intergeracionais-no-trabalho.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/04/Design-sem-nome-36.png",
+      "filename": "Design-sem-nome-36.png",
+      "articles": [
+        "como-desenvolver-lideranca-natural-e-lideranca-treinada.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/04/Imagem-do-WhatsApp-de-2025-04-24-as-10.12.04_0b5af7c4.jpg",
+      "filename": "Imagem-do-WhatsApp-de-2025-04-24-as-10.12.04_0b5af7c4.jpg",
+      "articles": [
+        "index.html",
+        "relacoes-intergeracionais-no-trabalho.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/04/O-MAIOR-CONSULTOR-DO-MUNDO-10.png",
+      "filename": "O-MAIOR-CONSULTOR-DO-MUNDO-10.png",
+      "articles": [
+        "index.html",
+        "produtividade-e-perfeccionismo-como-encontrar-equilibrio.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/04/O-MAIOR-CONSULTOR-DO-MUNDO-3.png",
+      "filename": "O-MAIOR-CONSULTOR-DO-MUNDO-3.png",
+      "articles": [
+        "consultor-empresarial-o-terceiro-pergaminho.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/04/O-MAIOR-CONSULTOR-DO-MUNDO-4.png",
+      "filename": "O-MAIOR-CONSULTOR-DO-MUNDO-4.png",
+      "articles": [
+        "consultor-empresarial-o-quarto-pergaminho.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/04/O-MAIOR-CONSULTOR-DO-MUNDO-5.png",
+      "filename": "O-MAIOR-CONSULTOR-DO-MUNDO-5.png",
+      "articles": [
+        "consultor-empresarial-o-quinto-pergaminho.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/04/O-MAIOR-CONSULTOR-DO-MUNDO-9.png",
+      "filename": "O-MAIOR-CONSULTOR-DO-MUNDO-9.png",
+      "articles": [
+        "equipes-comerciais-de-alta-performance.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/05/Design-sem-nome-26.png",
+      "filename": "Design-sem-nome-26.png",
+      "articles": [
+        "index.html",
+        "procrastinacao-causas-e-solucoes.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/06/Design-sem-nome.png",
+      "filename": "Design-sem-nome.png",
+      "articles": [
+        "index.html",
+        "nr-1-aplicacao-na-pratica.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/06/pexels-photo-7598011-7598011.jpg",
+      "filename": "pexels-photo-7598011-7598011.jpg",
+      "articles": [
+        "diagrama-de-venn-e-seu-poder-no-desenvolvimento-humano.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/alto-falante-alegre-falando-e-olhando-para-distancia.jpg",
+      "filename": "alto-falante-alegre-falando-e-olhando-para-distancia.jpg",
+      "articles": [
+        "index.html",
+        "nr-1-na-pratica-regras-de-treinamento-e-capacitacao.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/cena-autentica-clube-livro-1.jpg",
+      "filename": "cena-autentica-clube-livro-1.jpg",
+      "articles": [
+        "hse-na-pratica-guia-estrategico-completo-de-aplicacao.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/close-up-da-colecao-de-sinalizacao-ambiental.jpg",
+      "filename": "close-up-da-colecao-de-sinalizacao-ambiental.jpg",
+      "articles": [
+        "index.html",
+        "nr-1-e-esg-como-a-norma-apoia-praticas-sustentaveis.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/conceito-abstrato-de-rede-ainda-arranjo-de-vida.jpg",
+      "filename": "conceito-abstrato-de-rede-ainda-arranjo-de-vida.jpg",
+      "articles": [
+        "alicerce-nr-1-normas-regulamentadoras-seguranca-trabalho.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/conceito-de-educacao-estudante-estudando-e-brainstorming-conceito-de-campus-perto-de-estudantes-discutindo-seu-assunto-em-livros-ou-livros-didaticos-foco-seletivo.jpg",
+      "filename": "conceito-de-educacao-estudante-estudando-e-brainstorming-conceito-de-campus-perto-de-estudantes-discutindo-seu-assunto-em-livros-ou-livros-didaticos-foco-seletivo.jpg",
+      "articles": [
+        "educacao-continuada-na-nr-1-seguranca-sem-pausa.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/confident-young-builder-girl-mouth-sealed-with-warning-tape-holds-tape-shows-stop-gesture-isolated-orange-background-with-copy-space-2-1024x748.jpg",
+      "filename": "confident-young-builder-girl-mouth-sealed-with-warning-tape-holds-tape-shows-stop-gesture-isolated-orange-background-with-copy-space-2-1024x748.jpg",
+      "articles": [
+        "perigo-x-risco-diferenca-nr1-ensina-importancia-risco.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/executivo-tocando-um-icone-na-rede-social.jpg",
+      "filename": "executivo-tocando-um-icone-na-rede-social.jpg",
+      "articles": [
+        "index.html",
+        "por-que-a-nr-1-e-estrategica-para-o-rh-da-sua-empresa.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/fire-exit-emergency-attention-sign.jpg",
+      "filename": "fire-exit-emergency-attention-sign.jpg",
+      "articles": [
+        "index.html",
+        "perigo-x-risco-diferenca-nr1-ensina-importancia-risco.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/gerente-corporativo-conversando-com-um-grupo-de-trabalhadores-manuais-durante-uma-reuniao-de-equipe-em-uma-fabrica.jpg",
+      "filename": "gerente-corporativo-conversando-com-um-grupo-de-trabalhadores-manuais-durante-uma-reuniao-de-equipe-em-uma-fabrica.jpg",
+      "articles": [
+        "index.html",
+        "pgr-explicado-programa-gerenciamento-riscos.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/humor-alegre-grupo-de-pessoas-em-conferencia-de-negocios-em-sala-de-aula-moderna-durante-o-dia.jpg",
+      "filename": "humor-alegre-grupo-de-pessoas-em-conferencia-de-negocios-em-sala-de-aula-moderna-durante-o-dia.jpg",
+      "articles": [
+        "capacitacao-e-retencao-como-treinar-bem-ajuda-sua-empresa-a-segurar-talentos-cap.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/tres-pessoas-discutindo-um-plano-em-uma-fabrica.jpg",
+      "filename": "tres-pessoas-discutindo-um-plano-em-uma-fabrica.jpg",
+      "articles": [
+        "cvat-e-gro-na-pratica-gestao-eficiente-de-riscos.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/vista-frontal-empresario-segurando-o-rei-1024x683.jpg",
+      "filename": "vista-frontal-empresario-segurando-o-rei-1024x683.jpg",
+      "articles": [
+        "quando-o-lider-se-ausenta-licoes-de-uma-experiencia-real.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/09/vista-frontal-empresario-segurando-o-rei.jpg",
+      "filename": "vista-frontal-empresario-segurando-o-rei.jpg",
+      "articles": [
+        "index.html",
+        "quando-o-lider-se-ausenta-licoes-de-uma-experiencia-real.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/11/ChatGPT-Image-18-de-nov.-de-2025-17_10_00.png",
+      "filename": "ChatGPT-Image-18-de-nov.-de-2025-17_10_00.png",
+      "articles": [
+        "hse-it-5-coisas-que-voce-precisa-saber-sobre-o-hse-it.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/11/HSE-IT-Escala-de-Cores.png",
+      "filename": "HSE-IT-Escala-de-Cores.png",
+      "articles": [
+        "hse-it-5-coisas-que-voce-precisa-saber-sobre-o-hse-it.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/11/heartbeat-healthcare-life-health-cardiogram-concept.jpg",
+      "filename": "heartbeat-healthcare-life-health-cardiogram-concept.jpg",
+      "articles": [
+        "hse-it-5-coisas-que-voce-precisa-saber-sobre-o-hse-it.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2025/11/young-builder-shirt-vest-helmet-covering-face-with-hands-looking-upset-front-view-1024x683.jpg",
+      "filename": "young-builder-shirt-vest-helmet-covering-face-with-hands-looking-upset-front-view-1024x683.jpg",
+      "articles": [
+        "hse-it-5-coisas-que-voce-precisa-saber-sobre-o-hse-it.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2026/02/three-factory-workers-safety-hats-discussing-manufacture-plan-1.jpg",
+      "filename": "three-factory-workers-safety-hats-discussing-manufacture-plan-1.jpg",
+      "articles": [
+        "hse-a-metodologia-que-transforma-riscos-psicossociais-em-prova-tecnica.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2026/03/anxiety-inducing-imagery-with-unease-angst-feelings.jpg",
+      "filename": "anxiety-inducing-imagery-with-unease-angst-feelings.jpg",
+      "articles": [
+        "estresse-no-trabalho-hse-it.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2026/03/d9f55de2-a3c2-4a20-a536-a4e0380d21a3.jpg",
+      "filename": "d9f55de2-a3c2-4a20-a536-a4e0380d21a3.jpg",
+      "articles": [
+        "demandas-no-trabalho-hse-it.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2026/03/happy-corporate-manager-shaking-hands-with-black-worker-after-staff-meeting-factory.jpg",
+      "filename": "happy-corporate-manager-shaking-hands-with-black-worker-after-staff-meeting-factory.jpg",
+      "articles": [
+        "index.html",
+        "suporte-gestor-hse-it-2026-suporte-do-gestor.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2026/03/solar-panel-manufacturing-plant-researcher-taking-notes-files-1.jpg",
+      "filename": "solar-panel-manufacturing-plant-researcher-taking-notes-files-1.jpg",
+      "articles": [
+        "index.html",
+        "nr-01-riscos-psicossociais.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://cvat.blog/wp-content/uploads/2026/03/view-male-engineer-work-engineers-day-celebration.jpg",
+      "filename": "view-male-engineer-work-engineers-day-celebration.jpg",
+      "articles": [
+        "avaliacao-psicossocial-hse-it.html",
+        "index.html"
+      ],
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}
