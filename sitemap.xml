@@ -1,121 +1,584 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ── Homepage ──────────────────────────────────────────── -->
+  <!-- ── Páginas institucionais ────────────────────────────────────── -->
   <url>
-    <loc>https://cvatbrasil.com.br/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- ── NR-01 ─────────────────────────────────────────────── -->
   <url>
-    <loc>https://cvatbrasil.com.br/pages/nr01</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/treinamentos</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- ── Diagnóstico (formulário) ──────────────────────────── -->
   <url>
-    <loc>https://cvatbrasil.com.br/pages/diagnostico</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/treinamentos/hse</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- ── Soluções ──────────────────────────────────────────── -->
   <url>
-    <loc>https://cvatbrasil.com.br/pages/solucoes/cvat</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/treinamentos/copsoq</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://cvatbrasil.com.br/pages/solucoes/copsoq</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/nr01</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://cvatbrasil.com.br/pages/solucoes/hse-it</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/diagnostico</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://cvatbrasil.com.br/pages/solucoes/gestor-nr01</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/solucoes/cvat</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- ── Treinamentos ───────────────────────────────────────── -->
   <url>
-    <loc>https://cvatbrasil.com.br/pages/treinamentos</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/solucoes/copsoq</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- ── Para quem ─────────────────────────────────────────── -->
   <url>
-    <loc>https://cvatbrasil.com.br/pages/para-empresas</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/solucoes/hse-it</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://cvatbrasil.com.br/pages/para-rh</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/solucoes/gestor-nr01</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://cvatbrasil.com.br/pages/para-consultores</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/para-empresas</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
-  <!-- ── Blog ──────────────────────────────────────────────── -->
   <url>
-    <loc>https://cvatbrasil.com.br/pages/blog/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/para-rh</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/para-consultores</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- ── Artigos do blog — adicione um bloco <url> por artigo publicado ── -->
-  <!--
   <url>
-    <loc>https://cvatbrasil.com.br/pages/blog/slug-do-artigo</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/sobre</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  -->
-
-  <!-- ── Sobre ─────────────────────────────────────────────── -->
   <url>
-    <loc>https://cvatbrasil.com.br/pages/sobre</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/contato</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/contato</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
-  <!-- ── Contato ───────────────────────────────────────────── -->
+  <!-- ── Artigos do blog (79 artigos) ────────────────────────────── -->
   <url>
-    <loc>https://cvatbrasil.com.br/pages/contato</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://cvatbrasil.com/pages/blog/suporte-gestor-hse-it-2026-suporte-do-gestor.html</loc>
+    <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/demandas-no-trabalho-hse-it.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/estresse-no-trabalho-hse-it.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/nr-01-riscos-psicossociais.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/avaliacao-psicossocial-hse-it.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/hse-a-metodologia-que-transforma-riscos-psicossociais-em-prova-tecnica.html</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/hse-na-pratica-guia-estrategico-completo-de-aplicacao.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/hse-it-5-coisas-que-voce-precisa-saber-sobre-o-hse-it.html</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/capacitacao-e-retencao-como-treinar-bem-ajuda-sua-empresa-a-segurar-talentos-cap.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/educacao-continuada-na-nr-1-seguranca-sem-pausa.html</loc>
+    <lastmod>2025-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/nr-1-na-pratica-regras-de-treinamento-e-capacitacao.html</loc>
+    <lastmod>2025-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/nr-1-e-esg-como-a-norma-apoia-praticas-sustentaveis.html</loc>
+    <lastmod>2025-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/por-que-a-nr-1-e-estrategica-para-o-rh-da-sua-empresa.html</loc>
+    <lastmod>2025-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/perigo-x-risco-diferenca-nr1-ensina-importancia-risco.html</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/quando-o-lider-se-ausenta-licoes-de-uma-experiencia-real.html</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/pgr-explicado-programa-gerenciamento-riscos.html</loc>
+    <lastmod>2025-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/alicerce-nr-1-normas-regulamentadoras-seguranca-trabalho.html</loc>
+    <lastmod>2025-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/cvat-e-gro-na-pratica-gestao-eficiente-de-riscos.html</loc>
+    <lastmod>2025-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/diagrama-de-venn-e-seu-poder-no-desenvolvimento-humano.html</loc>
+    <lastmod>2025-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/como-desenvolver-lideranca-natural-e-lideranca-treinada.html</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/nr-1-aplicacao-na-pratica.html</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/procrastinacao-causas-e-solucoes.html</loc>
+    <lastmod>2025-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/equipes-comerciais-de-alta-performance.html</loc>
+    <lastmod>2025-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/produtividade-e-perfeccionismo-como-encontrar-equilibrio.html</loc>
+    <lastmod>2025-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/relacoes-intergeracionais-no-trabalho.html</loc>
+    <lastmod>2025-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/consultor-empresarial-o-quarto-pergaminho.html</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/consultor-empresarial-o-quinto-pergaminho.html</loc>
+    <lastmod>2025-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/consultor-empresarial-o-terceiro-pergaminho.html</loc>
+    <lastmod>2025-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/as-quatro-caixas-dagua-uma-metafora-para-o-sucesso-pessoal.html</loc>
+    <lastmod>2025-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/consultor-empresarial-o-chamado-uma-jornada-de-excelencia-e-transformacao.html</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/consultor-empresarial-o-primeiro-pergaminho.html</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/consultor-empresarial-o-segundo-pergaminho.html</loc>
+    <lastmod>2025-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/consultores-como-atender-de-pequenos-negocios-a-grandes-empresas-com-o-cvat.html</loc>
+    <lastmod>2025-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/desvendando-os-misterios-dos-valores-pessoais-comportamento-e-personalidade.html</loc>
+    <lastmod>2025-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/a-ultima-etapa-da-lideranca-altissimo-desempenho.html</loc>
+    <lastmod>2024-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/gestao-de-conflitos-e-comunicacao-eficaz-a-base-para-um-ambiente-de-trabalho-sau.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/aspectos-positivos-e-negativos-da-rotatividade-nas-organizacoes.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/absenteismo-por-que-e-fundamental-tratar-esse-problema-na-empresa.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/produtividade-como-alinhar-expectativas-e-potencial-dos-colaboradores.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/seus-colaboradores-estao-motivados-e-insatisfeitos-como-isso-e-possivel.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/a-evolucao-da-cidadania-organizacional-de-respeito-a-um-ambiente-saudavel.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/os-cinco-maiores-problemas-organizacionais-ontem-e-hoje.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/consultores-empresariais-como-o-cvat-pode-transformar-seu-trabalho-e-sua-carreir.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/o-primeiro-contato-como-o-consultor-pode-criar-um-oceano-azul-na-decisao-do-clie.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/consultores-grandes-problemas-grandes-ganhos-entenda-o-valor-do-seu-trabalho.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/por-que-as-pessoas-contratam-consultorias.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/como-o-cvat-pode-ajudar-consultores-a-resolver-conflitos-criticos-nas-empresas.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/todos-os-colaboradores-devem-ter-o-mesmo-perfil-a-importancia-da-diversidade-em.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/employer-branding-quando-100-dos-lideres-apresentam-baixo-impacto-na-marca-empre.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/cvat-como-ferramenta-para-o-desenvolvimento-de-liderancas.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/a-jornada-do-lider-entendendo-os-quatro-grandes-periodos-da-lideranca.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/a-transicao-para-a-lideranca-um-desafio-estrategico-para-consultores-e-rhs.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/a-segunda-fase-da-lideranca-do-conhecimento-a-acao-estrategica.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/a-terceira-fase-da-lideranca-lideres-e-equipes.html</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/clima-cultura-absenteismo-e-rotatividade-os-desafios-que-todo-profissional-de-rh.html</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/lideranca-engajamento-e-produtividade-a-chave-para-superar-absenteismo-e-rotativ.html</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/valores-pessoais-cultura-e-estrategia-empresarial-a-base-de-empresas-familiares.html</loc>
+    <lastmod>2024-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/valores-pessoais-cultura-estrategia-e-o-papel-da-consultoria-cvat-em-empresas-fa.html</loc>
+    <lastmod>2024-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/lideranca-autentica-uma-jornada-de-valores-pessoais.html</loc>
+    <lastmod>2024-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/voce-esta-feliz-com-a-sua-carreira-descubra-aspectos-que-nao-considerou.html</loc>
+    <lastmod>2023-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/lideranca-organizacional.html</loc>
+    <lastmod>2021-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/onboarding.html</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/recrutamento.html</loc>
+    <lastmod>2021-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/analise-comportamental.html</loc>
+    <lastmod>2021-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/turnover-organizacional.html</loc>
+    <lastmod>2021-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/qual-carreira-seguir.html</loc>
+    <lastmod>2021-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/lider.html</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/recrutamento-e-selecao.html</loc>
+    <lastmod>2021-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/marketing.html</loc>
+    <lastmod>2021-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/descoberta-da-vocacao.html</loc>
+    <lastmod>2021-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/transicao-de-carreira.html</loc>
+    <lastmod>2021-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/venda-spin.html</loc>
+    <lastmod>2021-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/gestao-de-rh.html</loc>
+    <lastmod>2021-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/autoconhecimento.html</loc>
+    <lastmod>2021-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/fit-cultural.html</loc>
+    <lastmod>2021-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/o-coaching-como-um-negocio.html</loc>
+    <lastmod>2021-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/o-que-e-a-rotatividade-nas-empresas-e-a-sua-solucao.html</loc>
+    <lastmod>2021-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/descubra-o-que-e-lideranca-e-o-segredo-para-ser-um-lider-bem-sucedido.html</loc>
+    <lastmod>2020-12-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cvatbrasil.com/pages/blog/blog-entenda-o-que-e-o-departamento-pessoal-e-suas-principais-funcoes.html</loc>
+    <lastmod>2020-12-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
