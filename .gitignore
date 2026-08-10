@@ -1,5 +1,8 @@
-# Credenciais do banco — nunca comitar
+# Credenciais e variáveis de ambiente — nunca comitar
 api/config.php
+.env
+.env.*
+!.env.example
 
 # Sistema operacional
 .DS_Store
