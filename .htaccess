@@ -7,13 +7,15 @@ RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # ── 2. Redirects 301 — URLs antigas → site novo ───────────────
+# Usamos Redirect (mod_alias) em vez de RewriteRule para garantir que
+# o redirect ocorra antes do filesystem check, mesmo com pastas físicas.
 # EXCEÇÃO: /braspress/ não entra aqui — URL fora de escopo permanente
-RewriteRule ^empresarios-cvat/?$              /pages/treinamentos [R=301,L]
-RewriteRule ^recursos-humano-cvat/?$          /pages/treinamentos [R=301,L]
-RewriteRule ^consultor-empresarial-cvat/?$    /pages/treinamentos [R=301,L]
-RewriteRule ^especialista-em-carreira-cvat/?$ /pages/treinamentos [R=301,L]
-RewriteRule ^desenvolvimento-humano-cvat/?$   /pages/treinamentos [R=301,L]
-RewriteRule ^atendimento-individual/?$        /pages/diagnostico  [R=301,L]
+Redirect 301 /empresarios-cvat/              /pages/treinamentos
+Redirect 301 /recursos-humano-cvat/          /pages/treinamentos
+Redirect 301 /consultor-empresarial-cvat/    /pages/treinamentos
+Redirect 301 /especialista-em-carreira-cvat/ /pages/treinamentos
+Redirect 301 /desenvolvimento-humano-cvat/   /pages/treinamentos
+Redirect 301 /atendimento-individual/        /pages/diagnostico
 
 # ── 3. Diretórios com arquivo .html correspondente → serve internamente
 #       Ex: /pages/treinamentos/ serve treinamentos.html sem redirecionar
