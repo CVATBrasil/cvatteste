@@ -6,4 +6,4 @@ Disallow: /pages/obrigado
 Disallow: /pages/obrigado.html
 
 # Sitemap
-Sitemap: https://cvatbrasil.com.br/sitemap.xml
+Sitemap: https://cvatbrasil.com/sitemap.xml
