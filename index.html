@@ -83,6 +83,13 @@
     <div class="loader-spinner"></div>
   </div>
 
+  <!-- Faixa de anúncio -->
+  <div class="announcement-bar" role="note" aria-label="Credenciais da CVAT Brasil">
+    <span>Certificação MEC</span>
+    <span class="announcement-sep" aria-hidden="true">·</span>
+    <span>+1.000 profissionais formados</span>
+  </div>
+
   <!-- Header (injetado via fetch) -->
   <div id="header-placeholder"></div>
 
@@ -100,47 +107,6 @@
             começam com <em class="hero-highlight">dados</em><br />
             – não com percepção.
           </h1>
-          <p class="hero-desc">
-            Escolha como você quer aplicar isso na sua realidade:
-          </p>
-
-          <!-- Cards de persona dentro do hero -->
-          <div class="hero-persona-cards">
-
-            <a href="./pages/para-empresas.html" class="hero-persona-card hero-persona-card--blue">
-              <div class="hero-persona-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="9" width="20" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 9V7a4 4 0 018 0v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </div>
-              <div>
-                <strong>Sou empresário / gestor</strong>
-                <span>Quero resultados e menos erros.</span>
-              </div>
-              <span class="hero-persona-arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a href="./pages/para-rh.html" class="hero-persona-card hero-persona-card--green">
-              <div class="hero-persona-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </div>
-              <div>
-                <strong>Sou profissional de RH</strong>
-                <span>Quero processos mais estruturados.</span>
-              </div>
-              <span class="hero-persona-arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a href="./pages/para-consultores.html" class="hero-persona-card hero-persona-card--coral">
-              <div class="hero-persona-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M5 21c0-3.5 3-6 7-6s7 2.5 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 3l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div>
-                <strong>Sou consultor</strong>
-                <span>Quero me diferenciar e escalar minha consultoria.</span>
-              </div>
-              <span class="hero-persona-arrow" aria-hidden="true">→</span>
-            </a>
-
-          </div>
 
           <div class="hero-trust">
             <span class="hero-trust-item">
@@ -246,135 +212,52 @@
       </div>
     </section>
 
-    <!-- ── MÉTRICAS ──────────────────────────────────────────── -->
-    <section class="metrics-section section bg-blue-light" aria-label="Números da CVAT Brasil">
-      <div class="container">
-        <div class="metrics-grid">
-          <div class="metric-item" data-reveal data-reveal-delay="1">
-            <span class="metric-number">+340</span>
-            <span class="metric-label">empresas atendidas</span>
-          </div>
-          <div class="metric-item" data-reveal data-reveal-delay="2">
-            <span class="metric-number">+80 mil</span>
-            <span class="metric-label">colaboradores avaliados</span>
-          </div>
-          <div class="metric-item" data-reveal data-reveal-delay="3">
-            <span class="metric-number">98%</span>
-            <span class="metric-label">de satisfação dos clientes</span>
-          </div>
-          <div class="metric-item" data-reveal data-reveal-delay="4">
-            <span class="metric-number">48h</span>
-            <span class="metric-label">para receber o relatório</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── O PROBLEMA É REAL ─────────────────────────────────── -->
-    <section class="problem-section section bg-gray-100" aria-labelledby="problem-heading">
-      <div class="container problem-inner" data-reveal>
-        <span class="section-label">O problema é real</span>
-        <h2 id="problem-heading" class="section-title problem-title">
-          A maioria das decisões sobre pessoas ainda é feita com base em percepção. E isso gera erros silenciosos — na contratação, no desenvolvimento e na gestão.
-        </h2>
-        <p class="problem-highlight">O problema não é falta de experiência. É falta de critério claro.</p>
-      </div>
-    </section>
-
-    <!-- ── 4 PERSONAS ────────────────────────────────────────── -->
-    <section class="personas-section section" id="para-voce" aria-labelledby="personas-heading">
+    <!-- ── TREINAMENTOS ──────────────────────────────────────── -->
+    <section class="section bg-gray-100" id="treinamentos" aria-labelledby="trainings-heading">
       <div class="container">
         <header class="section-header centered" data-reveal>
-          <span class="section-label">Para quem é a CVAT Brasil</span>
-          <h2 id="personas-heading" class="section-title">
-            Uma solução para cada papel<br />dentro da sua organização
+          <span class="section-label">Treinamentos</span>
+          <h2 id="trainings-heading" class="section-title">
+            Formação com certificação MEC
           </h2>
           <p class="section-desc">
-            Do C-level ao consultor externo — cada persona tem um caminho claro.
+            Ferramentas validadas internacionalmente para diagnóstico de riscos psicossociais e conformidade com a NR-01.
           </p>
         </header>
 
-        <div class="personas-grid">
+        <div class="trainings-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-6);margin-top:var(--space-8);">
 
-          <!-- Persona 1: Empresas -->
-          <article class="persona-card" data-reveal data-reveal-delay="1" aria-labelledby="persona-empresas">
-            <div class="persona-icon persona-icon--blue">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="3" y="10" width="22" height="15" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M9 10V7a5 5 0 0110 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <article class="solution-item" style="background:var(--color-white);border-radius:var(--radius-lg);padding:var(--space-8);border:1.5px solid var(--color-gray-200);display:flex;flex-direction:column;gap:var(--space-4);" data-reveal data-reveal-delay="1">
+            <div style="display:flex;align-items:center;gap:var(--space-3);">
+              <div style="width:48px;height:48px;border-radius:var(--radius-md);background:var(--color-blue-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M7 2h10a2 2 0 012 2v16a2 2 0 01-2 2H7a2 2 0 01-2-2V4a2 2 0 012-2z" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="badge badge-blue">HSE-IT</span>
             </div>
-            <h3 id="persona-empresas" class="persona-title">Para Empresas</h3>
-            <p class="persona-desc">
-              Lideranças que precisam de dados confiáveis sobre clima, engajamento e riscos antes de tomar decisões estratégicas de gente.
+            <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--color-blue-dark);line-height:1.3;">HSE-IT — Rastreio de Riscos Psicossociais</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-gray-600);line-height:1.65;flex:1;">
+              Ferramenta baseada nos padrões do Health and Safety Executive britânico. 35 questões, 6 dimensões, resultado em minutos. Com certificação MEC.
             </p>
-            <ul class="persona-benefits" role="list">
-              <li>Diagnóstico completo em até 48h</li>
-              <li>Dashboard executivo com plano de ação</li>
-              <li>Conformidade NR-01 documentada</li>
-            </ul>
-            <a href="./pages/para-empresas.html" class="btn btn-primary persona-cta">
-              Ver solução para empresas
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a href="./pages/solucoes/hse-it.html" class="btn btn-primary" style="align-self:flex-start;">
+              Conhecer o HSE-IT
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </article>
 
-          <!-- Persona 2: RH -->
-          <article class="persona-card persona-card--featured" data-reveal data-reveal-delay="2" aria-labelledby="persona-rh">
-            <div class="persona-featured-badge">Mais popular</div>
-            <div class="persona-icon persona-icon--white">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><circle cx="14" cy="10" r="4" stroke="currentColor" stroke-width="2"/><path d="M6 24c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <article class="solution-item" style="background:var(--color-white);border-radius:var(--radius-lg);padding:var(--space-8);border:1.5px solid var(--color-gray-200);display:flex;flex-direction:column;gap:var(--space-4);" data-reveal data-reveal-delay="2">
+            <div style="display:flex;align-items:center;gap:var(--space-3);">
+              <div style="width:48px;height:48px;border-radius:var(--radius-md);background:var(--color-blue-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--color-blue)" stroke-width="2"/><path d="M12 8v4l3 3" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
+              </div>
+              <span class="badge badge-blue">COPSOQ III</span>
             </div>
-            <h3 id="persona-rh" class="persona-title">Para RH</h3>
-            <p class="persona-desc">
-              Profissionais de RH que querem relatórios acionáveis, linguagem de negócios e ferramentas para apresentar resultados à diretoria.
+            <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--color-blue-dark);line-height:1.3;">COPSOQ III — Padrão Internacional de Avaliação</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-gray-600);line-height:1.65;flex:1;">
+              Instrumento validado em mais de 30 países. Avalia riscos e fatores de proteção à saúde mental em conformidade total com a NR-01 e o PGR.
             </p>
-            <ul class="persona-benefits" role="list">
-              <li>Questionários validados cientificamente</li>
-              <li>Relatórios prontos para apresentar</li>
-              <li>Histórico de ciclos comparativos</li>
-            </ul>
-            <a href="./pages/para-rh.html" class="btn btn-ghost persona-cta">
-              Ver solução para RH
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </article>
-
-          <!-- Persona 3: Consultores -->
-          <article class="persona-card" data-reveal data-reveal-delay="3" aria-labelledby="persona-consultores">
-            <div class="persona-icon persona-icon--green">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M5 23l5-5m0 0l3-9 9-5-5 9-9 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 id="persona-consultores" class="persona-title">Para Consultores</h3>
-            <p class="persona-desc">
-              Psicólogos e consultores de SST que aplicam diagnósticos em múltiplos clientes e precisam de eficiência, escala e credibilidade.
-            </p>
-            <ul class="persona-benefits" role="list">
-              <li>Gestão de múltiplos clientes</li>
-              <li>White-label disponível</li>
-              <li>Suporte técnico especializado</li>
-            </ul>
-            <a href="./pages/para-consultores.html" class="btn btn-primary persona-cta">
-              Ver solução para consultores
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </article>
-
-          <!-- Persona 4: NR-01 -->
-          <article class="persona-card persona-card--coral" data-reveal data-reveal-delay="4" aria-labelledby="persona-nr01">
-            <div class="persona-icon persona-icon--coral">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="5" y="4" width="18" height="20" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M10 10h8M10 14h8M10 18h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <span class="badge badge-coral" style="margin-bottom: var(--space-3);">Obrigatório desde 2025</span>
-            <h3 id="persona-nr01" class="persona-title">Conformidade NR-01</h3>
-            <p class="persona-desc">
-              A NR-01 exige identificação e gestão de riscos psicossociais. Evite autuações e demonstre conformidade com documentação completa.
-            </p>
-            <ul class="persona-benefits" role="list">
-              <li>Identificação de riscos psicossociais</li>
-              <li>Plano de Ação documentado</li>
-              <li>Evidências para fiscalização</li>
-            </ul>
-            <a href="./pages/nr01.html" class="btn btn-coral persona-cta">
-              Garantir conformidade agora
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a href="./pages/solucoes/copsoq.html" class="btn btn-primary" style="align-self:flex-start;">
+              Conhecer o COPSOQ III
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" linejoin="round"/></svg>
             </a>
           </article>
 
@@ -382,119 +265,80 @@
       </div>
     </section>
 
-    <!-- ── SOLUÇÕES ──────────────────────────────────────────── -->
-    <section class="solutions-section section bg-gray-100" id="solucoes" aria-labelledby="solutions-heading">
+    <!-- ── ARTIGOS DO BLOG ───────────────────────────────────── -->
+    <section class="section" id="blog" aria-labelledby="blog-heading">
       <div class="container">
         <header class="section-header centered" data-reveal>
-          <span class="section-label">Nossas ferramentas</span>
-          <h2 id="solutions-heading" class="section-title">
-            Soluções que combinam<br />ciência e praticidade
-          </h2>
-          <p class="section-desc">
-            Cada ferramenta é validada cientificamente e adaptada à realidade das empresas brasileiras.
-          </p>
+          <span class="section-label">Blog</span>
+          <h2 id="blog-heading" class="section-title">Artigos sobre saúde organizacional</h2>
         </header>
 
-        <div class="solutions-list">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-5);margin-top:var(--space-8);">
 
-          <article class="solution-item" data-reveal data-reveal-delay="1">
-            <div class="solution-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="var(--color-blue)" stroke-width="2"/><path d="M11 16l3 3 7-7" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="solution-content">
-              <h3 class="solution-title">CVAT — Clima Organizacional</h3>
-              <p class="solution-desc">Avalie engajamento, cultura e satisfação com metodologia própria e benchmarks setoriais. Resultados em dashboard interativo.</p>
-              <a href="./pages/solucoes/cvat.html" class="solution-link">
-                Conhecer o CVAT
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
+          <a href="./pages/blog/hse-it-5-coisas-que-voce-precisa-saber-sobre-o-hse-it.html"
+             style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-6);border:1.5px solid var(--color-gray-200);border-radius:var(--radius-lg);text-decoration:none;background:var(--color-white);transition:box-shadow var(--transition),transform var(--transition);"
+             onmouseover="this.style.boxShadow='var(--shadow-md)';this.style.transform='translateY(-2px)'"
+             onmouseout="this.style.boxShadow='none';this.style.transform=''"
+             data-reveal data-reveal-delay="1">
+            <span class="badge badge-blue" style="align-self:flex-start;">HSE-IT</span>
+            <h3 style="font-size:var(--text-base);font-weight:700;color:var(--color-blue-dark);line-height:1.4;">HSE-IT: 5 coisas que você precisa saber sobre o HSE-IT</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-gray-500);line-height:1.6;flex:1;">Descubra o que é o HSE-IT, o que ele mede e como ajuda sua empresa a reduzir riscos psicossociais e atender à NR-01.</p>
+            <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-blue);display:flex;align-items:center;gap:4px;">
+              Ler artigo
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
 
-          <article class="solution-item" data-reveal data-reveal-delay="2">
-            <div class="solution-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4a12 12 0 100 24A12 12 0 0016 4z" stroke="var(--color-blue)" stroke-width="2"/><path d="M16 10v6l4 4" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="solution-content">
-              <h3 class="solution-title">COPSOQ III — Riscos Psicossociais</h3>
-              <p class="solution-desc">Instrumento internacionalmente validado para identificar fatores de risco e proteção à saúde mental. Base para o PGR da NR-01.</p>
-              <a href="./pages/solucoes/copsoq.html" class="solution-link">
-                Conhecer o COPSOQ III
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
+          <a href="./pages/blog/por-que-a-nr-1-e-estrategica-para-o-rh-da-sua-empresa.html"
+             style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-6);border:1.5px solid var(--color-gray-200);border-radius:var(--radius-lg);text-decoration:none;background:var(--color-white);transition:box-shadow var(--transition),transform var(--transition);"
+             onmouseover="this.style.boxShadow='var(--shadow-md)';this.style.transform='translateY(-2px)'"
+             onmouseout="this.style.boxShadow='none';this.style.transform=''"
+             data-reveal data-reveal-delay="2">
+            <span class="badge badge-blue" style="align-self:flex-start;">NR-01</span>
+            <h3 style="font-size:var(--text-base);font-weight:700;color:var(--color-blue-dark);line-height:1.4;">Por que a NR-1 é essencial para o RH e não só para segurança do trabalho</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-gray-500);line-height:1.6;flex:1;">A NR-1 vai muito além da segurança: ela é um pilar estratégico para o RH que quer atuar com dados e conformidade.</p>
+            <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-blue);display:flex;align-items:center;gap:4px;">
+              Ler artigo
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
 
-          <article class="solution-item" data-reveal data-reveal-delay="3">
-            <div class="solution-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="5" width="20" height="22" rx="3" stroke="var(--color-blue)" stroke-width="2"/><path d="M11 12h10M11 17h10M11 22h6" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="solution-content">
-              <h3 class="solution-title">Gestor NR-01</h3>
-              <p class="solution-desc">Plataforma completa para gestão do PGR com foco em riscos psicossociais: identificação, avaliação, plano de ação e evidências.</p>
-              <a href="./pages/solucoes/gestor-nr01.html" class="solution-link">
-                Conhecer o Gestor NR-01
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
+          <a href="./pages/blog/cvat-como-ferramenta-para-o-desenvolvimento-de-liderancas.html"
+             style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-6);border:1.5px solid var(--color-gray-200);border-radius:var(--radius-lg);text-decoration:none;background:var(--color-white);transition:box-shadow var(--transition),transform var(--transition);"
+             onmouseover="this.style.boxShadow='var(--shadow-md)';this.style.transform='translateY(-2px)'"
+             onmouseout="this.style.boxShadow='none';this.style.transform=''"
+             data-reveal data-reveal-delay="3">
+            <span class="badge badge-green" style="align-self:flex-start;">CVAT</span>
+            <h3 style="font-size:var(--text-base);font-weight:700;color:var(--color-blue-dark);line-height:1.4;">CVAT como Ferramenta para o Desenvolvimento de Lideranças</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-gray-500);line-height:1.6;flex:1;">Como profissionais de RH, consultores e gestores usam o CVAT para identificar e desenvolver potenciais de liderança com base em dados.</p>
+            <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-blue);display:flex;align-items:center;gap:4px;">
+              Ler artigo
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
 
-          <article class="solution-item" data-reveal data-reveal-delay="4">
-            <div class="solution-icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="8" width="24" height="16" rx="3" stroke="var(--color-blue)" stroke-width="2"/><path d="M10 14h4m-4 4h8" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/><path d="M22 14l-3 4" stroke="var(--color-blue)" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="solution-content">
-              <h3 class="solution-title">HSE-IT — Saúde e Segurança</h3>
-              <p class="solution-desc">Integre saúde, segurança e meio ambiente em uma plataforma unificada com indicadores em tempo real e gestão de conformidade.</p>
-              <a href="./pages/solucoes/hse-it.html" class="solution-link">
-                Conhecer o HSE-IT
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </article>
+          <a href="./pages/blog/turnover-organizacional.html"
+             style="display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-6);border:1.5px solid var(--color-gray-200);border-radius:var(--radius-lg);text-decoration:none;background:var(--color-white);transition:box-shadow var(--transition),transform var(--transition);"
+             onmouseover="this.style.boxShadow='var(--shadow-md)';this.style.transform='translateY(-2px)'"
+             onmouseout="this.style.boxShadow='none';this.style.transform=''"
+             data-reveal data-reveal-delay="4">
+            <span class="badge badge-coral" style="align-self:flex-start;">RH</span>
+            <h3 style="font-size:var(--text-base);font-weight:700;color:var(--color-blue-dark);line-height:1.4;">Turnover organizacional: O que é e quais os tipos?</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-gray-500);line-height:1.6;flex:1;">Rotatividade é um indicador diretamente relacionado à eficiência operacional. Entenda como identificar, classificar e reduzir o turnover.</p>
+            <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-blue);display:flex;align-items:center;gap:4px;">
+              Ler artigo
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
 
         </div>
-      </div>
-    </section>
 
-    <!-- ── COMO FUNCIONA ─────────────────────────────────────── -->
-    <section class="how-section section" id="como-funciona" aria-labelledby="how-heading">
-      <div class="container">
-        <header class="section-header centered" data-reveal>
-          <span class="section-label">Processo</span>
-          <h2 id="how-heading" class="section-title">Do diagnóstico ao plano de ação<br />em 4 etapas simples</h2>
-        </header>
-
-        <ol class="steps-list" role="list">
-          <li class="step-item" data-reveal data-reveal-delay="1">
-            <div class="step-number" aria-hidden="true">01</div>
-            <div class="step-content">
-              <h3 class="step-title">Escolha o diagnóstico</h3>
-              <p class="step-desc">Selecione entre clima organizacional, riscos psicossociais (COPSOQ III) ou conformidade NR-01 conforme sua necessidade.</p>
-            </div>
-          </li>
-          <li class="step-item" data-reveal data-reveal-delay="2">
-            <div class="step-number" aria-hidden="true">02</div>
-            <div class="step-content">
-              <h3 class="step-title">Convide os colaboradores</h3>
-              <p class="step-desc">Envio automático por e-mail ou link. Questionários anônimos, mobile-friendly, disponíveis 24h. Taxa média de resposta: 72%.</p>
-            </div>
-          </li>
-          <li class="step-item" data-reveal data-reveal-delay="3">
-            <div class="step-number" aria-hidden="true">03</div>
-            <div class="step-content">
-              <h3 class="step-title">Receba o relatório em 48h</h3>
-              <p class="step-desc">Dashboard interativo com índices, gráficos, cruzamentos demográficos e benchmarks do seu setor. Exportação em PDF e Excel.</p>
-            </div>
-          </li>
-          <li class="step-item" data-reveal data-reveal-delay="4">
-            <div class="step-number" aria-hidden="true">04</div>
-            <div class="step-content">
-              <h3 class="step-title">Implante o plano de ação</h3>
-              <p class="step-desc">Recomendações priorizadas por impacto, atribuição de responsáveis, prazos e acompanhamento de indicadores ao longo do tempo.</p>
-            </div>
-          </li>
-        </ol>
+        <div style="text-align:center;margin-top:var(--space-8);" data-reveal>
+          <a href="./pages/blog/index.html" class="btn btn-secondary">
+            Ver todos os artigos
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -612,126 +456,83 @@
       </div>
     </section>
 
-    <!-- ── FAQ RÁPIDO ────────────────────────────────────────── -->
-    <section class="faq-section section" id="faq" aria-labelledby="faq-heading">
-      <div class="container">
+    <!-- ── REDES SOCIAIS ─────────────────────────────────────── -->
+    <section class="section" aria-labelledby="social-heading">
+      <div class="container" style="text-align:center;">
         <header class="section-header centered" data-reveal>
-          <span class="section-label">Dúvidas frequentes</span>
-          <h2 id="faq-heading" class="section-title">Perguntas que todo cliente faz</h2>
+          <span class="section-label">Siga a CVAT Brasil</span>
+          <h2 id="social-heading" class="section-title">Conteúdo sobre saúde organizacional</h2>
+          <p class="section-desc">Acompanhe dicas, artigos e novidades sobre riscos psicossociais, liderança e NR-01.</p>
         </header>
 
-        <div class="faq-list" data-reveal>
+        <div style="display:flex;align-items:center;justify-content:center;gap:var(--space-6);flex-wrap:wrap;margin-top:var(--space-8);" data-reveal>
 
-          <details class="faq-item">
-            <summary class="faq-question">
-              O diagnóstico gratuito é realmente sem custo?
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </summary>
-            <p class="faq-answer">Sim. O diagnóstico inicial é 100% gratuito, sem cartão de crédito e sem compromisso. Você recebe um relatório executivo com os principais indicadores da sua empresa.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">
-              Como funciona a anonimidade das respostas?
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </summary>
-            <p class="faq-answer">As respostas são completamente anônimas. Nenhum resultado individual é exibido — apenas agregados por área ou cargo, e somente quando há mínimo de 5 respostas no grupo.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">
-              A CVAT Brasil atende à NR-01 atualizada em 2025?
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </summary>
-            <p class="faq-answer">Sim. O Gestor NR-01 e o COPSOQ III foram desenvolvidos especificamente para atender aos requisitos da NR-01 atualizada, incluindo a identificação e gestão de riscos psicossociais.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">
-              Quanto tempo leva para ter os resultados?
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </summary>
-            <p class="faq-answer">O relatório executivo fica disponível em até 48 horas após o encerramento da coleta de dados. Diagnósticos completos com análise aprofundada podem levar até 5 dias úteis.</p>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">
-              É possível integrar com o HRIS da empresa?
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </summary>
-            <p class="faq-answer">Sim, temos APIs disponíveis para integração com os principais sistemas de RH (SAP, Totvs, Senior, ADP). Entre em contato para avaliar a integração com seu sistema atual.</p>
-          </details>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── PRÓXIMO PASSO ─────────────────────────────────────── -->
-    <section class="nextstep-section section" aria-labelledby="nextstep-heading">
-      <div class="container">
-        <header class="section-header centered" data-reveal>
-          <span class="section-label">Por onde começar</span>
-          <h2 id="nextstep-heading" class="section-title">Comece pelo próximo passo mais simples</h2>
-          <p class="section-desc">Escolha como você quer avançar hoje.</p>
-        </header>
-        <div class="nextstep-grid" data-reveal>
-
-          <a href="./pages/treinamentos.html" class="nextstep-card nextstep-card--blue">
-            <div class="nextstep-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polygon points="5,3 19,12 5,21" fill="currentColor"/></svg>
-            </div>
-            <div class="nextstep-body">
-              <h4>Acessar treinamentos</h4>
-              <p>Aprenda a metodologia CVAT e aplique na prática</p>
-            </div>
-            <svg class="nextstep-card-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <a href="https://youtube.com/@cvatbrasil"
+             target="_blank" rel="noopener noreferrer"
+             style="display:flex;flex-direction:column;align-items:center;gap:var(--space-3);padding:var(--space-6) var(--space-8);border:1.5px solid var(--color-gray-200);border-radius:var(--radius-lg);text-decoration:none;background:var(--color-white);transition:box-shadow var(--transition),transform var(--transition);min-width:160px;"
+             onmouseover="this.style.boxShadow='var(--shadow-md)';this.style.transform='translateY(-2px)'"
+             onmouseout="this.style.boxShadow='none';this.style.transform=''">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#FF0000" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span style="font-weight:600;color:var(--color-blue-dark);font-size:var(--text-sm);">YouTube</span>
+            <span style="font-size:var(--text-xs);color:var(--color-gray-500);">@cvatbrasil</span>
           </a>
 
-          <a href="./pages/solucoes/cvat.html" class="nextstep-card nextstep-card--green">
-            <div class="nextstep-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="nextstep-body">
-              <h4>Conhecer a ferramenta</h4>
-              <p>Veja como funciona o diagnóstico CVAT na prática</p>
-            </div>
-            <svg class="nextstep-card-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <a href="https://instagram.com/cvatbrasil"
+             target="_blank" rel="noopener noreferrer"
+             style="display:flex;flex-direction:column;align-items:center;gap:var(--space-3);padding:var(--space-6) var(--space-8);border:1.5px solid var(--color-gray-200);border-radius:var(--radius-lg);text-decoration:none;background:var(--color-white);transition:box-shadow var(--transition),transform var(--transition);min-width:160px;"
+             onmouseover="this.style.boxShadow='var(--shadow-md)';this.style.transform='translateY(-2px)'"
+             onmouseout="this.style.boxShadow='none';this.style.transform=''">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="url(#ig-gradient)" aria-hidden="true">
+              <defs>
+                <linearGradient id="ig-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#f09433"/>
+                  <stop offset="25%" stop-color="#e6683c"/>
+                  <stop offset="50%" stop-color="#dc2743"/>
+                  <stop offset="75%" stop-color="#cc2366"/>
+                  <stop offset="100%" stop-color="#bc1888"/>
+                </linearGradient>
+              </defs>
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span style="font-weight:600;color:var(--color-blue-dark);font-size:var(--text-sm);">Instagram</span>
+            <span style="font-size:var(--text-xs);color:var(--color-gray-500);">@cvatbrasil</span>
           </a>
 
-          <a href="./pages/contato.html" class="nextstep-card nextstep-card--coral">
-            <div class="nextstep-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="nextstep-body">
-              <h4>Falar com um especialista</h4>
-              <p>Tire suas dúvidas e descubra o melhor caminho</p>
-            </div>
-            <svg class="nextstep-card-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <a href="https://linkedin.com/company/cvatbrasil"
+             target="_blank" rel="noopener noreferrer"
+             style="display:flex;flex-direction:column;align-items:center;gap:var(--space-3);padding:var(--space-6) var(--space-8);border:1.5px solid var(--color-gray-200);border-radius:var(--radius-lg);text-decoration:none;background:var(--color-white);transition:box-shadow var(--transition),transform var(--transition);min-width:160px;"
+             onmouseover="this.style.boxShadow='var(--shadow-md)';this.style.transform='translateY(-2px)'"
+             onmouseout="this.style.boxShadow='none';this.style.transform=''">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span style="font-weight:600;color:var(--color-blue-dark);font-size:var(--text-sm);">LinkedIn</span>
+            <span style="font-size:var(--text-xs);color:var(--color-gray-500);">CVAT Brasil</span>
           </a>
 
         </div>
       </div>
     </section>
 
-    <!-- ── CTA FINAL ─────────────────────────────────────────── -->
-    <section class="cta-section" aria-labelledby="cta-heading">
+    <!-- ── FALE CONOSCO ──────────────────────────────────────── -->
+    <section class="cta-section" aria-labelledby="contact-heading">
       <div class="container">
         <div class="cta-inner" data-reveal>
           <div class="cta-text">
-            <span class="section-label" style="color: rgba(255,255,255,.7)">Comece hoje</span>
-            <h2 id="cta-heading" class="cta-title">
-              Sua empresa merece dados reais<br />sobre o bem-estar das pessoas
+            <span class="section-label" style="color: rgba(255,255,255,.7)">Fale Conosco</span>
+            <h2 id="contact-heading" class="cta-title">
+              Pronto para tomar decisões<br />baseadas em dados reais?
             </h2>
             <p class="cta-desc">
-              Faça o diagnóstico gratuito e descubra os pontos de atenção antes que se tornem problemas — ou autuações.
+              Entre em contato e descubra como o CVAT Brasil pode ajudar sua empresa com diagnósticos de clima, riscos psicossociais e conformidade NR-01.
             </p>
           </div>
           <div class="cta-actions">
-            <a href="./pages/diagnostico.html" class="btn btn-coral btn-lg">
-              Fazer diagnóstico grátis
+            <a href="./pages/contato.html" class="btn btn-coral btn-lg">
+              Falar com especialista
             </a>
-            <a href="./pages/contato.html" class="btn btn-ghost btn-lg">
-              Agendar demonstração
+            <a href="https://api.whatsapp.com/send/?phone=5511982878486&text=Ol%C3%A1%2C+vim+do+site+da+CVAT+Brasil+e+gostaria+de+saber+mais+sobre+os+treinamentos.&type=phone_number&app_absent=0"
+               class="btn btn-ghost btn-lg"
+               target="_blank" rel="noopener noreferrer">
+              WhatsApp
             </a>
           </div>
         </div>
@@ -746,6 +547,26 @@
   <!-- JS -->
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/forms.js" defer></script>
+
+  <style>
+    /* Faixa de anúncio */
+    .announcement-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+      padding: var(--space-2) var(--space-4);
+      background-color: var(--color-blue-dark);
+      color: var(--color-white);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .announcement-sep {
+      opacity: .5;
+    }
+  </style>
 
 </body>
 </html>
