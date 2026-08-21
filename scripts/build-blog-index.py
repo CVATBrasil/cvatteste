@@ -117,17 +117,19 @@ def build() -> None:
     html = INDEX_HTML.read_text(encoding='utf-8')
 
     # ── Inject featured article ──────────────────────────────────────────────
+    # Uses sentinel comments so the replacement is idempotent (safe to run multiple times).
     html = re.sub(
-        r'(<div id="blog-featured-wrap">)([\s\S]*?)(</div>)',
-        lambda m: f'{m.group(1)}\n        {featured_html}\n      {m.group(3)}',
+        r'<!-- FEATURED_START -->[\s\S]*?<!-- FEATURED_END -->',
+        f'<!-- FEATURED_START -->\n        {featured_html}\n      <!-- FEATURED_END -->',
         html,
         count=1,
     )
 
     # ── Inject article cards ─────────────────────────────────────────────────
+    # Uses sentinel comments so the replacement is idempotent (safe to run multiple times).
     html = re.sub(
-        r'(<div class="blog-grid" id="blog-grid">)([\s\S]*?)(</div>)',
-        lambda m: f'{m.group(1)}\n          {cards_html}\n        {m.group(3)}',
+        r'<!-- CARDS_START -->[\s\S]*?<!-- CARDS_END -->',
+        f'<!-- CARDS_START -->\n          {cards_html}\n        <!-- CARDS_END -->',
         html,
         count=1,
     )
