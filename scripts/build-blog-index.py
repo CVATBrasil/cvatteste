@@ -3,6 +3,11 @@
 Build script: pre-renders /pages/blog/index.html with static article HTML from /data/blog.json.
 Run whenever blog.json is updated so the listing page is indexable without JavaScript.
 
+Generates:
+  - 1 featured article (destaque: true)
+  - INITIAL_PER_CAT most-recent articles per category (static, indexable)
+  Remaining articles are loaded on demand via JS + blog.json.
+
 Usage:
   python3 scripts/build-blog-index.py
 """
@@ -15,6 +20,8 @@ from pathlib import Path
 ROOT       = Path(__file__).parent.parent
 BLOG_JSON  = ROOT / 'data' / 'blog.json'
 INDEX_HTML = ROOT / 'pages' / 'blog' / 'index.html'
+
+INITIAL_PER_CAT = 3  # cards rendered statically per category
 
 # ── SVGs de placeholder (espelha os definidos no inline JS do index.html) ──
 
@@ -44,7 +51,7 @@ def render_featured(item: dict) -> str:
         media = f'<div class="blog-featured-img-placeholder">{FEAT_SVG.get(cor, FEAT_SVG["blue"])}</div>'
 
     return (
-        f'<article class="blog-featured" data-cat="{item["categoria"]}" aria-labelledby="post-featured-title">\n'
+        f'<article class="blog-featured" data-cat="{item["categoria"]}" data-id="{item["id"]}" aria-labelledby="post-featured-title">\n'
         f'          <div class="blog-featured-img" aria-hidden="true">\n'
         f'            {media}\n'
         f'          </div>\n'
@@ -79,7 +86,7 @@ def render_card(item: dict) -> str:
 
     post_id = f'post-dyn-{item["id"]}-title'
     return (
-        f'<article class="blog-card" data-cat="{item["categoria"]}" aria-labelledby="{post_id}">\n'
+        f'<article class="blog-card" data-cat="{item["categoria"]}" data-id="{item["id"]}" aria-labelledby="{post_id}">\n'
         f'          <div class="blog-card-img" aria-hidden="true">\n'
         f'            {media}\n'
         f'          </div>\n'
@@ -107,17 +114,30 @@ def render_card(item: dict) -> str:
 def build() -> None:
     items = json.loads(BLOG_JSON.read_text(encoding='utf-8'))
 
-    featured = next((i for i in items if i.get('destaque')), None)
-    cards    = [i for i in items if not i.get('destaque')]
-    total    = len(items)
+    featured     = next((i for i in items if i.get('destaque')), None)
+    non_featured = [i for i in items if not i.get('destaque')]
+    total        = len(items)
+
+    # Sort by date descending so initial cards are the most recent per category
+    non_featured.sort(key=lambda x: x.get('data_iso', ''), reverse=True)
+
+    # Pick top INITIAL_PER_CAT articles per category for static HTML
+    cat_counts: dict = {}
+    initial_cards = []
+    for item in non_featured:
+        cat = item.get('categoria', '')
+        if cat_counts.get(cat, 0) < INITIAL_PER_CAT:
+            initial_cards.append(item)
+            cat_counts[cat] = cat_counts.get(cat, 0) + 1
+
+    initial_shown = len(initial_cards) + (1 if featured else 0)
 
     featured_html = render_featured(featured) if featured else ''
-    cards_html    = '\n          '.join(render_card(c) for c in cards)
+    cards_html    = '\n          '.join(render_card(c) for c in initial_cards)
 
     html = INDEX_HTML.read_text(encoding='utf-8')
 
     # ── Inject featured article ──────────────────────────────────────────────
-    # Uses sentinel comments so the replacement is idempotent (safe to run multiple times).
     html = re.sub(
         r'<!-- FEATURED_START -->[\s\S]*?<!-- FEATURED_END -->',
         f'<!-- FEATURED_START -->\n        {featured_html}\n      <!-- FEATURED_END -->',
@@ -125,8 +145,7 @@ def build() -> None:
         count=1,
     )
 
-    # ── Inject article cards ─────────────────────────────────────────────────
-    # Uses sentinel comments so the replacement is idempotent (safe to run multiple times).
+    # ── Inject initial article cards ─────────────────────────────────────────
     html = re.sub(
         r'<!-- CARDS_START -->[\s\S]*?<!-- CARDS_END -->',
         f'<!-- CARDS_START -->\n          {cards_html}\n        <!-- CARDS_END -->',
@@ -137,16 +156,17 @@ def build() -> None:
     # ── Update "Mostrando X de Y artigos" counter ────────────────────────────
     html = re.sub(
         r'(<p class="blog-load-more-text">)([\s\S]*?)(</p>)',
-        lambda m: f'{m.group(1)}Mostrando {total} de {total} artigos{m.group(3)}',
+        lambda m: f'{m.group(1)}Mostrando {initial_shown} de {total} artigos{m.group(3)}',
         html,
         count=1,
     )
 
     INDEX_HTML.write_text(html, encoding='utf-8')
 
-    print(f'✓  {total} artigos pré-renderizados em {INDEX_HTML.relative_to(ROOT)}')
+    cats_summary = ', '.join(f'{cat}:{n}' for cat, n in sorted(cat_counts.items()))
+    print(f'✓  {total} artigos — {len(initial_cards)} cards iniciais ({cats_summary})')
     print(f'   Destaque : {featured["titulo"][:60] if featured else "nenhum"}')
-    print(f'   Cards    : {len(cards)}')
+    print(f'   Restantes: {total - initial_shown} serão carregados via JS sob demanda')
 
 
 if __name__ == '__main__':
