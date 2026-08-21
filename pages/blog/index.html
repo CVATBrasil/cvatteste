@@ -841,14 +841,27 @@
           syncUI();
         });
 
-        document.getElementById('blog-search')?.addEventListener('input', function () {
+        document.getElementById('blog-search')?.addEventListener('input', async function () {
           const q = this.value.trim().toLowerCase();
           if (!q) { filterByCat('todos'); return; }
+          /* Inject any matching articles not yet in DOM before filtering */
+          await jsonPromise;
+          if (jsonData) {
+            const matches = jsonData.filter(a =>
+              (a.titulo ?? '').toLowerCase().includes(q) ||
+              (a.excerpt ?? '').toLowerCase().includes(q)
+            );
+            injectCards(matches);
+          }
+          let visible = 0;
           allArticles().forEach(el => {
             const title   = el.querySelector('h3')?.textContent.toLowerCase() ?? '';
             const excerpt = el.querySelector('p')?.textContent.toLowerCase() ?? '';
-            el.style.display = (title.includes(q) || excerpt.includes(q)) ? '' : 'none';
+            const match   = title.includes(q) || excerpt.includes(q);
+            el.style.display = match ? '' : 'none';
+            if (match) visible++;
           });
+          empty?.classList.toggle('hidden', visible > 0);
         });
 
         /* Newsletter */
