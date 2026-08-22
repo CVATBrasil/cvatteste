@@ -21,7 +21,7 @@ ROOT       = Path(__file__).parent.parent
 BLOG_JSON  = ROOT / 'data' / 'blog.json'
 INDEX_HTML = ROOT / 'pages' / 'blog' / 'index.html'
 
-INITIAL_PER_CAT = 3  # cards rendered statically per category
+INITIAL_PER_CAT = 2  # cards rendered statically per category
 
 # ── SVGs de placeholder (espelha os definidos no inline JS do index.html) ──
 
