@@ -88,10 +88,12 @@
   </div>
 
   <!-- Faixa de anúncio -->
-  <div class="announcement-bar" role="note" aria-label="Credenciais da CVAT Brasil">
-    <span>Certificação MEC</span>
-    <span class="announcement-sep" aria-hidden="true">·</span>
-    <span>+1.000 profissionais formados</span>
+  <div class="announcement-bar" role="note" aria-label="Novidade CVAT Brasil">
+    <a href="./pages/treinamentos/mba-consultoria-empresarial.html" class="announcement-link">
+      <span class="announcement-new">Novo</span>
+      MBA em Consultoria Empresarial e DHO com o CVAT · Pré-venda da 1ª turma
+      <span aria-hidden="true">→</span>
+    </a>
   </div>
 
   <!-- Header (injetado via fetch) -->
@@ -106,6 +108,11 @@
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-inner">
         <div class="hero-content">
+          <a href="./pages/treinamentos/mba-consultoria-empresarial.html" class="hero-mba-pill">
+            <span class="hero-mba-pill-tag">Novo</span>
+            Pós-graduação: MBA em Consultoria Empresarial e DHO com o CVAT
+            <span aria-hidden="true">→</span>
+          </a>
           <h1 id="hero-heading">
             Decisões melhores sobre pessoas<br />
             começam com <em class="hero-highlight">dados</em><br />
@@ -176,6 +183,52 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ── MBA EM DESTAQUE ───────────────────────────────────── -->
+    <section class="mba-home" aria-labelledby="mba-home-heading">
+      <div class="container">
+        <div class="mba-home-inner" data-reveal>
+
+          <div class="mba-home-content">
+            <span class="mba-home-label">Novo · Pós-graduação Lato Sensu · CVAT Brasil × Anhanguera</span>
+            <h2 id="mba-home-heading" class="mba-home-title">MBA em Consultoria Empresarial e DHO com o CVAT</h2>
+            <p class="mba-home-desc">
+              Aprenda a conduzir uma consultoria de gestão de pessoas do começo ao fim:
+              do perfil da alta direção à cultura da empresa, do diagnóstico ao plano
+              de ação com metas e indicadores.
+            </p>
+
+            <ul class="mba-home-facts">
+              <li>360 horas</li><li>9 disciplinas</li><li>EAD</li><li>Início jan/2027</li>
+            </ul>
+
+            <ol class="mba-home-steps" aria-label="Trilha do curso">
+              <li>Perfil e alta direção</li>
+              <li>Carreira e retenção</li>
+              <li>Equipes de vendas</li>
+              <li>Liderança</li>
+              <li>Cultura e riscos psicossociais (NR-01)</li>
+              <li>Consultoria completa</li>
+            </ol>
+
+            <div class="mba-home-ctas">
+              <a href="./pages/treinamentos/mba-consultoria-empresarial.html" class="btn btn-coral btn-lg">Conhecer o MBA</a>
+              <a href="./pages/treinamentos/mba-consultoria-empresarial.html#disciplinas" class="btn btn-lg mba-home-ghost">Ver as 9 disciplinas</a>
+            </div>
+            <p class="mba-home-note">Pré-venda da primeira turma · condição especial até 30/11</p>
+          </div>
+
+          <aside class="mba-home-aside" aria-label="Corpo docente principal">
+            <p class="mba-home-aside-tag">Com quem você aprende</p>
+            <div class="mba-home-prof"><strong>Prof. Dr. Reed Elliot Nelson</strong><span>Criador do CVAT</span></div>
+            <div class="mba-home-prof"><strong>Prof. Dr. Clovis Soler</strong><span>Coordenador · Representante do CVAT no Brasil</span></div>
+            <div class="mba-home-prof"><strong>Max Gines</strong><span>Master Trainer da ferramenta CVAT</span></div>
+            <p class="mba-home-quote">"Dado sem teoria vira relatório. Teoria sem dado vira opinião."</p>
+          </aside>
+
+        </div>
       </div>
     </section>
 
@@ -587,6 +640,41 @@
     .announcement-sep {
       opacity: .5;
     }
+
+    /* ── Faixa de anúncio: link ── */
+    .announcement-link { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+    .announcement-link:hover { text-decoration: underline; }
+    .announcement-new { background: #FF7752; color: #fff; padding: 2px 8px; border-radius: 999px; font-size: .65rem; letter-spacing: .08em; }
+
+    /* ── Hero: pílula MBA (fundo escuro) ── */
+    .hero-mba-pill { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: var(--space-5); padding: 6px 16px 6px 6px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; background: rgba(255,255,255,.1); font-size: var(--text-sm); font-weight: 600; color: #fff; text-decoration: none; transition: box-shadow var(--transition); }
+    .hero-mba-pill:hover { box-shadow: var(--shadow-md); }
+    .hero-mba-pill-tag { background: #FF7752; color: #fff; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+    @media (max-width: 640px) { .hero-mba-pill { border-radius: 14px; font-size: var(--text-xs); } }
+
+    /* ── Seção MBA em destaque ── */
+    .mba-home { padding: var(--space-16, 64px) 0; background: var(--color-white); }
+    .mba-home-inner { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-10, 40px); background: var(--color-blue-dark, #011633); border-radius: 24px; padding: var(--space-12, 48px); color: #fff; position: relative; overflow: hidden; }
+    .mba-home-inner::after { content: ''; position: absolute; right: -120px; top: -120px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(255,119,82,.35), transparent 70%); pointer-events: none; }
+    .mba-home-label { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #FF7752; margin-bottom: var(--space-3); }
+    .mba-home-title { font-family: var(--font-display, 'Sora'), sans-serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; line-height: 1.2; color: #fff; margin: 0 0 var(--space-4); }
+    .mba-home-desc { font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,.8); margin: 0 0 var(--space-5); max-width: 560px; }
+    .mba-home-facts { list-style: none; padding: 0; margin: 0 0 var(--space-6); display: flex; flex-wrap: wrap; gap: 8px; }
+    .mba-home-facts li { font-size: .78rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); }
+    .mba-home-steps { list-style: none; counter-reset: s; padding: 0; margin: 0 0 var(--space-8); display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+    .mba-home-steps li { counter-increment: s; display: flex; align-items: center; gap: 10px; font-size: .9rem; color: rgba(255,255,255,.88); }
+    .mba-home-steps li::before { content: counter(s, decimal-leading-zero); font-family: var(--font-display, 'Sora'), sans-serif; font-weight: 700; font-size: .78rem; color: #FF7752; }
+    .mba-home-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+    .mba-home-ghost { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); color: #fff; }
+    .mba-home-note { font-size: .78rem; color: rgba(255,255,255,.55); margin: var(--space-4) 0 0; }
+    .mba-home-aside { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: var(--space-6); align-self: center; position: relative; z-index: 1; }
+    .mba-home-aside-tag { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.55); margin: 0 0 var(--space-4); }
+    .mba-home-prof { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .mba-home-prof strong { display: block; font-size: .95rem; color: #fff; }
+    .mba-home-prof span { font-size: .8rem; color: rgba(255,255,255,.6); }
+    .mba-home-quote { font-family: var(--font-display, 'Sora'), sans-serif; font-size: .95rem; font-weight: 600; line-height: 1.5; color: #FF7752; margin: var(--space-5) 0 0; }
+    @media (max-width: 900px) { .mba-home-inner { grid-template-columns: 1fr; padding: var(--space-8, 32px) var(--space-6, 24px); } }
+    @media (max-width: 560px) { .mba-home-steps { grid-template-columns: 1fr; } }
   </style>
 
 </body>
