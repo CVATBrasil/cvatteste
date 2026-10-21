@@ -110,8 +110,8 @@
         <div class="hero-content">
           <a href="./pages/treinamentos/mba-consultoria-empresarial.html" class="hero-mba-pill">
             <span class="hero-mba-pill-tag">Novo</span>
-            Pós-graduação: MBA em Consultoria Empresarial e DHO com o CVAT
-            <span aria-hidden="true">→</span>
+            <span class="hero-mba-pill-text">MBA em Consultoria Empresarial e DHO</span>
+            <span class="hero-mba-pill-arrow" aria-hidden="true">→</span>
           </a>
           <h1 id="hero-heading">
             Decisões melhores sobre pessoas<br />
@@ -647,10 +647,32 @@
     .announcement-new { background: #FF7752; color: #fff; padding: 2px 8px; border-radius: 999px; font-size: .65rem; letter-spacing: .08em; }
 
     /* ── Hero: pílula MBA (fundo escuro) ── */
-    .hero-mba-pill { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: var(--space-5); padding: 6px 16px 6px 6px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; background: rgba(255,255,255,.1); font-size: var(--text-sm); font-weight: 600; color: #fff; text-decoration: none; transition: box-shadow var(--transition); }
-    .hero-mba-pill:hover { box-shadow: var(--shadow-md); }
-    .hero-mba-pill-tag { background: #FF7752; color: #fff; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
-    @media (max-width: 640px) { .hero-mba-pill { border-radius: 14px; font-size: var(--text-xs); } }
+    .hero-mba-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: nowrap;
+      align-self: flex-start;
+      width: fit-content;
+      max-width: 100%;
+      margin-bottom: var(--space-6, 24px);
+      padding: 5px 14px 5px 5px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.18);
+      color: #fff;
+      font-size: .85rem;
+      font-weight: 600;
+      line-height: 1;
+      text-decoration: none;
+      transition: background .2s, border-color .2s;
+    }
+    .hero-mba-pill:hover { background: rgba(255,255,255,.14); border-color: rgba(255,119,82,.6); }
+    .hero-mba-pill-tag { flex-shrink: 0; background: #FF7752; color: #fff; font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; }
+    .hero-mba-pill-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+    .hero-mba-pill-arrow { flex-shrink: 0; color: #FF7752; transition: transform .2s; }
+    .hero-mba-pill:hover .hero-mba-pill-arrow { transform: translateX(3px); }
+    @media (max-width: 480px) { .hero-mba-pill { font-size: .78rem; } }
 
     /* ── Seção MBA em destaque ── */
     .mba-home { padding: var(--space-16, 64px) 0; background: var(--color-white); }
