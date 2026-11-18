@@ -53,10 +53,10 @@ def fix_href(m: re.Match) -> str:
         'sobre':                     '/pages/sobre',
         'contato':                   '/pages/contato',
         'solucoes/cvat':             '/pages/solucoes/cvat',
-        'solucoes/copsoq':           '/pages/solucoes/copsoq',
-        'solucoes/hse-it':           '/pages/solucoes/hse-it',
-        'pages/treinamentos/hse':    '/pages/treinamentos/hse',
-        'pages/treinamentos/copsoq': '/pages/treinamentos/copsoq',
+        'solucoes/copsoq':           'https://gestornr01.com.br/cursos/copsoq',
+        'solucoes/hse-it':           'https://gestornr01.com.br/cursos/hse-it',
+        'pages/treinamentos/hse':    'https://gestornr01.com.br/cursos/hse-it',
+        'pages/treinamentos/copsoq': 'https://gestornr01.com.br/cursos/copsoq',
     }
     if slug in mappings:
         return f'href="{mappings[slug]}"'
